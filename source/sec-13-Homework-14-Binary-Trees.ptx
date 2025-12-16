@@ -1,0 +1,288 @@
+<section xml:id="sec-Homework-14-Binary-Trees-1">
+  <title>Homework 14 -- Binary Trees</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-M-S_CH10_short-tree_terminology4-1" label="exe-sec-Homework-14-Binary-Trees-1-234433">
+      <statement>
+        <p>
+          What are the child node(s) of "ontario"? If there is more than one child, list them with a single space in between.
+          <image decorative="yes" source="images/234433-example_tree.png" width="90%" />
+        </p>
+        <fillin answer="winnipeg vostok" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>winnipeg vostok</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>vostok winnipeg</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>winnipeg, vostok</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>vostok, winnipeg</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_short-tree_terminology6-1" label="exe-sec-Homework-14-Binary-Trees-1-234435">
+      <statement>
+        <p>What is the size of the subtree rooted at "huron"?</p>
+        <p>
+          <image decorative="yes" source="images/234435-example_tree.png" width="90%" />
+        </p>
+        <fillin answer="6" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>6</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_TF-tree_terminology7-1" label="exe-sec-Homework-14-Binary-Trees-1-234436">
+      <statement>
+        <p><alert>Which of the following statements is true about this tree?</alert></p>
+        <p>
+          <image decorative="yes" source="images/234436-example_tree1.png" width="90%" />
+        </p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>This is a binary tree of depth 4.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>This is a binary tree of depth 5.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>This is NOT a binary tree.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_multi-tree_terminology9-1" label="exe-sec-Homework-14-Binary-Trees-1-234438">
+      <statement>
+        <p>Which answer gives correct <alert>preorder</alert> traversal for the subtree rooted at "ontario"?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>ontario, vostok, ladoga, taymyr, winnipeg</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_multi-tree_terminology10-1" label="exe-sec-Homework-14-Binary-Trees-1-234439">
+      <statement>
+        <p>Which answer gives correct <alert>inorder</alert> traversal for the subtree rooted at "ontario"?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>ladoga, ontario, taymyr, vostok, winnipeg</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_multi-tree_terminology11-1" label="exe-sec-Homework-14-Binary-Trees-1-234440">
+      <statement>
+        <p>Which answer gives correct <alert>postorder</alert> traversal for the subtree rooted at "ontario"?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>winnipeg, vostok, taymyr, ontario, ladoga</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_multi-BST1-1" label="exe-sec-Homework-14-Binary-Trees-1-234442">
+      <statement>
+        <p>Assume that the tree below represents a binary search tree (BST), but that the type of data stored in the BST is unknown. Which node in the tree will contain the minimum value?</p>
+        <p>Note: A, B, ... are not data values stored in the nodes, they are simply <alert>labels</alert> for the nodes.</p>
+        <p>
+          <image decorative="yes" source="images/234442-example_tree2.png" width="90%" />
+        </p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>A</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>D</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>G</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>H</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH10_multi-BST2-1" label="exe-sec-Homework-14-Binary-Trees-1-234444">
+      <statement>
+        <p>Assume that the tree below represents a binary search tree (BST), but that the type of data stored in the BST is unknown. Which node in the tree will contain the maximum value?</p>
+        <p>
+          <image decorative="yes" source="images/234444-example_tree2.png" width="90%" />
+        </p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>A</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>D</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>G</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>H</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+</section>

@@ -1,0 +1,571 @@
+<section xml:id="sec-Homework-6-Pointers-1">
+  <title>Homework 6 -- Pointers</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-JMPCH12_multi-mem_alloc1-1" label="exe-sec-Homework-6-Pointers-1-234298">
+      <statement>
+        <p>When you declare a variable, the amount of memory that will be allocated for that variable is determined when?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>When the program is being compiled.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>During the linking phase of the build process.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>When the program starts running.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-dynamic_memory-1" label="exe-sec-Homework-6-Pointers-1-234302">
+      <statement>
+        <p>Your program needs more memory during execution time. From where can you get this additional memory?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>heap (a.k.a. free store)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stack</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>static memory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12-new-1" label="exe-sec-Homework-6-Pointers-1-234303">
+      <statement>
+        <p>What is the C++ keyword for allocating memory?</p>
+        <fillin answer="new" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>new</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12-delete-1" label="exe-sec-Homework-6-Pointers-1-234304">
+      <statement>
+        <p>What is the C++ keyword for deallocating memory?</p>
+        <fillin answer="delete" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>delete</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12-mem_leak1-1" label="exe-sec-Homework-6-Pointers-1-234299">
+      <statement>
+        <p>When a running program uses dynamic memory, but does not deallocate the memory it was using, this causes a <em></em> <em></em>.</p>
+        <p>HINT:  The answer is two words, lower case, with no punctuation marks and a single space between the words.</p>
+        <fillin answer="memory leak" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>memory leak</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-deallocate_dynamic_array-1" label="exe-sec-Homework-6-Pointers-1-234312">
+      <statement>
+        <p>Suppose that we have already allocated storage on the heap for a dynamic array of Person objects:</p>
+        <p><c>Person* arr = new Person[10];</c></p>
+        <p>To <alert>deallocate</alert>the entire dynamic array, which of the following is correct?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p><c>delete [] arr;</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>delete arr;</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>delete arr[];</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>delete[] arr[];</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-pointer1-1" label="exe-sec-Homework-6-Pointers-1-234300">
+      <statement>
+        <p>A pointer stores what?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>a memory location</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>a variable name</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>the value of a primitive data type (e.g., an integer or a bool)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-mem_leak1-1" label="exe-sec-Homework-6-Pointers-1-234301">
+      <statement>
+        <p>Which of the following functions DOES NOT have a memory leak?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <pre>void func(string word)
+{
+    int* ptr = NULL;
+    int len = word.size();
+    ptr = &amp;len
+    cout &lt;&lt; "Length of " &lt;&lt; word &lt;&lt; " is " &lt;&lt; *len &lt;&lt; endl;
+}              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>void func(string word)
+{
+    int* ptr = new int;
+    *ptr = word.size();
+}              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>void func(string word)
+{
+    int* ptr = new int[2]; 
+    ptr[0] = word.size();
+    delete ptr;
+}              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-mem_drawing1-1" label="exe-sec-Homework-6-Pointers-1-234307">
+      <statement>
+        <p>Which of the following memory drawings accurately depicts what memory will look like after the following lines of code execute? HINT: Pay attention to the difference between "stack" and "heap".</p>
+        <pre>int x = 23;
+int* p = &amp;x;
+int** m = &amp;p;        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596951-Screen%20Shot%202018-02-11%20at%2011.38.29%20AM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596952-Screen%20Shot%202018-02-11%20at%2011.40.15%20AM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596953-Screen%20Shot%202018-02-11%20at%2011.41.35%20AM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-mem_drawing2-1" label="exe-sec-Homework-6-Pointers-1-234310">
+      <statement>
+        <p>Which of the following memory drawings accurately depicts what memory will look like after the following lines of code execute?</p>
+        <pre>Person* ptr = NULL;
+ptr = new Person[2];
+ptr[0] = Person(“Cleo”, “Wilson”, 7);
+ptr[1] = Person(“Mr.”, “Gray”, 10);
+Person* Q = ptr;
+        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596962-Screen%20Shot%202018-02-11%20at%201.34.21%20PM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596963-Screen%20Shot%202018-02-11%20at%201.35.44%20PM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596964-Screen%20Shot%202018-02-11%20at%201.38.10%20PM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-mem_drawing3-1" label="exe-sec-Homework-6-Pointers-1-234311">
+      <statement>
+        <p>Which of the following memory drawings accurately depicts what memory will look like after the following lines of code execute?</p>
+        <pre>char* p_array = new char[3];
+char** p_p_array = &amp;p_array;
+p_array[0] = 'A';
+p_array[1] = 'B';
+p_array[2] = 'C';
+delete p_array;        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596965-Screen%20Shot%202018-02-11%20at%201.49.27%20PM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596966-Screen%20Shot%202018-02-11%20at%201.52.13%20PM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>
+                <image decorative="yes" source="images/596967-Screen%20Shot%202018-02-11%20at%201.50.36%20PM.png" width="90%" />
+              </p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_Chap4_pointer_assignments_1-1" label="exe-sec-Homework-6-Pointers-1-234313">
+      <statement>
+        <p>When the following code executes, what is the <alert>output</alert>?</p>
+        <pre>string s1 = "Ruthie";
+string s2 = "Skye";
+string* my_ptr = &amp;s1;
+string* other_ptr = &amp;s2;
+other_ptr = my_ptr;
+*other_ptr = "Ziggy";
+cout &lt;&lt; *my_ptr;        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p><c>Ziggy</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>Skye</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>Ruthie</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>Cleo</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>no output (empty string)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_Chap4_pointer_assignments_2-1" label="exe-sec-Homework-6-Pointers-1-234314">
+      <statement>
+        <p>When the following code executes, what is the <alert>output</alert>?</p>
+        <pre>string s1 = "Ruthie";
+string s2 = "Skye";
+string* my_ptr = &amp;s1;
+string* other_ptr = &amp;s2;
+*other_ptr = *my_ptr;
+*other_ptr = "Ziggy";
+cout &lt;&lt; *my_ptr;        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p><c>Ziggy</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>Skye</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><c>Ruthie</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>Cleo</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>no output (empty string)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12_multi-eval_pointers1-1" label="exe-sec-Homework-6-Pointers-1-234309">
+      <statement>
+        <p>Which of the following statements will be true after the following code has executed?</p>
+        <pre>string mystr = "cool";
+string* sptr1 = &amp;mystr;
+string* sptr2 = new string;
+sptr1 = sptr2;
+mystr = "cats";        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The value of *sptr1 will be "cool", and the value of *sptr2 will be "cats".</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The value of *sptr1 will be "cats", and the value of *sptr2 will be "cool".</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The value of *sptr1 will be "cool", and the value of *sptr2 will be "".</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>The value of *sptr1 will be "", and the value of *sptr2 will be "".</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12-dynamic_person-1" label="exe-sec-Homework-6-Pointers-1-234306">
+      <statement>
+        <p>Write a <alert>single line</alert> of code that will accomplish the following:</p>
+        <p>
+          <ul>
+            <li>declare <c>ptr</c> to be type "pointer to a Person"</li>
+            <li>create a default Person object in dynamic memory</li>
+            <li>assign the address of the default Person to <c>ptr</c></li>
+          </ul>
+        </p>
+        <p>HINT: Use conventional spacing (one space on each side of the assignment operator) and don't forget to end with a semicolon.</p>
+        <fillin answer="Person\* ptr = new Person;" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>Person\* ptr = new Person;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>Person \*ptr = new Person;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>Person\* ptr=new Person;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>Person \*ptr=new Person;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>Person \* ptr=new Person;</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH12-int_array-1" label="exe-sec-Homework-6-Pointers-1-234305">
+      <statement>
+        <p>Write a <alert>single line</alert> of code that will accomplish the following:</p>
+        <p>
+          <ul>
+            <li>declare <c>arr</c>to be of type "pointer to a char"</li>
+            <li>allocate a dynamic array of <em>type char</em> with capacity 4</li>
+            <li>assign the starting address of the array to arr</li>
+          </ul>
+        </p>
+        <p>HINT: Use conventional spacing (one space each side of the = operator) and don't forget your semicolon.</p>
+        <fillin answer="char\* arr = new char[4];" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>char\* arr = new char[4];</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>char \*arr = new char[4];</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>char\* arr=new char[4];</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>char \*arr=new char[4];</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>char\* arr = new char[4]</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>char \*arr=new char[4]</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>char \*arr = new char[4]</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+  </exercises>
+</section>

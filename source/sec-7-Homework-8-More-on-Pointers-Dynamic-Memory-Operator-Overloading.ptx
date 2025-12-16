@@ -1,0 +1,1285 @@
+<section xml:id="sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1">
+  <title>Homework 8 -- More on Pointers, Dynamic Memory, Operator Overloading</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-destructor_1-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234319">
+      <statement>
+        <p>A primary purpose of the <alert>destructor</alert> is to ...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>release an object's <alert>dynamic (heap)</alert>memory allocation when the object is no longer in use</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>release an object's <alert>static (stack)</alert>memory allocation when the object is no longer in use</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-destructor_2-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234320">
+      <statement>
+        <p>The name of the destructor always begins with the special character ____ .</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>~</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>#</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>$</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>?</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-destructor_3-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234321">
+      <statement>
+        <p>Which of the following is TRUE of the class destructor?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>The destructor has no parameters and no return value.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The destructor has no parameters, but it does have a return value.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The destructor has no return value, but it does have parameters.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The destructor has both a return value and parameters.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MAINSAV4-3review-destructor-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234308">
+      <statement>
+        <p>Which of the following is a true statement about when the destructor of a class is activated?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>If an object of class Foo was created in dynamic memory with the `new` keyword, then the Foo class destructor will be activated when `delete` is called on a pointer holding the address of the object.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>If an object of class Foo was created and assigned to a variable in the stack, the Foo class destructor will be activated when the variable goes out of scope.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>If an object of class Foo was passed by value to a function, then the Foo class destructor will be activated to delete the local copy of the object when the function ends.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The class destructor is only activated when called <alert>explicitly</alert>, such as: <c>~Foo(my_foo)</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-dynamic_data_structure1-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234315">
+      <statement>
+        <p>Dynamic data structures, created in the heap using pointers, let us set the SIZE of the data structure ...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>at runtime</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>at compilation time</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>during pre-processing</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-self_assignment_1-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234323">
+      <statement>
+        <p>We are implementing an assignment operator with the following prototype:</p>
+        <p><c>Image&amp; operator=(const Image&amp; source);</c></p>
+        <p>It's important to check for self-assignment when implementing the assignment operator for a class.  Which of the following is a <alert>correct check</alert> for possible self-assignment?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p><c>if (this == &amp;source) { return; }</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>if (this == source) { return; }</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>if (*this == &amp;source) { return; }</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>if (*this == source) { return; }</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-value_semantics_1-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234316">
+      <statement>
+        <p>True, or false?  The automatic assignment operator fails for any class that uses dynamic memory.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>True</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>False</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec3_multi-value_semantics_2-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234318">
+      <statement>
+        <p>Suppose <c>im1</c> is an existing Image object.</p>
+        <p>When the following line of code is executed, which function will be activated?</p>
+        <p><c>Image im2(im1);</c></p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>The Image class copy constructor.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The Image class default constructor.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The Image class assignment operator (operator=).</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec4_multi-copy_constructor_3-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234332">
+      <statement>
+        <p>Consider an Image class like the one in our labs. Suppose the Image object `im_2` is already initialized. Consider the following line of code:</p>
+        <p><c>Image im_1(im_2.getWidth(), im_2.getHeight());</c></p>
+        <p>When this code executes, does it activate the copy constructor?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>No</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Yes</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec4_multi-copy_constructor_2-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234330">
+      <statement>
+        <p>Refer to the Image class. Suppose the Image object `im_2` is already initialized. Consider the following line of code:</p>
+        <p><c>Image im_1 = im_2;</c></p>
+        <p>When this code executes, does it activate the copy constructor?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Yes</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>No</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec4_multi-copy_constructor_4-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234333">
+      <statement>
+        <p>Refer to the Image class, as in Lab 3. Suppose the Image objects `im_1` and `im_2` are already initialized. Consider the following line of code:</p>
+        <p><c>im_1 = im_2;</c></p>
+        <p>When this code executes, does it activate the copy constructor?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>No</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Yes</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4Sec4_multi-copy_constructor_5-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234334">
+      <statement>
+        <p>Suppose the function <c>getImage()</c> has the following prototype:</p>
+        <p><c>Image getImage();</c></p>
+        <p>When the <alert>return statement of <c>getImage()</c></alert> is executed, does it activate the Image class copy constructor?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Yes</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>No</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH4SEC3_short-this-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234324">
+      <statement>
+        <p>The keyword ________ can be used inside any member function to provide a pointer to the object that activated the function.</p>
+        <fillin answer="this" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>this</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh3_code-Sequence-Pixel_1-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234326">
+      <statement>
+        <p>Assume a Pixel class with member variables named <alert>blue</alert>, <alert>red</alert> and <alert>green</alert></p>
+        <p>Implement a member function called <c>is_white</c> for the Pixel class. It takes no arguments.</p>
+        <p>The function <c>is_white</c> <alert>returns true</alert> if this is a white pixel (all three color values are 255); otherwise, <c>is_white</c> <alert>returns false.</alert></p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Pixel_inlined.cpp
+// 2-14-18
+// Pixel code for coderunner questions
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// Pixel class definition
+class Pixel
+{
+   public:
+    // NEW FUNCTION FOR THIS PROBLEM! 
+    // return true if this is a white pixel, else, return false
+    bool is_white();
+    
+    // CONSTRUTOR
+    Pixel( int r=0, int g=0, int b=0 )
+    { red = r; green = g; blue = b; }
+
+    // MODIFICATION MEMBER FUNCTIONS
+    void set( int r, int g, int b )
+    { red = r; green = g; blue = b; }
+
+    void setRed( int r )
+    { red = r; }
+
+    void setGreen( int g )
+    { green = g; }
+
+    void setBlue( int b )
+    { blue = b; }
+
+    // ACCESSOR MEMBER FUNCTIONS
+    int getRed( ) const
+    { return red; }
+
+    int getGreen( ) const
+    { return green; }
+
+    int getBlue( ) const
+    { return blue; }
+
+    // FRIEND FUNCTIONS
+    friend std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix);
+    friend std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix);
+
+   private:
+    // INSTANCE VARIABLES
+    int red;   // red level for RGB color model, 0 &lt;= red &lt;=255
+    int green;   // green level for RGB color model, 0 &lt;= red &lt;=255
+    int blue;   // blue level for RGB color model, 0 &lt;= red &lt;=255
+};  // end class definition
+
+// OPERATOR OVERLOADS (Friends)
+std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix)
+{
+    out &lt;&lt; pix.getRed() &lt;&lt; " " &lt;&lt; pix.getGreen() &lt;&lt; " " &lt;&lt; pix.getBlue();
+
+    return out;
+}
+
+std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
+{
+   int r, g, b;
+   in &gt;&gt; r &gt;&gt; g &gt;&gt; b;
+   pix.setRed(r);
+   pix.setGreen(g);
+   pix.setBlue(b);
+
+   return in;
+}
+
+
+// OTHER NON-MEMBER FUNCTIONS 
+bool operator== (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+    return (pix1.getRed() == pix2.getRed()) &amp;&amp;
+    (pix1.getGreen() == pix2.getGreen()) &amp;&amp;
+    (pix1.getBlue() == pix2.getBlue());
+}
+
+bool operator!= (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return !(pix1 == pix2);
+}
+
+
+        </preamble>
+        <code>
+bool Pixel::is_white()
+{
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Pixel pix;
+    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
+    
+    std::string answer = 'this is NOT a white pixel.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Pixel pix(253, 254, 255);
+    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
+    std::string answer = 'this is NOT a white pixel.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Pixel pix(255, 255, 255);
+    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
+    std::string answer = 'this is a white pixel!\n\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Pixel pix(0, 255, 255);
+    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
+    std::string answer = 'this is NOT a white pixel.'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Pixel pix(255, 255, 254);
+    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
+    std::string answer = 'this is NOT a white pixel.'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    Pixel pix(254, 255, 255);
+    if (pix.is_white()) { cout &lt;&lt; "nope" &lt;&lt; endl; }
+    else { cout &lt;&lt; "OK" &lt;&lt; endl; }
+    std::string answer = 'OK'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    Pixel pix(255, 255, 255);
+    if (pix.is_white()) { cout &lt;&lt; "Yes!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "No" &lt;&lt; endl; }
+    std::string answer = 'Yes!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    Pixel pix(255, 253, 255);
+    if (pix.is_white()) { cout &lt;&lt; "Yes!" &lt;&lt; endl; }
+    else { cout &lt;&lt; "No" &lt;&lt; endl; }
+    std::string answer = 'No'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh2_code-point_addition-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234277">
+      <statement>
+        <p>Assume a <alert>point</alert> class with member variables <alert>x</alert>, <alert>y</alert>, member functions <alert>get_x()</alert> and <alert>get_y()</alert>, and a constructor<alert>point(x,y)</alert>.</p>
+        <p>Below is the documentation for the addition (+) operator for the <alert>point</alert> class.</p>
+        <pre>/*
+ * addition operator (+)
+ *
+ * The x value for the result is the sum of the x values for the two points being added, and 
+ * the y value for the result is the sum of the y values for the two points being added.
+ * returns a new point that is the sum of two other points
+ *
+ * Example:  if point1 is (4, -2) and point2 is (3, 1), then 
+ *           point1 + point2 will return the point (7, -1)
+ */        </pre>
+        <p>Write the code to turn the given stub definition for the function into a complete implementation. Note that you will need to use get_x and get_y to reach the values, as the operator is not defined as a friend of the class.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// class definition
+class point
+{
+public:
+    // CONSTRUCTOR
+    point(double initial_x = 0.0, double initial_y = 0.0);
+    
+    // ACCESSORS
+    double get_x( ) const { return x; }
+    double get_y( ) const { return y; }
+    
+    // MODIFIERS
+    void shift(double x_amount, double y_amount);
+    void rotate90( );
+    
+    // FRIENDS
+    friend std::istream&amp; operator &gt;&gt;(std::istream&amp; ins, point&amp; target);
+
+    private:
+        double x; // x coordinate of this point
+        double y; // y coordinate of this point
+};
+
+// implementation
+point::point(double initial_x, double initial_y)
+{
+	x = initial_x;   // Constructor sets point to a given position
+	y = initial_y;
+}
+
+void point::shift(double x_amount, double y_amount)
+{
+	x += x_amount;
+	y += y_amount;   
+}
+
+void point::rotate90( )
+{
+	double new_x;
+	double new_y;
+
+	new_x = y;  // For a 90 degree clockwise rotation the new y is -1
+	new_y = -x; // times original x, and the new x is the original y
+	x = new_x;
+	y = new_y;   
+}
+
+ostream&amp; operator&lt;&lt;(ostream &amp;out, const point &amp;pt)
+{  
+   out &lt;&lt; "(" &lt;&lt; pt.get_x() &lt;&lt; ", " &lt;&lt; pt.get_y() &lt;&lt; ")";
+   return out;
+}
+
+
+        </preamble>
+        <code>
+point operator+(const point &amp;pt1, const point &amp;pt2)
+{  
+   return pt1;  // CHANGE THIS LINE (it's a stub)
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    point pt1(-1.5, 3.75);
+    point pt2(0.5, 0.5);
+    cout &lt;&lt; pt1 + pt2;
+    std::string answer = '(-1, 4.25)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    point pt1(10, 3);
+    point pt2(-1, -1);
+    cout &lt;&lt; pt1 + pt2;
+    std::string answer = '(9, 2)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    point pt1(80, -55.2);
+    point pt2(-50, -50);
+    cout &lt;&lt; pt1 + pt2;
+    std::string answer = '(30, -105.2)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    point pt1(-12.8, -18.5);
+    point pt2(3.5, 6.5);
+    cout &lt;&lt; pt1 + pt2;
+    std::string answer = '(-9.3, -12)'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh2_code-point_multiplication-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234281">
+      <statement>
+        <p>Assume a <alert>point</alert> class with member variables <alert>x</alert>, <alert>y</alert>, member functions <alert>get_x()</alert> and <alert>get_y()</alert>, and a constructor<alert>point(x,y)</alert>.</p>
+        <p>Below is the documentation for the multiplication (*) operator for the <alert>point</alert> class.</p>
+        <pre>/*
+ * multiplication operator (*)
+ *
+ * Calculates the dot product of two points by adding the product of the x's
+ * and the product of the y's.
+ * returns the dot product of two points
+ *
+ * Example:  if point1 is (4, -2) and point2 is (3, 1), then 
+ *           the dot product would be (4 * 3) + (-2 * 1), i.e., 10
+ */        </pre>
+        <p>Write the code to turn the given stub definition for the function into a complete implementation. Note that this will not be a friend to the class, so you will need to use get_x and get_y to access the member variables values.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// class definition
+class point
+{
+public:
+    // CONSTRUCTOR
+    point(double initial_x = 0.0, double initial_y = 0.0);
+    
+    // ACCESSORS
+    double get_x( ) const { return x; }
+    double get_y( ) const { return y; }
+    
+    // MODIFIERS
+    void shift(double x_amount, double y_amount);
+    void rotate90( );
+    
+    // FRIENDS
+    friend std::istream&amp; operator &gt;&gt;(std::istream&amp; ins, point&amp; target);
+
+    private:
+        double x; // x coordinate of this point
+        double y; // y coordinate of this point
+};
+
+// implementation
+point::point(double initial_x, double initial_y)
+{
+	x = initial_x;   // Constructor sets point to a given position
+	y = initial_y;
+}
+
+void point::shift(double x_amount, double y_amount)
+{
+	x += x_amount;
+	y += y_amount;   
+}
+
+void point::rotate90( )
+{
+	double new_x;
+	double new_y;
+
+	new_x = y;  // For a 90 degree clockwise rotation the new y is -1
+	new_y = -x; // times original x, and the new x is the original y
+	x = new_x;
+	y = new_y;   
+}
+
+ostream&amp; operator&lt;&lt;(ostream &amp;out, const point &amp;pt)
+{  
+   out &lt;&lt; "(" &lt;&lt; pt.get_x() &lt;&lt; ", " &lt;&lt; pt.get_y() &lt;&lt; ")";
+   return out;
+}
+
+
+        </preamble>
+        <code>
+double operator*(const point &amp;pt1, const point &amp;pt2)
+{  
+   return 0;
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    point pt1(-1.5, 3.75);
+    point pt2(0.5, 0.5);
+    cout &lt;&lt; pt1 * pt2;
+    std::string answer = '1.125'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    point pt1(10, 3);
+    point pt2(-1, -1);
+    cout &lt;&lt; pt1 * pt2;
+    std::string answer = '-13'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    point pt1(80, -55.2);
+    point pt2(-50, -50);
+    cout &lt;&lt; pt1 * pt2;
+    std::string answer = '-1240'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    point pt1(-12, -18.5);
+    point pt2(3.5, 6.5);
+    cout &lt;&lt; pt1 * pt2;
+    std::string answer = '-162.25'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh2_code-point_equivalence-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234279">
+      <statement>
+        <p>Assume a <alert>point</alert> class with member variables <alert>x</alert>, <alert>y</alert>, member functions <alert>get_x()</alert> and <alert>get_y()</alert>, and a constructor<alert>point(x,y)</alert>.</p>
+        <p>Below is the documentation for the equivalence (==) operator for the <alert>point</alert> class.</p>
+        <pre>/*
+ * equivalence (==)
+ *
+ * Two points are equivalent if they have the same x value and the same y value.
+ * returns true if point1 and point2 are equivalent; otherwise, returns false
+ */        </pre>
+        <p>Write the code to turn the given stub definition for the function into a complete implementation. Note that this will not be a friend to the class, so you will have to use get_x and get_y to access the variables.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// class definition
+class point
+{
+public:
+    // CONSTRUCTOR
+    point(double initial_x = 0.0, double initial_y = 0.0);
+    
+    // ACCESSORS
+    double get_x( ) const { return x; }
+    double get_y( ) const { return y; }
+    
+    // MODIFIERS
+    void shift(double x_amount, double y_amount);
+    void rotate90( );
+    
+    // FRIENDS
+    friend std::istream&amp; operator &gt;&gt;(std::istream&amp; ins, point&amp; target);
+
+    private:
+        double x; // x coordinate of this point
+        double y; // y coordinate of this point
+};
+
+// implementation
+point::point(double initial_x, double initial_y)
+{
+	x = initial_x;   // Constructor sets point to a given position
+	y = initial_y;
+}
+
+void point::shift(double x_amount, double y_amount)
+{
+	x += x_amount;
+	y += y_amount;   
+}
+
+void point::rotate90( )
+{
+	double new_x;
+	double new_y;
+
+	new_x = y;  // For a 90 degree clockwise rotation the new y is -1
+	new_y = -x; // times original x, and the new x is the original y
+	x = new_x;
+	y = new_y;   
+}
+
+ostream&amp; operator&lt;&lt;(ostream &amp;out, const point &amp;pt)
+{  
+   out &lt;&lt; "(" &lt;&lt; pt.get_x() &lt;&lt; ", " &lt;&lt; pt.get_y() &lt;&lt; ")";
+   return out;
+}
+
+
+        </preamble>
+        <code>
+bool operator==(const point &amp;pt1, const point &amp;pt2)
+{  
+   return false;
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    point pt1(-1.5, 3.75);
+    point pt2(-1.5, 3.75);
+    if (pt1 == pt2)
+        cout &lt;&lt; "equivalent";
+    else
+        cout &lt;&lt; "not equivalent";
+    std::string answer = 'equivalent'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    point pt1(9, 2);
+    point pt2(2, 9);
+    if (pt1 == pt2)
+        cout &lt;&lt; "equivalent";
+    else
+        cout &lt;&lt; "not equivalent";
+    std::string answer = 'not equivalent'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    point pt1(30, -105.2);
+    point pt2(30, -105);
+    if (pt1 == pt2)
+        cout &lt;&lt; "equivalent";
+    else
+        cout &lt;&lt; "not equivalent";
+    std::string answer = 'not equivalent'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    point pt1(-9.3, -12);
+    point pt2(9.3, 12);
+    if (pt1 == pt2)
+        cout &lt;&lt; "equivalent";
+    else
+        cout &lt;&lt; "not equivalent";
+    std::string answer = 'not equivalent'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh2_code-point_stream_input-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234275">
+      <statement>
+        <p>Assume a <alert>point</alert> class with member variables <alert>x</alert>, <alert>y</alert>, member functions <alert>get_x()</alert> and <alert>get_y()</alert>, and a constructor<alert>point(x,y)</alert>.</p>
+        <p>Below is the documentation for an input stream operator (&gt;&gt;) function for the <alert>point</alert> class.</p>
+        <pre>/*
+ * input stream operator (&gt;&gt;)
+ *
+ *    - takes data from the input stream and assigns new values to the 
+ *      instance variables of the point
+ *    - returns the 'in' parameter to allow for chaining
+ *
+ * Note:  The input consists of the following: "(x, y)" where x and y
+ *        are doubles.
+ *
+ * Example:  If the input stream 'in' holds the message
+ *               "(-1.5, 3.75)"
+ *           then 'in &gt;&gt; pt' will cause pt's data to become
+ *           x: -1.5; y: 3.75
+ *        </pre>
+        <p>Write the code to turn the given stub definition for the function into a complete implementation. This will be a friend to the class, so you can directly write into the x and y variables.</p>
+        <p>HINT: Be sure to consume all the input, "(x here..., y here...)", including the parentheses, and the comma. You can use the input stream function <alert>ignore</alert> to skip characters.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// class definition
+class point
+{
+public:
+    // CONSTRUCTOR
+    point(double initial_x = 0.0, double initial_y = 0.0);
+    
+    // ACCESSORS
+    double get_x( ) const { return x; }
+    double get_y( ) const { return y; }
+    
+    // MODIFIERS
+    void shift(double x_amount, double y_amount);
+    void rotate90( );
+    
+    // FRIENDS
+    friend std::istream&amp; operator &gt;&gt;(std::istream&amp; ins, point&amp; target);
+
+    private:
+        double x; // x coordinate of this point
+        double y; // y coordinate of this point
+};
+
+// implementation
+point::point(double initial_x, double initial_y)
+{
+	x = initial_x;   // Constructor sets point to a given position
+	y = initial_y;
+}
+
+void point::shift(double x_amount, double y_amount)
+{
+	x += x_amount;
+	y += y_amount;   
+}
+
+void point::rotate90( )
+{
+	double new_x;
+	double new_y;
+
+	new_x = y;  // For a 90 degree clockwise rotation the new y is -1
+	new_y = -x; // times original x, and the new x is the original y
+	x = new_x;
+	y = new_y;   
+}
+
+ostream&amp; operator&lt;&lt;(ostream &amp;out, const point &amp;pt)
+{  
+   out &lt;&lt; "(" &lt;&lt; pt.get_x() &lt;&lt; ", " &lt;&lt; pt.get_y() &lt;&lt; ")";
+   return out;
+}
+
+
+        </preamble>
+        <code>
+istream&amp; operator&gt;&gt;(istream &amp;in, point &amp;pt)
+{  
+    return in;
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    stringstream message;
+    message &lt;&lt; "(-1.5, 3.75)";
+    point pt(0, 0);
+    message &gt;&gt; pt;
+    cout &lt;&lt; pt;
+    std::string answer = '(-1.5, 3.75)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    stringstream message;
+    message &lt;&lt; "(10, 3)";
+    point pt(0, 0);
+    message &gt;&gt; pt;
+    cout &lt;&lt; pt;
+    std::string answer = '(10, 3)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    stringstream message;
+    message &lt;&lt; "(80, -55.2)";
+    point pt(0, 0);
+    message &gt;&gt; pt;
+    cout &lt;&lt; pt;
+    std::string answer = '(80, -55.2)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    stringstream message;
+    message &lt;&lt; "(-12.8, -18.5)";
+    point pt(0, 0);
+    message &gt;&gt; pt;
+    cout &lt;&lt; pt;
+    std::string answer = '(-12.8, -18.5)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    stringstream message;
+    message &lt;&lt; "(-12.8, -18.5)" &lt;&lt; "(1.1, 2.2)";
+    point pt1(0, 0);
+    message &gt;&gt; pt1 &gt;&gt; pt1;
+    cout &lt;&lt; pt1;
+    std::string answer = '(1.1, 2.2)'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh2_code-point_stream_output-1" label="exe-sec-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading-1-234272">
+      <statement>
+        <p>Assume a <alert>point</alert> class with member variables <alert>x</alert>, <alert>y</alert>, member functions <alert>get_x()</alert> and <alert>get_y()</alert>, and a constructor<alert>point(x,y)</alert>.</p>
+        <p>Below is the documentation for an output stream operator (&lt;&lt;) function for the <alert>point</alert> class.</p>
+        <pre>/*
+ * output stream operator (&lt;&lt;)
+ *
+ * output a point to a stream
+ * returns the 'out' parameter to allow for chaining
+ *
+ * Note:  The output of a point looks like the following:
+ *           "(x, y)"
+ *        where x is the x-value and y is the y-value for the point.
+ *
+ * Example:  Calling the output stream operator on a point with 
+ *           x = 4 and y = -2 would produce the following: (4, -2)
+ */        </pre>
+        <p>Write the code to turn the given stub definition for the function into a complete implementation.</p>
+        <p>HINT: The output stream operator is NOT a friend of the class. Use the getters to access the values of member variables x and y.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// class definition
+class point
+{
+public:
+    // CONSTRUCTOR
+    point(double initial_x = 0.0, double initial_y = 0.0);
+    
+    // ACCESSORS
+    double get_x( ) const { return x; }
+    double get_y( ) const { return y; }
+    
+    // MODIFIERS
+    void shift(double x_amount, double y_amount);
+    void rotate90( );
+    
+    // FRIENDS
+    friend std::istream&amp; operator &gt;&gt;(std::istream&amp; ins, point&amp; target);
+
+    private:
+        double x; // x coordinate of this point
+        double y; // y coordinate of this point
+};
+
+// implementation
+point::point(double initial_x, double initial_y)
+{
+	x = initial_x;   // Constructor sets point to a given position
+	y = initial_y;
+}
+
+void point::shift(double x_amount, double y_amount)
+{
+	x += x_amount;
+	y += y_amount;   
+}
+
+void point::rotate90( )
+{
+	double new_x;
+	double new_y;
+
+	new_x = y;  // For a 90 degree clockwise rotation the new y is -1
+	new_y = -x; // times original x, and the new x is the original y
+	x = new_x;
+	y = new_y;   
+}
+
+
+        </preamble>
+        <code>
+ostream&amp; operator&lt;&lt;(ostream &amp;out, const point &amp;pt)
+{  
+   out &lt;&lt; "stream output not implemented";
+   return out;
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    point pt(-1.5, 3.75);
+    cout &lt;&lt; pt;
+    std::string answer = '(-1.5, 3.75)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    point pt(10, 3);
+    cout &lt;&lt; pt;
+    std::string answer = '(10, 3)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    point pt(80, -55.2);
+    cout &lt;&lt; pt;
+    std::string answer = '(80, -55.2)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    point pt(-12.8, -18.5);
+    cout &lt;&lt; pt;
+    std::string answer = '(-12.8, -18.5)'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    point pt1(80, -55.2);
+    point pt2(5.3, -5.3);
+    cout &lt;&lt; pt1 &lt;&lt; " and " &lt;&lt; pt2;
+    std::string answer = '(80, -55.2) and (5.3, -5.3)'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

@@ -1,0 +1,748 @@
+<section xml:id="sec-Homework-7-Classes-1">
+  <title>Homework 7 -- Classes</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-MainSavCH1SEC1_multi-oop1-1" label="exe-sec-Homework-7-Classes-1-234242">
+      <statement>
+        <p>The acronym "OOP" refers to...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>object-oriented programming</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>open object paradigm</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>output operator programming</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH1SEC1_short-precondition1-1" label="exe-sec-Homework-7-Classes-1-234245">
+      <statement>
+        <p>A _______________ is a statement giving the condition that is required to be true when a function is called.</p>
+        <fillin answer="precondition" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>precondition</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH1SEC1_short-postcondition1-1" label="exe-sec-Homework-7-Classes-1-234246">
+      <statement>
+        <p>A _______________ is a statement describing what condition(s) will be true when a function call is completed.  If the function is correct and the precondition was true when the function was called, then the (fill in the blank) will be true when the function call completes.</p>
+        <fillin answer="postcondition" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>postcondition</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH1SEC1_multi-standard_library_compliance-copy--1" label="exe-sec-Homework-7-Classes-1-234250">
+      <statement>
+        <p>It's important that other programmers are able to <em>use</em> one of the classes you've created in C++ <alert>without knowing the details</alert> of <em>how</em> you implemented the class.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>True</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>False</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH1SEC1_short-declared_constant-1" label="exe-sec-Homework-7-Classes-1-234247">
+      <statement>
+        <p>The keyword ________, appearing immediately before the declaration of a variable such as</p>
+        <p><c>double TABLE_BEGIN = -50.0;</c></p>
+        <p>makes TABLE_BEGIN a <alert>declared constant</alert>.  Using the name TABLE_BEGIN instead of using the number -50.0 directly in the remainder of the program makes it easy to understand the purpose of the constant.</p>
+        <fillin answer="const" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>const</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC1_multi-scope_resolution_operator-1" label="exe-sec-Homework-7-Classes-1-234252">
+      <statement>
+        <p>The operator `<c>::</c>` (two colons) in C++ is called the...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>scope resolution operator</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>double colon operator</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>four dots operator</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>namespace specifier</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC1_short-const_function-1" label="exe-sec-Homework-7-Classes-1-234251">
+      <statement>
+        <p>Using the _______ keyword at the end of the function prototype in a class definition tells the compiler and other programmers that the function CANNOT change the object that activated the member function.</p>
+        <fillin answer="const" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>const</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC2_multi-constructor-1" label="exe-sec-Homework-7-Classes-1-234255">
+      <statement>
+        <p>A constructor is called automatically whenever a variable of the class is _______________ .</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>declared</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>accessed</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>evaluated</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>destroyed</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC2_multi-constructor2-1" label="exe-sec-Homework-7-Classes-1-234254">
+      <statement>
+        <p>Which of these is a syntactically correct prototype for the <alert>constructor</alert> of a class called `quadratic`?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>quadratic(a, b, c);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>quadratic(double a, double b, double c);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>double quadratic(double a, double b, double c);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>quadratic_constructor(double a, double b, double c);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>void quadratic_constructor(double a, double b, double c);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC2_short-constructor1-1" label="exe-sec-Homework-7-Classes-1-234253">
+      <statement>
+        <p>The name of a class constructor must be the same as the name of the _______</p>
+        <fillin answer="class" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>class</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>class name</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC2_short-constructor_throttle-1" label="exe-sec-Homework-7-Classes-1-234257">
+      <statement>
+        <p>The throttle constructor takes an integer called 'size' and uses it to initialize a new instance of the throttle class.  Give the prototype (including the <alert>final semicolon</alert>) for the throttle constructor.</p>
+        <fillin answer="throttle(int size);" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>throttle(int size);</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>throttle (int size);</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC2_multi-default_constructor-1" label="exe-sec-Homework-7-Classes-1-234258">
+      <statement>
+        <p>A constructor with no formal parameters is called a _________ constructor.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>default</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>deficient</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>simple</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>working</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC2_multi-multiple_constructors-1" label="exe-sec-Homework-7-Classes-1-234259">
+      <statement>
+        <p>True, or false? When defining a new class, <alert>you may declare as many constructors as you like</alert>.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>true</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC3_multi-value_semantics-1" label="exe-sec-Homework-7-Classes-1-234260">
+      <statement>
+        <p>The <em>value semantics</em> of a class determines how values are copied from one object of the class to another.  In C++, the value semantics consists of these two operations:</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>assignment operator</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>copy constructor</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>default constructor</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stream output operator (&lt;&lt;)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC3_multi-copy_constructor-1" label="exe-sec-Homework-7-Classes-1-269891">
+      <statement>
+        <p>Which of the following is a correct prototype for a COPY CONSTRUCTOR belonging to the <alert>throttle</alert> class?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>throttle(const throttle &amp;t);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>throttle(int size);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>void throttle(throttle t);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>void throttle(int size);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC3_multi-header_file-1" label="exe-sec-Homework-7-Classes-1-234262">
+      <statement>
+        <p>Which of the following parts of defining a new class in C++ belong in the HEADER file (e.g., throttle.h)?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>an extended comment which tells folks how to USE the class</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>the class definition, including prototypes for member functions and declarations for member variables</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>a macro guard to prevent duplicate definition</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>complete implementations for all member functions</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH2SEC3_multi-no_using_statement_in_header-1" label="exe-sec-Homework-7-Classes-1-234263">
+      <statement>
+        <p>True, or false? You should <em>always</em> put a 'using' statement in the header file for a new C++ class, to help out other programs that will include that header file in their code.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>true</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-stringstream_short-sstream1-1" label="exe-sec-Homework-7-Classes-1-234266">
+      <statement>
+        <p>What is the exact output from the following lines of code?</p>
+        <pre>#include &lt;sstream&gt;        <iostream>
+#include &lt;string&gt;        <sstream>
+#include &lt;iostream&gt;        <string>
+
+using namespace std;
+
+int main()
+{
+   stringstream ss;
+   string mystring = "take a break";
+   ss &lt;&lt; mystring;
+   cout &lt;&lt; ss.str();
+}        </string>        </sstream>        </iostream>        </pre>
+        <fillin answer="take a break" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>take a break</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-stringstream_code-sstream1-1" label="exe-sec-Homework-7-Classes-1-234264">
+      <statement>
+        <p>The function <c>int_to_string</c> takes an integer 'nums' and returns the equivalent string of digits.  For example, the function call <alert><c>int_to_string(33250</c><c>)</c></alert> returns the equivalent string, "33250".</p>
+        <p>Hint:  Use a <alert>stringstream</alert> to help with this conversion.  Assume that the enclosing program has included the <c>sstream</c> header file.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;cassert&gt;  // provides "assert"
+        
+using namespace std;
+#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
+
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    string val = int_to_string(7785);
+    assert(val.length() == 4);
+    cout &lt;&lt; val;
+    std::string answer = '7785'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    string val = int_to_string(-3);
+    assert(val.length() == 2);
+    cout &lt;&lt; val;
+    std::string answer = '-3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    string val = int_to_string(123454321);
+    assert(val.length() == 9);
+    cout &lt;&lt; val;
+    std::string answer = '123454321\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    string val = int_to_string(-999999);
+    if (val.length() != 7) {
+    cout &lt;&lt; "wrong"; }
+    else {
+    cout &lt;&lt; val; }
+    std::string answer = '-999999'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-review_code-for_loop_string_validation-1" label="exe-sec-Homework-7-Classes-1-234265">
+      <statement>
+        <p>Write a function <c>is_numerical</c> that takes a string called <c>'input_string'</c> and returns true if that string can be interpreted as a number; otherwise, is_numerical returns false.</p>
+        <p><alert>Here is the meaning of the phrase, "string can be interpreted as a number", in the current context:</alert></p>
+        <p>- the string is not empty</p>
+        <p>- the string has no characters other than <c>'-', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'</c></p>
+        <p>- the optional <c>'-'</c> character can ONLY be at index 0 (for indicating a negative number)</p>
+        <p>- the optional <c>'.'</c> character (for making a decimal point) should NOT appear more than once and should NOT appear to the left of <c>'-'</c></p>
+        <p>- the string must contain AT LEAST ONE DIGIT</p>
+        <p><alert>Note</alert>: <alert>This is a review question</alert>.  You might find it helpful to write <alert>helper functions</alert>, call on string class methods, use a <c>for</c> loop, a stringstream,  a switch statement, etc.  Everything we've used so far is fair game. Make a CLEAR PLAN before you start coding.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+        
+using namespace std;
+#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
+
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("3.14159");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("this_is_a_non_numerical_string");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("-5");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("17_is_prime");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("-1&lt;0");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("359-7");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("5.3.0");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("-.");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical(".99999");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test10" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("-.5");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test11" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical(".1-.2");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test12" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("");
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test13" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical(".-");
+    
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test14" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("-123.123123123123123");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test15" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("55.");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test16" ) {
+    std::stringstream cout;
+    cout &lt;&lt; is_numerical("01234567890123456789");
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

@@ -1,0 +1,1065 @@
+<section xml:id="sec-Homework-3-1">
+  <title>Homework 3</title>
+  <introduction>
+    <p>The goal of this assignment is to give you some practice writing simple C++ programs and to check your knowledge of some of the main concepts from:  functions, switch statement, randomness.</p>
+  </introduction>
+  <exercises>
+    <exercise xml:id="exer-JMPCH6_multi-func_declaration-1" label="exe-sec-Homework-3-1-234174">
+      <statement>
+        <p>For a function <alert>declaration</alert> in C++, what are the <alert>required</alert> elements?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>function body (implementation)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>return type</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>function name</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>parameter list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>access modifier</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-func_definition-1" label="exe-sec-Homework-3-1-234175">
+      <statement>
+        <p>For a function definition in C++, what are the <alert>required</alert> elements?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>function body (implementation)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>return type</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>function name</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>parameter list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>access modifier</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-func_definitions-1" label="exe-sec-Homework-3-1-234176">
+      <statement>
+        <p>Which of these are <alert>complete</alert> function definitions with no syntax errors?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int myFun();</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>void mystery() {}</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>int addEmUp(int x, int y) { return x + y; }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int thingy(a, b) { return a; }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>yolo() { return "YOLO"; }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_code-add_doubles-1" label="exe-sec-Homework-3-1-234172">
+      <statement>
+        <p>Write a function <c>add_doubles</c> that takes two parameters of type double and returns the sum.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+double add_doubles(double a, double b)
+{
+    // add needed code here
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_doubles(3.2, 4.6)
+    std::string answer = '7.8'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_doubles(1.1, -3)
+    std::string answer = '-1.9'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_doubles(-10.5, 90.0)
+    std::string answer = '79.5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_doubles(-0.25, -0.025)
+    std::string answer = '-0.275'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_code-add_strings-1" label="exe-sec-Homework-3-1-234173">
+      <statement>
+        <p>Write a function <c>add_strings</c> that takes two parameters of type string and returns the concatenation.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_strings("Happy ", "New Year!")
+    std::string answer = 'Happy New Year!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_strings("Jumping", "")
+    std::string answer = 'Jumping'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_strings("Pota", "to")
+    std::string answer = 'Potato'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; add_strings("975", "579")
+    std::string answer = '975579'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-func_prototype-1" label="exe-sec-Homework-3-1-234177">
+      <statement>
+        <p>Which of these is NOT a proper function prototype?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>char getChar();</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>void minString(string s1, string s2);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>double(int x, int y);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int funfun17(char x);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-overloading-1" label="exe-sec-Homework-3-1-234180">
+      <statement>
+        <p>C++ allows function ___________ : you can use the <alert>same name</alert> for more than one function, as long as the functions all have <alert>different parameter lists</alert>.  (Fill in the blank.)</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>multinaming</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>emulating</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>overloading</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-return_type_void-1" label="exe-sec-Homework-3-1-234181">
+      <statement>
+        <p>In C++, if you want a function that does not return a value -- for example, a function that just prints something to the screen -- you can declare its return type as ...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>void</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>null</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>None</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>nada</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_short-prototype-1" label="exe-sec-Homework-3-1-234184">
+      <statement>
+        <p>What is the prototype for the following function?  (HINT:  It ends with a semicolon.)</p>
+        <pre>int add (int x, int y)
+{
+    return x + y;
+}        </pre>
+        <fillin answer="int add (int x, int y);" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>int add (int x, int y);</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>int add(int x, int y);</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>int add(int x,int y);</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-global_var-1" label="exe-sec-Homework-3-1-234178">
+      <statement>
+        <p>A ___________ variable is a variable that is declared outside of any function.  These variables are available everywhere in the program past the point of the variable's declaration.  (Fill in the blank.)</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>local</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>automatic</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>global</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>temporary</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_multi-local_var-1" label="exe-sec-Homework-3-1-234179">
+      <statement>
+        <p>Any variable declared in the scope of a function, or inside of a block, is called a ___________ variable.  (Fill in the blank.)</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>local</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>regular</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>global</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>normal</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_short-variable_scope-1" label="exe-sec-Homework-3-1-234182">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>void myfun(int x)
+{     
+    x = x + 5;
+}
+
+int main()
+{
+    int x = 4;
+    myfun(x);
+    cout &lt;&lt; x;
+}        </pre>
+        <fillin answer="4" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>4</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_short-variable_scope2-1" label="exe-sec-Homework-3-1-234183">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>int divide(int num, int denom)
+{
+    if (denom == 0)
+    {
+        int result = -99;
+        return result;
+    }
+    int result = num / denom;
+    return result;
+}
+
+int main()
+{
+    cout &lt;&lt; divide(3, 0);
+}        </pre>
+        <fillin answer="-99" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>-99</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_code-factorial-1" label="exe-sec-Homework-3-1-234190">
+      <statement>
+        <p>
+          Write a C++ function <alert>factorial</alert> that takes an integer, 'n', and returns the value of n factorial (a.k.a., n!):
+          <ul>
+            <li>When n is positive, n! = 1 * 2 * 3 * ... * n.  For example, 5! = 1 * 2 * 3 * 4 * 5 = 120.</li>
+            <li>When n is zero, n! is defined to be 1.</li>
+            <li>When n is negative, n! is undefined.</li>
+          </ul>
+        </p>
+        <p>You may assume that the parameter 'n' will not be negative in this problem.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; factorial(5);
+    std::string answer = '120'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; factorial(10);
+    std::string answer = '3628800'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; factorial(0);
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; factorial(1);
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; factorial(3);
+    std::string answer = '6'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_code-func_accumulate_acronym-1" label="exe-sec-Homework-3-1-234171">
+      <statement>
+        <p>The function <c>accumulate_acronym</c> has no arguments; it reads strings from standard input and accumulates the corresponding acronym.</p>
+        <p>The end of the input is signaled when the user enters the string "STOP".  For example, if the user enters "United Guinea Pig Supporters of America STOP", then the function <alert>returns</alert> the acronym string, "UGPSoA".  (The function does not print anything to standard output.)</p>
+        <p></p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; accumulate_acronym()
+    std::string answer = 'CR'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; accumulate_acronym()
+    std::string answer = 'ACM'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; accumulate_acronym()
+    std::string answer = 'FTL'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; accumulate_acronym()
+    std::string answer = 'yolo'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH7_multi-switch1-1" label="exe-sec-Homework-3-1-234185">
+      <statement>
+        <p>In a C++ switch statement, what is required to avoid falling through from one case to the next?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>break;</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>end;</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stop;</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>a semicolon</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH7_short-switch1-1" label="exe-sec-Homework-3-1-234186">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>int n = 1;
+switch(n)
+{
+    case 0: cout &lt;&lt; "Zero";
+    case 1: cout &lt;&lt; "One";
+    case 2: cout &lt;&lt; "Hola!";
+}        </pre>
+        <fillin answer="OneHola!" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>OneHola!</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH8_multi-rand-1" label="exe-sec-Homework-3-1-234187">
+      <statement>
+        <p>When writing a C++ program where you need to generate (pseudo) random numbers, when in your program should you use srand?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Every time you need a random number</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Never, it's just window dressing</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Once, at the start of your program</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Occasionally, after you've used rand for a while</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH8_short-mod--1" label="exe-sec-Homework-3-1-234188">
+      <statement>
+        <p>In C++, as in Python, % is the modulo operator. What is the result of the expression <c>123 % 10</c>?</p>
+        <fillin answer="3" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>3</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH8_short-integer_division-1" label="exe-sec-Homework-3-1-234189">
+      <statement>
+        <p>In C++, the behavior of the / operator (division) depends on the type of the operands. If both operands are integers, C++ performs integer division.</p>
+        <p>What is the result of the expression <c>15 / 4</c>?</p>
+        <fillin answer="3" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>3</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6_code-weird_sum-1" label="exe-sec-Homework-3-1-234191">
+      <statement>
+        <p>Write a C++ function <alert>weird_sum</alert> that takes two integers, 'n1' and 'n2'. The function returns the sum of 'n1' and 'n2', unless their sum is a multiple of 13, in which case the function returns 3 less than their actual sum.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(13, 1);
+    std::string answer = '14'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(10, 16);
+    std::string answer = '23'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(-4, 42);
+    std::string answer = '38'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(-1, -12);
+    std::string answer = '-16'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(14, -15);
+    std::string answer = '-1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(13, 0);
+    std::string answer = '10'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(100, -35);
+    std::string answer = '62'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(-5, 5);
+    std::string answer = '-3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(5, 7);
+    std::string answer = '12'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test10" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(7, 7);
+    std::string answer = '14'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test11" ) {
+    std::stringstream cout;
+    cout &lt;&lt; weird_sum(-13, -12);
+    std::string answer = '-25'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH6-first_alpha-1" label="exe-sec-Homework-3-1-234192">
+      <statement>
+        <p>Write a C++ function called <alert>first_alpha</alert> that takes three string arguments and returns the string that comes first alphabetically from among those three. You may assume that the strings are in all lowercase.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; first_alpha("uno", "dos", "tres")
+    std::string answer = 'dos'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; first_alpha("mouse", "dog", "cat")
+    std::string answer = 'cat'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; first_alpha("eraser", "pen", "pencil")
+    std::string answer = 'eraser'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; first_alpha("three", "random", "words")
+    std::string answer = 'random'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; first_alpha("baseball", "basketball", "bocceball")
+    std::string answer = 'baseball'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    cout &lt;&lt; first_alpha("pickle", "marshmallow", "artichoke")
+    std::string answer = 'artichoke'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-LINUX_naming_a_file-1" label="exe-sec-Homework-3-1-234193">
+      <statement>
+        <p>In Linux, when naming a file, is it better to use embedded spaces ("this is my file"), or underscores ("this_is_my_file")?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>underscores</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>embedded spaces</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-LINUX_short_list_all_cpp_files-1" label="exe-sec-Homework-3-1-234195">
+      <statement>
+        <p>In Linux, what is the <alert>exact</alert>command you would enter to list all of the .cpp files in your current directory?</p>
+        <fillin answer="ls \*.cpp" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>ls \*.cpp</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-LINUX_less-1" label="exe-sec-Homework-3-1-234194">
+      <statement>
+        <p>The ________ command is a Linux utility which can be used to read the contents of a text file one screen-full at a time, in the console.</p>
+        <p>It allows faster access to the initial contents of a large text file because it doesn't load the entire file at once.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>less</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>quick_read</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>skim</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>browse</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-LINUX_rm-1" label="exe-sec-Homework-3-1-234196">
+      <statement>
+        <p>In Linux, the <c>rm</c> command is used to remove (delete) files and directories. <c>rm</c> can be dangerous, especially for new Linux users, because...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>by default, it does not ask for *confirmation*, it just goes ahead and deletes</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>it can be combined with flags, like -r and -f, to delete the entire contents of the file system</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>it can be used with patterns, like *.*, to delete many many files at once</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>all of the above</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+</section>

@@ -1,0 +1,1262 @@
+<section xml:id="sec-Homework-4-Arrays-Strings-1">
+  <title>Homework 4 -- Arrays &amp; Strings</title>
+  <introduction>
+    <p>The goal of this assignment is to give you some practice writing simple C++ programs and to check your knowledge of some of the main concepts from:  arrays and strings.</p>
+  </introduction>
+  <exercises>
+    <exercise xml:id="exer-JMPCH10_multi-array_decl_1-1" label="exe-sec-Homework-4-Arrays-Strings-1-234198">
+      <statement>
+        <p>Which of the following is the correct way to declare an array called 'my_bools' with the capacity to store 20 values of type bool?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>bool my_bools[20];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>bool[20] my_bools;</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>bool[] my_bools = new bool[20];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>bool[] = my_bools[20]</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_multi-array_index_1-1" label="exe-sec-Homework-4-Arrays-Strings-1-234200">
+      <statement>
+        <p>What is the INDEX of the FIRST element of an array of length 5 in C++?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>0</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>1</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>-1</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>5</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_multi-array_index_2-1" label="exe-sec-Homework-4-Arrays-Strings-1-234201">
+      <statement>
+        <p>What is the INDEX of the LAST element of an array of length 5 in C++?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>4</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>5</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>-1</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>6</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_multi-array_access-1" label="exe-sec-Homework-4-Arrays-Strings-1-234205">
+      <statement>
+        <p>Which of the following correctly accesses the fourth element stored in 'arr', an array with ten elements?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>arr[3];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>arr[4];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>arr(3);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>arr(4);</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_short-array_decl_2-1" label="exe-sec-Homework-4-Arrays-Strings-1-234199">
+      <statement>
+        <p>What is the exact output from the following snippet of C++ code?</p>
+        <pre>int my_array[10];
+for (int i = 0; i &lt; 10; i++)
+    my_array[i] = i * i;
+cout &lt;&lt; my_array[1 + 2];        </pre>
+        <fillin answer="9" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>9</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_multi-array_writing-_past_end_of_array-1" label="exe-sec-Homework-4-Arrays-Strings-1-234210">
+      <statement>
+        <p>The following code has an error -- it declares an array to store 10 integers and attempts to write to offset 10:</p>
+        <p>BAD CODE</p>
+        <pre>int arr[10];
+for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
+        <p>When the program which includes this code is built, at what stage of the build process will an error message be generated?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>during preprocessing</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>during compilation</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>during linking</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>none of the above</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_multi-array_decl_2-1" label="exe-sec-Homework-4-Arrays-Strings-1-234202">
+      <statement>
+        <p>Which of the following is the correct way to declare a two-dimensional array called "my_grid" with the capacity to store a 3 by 5 table of integer values?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>int my_grid[3][5];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int[3][5] my_grid;</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int[][] my_grid = new int[3][5];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int[][] = my_grid[3][5];</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_multi-array_argument-1" label="exe-sec-Homework-4-Arrays-Strings-1-234206">
+      <statement>
+        <p>Which of the following correctly declares a function 'my_fun' which takes a 2-dimensional array of bool values and returns an integer?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>int my_fun( bool x[ ][ 20 ] );</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>int my_fun( bool x[ 10 ][ 20 ] );</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int my_fun( bool x[ ][ ] );</p>
+            </p>
+          </statement>
+          <feedback>
+            <p>int my_fun( bool x[ ] );</p>
+          </feedback>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int my_fun( bool array x );</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_code-array1-1" label="exe-sec-Homework-4-Arrays-Strings-1-234197">
+      <statement>
+        <p>Write a function <alert>array_sum</alert> that takes two arguments: an integer array called 'nums' and an integer called 'size' representing the number of values stored in the array. The function accumulates the sum of the values in the 'nums' array and returns that sum. If size &lt; 1, the function returns 0.</p>
+        <p>An outline of the function definition is provided to help you get started.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+int array_sum(int nums[], int size)
+{
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[1] = {3};
+    // call the function with arr = [3], size = 1
+    cout &lt;&lt; array_sum(arr, 1)
+    std::string answer = '3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[5] = {1, 2, 3, 4, 5};
+    // call the function with size = 4
+    cout &lt;&lt; array_sum(arr, 4)
+    std::string answer = '10'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[5]; // values are random garbage
+    // call the function with size = 0
+    cout &lt;&lt; array_sum(arr, 0)
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[5]; // values are random garbage
+    // call the function with size = -43
+    cout &lt;&lt; array_sum(arr, -43)
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[6] = {1, 2, 3, 4, 5, 6};
+    // call the function with size = 6
+    cout &lt;&lt; array_sum(arr, 6)
+    std::string answer = '21'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[11];
+    for(int i=0; i&lt;=10; i++) {arr[i] = 2*i - 1;}
+    // call the function with arr = [-1, 1, 3, 5, ..., 19] and size = 11
+    cout &lt;&lt; array_sum(arr, 11);
+    std::string answer = '99'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_code-array2-1" label="exe-sec-Homework-4-Arrays-Strings-1-234203">
+      <statement>
+        <p>Write a function <alert>array_max</alert> that takes one argument: a two-dimensional array of integers 'arr' which will always have 3 rows and 5 columns. The function returns the <alert>largest element in the array</alert>.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+int array_max(int nums[3][5])
+{
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = i*i - j*j;
+       }
+    }
+    cout &lt;&lt; array_max(arr)
+    std::string answer = '4'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = i*i - j*j;
+       }
+    }
+    arr[0][0] = 100;
+    cout &lt;&lt; array_max(arr)
+    std::string answer = '100'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = i*i - j*j;
+       }
+    }
+    arr[0][4] = 1000;
+    cout &lt;&lt; array_max(arr)
+    std::string answer = '1000'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = i*i - j*j;
+       }
+    }
+    arr[2][0] = 99;
+    cout &lt;&lt; array_max(arr)
+    std::string answer = '99'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = i*i - j*j;
+       }
+    }
+    arr[2][4] = 15;
+    cout &lt;&lt; array_max(arr)
+    std::string answer = '15'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = i*i - j*j;
+       }
+    }
+    arr[1][2] = 876;
+    cout &lt;&lt; array_max(arr)
+    std::string answer = '876'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_code-array3-1" label="exe-sec-Homework-4-Arrays-Strings-1-234204">
+      <statement>
+        <p>Write a function <c>unique_elements</c> that takes an array of integers 'arr' and an integer 'size' (the size of 'arr'). The function returns true if there are no repeated elements in arr, otherwise it returns false.</p>
+        <p>Note: If size &lt; 2, the function returns true since you need at least 2 elements to have a repeated element.</p>
+        <p></p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};
+    // no repeats
+    cout &lt;&lt; unique_elements(arr, 10);
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[5] = {0, 1, 2, 3, 1};
+    // has repeat
+    cout &lt;&lt; unique_elements(arr, 5);
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[1] = {999};
+    // no repeats, size is 1
+    cout &lt;&lt; unique_elements(arr, 1);
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[8] = {100, 1, 2, 3, 5, 100, 7};
+    // has repeat
+    cout &lt;&lt; unique_elements(arr, 8);
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[2] = {100, 99};
+    // no repeat
+    cout &lt;&lt; unique_elements(arr, 2);
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[2] = {53, 53};
+    // has repeat
+    cout &lt;&lt; unique_elements(arr, 2);
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    int arr[20];
+    for(int i=0; i&lt;20; i++){arr[i] = i;}
+    arr[3] = arr[17];
+    // arr = [0, 1, 2, 17, 4, 5, ...., 16, 17, 18, 19], has repeat
+    cout &lt;&lt; unique_elements(arr, 20);
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_code-array4-1" label="exe-sec-Homework-4-Arrays-Strings-1-234207">
+      <statement>
+        <p>Write a function <c>count_evens</c> that takes an array of integers 'arr' and an integer 'n'. The function returns an integer indicating the number of even elements among the first n elements of 'arr'.</p>
+        <p></p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 1, 3, 4, 6, 7, 9, 10, 12, 13};
+    // n = 3, answer is 1
+    cout &lt;&lt; count_evens(arr, 3); 
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 1, 3, 4, 6, 7, 9, 10, 12, 13};
+    // n = 10, answer is 5
+    cout &lt;&lt; count_evens(arr, 10); 
+    std::string answer = '5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[10] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+    // n = 1, answer is 0
+    cout &lt;&lt; count_evens(arr, 1); 
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[10] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+    // n = 10, answer is 0
+    cout &lt;&lt; count_evens(arr, 10); 
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[50];
+    for(int i=0; i&lt;50; i++){
+       arr[i] = 2*i + 2;
+    }
+    // arr = [2, 4, 6, ..., 100]
+    // n = 1, answer is 1
+    cout &lt;&lt; count_evens(arr, 1); 
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[50];
+    for(int i=0; i&lt;50; i++){
+       arr[i] = 2*i + 2;
+    }
+    // arr = [2, 4, 6, ..., 100]
+    // n = 49, answer is 49
+    cout &lt;&lt; count_evens(arr, 49); 
+    std::string answer = '49'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_code-array5-1" label="exe-sec-Homework-4-Arrays-Strings-1-234208">
+      <statement>
+        <p>Write a function <c>count_occurrences</c> that takes an array of integers 'arr', an integer 'size', and an integer 'n'. The function returns an integer indicating the number of occurrences of the value 'n' among the first size-many elements in 'arr'.</p>
+        <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>count_occurrences(arr, 3, 5)</c> returns 1 since there is one '5' in [3, 3, 5], and count_occurrences(arr, 6, 3) returns 4 since there are four 3's in [3, 3, 5, 3, 3, 2].</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
+    // size = 4, n = 1, should return 2
+    cout &lt;&lt; count_occurrences(arr, 4, 1); 
+    std::string answer = '2'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
+    // size = 4, n = -1, should return 0
+    cout &lt;&lt; count_occurrences(arr, 4, -1); 
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[10];
+    for(int i=0; i&lt;10; i++){arr[i] = 7;}
+    // arr = [7, 7, ..., 7]
+    // size = 4, n = 7, should return 4
+    cout &lt;&lt; count_occurrences(arr, 4, 7); 
+    std::string answer = '4'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[10];
+    for(int i=0; i&lt;10; i++){arr[i] = 7;}
+    // arr = [7, 7, ..., 7]
+    // size = 10, n = 7, should return 10
+    cout &lt;&lt; count_occurrences(arr, 10, 7); 
+    std::string answer = '10'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[100];
+    for(int i=0; i&lt;100; i++){arr[i] = 7*(i%2);}
+    // arr = [0, 7, 0, 7, ..., 0, 7]
+    // size = 3, n = 7, should return 1
+    cout &lt;&lt; count_occurrences(arr, 3, 7); 
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[100];
+    for(int i=0; i&lt;100; i++){arr[i] = 7*(i%2);}
+    // arr = [0, 7, 0, 7, ..., 0, 7]
+    // size = 100, n = 7, should return 50
+    cout &lt;&lt; count_occurrences(arr, 100, 7); 
+    std::string answer = '50'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH10_code-array6-1" label="exe-sec-Homework-4-Arrays-Strings-1-234209">
+      <statement>
+        <p>Write a function <c>last_index</c> that takes an array of integers 'arr', an integer 'size', and an integer 'n'. The function returns an integer indicating the LARGEST index i such that i &lt; size and arr[i] equals n.  If there are no occurrences of 'n' among the first size-many elements of 'arr', the function returns -1 to indicate "n not found".</p>
+        <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>last_index(arr, 7, 3)</c> returns 4 since 4 is the largest index i (i &lt; 7) such that arr[i] equals 3.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
+    // with size = 6 and n = 1, should return 3
+    cout &lt;&lt; last_index(arr, 6, 1); 
+    std::string answer = '3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 4, 8, 0, 4, 8, 0, 4, 8, 0};
+    // with size = 1 and n = 4, should return -1
+    cout &lt;&lt; last_index(arr, 1, 4); 
+    std::string answer = '-1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
+    // with size = 10 and n = 4, should return 9
+    cout &lt;&lt; last_index(arr, 10, 4); 
+    std::string answer = '9'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
+    // with size = 6 and n = 2, should return 5
+    cout &lt;&lt; last_index(arr, 6, 2); 
+    std::string answer = '5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[10] = {0, 0, 1, 1, 0, 0, 1, 1, 0, 0};
+    // with size = 10 and n = 1, should return 7
+    cout &lt;&lt; last_index(arr, 10, 1); 
+    std::string answer = '7'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[10] = {50, 0, 1, 1, 2, 2, 3, 3, 4, 4};
+    // with size = 6 and n = 50, should return 0
+    cout &lt;&lt; last_index(arr, 6, 50); 
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_multi-cin_data_type-1" label="exe-sec-Homework-4-Arrays-Strings-1-234211">
+      <statement>
+        <p>The 'cin' method is really an OBJECT.  What is the data type of 'cin'?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>output writer</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>input reader</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>output stream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>input stream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_short-getline_with_-_delimiter-1" label="exe-sec-Homework-4-Arrays-Strings-1-234212">
+      <statement>
+        <p>Suppose the user enters the string, "To be, or not to be? That is the question.", when prompted by the program.</p>
+        <p>What is the exact output from the following snippet of C++ code?</p>
+        <pre>string input;
+cout &lt;&lt; "Please enter your input: ";
+getline(cin, input, '?');
+cout &lt;&lt; input;        </pre>
+        <fillin answer="To be, or not to be" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>To be, or not to be</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_multi-string_length-1" label="exe-sec-Homework-4-Arrays-Strings-1-234215">
+      <statement>
+        <p>Suppose we have included the string class header file (<c>#include &lt;string&gt;</c>), declared a variable 's' of type string, and assigned a value to s. For example:</p>
+        <p><c>string s = "Marie Curie's century-old notebooks are still radioactive.";</c></p>
+        <p>Which of the following function calls will correctly <alert>return the number of characters</alert> in 's'?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>s.length();</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>s.size();</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>s.num_chars();</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>s.len();</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_multi-string_indexing-1" label="exe-sec-Homework-4-Arrays-Strings-1-234216">
+      <statement>
+        <p>Suppose 'mystring' is been declared to have type 'string' and has been initialized.</p>
+        <p>Suppose 'i' is an integer, where i &gt;= 0 and i is less than the length of mystring.</p>
+        <p>True, or false?</p>
+        <p><c>mystring[i]</c> returns the char in 'mystring' at index 'i'.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>true</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_short-string_indexing_2-1" label="exe-sec-Homework-4-Arrays-Strings-1-234217">
+      <statement>
+        <p>What is the exact output from the following snippet of C++ code?</p>
+        <pre>string input = "METHODS";
+cout &lt;&lt; input[1];        </pre>
+        <fillin answer="E" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>E</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_code-sample_code_41-1" label="exe-sec-Homework-4-Arrays-Strings-1-234214">
+      <statement>
+        <p>Write a complete C++ program that reads a line of input and prints it out; however, if the string that was read is more than 20 characters long (including whitespace characters), the message "too long" is printed instead.</p>
+        <p>The end of the input is signaled by the user hitting the "enter" key, which creates a '\n' character at the end of the input. Note that the newline character '\n' is discarded, it does not become part of the string which is read.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Mr. Grey is fluffy'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'too long'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Ruthie wants to play'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'too long'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_multi-string_npos-1" label="exe-sec-Homework-4-Arrays-Strings-1-234218">
+      <statement>
+        <p>The 'find' method in the string class takes a substring and a position in the original string and finds the first occurrence of the substring, starting from the given index.  If the substring is not found, what is returned by the 'find' method?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>string::npos</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>-1</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>nothing is returned, it creates an error message</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>None</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_short-string_find-1" label="exe-sec-Homework-4-Arrays-Strings-1-234219">
+      <statement>
+        <p>What is the exact output from the following snippet of C++ code?</p>
+        <pre>string input = "she sells sea shells by the sea shore";
+cout &lt;&lt; input.find("se", 0);        </pre>
+        <fillin answer="4" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>4</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_short-string_rfind-1" label="exe-sec-Homework-4-Arrays-Strings-1-234220">
+      <statement>
+        <p>What is the exact output from the following snippet of C++ code? Notice we're calling '<c>rfind</c>' now instead of '<c>find</c>'.</p>
+        <pre>string input = "she sells sea shells";
+cout &lt;&lt; input.rfind("se");        </pre>
+        <fillin answer="10" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>10</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_code-sample_code_42-1" label="exe-sec-Homework-4-Arrays-Strings-1-234213">
+      <statement>
+        <p>Write a complete C++ program that reads from a comma-separated string of name values (entered by standard input) and prints each name on its own line. The end of the CSV input will be signaled by two commas in a row.</p>
+        <p>For example, if the CSV-formatted input string is "Aaron Rodgers,J. J. Watt,Luke Kuechly,," then the output should be:</p>
+        <pre>Aaron Rodgers
+J. J. Watt
+Luke Kuechly        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Skye\nSpike\nCleo\nZiggy'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Bulldog\nBeagle\nPlott Hound\nBoxer\nPoodle'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'SQL\nJava\nPython\nC#\nR\nJavascript\nCobol'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Luke Skywalker\nKylo Ren\nSupreme Leader Snoke\nRey\nLeia Organa\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Winnie the Pooh\nTigger\nPiglet\nEeyore\nRoo\nChristopher Robin\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH19_code-second_half_of_string-1" label="exe-sec-Homework-4-Arrays-Strings-1-234221">
+      <statement>
+        <p>
+          Write a function <c>second_half</c> that has one argument, 'input_string', of type string and returns a string that is the second half of 'input_string'. Whether 'input_string' has an even length, 2n, or an odd length, 2n+1, the return string will always have length n. (The center character is not included in the second half for odd-length strings.)
+          <ul>
+            <li><c>second_half("Piggy")</c> returns "gy" (input length is 2*2 + 1, output length is 2).</li>
+            <li><c>second_half("COFFEE MUG")</c> returns "E MUG" (input length is 2 * 5, output length is 5).</li>
+          </ul>
+        </p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("Freddie Mercury")
+    std::string answer = 'Mercury'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("David Bowie")
+    std::string answer = 'Bowie'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("Pink Floyd")
+    std::string answer = 'Floyd'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("AC/DC")
+    std::string answer = 'DC'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("Ramones")
+    std::string answer = 'nes'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("Who")
+    std::string answer = 'o'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    cout &lt;&lt; second_half("The Rolling Stones")
+    std::string answer = 'ng Stones'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

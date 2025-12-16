@@ -1,0 +1,932 @@
+<section xml:id="sec-Homework-1-1">
+  <title>Homework 1</title>
+  <introduction>
+    <p>The goal of this assignment is to give you some practice writing simple C++ programs and to check your knowledge of some of the main concepts of basic C++.</p>
+  </introduction>
+  <exercises>
+    <exercise xml:id="exer-JMPCH2_code-howdy-cpp-1" label="exe-sec-Homework-1-1-234116">
+      <statement>
+        <p>Write a C++ program that will use 'cout' and the output stream operator '&lt;&lt;' to produce the following output:</p>
+        <pre>Howdy, partner!
+What's new in town?        </pre>
+        <p>Note: You have been given the first two lines of the program (the #include and using namespace).</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+#include &lt;iostream&gt;
+using namespace std;
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = "Howdy, partner!\nWhat's new in town?"
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_code-names-cpp-1" label="exe-sec-Homework-1-1-234118">
+      <statement>
+        <p>Write a C++ program that will output the names of Dr. Wilson's and Dr. Wahl's cats, one name per line. Output the names in alphabetical order.</p>
+        <p>Dr. Wilson's cats: Ziggy, Cleo, Spike, Skye</p>
+        <p>Dr. Wahl's cats: Mr. Grey, Xerea</p>
+        <p><alert>Note: For this problem you will need to type in the 'include' and 'namespace' lines at the top of your program.</alert></p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Cleo\nMr. Grey\nSkye\nSpike\nXerea\nZiggy'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-program-basics-1" label="exe-sec-Homework-1-1-234135">
+      <statement>
+        <p>The following line of C++ code tells the compiler what?</p>
+        <pre>    #include &lt;iostream&gt;
+        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Take the code from the file called <alert>iostream</alert> and paste it into the program before creating the executable.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Execute the code in the file called <alert>iostream</alert> before creating the executable for the current program.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-basic-syntax-1" label="exe-sec-Homework-1-1-234121">
+      <statement>
+        <p>What punctuation ends most lines of C++ code?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p><c>//</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><c>;</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>:</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>&lt;&lt;</c></p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-program-basics-2" label="exe-sec-Homework-1-1-234133">
+      <statement>
+        <p>The following line of C++ code tells the compiler what?</p>
+        <pre>    int main()
+        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>There is a function named <alert><c>main</c></alert> that returns an integer.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>There is a variable named <alert><c>main</c></alert> that is of type integer.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_short-comments-1" label="exe-sec-Homework-1-1-234117">
+      <statement>
+        <p>What character(s) do you need to type to indicate that everything that follows on that line is a comment?</p>
+        <fillin answer="//" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>//</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-program-basics-3" label="exe-sec-Homework-1-1-234119">
+      <statement>
+        <p>What is the one function that all C++ programs must contain?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p><c>start()</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>system()</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><c>main()</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>include()</c></p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-program-basics-4" label="exe-sec-Homework-1-1-234122">
+      <statement>
+        <p>What header file do you need to use to get access to 'cout'?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p><c>stream</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>nothing, because <c>cout</c> is available by default</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><c>iostream</c></p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p><c>namespace</c></p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-variables-1" label="exe-sec-Homework-1-1-234137">
+      <statement>
+        <p>The following line of C++ code tells the compiler what?</p>
+        <pre>    int myvar;
+        </pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>There is a function named <alert><c>myvar</c></alert> that returns an integer.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>There is a variable named <alert><c>myvar</c></alert> that is of type integer.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-program-basics-5" label="exe-sec-Homework-1-1-234123">
+      <statement>
+        <p>Which of the following is a complete C++ program that will compile and run without error?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <pre>    int main()
+    {
+        return 0;
+    }              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    def main():
+       return
+              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    main()
+    {
+       # your code here
+    }              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    def main()
+    {
+       return;
+    }              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_multi-variables-2" label="exe-sec-Homework-1-1-234124">
+      <statement>
+        <p>Which of the following is NOT a valid variable declaration?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>int a, b, c, d;</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>double pi = 3.14159;</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p><c>cin &gt;&gt; thisisanumber;</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>char letter;</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH2_short-data-types-1" label="exe-sec-Homework-1-1-234125">
+      <statement>
+        <p>What variable type should you use if you want to store a number like -99.123?</p>
+        <fillin answer="double" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>double</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>float</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_code-addition-cpp-1" label="exe-sec-Homework-1-1-234128">
+      <statement>
+        <p>Write a C++ program that reads in two integers entered by the user, adds them together, and outputs the sum.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '11'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '1000'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = '2'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-84'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_code-subtraction-cpp-1" label="exe-sec-Homework-1-1-234129">
+      <statement>
+        <p>Write a C++ program that reads in two numbers with a decimal point entered by the user, subtracts the second number from the first, and outputs the difference.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '6.25'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-17.0707'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = '3.2'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = '10.8'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_code-calc1-cpp-1" label="exe-sec-Homework-1-1-234130">
+      <statement>
+        <p>
+          Write a simple calculator program in C++. Your program should:
+          <ul>
+            <li>read in two decimal numbers (i.e., numbers may not be integers)</li>
+            <li>
+              <p>
+                give the results for the following calculations
+                <ul>
+                  <li>adding the two numbers together</li>
+                  <li>subtracting the second number from the first</li>
+                  <li>multiplying the two numbers together</li>
+                  <li>dividing the first number by the second</li>
+                </ul>
+              </p>
+            </li>
+            <li>produce output formatted like the given example</li>
+          </ul>
+        </p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '5.5 + 2.5 = 8\n5.5 - 2.5 = 3\n5.5 * 2.5 = 13.75\n5.5 / 2.5 = 2.2'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-6.65 + 0.1 = -6.55\n-6.65 - 0.1 = -6.75\n-6.65 * 0.1 = -0.665\n-6.65 / 0.1 = -66.5'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_multi-data-types-1" label="exe-sec-Homework-1-1-234136">
+      <statement>
+        <p>Which of the following is NOT one of the basic (i.e., "primitive") data types available to you in C++?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>string</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>int</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>char</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>double</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_multi-operators-1" label="exe-sec-Homework-1-1-234127">
+      <statement>
+        <p>Given that variable 'num' currently has the value 0, which of the following segments of code, when executed, will NOT result in 'num' having the value 3?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <pre>    num == 3;</pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    num++;
+    num++;
+    num++;              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <pre>    num += 3</pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    num = num + 3;</pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_short-operators-1" label="exe-sec-Homework-1-1-234140">
+      <statement>
+        <p>Give the expression that will use the autoincrement operator to add one to a variable named 'count'.</p>
+        <fillin answer="count++;" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>count++;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>++count;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>++count</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>count++</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_short-operators-2" label="exe-sec-Homework-1-1-234141">
+      <statement>
+        <p>Give the expression that will use the autodecrement operator to subtract one from a variable named 'guesses'.</p>
+        <fillin answer="--guesses;" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>--guesses;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>guesses--;</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>--guesses</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>guesses--</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_code-person_name-cpp-1" label="exe-sec-Homework-1-1-234132">
+      <statement>
+        <p>Write a simple C++ program that will read in from standard input three strings representing a person's last name, first name, and middle initial, and then output the person's full name formatted like the given example.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Person: Charles S. Chaplin'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Person: Alan M. Turing'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Person: Xerea L. Davis'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'Person: Steven P. Jobs'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_multi-user-input-1" label="exe-sec-Homework-1-1-234126">
+      <statement>
+        <p>Which of the following snippets of C++ code will read a single integer from standard input?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <pre>    int myint;
+    cin &gt;&gt; myint;              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    double a;
+    cin &gt;&gt; a;              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <pre>    int thisisanumber;
+    cout &lt;&lt; thisisanumber;              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <pre>    int myint;
+    cin &lt;&lt; myint;              </pre>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_multi-variables-1" label="exe-sec-Homework-1-1-234138">
+      <statement>
+        <p>Which of the following will NOT cause a compiler error (though it *might* cause a compiler warning)?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Using a variable without first initializing it.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Using a variable without first declaring it.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Declaring a variable more than once in the same block of code.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_multi-operators-2" label="exe-sec-Homework-1-1-234131">
+      <statement>
+        <p>The following line of code will do what?</p>
+        <pre>  x -= 5;</pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>subtract 5 from the current value of 'x'</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>assign the value 5 to 'x'</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>add 5 to the current value of 'x'</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>compare the value of `x` to 5</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH3_short-strings-1" label="exe-sec-Homework-1-1-234139">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>    string animal = "mice";
+    string adj = "blind";
+    int val = 3;
+    cout &lt;&lt; val &lt;&lt; " " + adj + " " + animal;        </pre>
+        <fillin answer="3 blind mice" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>3 blind mice</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH21_multi-build1-1" label="exe-sec-Homework-1-1-234142">
+      <statement>
+        <p>Which of the following is NOT a part of the C++ build process?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Postprocessing</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Preprocessing</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Compiling</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Linking</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH21_multi-build2-1" label="exe-sec-Homework-1-1-234143">
+      <statement>
+        <p>When would you get an error related to an undefined function?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>During the link phase</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>During the compilation phase</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>At program startup</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>When your executable calls the function for the first time</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH21_multi-build3-1" label="exe-sec-Homework-1-1-234144">
+      <statement>
+        <p>What advantage is there to having separate compile and link steps in the build process?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>It allows only changed files to be recompiled, saving compilation time.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>None, it's confusing and it probably makes things slower since you have multiple programs running together.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>It makes it easier to diagnose errors because you know whether the problem is from the linker or the compiler.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+</section>

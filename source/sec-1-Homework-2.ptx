@@ -1,0 +1,1140 @@
+<section xml:id="sec-Homework-2-1">
+  <title>Homework 2</title>
+  <introduction>
+    <p>The goal of this assignment is to give you some practice writing simple C++ programs and to check your knowledge of some of the main concepts from chapters 4 &amp; 5:  if statements and loops.</p>
+    <p>Don't forget to only submit once you have all questions right.</p>
+    <p />
+  </introduction>
+  <exercises>
+    <exercise xml:id="exer-JMPCH4_short-conditionals-1" label="exe-sec-Homework-2-1-234147">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>    int a = 5;
+    int b = 10;
+    
+    if (a &lt; b)
+        cout &lt;&lt; a &lt;&lt; " is less than " &lt;&lt; b &lt;&lt; endl;        </pre>
+        <fillin answer="5 is less than 10" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>5 is less than 10</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_short-conditionals-2" label="exe-sec-Homework-2-1-234148">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?  Note: study the code carefully and remember that indentation is ignored by the C++ compiler.</p>
+        <pre>    int a = 3;
+    int b = 7;
+    
+    if (a &gt; b)
+        cout &lt;&lt; "SUPER ";
+        cout &lt;&lt; "DUPER ";    if (a &lt;= b)        cout &lt;&lt; "SNOOPER ";        </pre>
+        <fillin answer="DUPER SNOOPER" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>DUPER SNOOPER</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_short-conditionals-3" label="exe-sec-Homework-2-1-234149">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>    int a = 3;
+    int b = 7;
+    
+    if (a &gt; b)
+    {
+        cout &lt;&lt; "SUPER" &lt;&lt; b;
+    }
+    cout &lt;&lt; "DUPER" &lt;&lt; endl;        </pre>
+        <fillin answer="DUPER" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>DUPER</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_code-calculator2-cpp-1" label="exe-sec-Homework-2-1-234146">
+      <statement>
+        <p>
+          Write a simple calculator program in C++. Your program should:
+          <ul>
+            <li>read in the operator symbol (+, -, *, /) as a char</li>
+            <li>read in two decimal numbers (type double)</li>
+            <li>output the result of performing the requested operation on the given numbers</li>
+            <li>format the output as in the given example</li>
+          </ul>
+        </p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '5.5 + 2.01 = 7.51'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-75.75 - 4.11 = -79.86'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = '1.5 * -2.1 = -3.15'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = '111.111 / 10 = 11.1111'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_code-numcomp-cpp-1" label="exe-sec-Homework-2-1-234150">
+      <statement>
+        <p>Write a C++ program that reads in two integers, and then outputs whether the first number is greater than the second, the first number is less than the second, or the two numbers are equal. See the examples for the correct format of the output.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '3 is less than 5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '6 is greater than 1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-42 is equal to -42'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-35 is greater than -40'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-44 is less than 80'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    
+    std::string answer = '4 is greater than -62'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_multi-operators--1" label="exe-sec-Homework-2-1-234155">
+      <statement>
+        <p>In C++, which operator is used to compare two values for equality (for example, checking whether a variable has the value 2)?  Hint: There is one right answer.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>==</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>equal</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>=</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>.equals</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>$</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_multi-boolean-1" label="exe-sec-Homework-2-1-234152">
+      <statement>
+        <p>Which of the following expressions evaluate to true? Note: choose all the correct answers.</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>0</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p><c>true</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>1<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>(10 &lt;= 3)</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>! <c>(10 &lt;= 3)</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p><c>false</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_multi-boolean2-1" label="exe-sec-Homework-2-1-234156">
+      <statement>
+        <p>Which of the following expressions evaluate to TRUE?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>true &amp;&amp; false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>! ( false || (false &amp;&amp; true) )</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>true || (false &amp;&amp; ! true)<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>(true &amp;&amp; false) || ! (true || false)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>false || ! false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>false &amp;&amp; ! false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_multi-operators--2" label="exe-sec-Homework-2-1-234145">
+      <statement>
+        <p>Which values of x and y will make the following expression evaluate to TRUE?  Choose ALL the correct answers.</p>
+        <p><c>x != 0 &amp;&amp; x * y &lt; 10</c></p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>x = -1, y = 10</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = -3, y = -5</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>x = -1, y = 0</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = 4, y = 3</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = -10, y = -1</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = 0, y = 0</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_multi-operators--3" label="exe-sec-Homework-2-1-234154">
+      <statement>
+        <p>Which values of x and y will make the following expression evaluate to FALSE?  Choose ALL the correct answers.</p>
+        <p><c>x &gt;= 5 || y &lt; 2</c></p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = -1, y = 0</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>x = -1, y = 2</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>x = 4, y = 10</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = 5, y = 0</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = 5, y = 2</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>x = 8, y = 10</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_code-numposneg-cpp-1" label="exe-sec-Homework-2-1-234151">
+      <statement>
+        <p>Write a C++ program that reads in one decimal number, and then outputs whether the number is positive, negative, or zero. See the examples for the expected format of the output.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '3.14 is positive'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-42.889 is negative'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = '0 is zero'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = '-97.8 is negative'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    
+    std::string answer = '59.26 is positive'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH4_code-string_comparison-1" label="exe-sec-Homework-2-1-234153">
+      <statement>
+        <p>Write a C++ program that reads in two strings and compares them. Format your output to correspond with the given examples.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = "'cat' is greater than 'bear'"
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = "'dog' is less than 'whale'"
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = "both words are '2018'"
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = "'Boolean' is less than 'C++'"
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    
+    std::string answer = "'String' is greater than 'Comparison'"
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_multi-for_1-1" label="exe-sec-Homework-2-1-234162">
+      <statement>
+        <p>Which part is missing from the for loop below?</p>
+        <pre>for (int n = 0; ; n += 2)</pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Variable initialization</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Loop condition</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Variable update<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_multi-for_2-1" label="exe-sec-Homework-2-1-234163">
+      <statement>
+        <p>Which part is missing from the for loop below?</p>
+        <pre>for (int n = 100; n &gt;= 0 ; )</pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Variable initialization</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Loop condition</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Variable update<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_short-for_1-1" label="exe-sec-Homework-2-1-234160">
+      <statement>
+        <p>What is the exact output that will be produced by the following C++ code?</p>
+        <pre>int x;for (x = 0; x &lt; 50; x++) {}cout &lt;&lt; x &lt;&lt; endl;</pre>
+        <fillin answer="50" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>50</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_multi-loop_1-1" label="exe-sec-Homework-2-1-234161">
+      <statement>
+        <p>Which of the following is NOT a C++ loop structure?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>for</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>do-while</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>while<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>repeat</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_code-for_2-1" label="exe-sec-Homework-2-1-234164">
+      <statement>
+        <p>Write a C++ program that gets a positive integer from standard input, then outputs the square of all integers from the entered number down to one.  See the example for the correct format of the output.</p>
+        <p>Note: Use a 'for' loop to solve this problem.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '5 squared is 25\n4 squared is 16\n3 squared is 9\n2 squared is 4\n1 squared is 1\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = '1 squared is 1\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = '3 squared is 9\n2 squared is 4\n1 squared is 1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = '7 squared is 49\n6 squared is 36\n5 squared is 25\n4 squared is 16\n3 squared is 9\n2 squared is 4\n1 squared is 1\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_code-for_1-1" label="exe-sec-Homework-2-1-234158">
+      <statement>
+        <p>Write a C++ program that repeatedly reads a string from standard input and compares it with the string "my_password".</p>
+        <p>- If the strings match, the program outputs the message, "CORRECT!", and stops.</p>
+        <p>- If the strings do not match, and the user has not already made ten attempts, the program reads another string and compares with "my_password" as before.</p>
+        <p>- If the user's tenth attempt fails to match "my_password", the program outputs the message, "WRONG!", and stops.</p>
+        <p>Note: Use a 'for' loop to solve this problem.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'CORRECT!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'CORRECT!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'CORRECT!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'WRONG!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'WRONG!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'WRONG!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'CORRECT!'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_code-while_1-1" label="exe-sec-Homework-2-1-234157">
+      <statement>
+        <p>Write a C++ program that reads integers from standard input and keeps a running sum of all the positive integers that are entered. <alert>As soon as a negative integer is entered</alert>, the program stops and outputs the sum of the positive integers that were read. If the first number is negative, then the result should be 0. Hint: Solve this problem with a <c>while</c>loop.</p>
+        <p>Format your output as in the given examples.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'The sum of the positive numbers is 10.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'The sum of the positive numbers is 0.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'The sum of the positive numbers is 28.'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'The sum of the positive numbers is 5.'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-JMPCH5_code-while_2-1" label="exe-sec-Homework-2-1-234159">
+      <statement>
+        <p>Write a C++ program that reads integers from standard input until a number <alert>greater than 1000</alert> is entered.  At that point, the program stops and prints a report regarding how many numbers were entered that were not greater than 1000.  Match the form of your output to the given examples.</p>
+        <p>Hint: Solve this problem with a <c>while</c>loop.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'You entered 3 numbers &lt;= 1000.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'You entered 0 numbers &lt;= 1000.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'You entered 5 numbers &lt;= 1000.'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    
+    std::string answer = 'You entered 3 numbers &lt;= 1000.'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-LINUX_print_working_directory-1" label="exe-sec-Homework-2-1-234166">
+      <statement>
+        <p>In Linux, what is the command <c>pwd</c> used for?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>print name of current/working directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>change password</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>path wrapper disable<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>pluggable window module</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-LINUX_change_directory-1" label="exe-sec-Homework-2-1-234165">
+      <statement>
+        <p>In Linux, what is the command <c>cd</c> used for?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>change directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>change distribution</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>check daemon<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>check disk capacity</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-LINUX_change_directory_noargs-1" label="exe-sec-Homework-2-1-234167">
+      <statement>
+        <p>In Linux, running the <c>cd</c> command (without any arguments) will ...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>take you to your home directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>cache your current directory path</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>check current document for spelling errors<c /></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>list all the files in your current directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-LINUX_short_cd_to_parent-1" label="exe-sec-Homework-2-1-234170">
+      <statement>
+        <p>In Linux, what is the exact command which takes you to the parent directory of your current working directory?</p>
+        <fillin answer="cd .." width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>cd ..</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-LINUX_absolute_path-1" label="exe-sec-Homework-2-1-234168">
+      <statement>
+        <p>In Linux (and in other systems), a <em>path</em>gives the unique location of a file or a folder in a file system..</p>
+        <p>Alternatively referred to as the <em>full path</em>, the ___________ <alert>path</alert> for a file specifies the <url href="https://www.computerhope.com/jargon/r/root.htm">root</url> <url href="https://www.computerhope.com/jargon/d/director.htm">directory</url> and all other <url href="https://www.computerhope.com/jargon/s/subdirec.htm">subdirectories</url> in which the file is contained.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>absolute</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>relative</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>proper</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>normal</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-LINUX_relative_path-1" label="exe-sec-Homework-2-1-234169">
+      <statement>
+        <p>In Linux (and in other systems), a <em>path</em>gives the unique location of a file or a folder in a file system..</p>
+        <p>The <alert>relative</alert> <alert>path</alert> for a file specifies the file's location relative to ...</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>the current working directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>the root of the file system</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>the <alert>parent</alert>of the current working directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>the user's home directory</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
+</section>

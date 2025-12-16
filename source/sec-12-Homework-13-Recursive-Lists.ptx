@@ -1,0 +1,4151 @@
+<section xml:id="sec-Homework-13-Recursive-Lists-1">
+  <title>Homework 13 -- Recursive Lists</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-Recursive-Nodes-1" label="exe-sec-Homework-13-Recursive-Lists-1-234114">
+      <statement correct="yes">
+        <p>In a recursive list implementation, the nodes (<c>Rec_node</c> class) are "smart" and "dual-natured".  Each <c>Rec_node</c> considers itself to be the first node of a list consisting of a) itself and b) all the rest of the nodes that follow. As such, <c>Rec_nodes</c> have list functionality (append, retrieve, etc.).</p>
+        <p>
+          In addition:
+          <ul>
+            <li><c>Rec_node</c> methods are implemented RECURSIVELY whenever possible.</li>
+            <li><c>Rec_nodes</c> store strings as their data.</li>
+          </ul>
+        </p>
+        <p>Constructors for the <c>Rec_node</c> class:</p>
+        <pre>// Default constructor creates a Rec_Node with data = "" and rest_ptr = NULL
+Rec_node();
+
+// Constructor with 1 or 2 arguments
+Rec_node(string val, Rec_node* rest_ptr = NULL);        </pre>
+        <p>Private section for the <c>Rec_node</c> class:</p>
+        <pre>private:
+
+   // Instance variables
+   string data;       // value stored in this node
+   Rec_node * rest;   // pointer to first node of the rest of this list
+
+   /*
+   *  Rec_node assignment operator is disabled by making it private.
+   *  DO NOT IMPLEMENT.  DO NOT USE.
+   */
+   Rec_node&amp; operator=(const Rec_node &amp;other);        </pre>
+      </statement>
+    </exercise>
+    <exercise xml:id="exer-Recursion-Rec_node-append-1" label="exe-sec-Homework-13-Recursive-Lists-1-234401">
+      <statement>
+        <p>Implement the <c>append</c> member function for the <c>Rec_node</c> class.</p>
+        <pre>   /*
+   *  append
+   *  Postcondition: `val` is the new last item of the list; the list is not
+   *     changed in any other way.
+   *
+   *  Note: MUST be implemented with recursion.
+   */
+   void Rec_node::append(string val)        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Rec_node.cpp
+// 3-26-19
+// Rec_node inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *   Exception: Throws domain_error if n &gt;= length of the list headed
+      *     by this node.  (List.cpp will throw the exception if n &lt; 0;
+      *     no need to check for that here.)
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+
+      // FRIEND
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+/*
+*  Constructor with 1 or 2 parameters
+*  Postcondition: `val` is stored stored in the `data` field
+*  Postcondition: `rest_ptr` is stored stored in the `rest` field
+*  Note:  `rest_ptr` defaults to NULL if not provided
+*/
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+/*
+*  Default constructor
+*  Postcondition: `data` is set to the empty string
+*  Postcondition: `rest` is set to NULL
+*/
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+
+        </preamble>
+        <code>
+void Rec_node::append(string val)
+{
+    // base case
+
+
+    // recursive case
+
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    n1.append("Mr. Gray");
+    cout &lt;&lt; n1 &lt;&lt; endl;
+    
+    std::string answer = 'Ziggy, Mr. Gray\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Rec_node n1("softball");
+    n1.append("basketball");
+    n1.append("oddball");
+    n1.append("goofball");
+    cout &lt;&lt; n1 &lt;&lt; endl;
+    
+    std::string answer = 'softball, basketball, oddball, goofball\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Rec_node n1("python");
+    n1.append("C++");
+    n1.append("java");
+    cout &lt;&lt; n1 &lt;&lt; endl;
+    
+    std::string answer = 'python, C++, java\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-Rec_node-retrieve-1" label="exe-sec-Homework-13-Recursive-Lists-1-234402">
+      <statement>
+        <p>Implement the <c>retrieve</c> member function for the <c>Rec_node</c> class.</p>
+        <pre>   /*
+   *  retrieve
+   *  Precondition:  0 &lt;= n &lt; length of the list starting from this node
+   *  Postcondition: string object at index `n` is returned, where indexing
+   *     is relative to the current node.
+   *  Example:  myNode.retrieve(0) will return the data in `myNode`, while
+   *     myNode.retrieve(1) will return the data in the node that immediately
+   *     follows `myNode`.
+   *  Note: MUST be implemented with recursion.
+   */
+   string Rec_node::retrieve(int n) const        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Rec_node.cpp
+// 3-26-19
+// Rec_node inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+
+      // FRIEND
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+/*
+*  Constructor with 1 or 2 parameters
+*  Postcondition: `val` is stored stored in the `data` field
+*  Postcondition: `rest_ptr` is stored stored in the `rest` field
+*  Note:  `rest_ptr` defaults to NULL if not provided
+*/
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+/*
+*  Default constructor
+*  Postcondition: `data` is set to the empty string
+*  Postcondition: `rest` is set to NULL
+*/
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+
+        </preamble>
+        <code>
+string Rec_node::retrieve(int n) const
+{
+    // base case
+
+
+    // recursive case
+
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    n1.append("Mr. Gray");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
+    
+    std::string answer = 'Ziggy, Mr. Gray\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Rec_node n1("softball");
+    n1.append("basketball");
+    n1.append("oddball");
+    n1.append("goofball");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
+         &lt;&lt; n1.retrieve(2) &lt;&lt; ", " &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
+    
+    std::string answer = 'softball, basketball, oddball, goofball\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Rec_node n1("python");
+    n1.append("C++");
+    n1.append("java");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
+         &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
+    
+    std::string answer = 'python, C++, java\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; endl;
+    std::string answer = 'Ziggy'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    n1.append("Mr. Gray");
+    n1.append("Ruthie");
+    n1.append("Snoopy");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(1) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(2) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
+    std::string answer = 'Ziggy, Mr. Gray, Ruthie, Snoopy'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-Rec_node-insert_at-1" label="exe-sec-Homework-13-Recursive-Lists-1-234403">
+      <statement>
+        <p>Implement the <c>insertAt</c> member function for the <c>Rec_node</c> class.</p>
+        <pre>   /*
+   *  insertAt
+   *  Insert a new node containing `val` at index `n` relative to this node.
+   *  Precondition: 1 &lt;= n &lt;= length
+   *
+   *  For example, if n is 1, a new node containing val will be inserted 
+   *  immediately after this node.
+   */
+   void Rec_node::insertAt(int n, string val)        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Rec_node.cpp
+// 3-26-19
+// Rec_node inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+
+      // FRIEND
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+/*
+*  Constructor with 1 or 2 parameters
+*  Postcondition: `val` is stored stored in the `data` field
+*  Postcondition: `rest_ptr` is stored stored in the `rest` field
+*  Note:  `rest_ptr` defaults to NULL if not provided
+*/
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+/*
+*  Default constructor
+*  Postcondition: `data` is set to the empty string
+*  Postcondition: `rest` is set to NULL
+*/
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+/*
+*  retrieve
+*  Precondition:  0 &lt;= n &lt; length of the list starting from this node
+*  Postcondition: string object at index `n` is returned, where indexing
+*     is relative to the current node.
+*  Example:  myNode.retrive(0) will return the data in `myNode`, while
+*     myNode.retrieve(1) will return the data in the node that immediately
+*     follows `myNode`.
+*  Note: MUST be implemented with recursion.
+*/
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+
+        </preamble>
+        <code>
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+       
+    // recursive case
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    n1.insertAt(1, "Mr. Gray");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
+    
+    std::string answer = 'Ziggy, Mr. Gray\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Rec_node n1("softball");
+    n1.append("basketball");
+    n1.append("oddball");
+    n1.insertAt(3, "goofball");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
+    &lt;&lt; n1.retrieve(2) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
+    
+    std::string answer = 'softball, basketball, oddball, goofball\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Rec_node n1("python");
+    n1.append("java");
+    n1.insertAt(1, "C++");
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
+    &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
+    std::string answer = 'python, C++, java\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Rec_node n1("a");
+    n1.append("b");
+    n1.append("c");
+    n1.insertAt(1, "new");
+    cout &lt;&lt; n1;
+    std::string answer = 'a, new, b, c\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Rec_node n1("a");
+    n1.append("b");
+    n1.append("c");
+    n1.insertAt(2, "new");
+    cout &lt;&lt; n1;
+    std::string answer = 'a, b, new, c\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    Rec_node n1("a");
+    n1.append("b");
+    n1.append("c");
+    n1.insertAt(3, "new");
+    cout &lt;&lt; n1;
+    std::string answer = 'a, b, c, new\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-Rec_node-removeFrom-1" label="exe-sec-Homework-13-Recursive-Lists-1-234404">
+      <statement>
+        <p>Implement the <c>removeFrom</c> member function for the <c>Rec_node</c> class.</p>
+        <pre>   /*
+   *  removeFrom
+   *  Delete a node at a given index and return its data.
+   *  Precondition: 1 &lt;= n &lt; length
+   *  Postcondition: The list is one node shorter; the node that had index
+   *     `n` relative to this node is now deleted and its data returned.
+   *     The list is not changed in any other way.
+   *
+   *  Note: Rec_node.removeFrom will NOT handle the case n == 0; it is handled in the List class.
+   *
+   *  Note: MUST be implemented with recursion.
+   */
+   string Rec_node::removeFrom(int n)        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Rec_node.cpp
+// 3-26-19
+// Rec_node inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+
+      // FRIEND
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+/*
+*  Constructor with 1 or 2 parameters
+*  Postcondition: `val` is stored stored in the `data` field
+*  Postcondition: `rest_ptr` is stored stored in the `rest` field
+*  Note:  `rest_ptr` defaults to NULL if not provided
+*/
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+/*
+*  Default constructor
+*  Postcondition: `data` is set to the empty string
+*  Postcondition: `rest` is set to NULL
+*/
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+/*
+*  retrieve
+*  Precondition:  0 &lt;= n &lt; length of the list starting from this node
+*  Postcondition: string object at index `n` is returned, where indexing
+*     is relative to the current node.
+*  Example:  myNode.retrive(0) will return the data in `myNode`, while
+*     myNode.retrieve(1) will return the data in the node that immediately
+*     follows `myNode`.
+*  Note: MUST be implemented with recursion.
+*/
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+/*
+*  insertAt
+*  Insert a new node containing `val` at index `n` relative to
+*     this node.
+*  Precondition: 1 &lt; n &lt; length
+*/
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+    if (n == 1)
+    {
+        // insert right after this node
+        rest = new Rec_node(val, rest);
+        return;
+    }
+       
+    // recursive case
+    rest -&gt; insertAt(n - 1, val);
+}
+
+
+        </preamble>
+        <code>
+string Rec_node::removeFrom(int n)
+{
+    // base case
+
+
+    // recursive case
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    n1.append("Mr. Gray");
+    cout &lt;&lt; "removing: " 
+    &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
+    
+    std::string answer = 'removing: Mr. Gray\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Rec_node n1("softball");
+    n1.append("basketball");
+    n1.append("oddball");
+    n1.append("goofball");
+    cout &lt;&lt; "removing: " 
+    &lt;&lt; n1.removeFrom(2) 
+    &lt;&lt; endl;
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
+    &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
+    
+    std::string answer = 'removing: oddball\nsoftball, basketball, goofball\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Rec_node n1("python");
+    n1.append("C++");
+    n1.append("java");
+    cout &lt;&lt; "removing: " 
+    &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
+    std::string answer = 'removing: C++\npython, java\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Rec_node n1("a");
+    n1.append("b");
+    n1.append("c");
+    n1.append("d");
+    n1.removeFrom(1);
+    cout &lt;&lt; n1;
+    std::string answer = 'a, c, d\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Rec_node n1("a");
+    n1.append("b");
+    n1.append("c");
+    n1.append("d");
+    n1.removeFrom(2);
+    cout &lt;&lt; n1;
+    std::string answer = 'a, b, d\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    Rec_node n1("a");
+    n1.append("b");
+    n1.append("c");
+    n1.append("d");
+    n1.removeFrom(3);
+    cout &lt;&lt; n1;
+    std::string answer = 'a, b, c\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-Rec_node-size-1" label="exe-sec-Homework-13-Recursive-Lists-1-234405">
+      <statement>
+        <p>Implement the <alert>size</alert> member function for the <c>Rec_node</c> class.</p>
+        <pre>   /*
+   *  size
+   *  Postcondition: Return the number of nodes in the list headed by this node.
+   *
+   *  Note: MUST be implemented with recursion.
+   */
+   int Rec_node::size() const        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Rec_node.cpp
+// 3-26-19
+// Rec_node inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+      
+      /*
+      *  size
+      *  Postcondition: Return the number of nodes in the list headed by this node.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      int size() const;
+
+      // FRIEND
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+/*
+*  Constructor with 1 or 2 parameters
+*  Postcondition: `val` is stored stored in the `data` field
+*  Postcondition: `rest_ptr` is stored stored in the `rest` field
+*  Note:  `rest_ptr` defaults to NULL if not provided
+*/
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+/*
+*  Default constructor
+*  Postcondition: `data` is set to the empty string
+*  Postcondition: `rest` is set to NULL
+*/
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+/*
+*  retrieve
+*  Precondition:  0 &lt;= n &lt; length of the list starting from this node
+*  Postcondition: string object at index `n` is returned, where indexing
+*     is relative to the current node.
+*  Example:  myNode.retrive(0) will return the data in `myNode`, while
+*     myNode.retrieve(1) will return the data in the node that immediately
+*     follows `myNode`.
+*  Note: MUST be implemented with recursion.
+*/
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+/*
+*  insertAt
+*  Insert a new node containing `val` at index `n` relative to
+*     this node.
+*  Precondition: 1 &lt; n &lt; length
+*/
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+    if (n == 1)
+    {
+        // insert right after this node
+        rest = new Rec_node(val, rest);
+        return;
+    }
+       
+    // recursive case
+    rest -&gt; insertAt(n - 1, val);
+}
+
+/*
+*  removeFrom
+*  Delete a node at a given index and return its data.
+*  Precondition: 1 &lt;= n &lt; length
+*  Postcondition: The list is one node shorter; the node which had index
+*     `n` relative to this node is now deleted and its data returned.
+*     The list is not changed in any other way.
+*
+*  Note: List.removeFrom will handle the case n == 0.
+*
+*  Note: MUST be implemented with recursion.
+*/
+string Rec_node::removeFrom(int n)
+{
+    // base case
+    if (n == 1)
+    {
+        // remove the node right after this one and deallocate memory
+        Rec_node* temp = rest;
+        rest = temp -&gt; rest;
+        string val = temp -&gt; data;
+        delete temp;
+        return val;
+    }
+
+    // recursive case
+    return rest -&gt; removeFrom(n - 1);
+}
+
+
+        </preamble>
+        <code>
+int Rec_node::size() const
+{
+    // base case
+
+    // recursive case
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy");
+    n1.append("Mr. Gray");
+    cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
+    
+    std::string answer = 'size is: 2\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Rec_node n1("softball");
+    n1.append("basketball");
+    n1.append("oddball");
+    n1.append("goofball");
+    cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
+    
+    std::string answer = 'size is: 4\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Rec_node n1("python");
+    n1.append("C++");
+    n1.append("java");
+    cout &lt;&lt; "check out my size: " &lt;&lt; n1.size() &lt;&lt; endl;
+    std::string answer = 'check out my size: 3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Rec_node n1("1");
+    n1.append("2");
+    n1.append("3");
+    n1.append("4");
+    n1.append("5");
+    int n = n1.size();
+    if (n == 5) cout &lt;&lt; "OK";
+    else cout &lt;&lt; "NOPE";
+    std::string answer = 'OK'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-Rec_node-equivalence-1" label="exe-sec-Homework-13-Recursive-Lists-1-234406">
+      <statement>
+        <p>Implement the equivalence (<alert>operator==</alert>) and inequivalence (<alert>operator!=</alert>) <em>non-member functions</em> for the <c>Rec_node</c> class.</p>
+        <pre>   /*
+   *  operator==
+   *     The lists headed by n1 and n2 are equivalent if n1 and n2 have the same data and
+   *     the list at the head of n1's rest is equivalent to the list at the head of n2's rest.      
+   *     
+   *  Postcondition: Return true if the lists headed by n1 and n2 are equivalent. 
+   *
+   *  Note: MUST be implemented with recursion.
+   */
+   bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
+   
+   
+   /*
+   *  operator!=
+   *     The lists headed by n1 and n2 not equivalent if n1 and n2 have different data or 
+   *     the list at the head of n1's rest is not equivalent to the list at the head of n2's rest.        
+   *     
+   *  Postcondition: Return true if the lists headed by n1 and n2 are not equivalent.
+   *
+   *  Note: DO NOT IMPLEMENT WITH RECURSION; implement by calling ==.
+   */
+   bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILE: Rec_node.cpp
+// 3-26-19
+// Rec_node inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+      
+      /*
+      *  size
+      *  Postcondition: Return the number of nodes in the list headed by this node.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      int size() const;
+
+      // FRIEND
+      friend bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+// Rec_node implementation
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+    if (n == 1)
+    {
+        // insert right after this node
+        rest = new Rec_node(val, rest);
+        return;
+    }
+       
+    // recursive case
+    rest -&gt; insertAt(n - 1, val);
+}
+
+string Rec_node::removeFrom(int n)
+{
+    // base case
+    if (n == 1)
+    {
+        // remove the node right after this one and deallocate memory
+        Rec_node* temp = rest;
+        rest = temp -&gt; rest;
+        string val = temp -&gt; data;
+        delete temp;
+        return val;
+    }
+
+    // recursive case
+    return rest -&gt; removeFrom(n - 1);
+}
+
+int Rec_node::size() const
+{
+    // base case
+    if (rest == NULL)
+    {
+        return 1;
+    }
+
+    // recursive case
+    else
+    {
+        return rest -&gt; size() + 1;
+    }
+}
+
+bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
+/*
+{
+    // recursive case
+    if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
+        return *n1.rest == *n2.rest;
+       
+    // base cases:
+    if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
+        return true;
+    else
+        return false;
+}
+*/
+
+bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);
+/*
+{
+    return not (n1 == n2);
+}
+*/
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+
+
+
+        </preamble>
+        <code>
+bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    // recursive case
+       
+    // base cases:
+
+}
+
+bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+ 
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Rec_node n1("Ziggy"); n1.append("Spike"); n1.append("Skye");
+    Rec_node n2("Ziggy"); n2.append("Spike"); n2.append("Cleo");
+    if (not (n1 == n2))
+        cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Eek! No, n1 != n2. Check your code!" &lt;&lt; endl;
+    
+    std::string answer = 'Right, those two are NOT equivalent!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Rec_node n1("Scooby Doo"); n1.append("Snoopy");
+    Rec_node n2("Scooby Doo"); n2.append("Snoopy");
+    if (n1 == n2)
+        cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
+    std::string answer = 'Right, those two ARE equivalent!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Rec_node n1("Scooby Doo"); n1.append("Snoopy");
+    Rec_node n2("Snoopy"); n2.append("Scooby Doo");
+    if (not (n1 == n2))
+        cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
+    std::string answer = 'Right, those two are NOT equivalent!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Rec_node n1("Garfield"); n1.append("Odie");
+    Rec_node n2("Odie"); n2.append("Garfield");
+    if (n1 != n2)
+        cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
+    std::string answer = 'Right, those two are NOT equivalent!'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Rec_node n1("Woohoo!");
+    Rec_node n2("Woohoo!");
+    if (not (n1 != n2))
+        cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
+    
+    std::string answer = 'Right, those two ARE equivalent!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    Rec_node n1("python"); n1.append("C++"); n1.append("java");
+    Rec_node n2("python"); n2.append("C++"); n2.append("java");
+    if (n1 == n2)
+        cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
+    std::string answer = 'Right, those two ARE equivalent!'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-List-Using-Recursive-Nodes-1" label="exe-sec-Homework-13-Recursive-Lists-1-270840">
+      <statement correct="yes">
+        <p>The <c>List</c> class for this implementation has a single instance variable, <c>head_ptr</c>, which is a pointer to a <c>Rec_node</c>.</p>
+        <p>
+          <image decorative="yes" source="images/270840-Screen%20Shot%202019-03-26%20at%204.35.11%20PM.png" width="90%" />
+          .
+        </p>
+        <pre>private:
+
+   // Instance variables
+   Rec_node * head_ptr;   // pointer to head of the list
+
+   /*
+   *  List assignment operator is disabled by making it private.
+   *  DO NOT IMPLEMENT.  DO NOT USE.
+   */
+   List&amp; operator=(const List &amp;other);        </pre>
+        <p>Most functions for this List implementation are very straightforward: simply call the corresponding function on the <c>Rec_node</c> being pointed to by <c>head_ptr</c>.  Just be sure to handle the special case when the list is empty.</p>
+        <p>For reference, here are the getters and setters for the Rec_node class:</p>
+        <p>// *** Getters and Setters, Defined HERE In-Line *** //      string getData() const { return data; }      Rec_node * getRest() const { return rest; }      void setData(string val) { data = val; }      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }</p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exer-Recursion-List-isEmpty_append_retrieve-1" label="exe-sec-Homework-13-Recursive-Lists-1-234407">
+      <statement>
+        <p>Implement the <c>isEmpty</c>, <c>append</c> , and <c>retrieve</c> member functions for the recursive <c>List</c> class.  The <c>Rec_node::size()</c> method has been disabled.</p>
+        <pre>      /*
+      *  isEmpty
+      *   Postcondition: Returns true if this is an empty list; otherwise,
+      *     returns false.
+      */
+      bool isEmpty() const;
+      
+      
+      /*
+      *  append
+      *   Postcondition: A new item, `val`, is added to the end of the list.
+      *
+      *   Note: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      void append(string val);
+      
+      
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of list
+      *   Postcondition: Item at index `n` (counting from 0 at the head node)
+      *     is returned.
+      *
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      string retrieve(int n) const;        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILES: Rec_node.cpp and List.cpp
+// 3-26-19
+// Inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+      
+      /*
+      *  size
+      *  Postcondition: Return the number of nodes in the list headed by this node.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      //int size() const;
+
+      // FRIEND
+      friend bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+// Rec_node implementation
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+    if (n == 1)
+    {
+        // insert right after this node
+        rest = new Rec_node(val, rest);
+        return;
+    }
+       
+    // recursive case
+    rest -&gt; insertAt(n - 1, val);
+}
+
+string Rec_node::removeFrom(int n)
+{
+    // base case
+    if (n == 1)
+    {
+        // remove the node right after this one and deallocate memory
+        Rec_node* temp = rest;
+        rest = temp -&gt; rest;
+        string val = temp -&gt; data;
+        delete temp;
+        return val;
+    }
+
+    // recursive case
+    return rest -&gt; removeFrom(n - 1);
+}
+
+/*
+int Rec_node::size() const
+{
+    // base case
+    if (rest == NULL)
+    {
+        return 1;
+    }
+
+    // recursive case
+    else
+    {
+        return rest -&gt; size() + 1;
+    }
+}
+*/
+
+bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    // recursive case
+    if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
+        return *n1.rest == *n2.rest;
+       
+    // base cases:
+    if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
+        return true;
+    else
+        return false;
+}
+
+bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    return not (n1 == n2);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+class List
+{
+   public:
+
+      /*
+      *  Default constructor initializes an empty list.
+      */
+      List();
+
+      /*
+      *  List destructor - test it indirectly using valgrind.
+      */
+      ~List();
+
+      /*
+      *  isEmpty
+      *   Postcondition: Returns true if this is an empty list; otherwise,
+      *     returns false.
+      */
+      bool isEmpty() const;
+
+      /*
+      *  append
+      *   Postcondition: A new item, `val`, is added to the end of the list.
+      *
+      *   Note: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of list
+      *   Postcondition: Item at index `n` (counting from 0 at the head node)
+      *     is returned.
+      *
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      string retrieve(int n) const;
+      
+      /*
+      *  size
+      *   Postcondition: Returns the number of items in the list.
+      */
+      //int size() const;
+
+      /*
+      *  clear
+      *   Postcondition: This list is empty.
+      */
+      void clear();
+
+      /*
+      *  insertAt
+      *   Inserts a new item at a given index `n` in the list.
+      *   Precondition: 0 &lt;= n &lt;= length of this list
+      *   Postcondition: The length of the list has increased by one.
+      *   Postcondition: The item at index `n` in the list is now `val`.
+      *   Postcondition: The relative positions of the previously-existing
+      *     items are unchanged.
+      *   
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete a node at a given index `n` and return its data.
+      *   Precondition: 0 &lt;= n &lt; length
+      *   Postcondition: The list is now one item shorter. The node at position
+      *     `n` has been deleted.  The relative positions of the other items
+      *     are unchanged.
+      *
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      string removeFrom(int n);
+
+      /*
+      *  isOrdered
+      *   Postcondition: Returns true if this list is in ascending order;
+      *     otherwise, returns false.
+      *
+      *   Note: Returns true if the list is empty.
+      *
+      *   Note: Make a call to Rec_node::isOrdered.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Precondition: This list is ordered.
+      *   Postcondition: `val` is inserted into this list, increasing its length
+      *     by one.
+      *   Postcondition: This list is ordered.
+      *   Exception: Throws domain_error if precondition fails.
+      *
+      *   Note: Make a call to Rec_node::orderedInsert.
+      */
+      void orderedInsert(string val);
+
+      // FRIENDS
+      friend bool operator==(const List &amp;L1, const List &amp;L2);
+      friend bool operator!=(const List &amp;L1, const List &amp;L2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L);
+
+   private:
+
+      // INSTANCE VARIABLE
+      Rec_node * head_ptr;  // pointer to the head of the list
+
+      /*
+      * List assignment operator and copy constructor are disabled by making them private.
+      *    DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      List&amp; operator=(const List &amp;other);
+      List(const List &amp;other);
+
+};  // List class
+
+/*
+*  Default constructor initializes an empty list.
+*/
+List::List()
+{
+    head_ptr = NULL;
+}
+
+/*
+*  List destructor - test it indirectly using valgrind.
+*/
+List::~List()
+{
+    if (head_ptr == NULL)
+    {
+        return;
+    }
+    
+    Rec_node* temp;
+    while (head_ptr -&gt; getRest() != NULL)
+    {
+        temp = head_ptr -&gt; getRest(); 
+        head_ptr -&gt; setRest(temp -&gt; getRest());
+        delete temp;
+    }
+    delete head_ptr;
+}
+
+/*
+bool List::isEmpty() const
+{
+    return head_ptr == NULL;
+}
+
+
+void List::append(string val)
+{
+    if (isEmpty())
+        head_ptr = new Rec_node(val);
+    else
+        head_ptr -&gt; append(val);   
+}
+
+
+string List::retrieve(int n) const
+{
+    return head_ptr -&gt; retrieve(n);
+}
+
+void List::insertAt(int n, string val)
+{
+    
+}
+
+string List::removeFrom(int n)
+{
+    
+}
+*/
+
+/*
+int List::size() const
+{
+    return 0;
+}
+*/
+
+/*
+*  operator== (equivalence)
+*   Postcondition: Returns true if the lists are logically equivalent,
+*     that is, they have equivalent data in the same order; otherwise,
+*     returns false.
+*/
+bool operator==(const List &amp;L1, const List &amp;L2)
+{
+    return false;
+}
+
+/*
+*  operator!= (inequivalence)
+*   Postcondition: Returns true if the lists are NOT logically equivalent,
+*     otherwise, returns false.
+*/
+bool operator!=(const List &amp;L1, const List &amp;L2)
+{
+    return not (L1 == L2);
+}
+
+/*
+*  operator&lt;&lt; (stream output)
+*
+*  When the empty list is printed, the message is "&lt;empty list&gt;".
+*  Otherwise, the list items are printed on a single line with a single
+*     space after each item.
+*
+*  Note: Make a call to operator&lt;&lt; for Rec_node.
+*/
+std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L)
+{
+    if (L.isEmpty())
+    {
+        out &lt;&lt; "&lt;empty list&gt;";
+    }
+    
+    else
+    {
+        out &lt;&lt; *(L.head_ptr);
+    }
+    
+    return out;
+}
+
+
+        </preamble>
+        <code>
+bool List::isEmpty() const
+{
+
+}
+
+void List::append(string val)
+{
+
+}
+
+string List::retrieve(int n) const
+{
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    List empty_list;
+    if (empty_list.isEmpty())
+        cout &lt;&lt; "Right!";
+    else
+        cout &lt;&lt; "Incorrect.";
+    
+    std::string answer = 'Right!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    List l1; 
+    l1.append("Ziggy");
+    if (!l1.isEmpty())
+        cout &lt;&lt; "Right!";
+    else
+        cout &lt;&lt; "Incorrect.";
+    std::string answer = 'Right!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    List l1; 
+    l1.append("pickle"); 
+    l1.append("relish");
+    if (!l1.isEmpty())
+        cout &lt;&lt; "Right! ";
+    else
+        cout &lt;&lt; "Incorrect. ";
+    cout &lt;&lt; l1;
+    std::string answer = 'Right! pickle, relish\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    List l1; 
+    l1.append("pickle"); 
+    l1.append("relish");
+    l1.append("mustard");
+    if (!l1.isEmpty())
+        cout &lt;&lt; "Right! ";
+    else
+        cout &lt;&lt; "Incorrect. ";
+    cout &lt;&lt; l1;
+    std::string answer = 'Right! pickle, relish, mustard\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    List l1; 
+    l1.append("pickle"); 
+    l1.append("relish");
+    cout &lt;&lt; l1.retrieve(0) 
+         &lt;&lt; " " &lt;&lt; l1.retrieve(1) 
+         &lt;&lt; endl;
+    std::string answer = 'pickle relish\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    List l1; 
+    l1.append("picklers"); 
+    cout &lt;&lt; l1.retrieve(0) 
+         &lt;&lt; endl;
+    std::string answer = 'picklers\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    List l1; 
+    l1.append("picklers"); 
+    l1.append("relishers");
+    l1.append("xxxxx");
+    cout &lt;&lt; l1.retrieve(0) &lt;&lt; " " 
+         &lt;&lt; l1.retrieve(1) &lt;&lt; " " 
+         &lt;&lt; l1.retrieve(2) &lt;&lt; endl;
+    std::string answer = 'picklers relishers xxxxx\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-List-size-1" label="exe-sec-Homework-13-Recursive-Lists-1-234409">
+      <statement>
+        <p>Implement the <c>size</c> function for the recursive <c>List</c> class <em>without using a "for" or a "while" loop</em>.</p>
+        <pre>      /*
+      *  size
+      *   Postcondition: Returns the number of items in the list.
+      */
+      int size() const;        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILES: Rec_node.cpp and List.cpp
+// 3-26-19
+// Inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+      
+      /*
+      *  size
+      *  Postcondition: Return the number of nodes in the list headed by this node.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      int size() const;
+
+      // FRIEND
+      friend bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+// Rec_node implementation
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+    if (n == 1)
+    {
+        // insert right after this node
+        rest = new Rec_node(val, rest);
+        return;
+    }
+       
+    // recursive case
+    rest -&gt; insertAt(n - 1, val);
+}
+
+string Rec_node::removeFrom(int n)
+{
+    // base case
+    if (n == 1)
+    {
+        // remove the node right after this one and deallocate memory
+        Rec_node* temp = rest;
+        rest = temp -&gt; rest;
+        string val = temp -&gt; data;
+        delete temp;
+        return val;
+    }
+
+    // recursive case
+    return rest -&gt; removeFrom(n - 1);
+}
+
+int Rec_node::size() const
+{
+    // base case
+    if (rest == NULL)
+    {
+        return 1;
+    }
+
+    // recursive case
+    else
+    {
+        return rest -&gt; size() + 1;
+    }
+}
+
+
+bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    // recursive case
+    if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
+        return *n1.rest == *n2.rest;
+       
+    // base cases:
+    if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
+        return true;
+    else
+        return false;
+}
+
+bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    return not (n1 == n2);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+class List
+{
+   public:
+
+      /*
+      *  Default constructor initializes an empty list.
+      */
+      List();
+
+      /*
+      *  List destructor - test it indirectly using valgrind.
+      */
+      ~List();
+
+      /*
+      *  isEmpty
+      *   Postcondition: Returns true if this is an empty list; otherwise,
+      *     returns false.
+      */
+      bool isEmpty() const;
+
+      /*
+      *  append
+      *   Postcondition: A new item, `val`, is added to the end of the list.
+      *
+      *   Note: Make a call to Rec_node::append.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of list
+      *   Postcondition: Item at index `n` (counting from 0 at the head node)
+      *     is returned.
+      *
+      *   Note: Make a call to Rec_node::retrieve.
+      */
+      string retrieve(int n) const;
+      
+      /*
+      *  size
+      *   Postcondition: Returns the number of items in the list.
+      */
+      int size() const;
+
+      /*
+      *  clear
+      *   Postcondition: This list is empty.
+      */
+      void clear();
+
+      /*
+      *  insertAt
+      *   Inserts a new item at a given index `n` in the list.
+      *   Precondition: 0 &lt;= n &lt;= length of this list
+      *   Postcondition: The length of the list has increased by one.
+      *   Postcondition: The item at index `n` in the list is now `val`.
+      *   Postcondition: The relative positions of the previously-existing
+      *     items are unchanged.
+      *   
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete a node at a given index `n` and return its data.
+      *   Precondition: 0 &lt;= n &lt; length
+      *   Postcondition: The list is now one item shorter. The node at position
+      *     `n` has been deleted.  The relative positions of the other items
+      *     are unchanged.
+      *
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      string removeFrom(int n);
+
+      /*
+      *  isOrdered
+      *   Postcondition: Returns true if this list is in ascending order;
+      *     otherwise, returns false.
+      *
+      *   Note: Returns true if the list is empty.
+      *
+      *   Note: Make a call to Rec_node::isOrdered.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Precondition: This list is ordered.
+      *   Postcondition: `val` is inserted into this list, increasing its length
+      *     by one.
+      *   Postcondition: This list is ordered.
+      *   Exception: Throws domain_error if precondition fails.
+      *
+      *   Note: Make a call to Rec_node::orderedInsert.
+      */
+      void orderedInsert(string val);
+
+      // FRIENDS
+      friend bool operator==(const List &amp;L1, const List &amp;L2);
+      friend bool operator!=(const List &amp;L1, const List &amp;L2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L);
+
+   private:
+
+      // INSTANCE VARIABLE
+      Rec_node * head_ptr;  // pointer to the head of the list
+
+      /*
+      * List assignment operator and copy constructor are disabled by making them private.
+      *    DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      List&amp; operator=(const List &amp;other);
+      List(const List &amp;other);
+
+};  // List class
+
+/*
+*  Default constructor initializes an empty list.
+*/
+List::List()
+{
+    head_ptr = NULL;
+}
+
+/*
+*  List destructor - test it indirectly using valgrind.
+*/
+List::~List()
+{
+    if (head_ptr == NULL)
+    {
+        return;
+    }
+    
+    Rec_node* temp;
+    while (head_ptr -&gt; getRest() != NULL)
+    {
+        temp = head_ptr -&gt; getRest(); 
+        head_ptr -&gt; setRest(temp -&gt; getRest());
+        delete temp;
+    }
+    delete head_ptr;
+}
+
+bool List::isEmpty() const
+{
+    return head_ptr == NULL;
+}
+
+void List::append(string val)
+{
+    if (isEmpty())
+        head_ptr = new Rec_node(val);
+    else
+        head_ptr -&gt; append(val);   
+}
+
+string List::retrieve(int n) const
+{
+    return head_ptr -&gt; retrieve(n);
+}
+
+void List::insertAt(int n, string val)
+{
+    if (n == 0 &amp;&amp; isEmpty())
+    {
+        append(val);
+    }
+    else if (n == 0)
+    {
+        head_ptr = new Rec_node(val, head_ptr);
+    }
+    else
+    {
+        head_ptr -&gt; insertAt(n, val);
+    }   
+}
+
+string List::removeFrom(int n)
+{
+    if (n == 0)
+    {
+        Rec_node* temp_ptr = head_ptr;
+        string retval = temp_ptr -&gt; getData();
+        head_ptr = head_ptr -&gt; getRest();
+        delete temp_ptr;
+        return retval;
+    }
+    else
+    {
+        return head_ptr -&gt; removeFrom(n);
+    } 
+}
+
+
+/*
+int List::size() const
+{
+    if (isEmpty())
+        return 0;
+    else
+        return head_ptr -&gt; size();
+}
+*/
+
+/*
+*  operator== (equivalence)
+*   Postcondition: Returns true if the lists are logically equivalent,
+*     that is, they have equivalent data in the same order; otherwise,
+*     returns false.
+*/
+bool operator==(const List &amp;L1, const List &amp;L2)
+{
+    if (L1.isEmpty() &amp;&amp; L2.isEmpty())
+        return true;
+    else
+        return *L1.head_ptr == *L2.head_ptr;
+}
+
+/*
+*  operator!= (inequivalence)
+*   Postcondition: Returns true if the lists are NOT logically equivalent,
+*     otherwise, returns false.
+*/
+bool operator!=(const List &amp;L1, const List &amp;L2)
+{
+    return not (L1 == L2);
+}
+
+/*
+*  operator&lt;&lt; (stream output)
+*
+*  When the empty list is printed, the message is "&lt;empty list&gt;".
+*  Otherwise, the list items are printed on a single line with a single
+*     space after each item.
+*
+*  Note: Make a call to operator&lt;&lt; for Rec_node.
+*/
+std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L)
+{
+    if (L.isEmpty())
+    {
+        out &lt;&lt; "&lt;empty list&gt;";
+    }
+    
+    else
+    {
+        out &lt;&lt; *(L.head_ptr);
+    }
+    
+    return out;
+}
+
+
+        </preamble>
+        <code>
+int List::size() const
+{
+
+}
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    List L1;
+    if (L1.size() == 0) 
+       cout &lt;&lt; "Size is 0.";
+    else 
+       cout &lt;&lt; "Incorrect.";
+    
+    std::string answer = 'Size is 0.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("Ziggy"); 
+    L1.append("Spike");
+    L1.append("Spike"); 
+    L1.append("Spike"); 
+    L1.append("Spike"); 
+    L1.append("Spike");
+    if (L1.size() == 6) 
+       cout &lt;&lt; "Size is 6.";
+    else 
+       cout &lt;&lt; "Incorrect.";
+    std::string answer = 'Size is 6.\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("Ziggy"); 
+    L1.append("Spike"); 
+    L1.append("Cleo"); 
+    L1.append("Skye");
+    cout &lt;&lt; "size is " 
+         &lt;&lt; L1.size() 
+         &lt;&lt; endl;
+    std::string answer = 'size is 4\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    List L1;
+    cout &lt;&lt; L1.size();
+    std::string answer = '0\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("Ziggy"); 
+    L1.append("Spike");
+    L1.append("Spike"); 
+    L1.append("Spike"); 
+    L1.append("Spike"); 
+    if (L1.size() == 5) 
+       cout &lt;&lt; "FIVE";
+    else cout &lt;&lt; "Incorrect.";
+    std::string answer = 'FIVE'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("Ziggy"); 
+    if (L1.size() == 1) 
+       cout &lt;&lt; "ONE";
+    else 
+       cout &lt;&lt; "Incorrect.";
+    std::string answer = 'ONE'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Recursion-List-insertAt_removeFrom-1" label="exe-sec-Homework-13-Recursive-Lists-1-234408">
+      <statement>
+        <p>Implement the <c>insertAt</c> and <c>removeFrom</c> member functions for the recursive <c>List</c> class.  The <c>Rec_node::size()</c> method has been disabled.</p>
+        <pre>      /*
+      *  insertAt
+      *   Inserts a new item at a given index `n` in the list.
+      *   Precondition: 0 &lt;= n &lt;= length of this list
+      *   Postcondition: The length of the list has increased by one.
+      *   Postcondition: The item at index `n` in the list is now `val`.
+      *   Postcondition: The relative positions of the previously-existing
+      *     items are unchanged.
+      *   
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      void insertAt(int n, string val);
+      
+      
+      /*
+      *  removeFrom
+      *   Delete a node at a given index `n` and return its data.
+      *   Precondition: 0 &lt;= n &lt; length
+      *   Postcondition: The list is now one item shorter. The node at position
+      *     `n` has been deleted.  The relative positions of the other items
+      *     are unchanged.
+      
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      string removeFrom(int n);        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+// FILES: Rec_node.cpp and List.cpp
+// 3-26-19
+// Inlined for coderunner questions
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Rec_node
+{
+   public:
+
+      // ##### BASIC FUNCTIONALITY ##### //
+
+      /*
+      *  Default constructor
+      *   Postcondition: `data` is set to the empty string.
+      *   Postcondition: `rest` is set to NULL.
+      */
+      explicit Rec_node();
+
+      /*
+      *  Constructor with 1 or 2 parameters
+      *   Postcondition: `val` is stored stored in the `data` field.
+      *   Postcondition: `rest_ptr` is stored stored in the `rest` field.
+      *   Note: `rest_ptr` defaults to NULL if not provided.
+      */
+      Rec_node(string val, Rec_node * rest_ptr = NULL);
+
+      /*
+      *  No destructor is provided for the Rec_node class; the List class will
+      *  deallocate Rec_node storage in the List destructor.
+      */
+
+      // *** Getters and Setters, Defined HERE In-Line *** //
+      string getData() const { return data; }
+      Rec_node * getRest() const { return rest; }
+      void setData(string val) { data = val; }
+      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+
+      /*
+      *  append
+      *   Postcondition: `val` is the new last item of the list headed by 
+      *     this node; the list is not changed in any other way.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of the list headed by this node.
+      *   Postcondition: value_type object at index `n` is returned, where indexing
+      *     is relative to this node.
+      *
+      *   Example: myNode.retrive(0) will return the data in `myNode`, while
+      *     myNode.retrieve(1) will return the data in the node that immediately
+      *     follows `myNode`.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      string retrieve(int n) const;
+
+      /*
+      *  insertAt
+      *   Insert a new node containing `val` at index `n` relative to this node.
+      *   Precondition: 0 &lt; n &lt; length
+      *   Exception: Throws domain_error if `n` is too large (List class
+      *     will ensure this function is never called with n &lt;= 0.)
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete the node at index `n` from the list headed by this node and 
+      *     return its data; index `n` is relative to this node.
+      *   Precondition: 1 &lt;= n &lt; length
+      *   Postcondition: The list headed by this node is one node shorter; 
+      *     the node that had index `n` relative to this node is now deleted 
+      *     and its data returned; the list is not changed in any other way.
+      *   Exception: Throws domain_error if `n` is too large.
+      *
+      *   Note: List.removeFrom will handle the cases n &lt; 0 and n == 0.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      string removeFrom(int n);
+
+      /*
+      * clearRest
+      *  Removes all nodes that come after this node from the list headed by
+      *     this node. 
+      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     that node are deallocated.
+      *  Postcondition: `rest` is set to NULL.
+      */
+      void clearRest();
+
+      /*
+      *  isOrdered
+      *   Checks if the list headed by this node is in ascending order.
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *     than length of the list headed by this node, retrieve(i) is less than
+      *     or equal to retrieve(i + 1); otherwise, returns false.
+      *
+      *  Note: MUST be implemented with recursion.
+      *
+      *  Note: A one-element list is considered to be in ascending order.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Inserts `val` into its proper place in the ordered list headed by
+      *     this node. 
+      *   Precondition: The list headed by this node is ordered, and 
+      *     P is &lt;= the data in this node.
+      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *     otherwise, the list is unchanged.
+      *   Postcondition: The list headed by this node is in ascending ordered.
+      *
+      *   Note: Do not check the precondition. List.orderedInsert will throw a
+      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     the preconditions are true.
+      *
+      *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
+      *     List.orderedInsert will handle that insertion. Rec_node.orderedInsert
+      *     will ONLY be called in the case that P is &gt;= the data in this node.
+      *
+      *   Note: MUST be implemented with recursion.
+      */
+      void orderedInsert(string val);
+      
+      /*
+      *  size
+      *  Postcondition: Return the number of nodes in the list headed by this node.
+      *
+      *  Note: MUST be implemented with recursion.
+      */
+      //int size() const;
+
+      // FRIEND
+      friend bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const Rec_node &amp;node);
+
+   private:
+
+      // Instance variables
+      string data;   // value_type stored in this node
+      Rec_node * rest;   // pointer to first node of the rest of this list
+
+      /*
+      *  Rec_node assignment operator is disabled by making it private.
+      *  DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      Rec_node&amp; operator=(const Rec_node &amp;other);
+
+};  // Rec_node class definition
+
+// Rec_node implementation
+Rec_node::Rec_node(string val, Rec_node * rest_ptr)
+{
+    data = val;
+    rest = rest_ptr;
+}
+
+Rec_node::Rec_node()
+{
+    data = "";
+    rest = NULL;
+}
+
+void Rec_node::append(string val)
+{
+    // base case
+    if (rest == NULL)
+    {
+        rest = new Rec_node(val, NULL);
+        return;
+    }
+
+    // recursive case
+    rest -&gt; append(val);
+}
+
+string Rec_node::retrieve(int n) const
+{
+    // base case
+    if (n == 0)
+    {
+        return data;
+    }
+
+    // recursive case
+    return rest -&gt; retrieve(n - 1);
+}
+
+void Rec_node::insertAt(int n, string val)
+{
+    // base case
+    if (n == 1)
+    {
+        // insert right after this node
+        rest = new Rec_node(val, rest);
+        return;
+    }
+       
+    // recursive case
+    rest -&gt; insertAt(n - 1, val);
+}
+
+string Rec_node::removeFrom(int n)
+{
+    // base case
+    if (n == 1)
+    {
+        // remove the node right after this one and deallocate memory
+        Rec_node* temp = rest;
+        rest = temp -&gt; rest;
+        string val = temp -&gt; data;
+        delete temp;
+        return val;
+    }
+
+    // recursive case
+    return rest -&gt; removeFrom(n - 1);
+}
+
+/*
+int Rec_node::size() const
+{
+    // base case
+    if (rest == NULL)
+    {
+        return 1;
+    }
+
+    // recursive case
+    else
+    {
+        return rest -&gt; size() + 1;
+    }
+}
+*/
+
+bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    // recursive case
+    if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
+        return *n1.rest == *n2.rest;
+       
+    // base cases:
+    if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
+        return true;
+    else
+        return false;
+}
+
+bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2)
+{
+    return not (n1 == n2);
+}
+
+ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
+{
+    out &lt;&lt; node.getData();
+    if (node.rest != NULL)
+    {
+        out &lt;&lt; ", " &lt;&lt; *(node.rest);
+    }
+    return out;
+}
+
+class List
+{
+   public:
+
+      /*
+      *  Default constructor initializes an empty list.
+      */
+      List();
+
+      /*
+      *  List destructor - test it indirectly using valgrind.
+      */
+      ~List();
+
+      /*
+      *  isEmpty
+      *   Postcondition: Returns true if this is an empty list; otherwise,
+      *     returns false.
+      */
+      bool isEmpty() const;
+
+      /*
+      *  append
+      *   Postcondition: A new item, `val`, is added to the end of the list.
+      *
+      *   Note: Make a call to Rec_node::append.
+      */
+      void append(string val);
+
+      /*
+      *  retrieve
+      *   Precondition: 0 &lt;= n &lt; length of list
+      *   Postcondition: Item at index `n` (counting from 0 at the head node)
+      *     is returned.
+      *
+      *   Note: Make a call to Rec_node::retrieve.
+      */
+      string retrieve(int n) const;
+      
+      /*
+      *  size
+      *   Postcondition: Returns the number of items in the list.
+      */
+      //int size() const;
+
+      /*
+      *  clear
+      *   Postcondition: This list is empty.
+      */
+      void clear();
+
+      /*
+      *  insertAt
+      *   Inserts a new item at a given index `n` in the list.
+      *   Precondition: 0 &lt;= n &lt;= length of this list
+      *   Postcondition: The length of the list has increased by one.
+      *   Postcondition: The item at index `n` in the list is now `val`.
+      *   Postcondition: The relative positions of the previously-existing
+      *     items are unchanged.
+      *   
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      void insertAt(int n, string val);
+
+      /*
+      *  removeFrom
+      *   Delete a node at a given index `n` and return its data.
+      *   Precondition: 0 &lt;= n &lt; length
+      *   Postcondition: The list is now one item shorter. The node at position
+      *     `n` has been deleted.  The relative positions of the other items
+      *     are unchanged.
+      *
+      *   Note 1: Do not worry about invalid values for `n`.
+      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+      *      nature of of Rec_nodes to accomplish any iteration.
+      */
+      string removeFrom(int n);
+
+      /*
+      *  isOrdered
+      *   Postcondition: Returns true if this list is in ascending order;
+      *     otherwise, returns false.
+      *
+      *   Note: Returns true if the list is empty.
+      *
+      *   Note: Make a call to Rec_node::isOrdered.
+      */
+      bool isOrdered() const;
+
+      /*
+      *  orderedInsert
+      *   Precondition: This list is ordered.
+      *   Postcondition: `val` is inserted into this list, increasing its length
+      *     by one.
+      *   Postcondition: This list is ordered.
+      *   Exception: Throws domain_error if precondition fails.
+      *
+      *   Note: Make a call to Rec_node::orderedInsert.
+      */
+      void orderedInsert(string val);
+
+      // FRIENDS
+      friend bool operator==(const List &amp;L1, const List &amp;L2);
+      friend bool operator!=(const List &amp;L1, const List &amp;L2);
+      friend std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L);
+
+   private:
+
+      // INSTANCE VARIABLE
+      Rec_node * head_ptr;  // pointer to the head of the list
+
+      /*
+      * List assignment operator and copy constructor are disabled by making them private.
+      *    DO NOT IMPLEMENT.  DO NOT USE.
+      */
+      List&amp; operator=(const List &amp;other);
+      List(const List &amp;other);
+
+};  // List class
+
+/*
+*  Default constructor initializes an empty list.
+*/
+List::List()
+{
+    head_ptr = NULL;
+}
+
+/*
+*  List destructor - test it indirectly using valgrind.
+*/
+List::~List()
+{
+    if (head_ptr == NULL)
+    {
+        return;
+    }
+    
+    Rec_node* temp;
+    while (head_ptr -&gt; getRest() != NULL)
+    {
+        temp = head_ptr -&gt; getRest(); 
+        head_ptr -&gt; setRest(temp -&gt; getRest());
+        delete temp;
+    }
+    delete head_ptr;
+}
+
+bool List::isEmpty() const
+{
+    return head_ptr == NULL;
+}
+
+void List::append(string val)
+{
+    if (isEmpty())
+        head_ptr = new Rec_node(val);
+    else
+        head_ptr -&gt; append(val);   
+}
+
+string List::retrieve(int n) const
+{
+    return head_ptr -&gt; retrieve(n);
+}
+
+/*
+void List::insertAt(int n, string val)
+{
+    if (n == 0 &amp;&amp; isEmpty())
+    {
+        append(val);
+    }
+    else if (n == 0)
+    {
+        head_ptr = new Rec_node(val, head_ptr);
+    }
+    else
+    {
+        head_ptr -&gt; insertAt(n, val);
+    }   
+}
+
+string List::removeFrom(int n)
+{
+    if (n == 0)
+    {
+        Rec_node* temp_ptr = head_ptr;
+        string retval = temp_ptr -&gt; getData();
+        head_ptr = head_ptr -&gt; getRest();
+        delete temp_ptr;
+        return retval;
+    }
+    else
+    {
+        return head_ptr -&gt; removeFrom(n);
+    } 
+}
+*/
+
+
+/*
+int List::size() const
+{
+    return 0;
+}
+*/
+
+/*
+*  operator== (equivalence)
+*   Postcondition: Returns true if the lists are logically equivalent,
+*     that is, they have equivalent data in the same order; otherwise,
+*     returns false.
+*/
+bool operator==(const List &amp;L1, const List &amp;L2)
+{
+    return false;
+}
+
+/*
+*  operator!= (inequivalence)
+*   Postcondition: Returns true if the lists are NOT logically equivalent,
+*     otherwise, returns false.
+*/
+bool operator!=(const List &amp;L1, const List &amp;L2)
+{
+    return not (L1 == L2);
+}
+
+/*
+*  operator&lt;&lt; (stream output)
+*
+*  When the empty list is printed, the message is "&lt;empty list&gt;".
+*  Otherwise, the list items are printed on a single line with a single
+*     space after each item.
+*
+*  Note: Make a call to operator&lt;&lt; for Rec_node.
+*/
+std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L)
+{
+    if (L.isEmpty())
+    {
+        out &lt;&lt; "&lt;empty list&gt;";
+    }
+    
+    else
+    {
+        out &lt;&lt; *(L.head_ptr);
+    }
+    
+    return out;
+}
+
+        </preamble>
+        <code>
+void List::insertAt(int n, string val)
+{
+
+}
+
+string List::removeFrom(int n)
+{
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.insertAt(0, "Ziggy");
+    cout &lt;&lt; L1;
+    
+    std::string answer = 'Ziggy\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.insertAt(0, "Skye");
+    L1.insertAt(0, "Ziggy");
+    cout &lt;&lt; L1;
+    std::string answer = 'Ziggy, Skye\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.insertAt(0, "Skye");
+    L1.insertAt(1, "Ziggy");
+    L1.insertAt(2, "Mr. Gray");
+    L1.insertAt(3, "Xerea");
+    L1.insertAt(2, "Ruthie");
+    L1.insertAt(1, "Spot");
+    cout &lt;&lt; L1;
+    std::string answer = 'Skye, Spot, Ziggy, Ruthie, Mr. Gray, Xerea\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.insertAt(0, "Skye");
+    L1.insertAt(1, "Z");
+    L1.insertAt(2, "M");
+    L1.insertAt(3, "X");
+    L1.insertAt(4, "d");
+    L1.insertAt(2, "x");
+    L1.insertAt(3, "k");
+    L1.insertAt(1, "w");
+    cout &lt;&lt; L1;
+    std::string answer = 'Skye, w, Z, x, k, M, X, d\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("apple");
+    L1.append("banana");
+    L1.append("pear");
+    cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'apple\nbanana, pear\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("apple");
+    L1.append("banana");
+    L1.append("pear");
+    cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'banana\napple, pear\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("apple");
+    L1.append("banana");
+    L1.append("pear");
+    cout &lt;&lt; L1.removeFrom(2) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'pear\napple, banana\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("apple");
+    cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'apple\n&lt;empty list&gt;\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("apple");
+    L1.append("banana");
+    cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'apple\nbanana\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test10" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("apple");
+    L1.append("banana");
+    cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'banana\napple\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test11" ) {
+    std::stringstream cout;
+    List L1; 
+    L1.append("a");
+    L1.append("b");
+    L1.append("c");
+    L1.append("d");
+    L1.append("e");
+    cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
+    cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
+    cout &lt;&lt; L1.removeFrom(2) &lt;&lt; endl;
+    cout &lt;&lt; L1;
+    std::string answer = 'a\nc\ne\nb, d\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

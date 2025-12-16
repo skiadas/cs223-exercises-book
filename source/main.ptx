@@ -1,0 +1,22 @@
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <book>
+    <title>CS223 Exercises</title>
+    <chapter xml:id="ch-exercises">
+      <title>Chapter Title</title>
+      <xi:include href="./sec-0-Homework-1.ptx" />
+      <xi:include href="./sec-1-Homework-2.ptx" />
+      <xi:include href="./sec-2-Homework-3.ptx" />
+      <xi:include href="./sec-3-Homework-4-Arrays-Strings.ptx" />
+      <xi:include href="./sec-4-Homework-5-Input-Output.ptx" />
+      <xi:include href="./sec-5-Homework-6-Pointers.ptx" />
+      <xi:include href="./sec-6-Homework-7-Classes.ptx" />
+      <xi:include href="./sec-7-Homework-8-More-on-Pointers-Dynamic-Memory-Operator-Overloading.ptx" />
+      <xi:include href="./sec-8-Homework-9-Linked-Lists.ptx" />
+      <xi:include href="./sec-9-Homework-10-Exception-Handling-and-Function-Templates.ptx" />
+      <xi:include href="./sec-10-Homework-11-Stacks-Queues.ptx" />
+      <xi:include href="./sec-11-Homework-12-Recursion.ptx" />
+      <xi:include href="./sec-12-Homework-13-Recursive-Lists.ptx" />
+      <xi:include href="./sec-13-Homework-14-Binary-Trees.ptx" />
+    </chapter>
+  </book>
+</pretext>

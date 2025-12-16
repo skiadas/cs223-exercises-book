@@ -1,0 +1,684 @@
+<section xml:id="sec-Homework-9-Linked-Lists-1">
+  <title>Homework 9 -- Linked Lists</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-NumberListSum-1" label="exe-sec-Homework-9-Linked-Lists-1-270230">
+      <statement>
+        <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>sumAll()</alert> that will add up all the values in the list and return the result.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+typedef double value_type;  // NOTE CHANGE from textbook version
+
+class Node {
+ public:
+    value_type value;
+    Node* next;
+ 
+    // CONSTRUCTOR
+    Node(value_type init_data = value_type(), Node* init_link = nullptr) :
+    value(init_data), next(init_link)
+    { }
+
+};
+
+class List {
+  public:
+    Node* head;
+
+  List() { head = nullptr; }
+
+  void insertStart(value_type v) {
+    head = new Node(v, head);
+  }
+
+  double sumAll();
+
+  friend ostream&amp; operator&lt;&lt;(ostream&amp; out, List&amp; l) {
+    Node* curr = l.head;
+    while (curr != nullptr) {
+      out &lt;&lt; curr-&gt;value;
+      if (curr-&gt;next != nullptr) cout &lt;&lt; " -&gt; ";
+      curr = curr-&gt;next;
+    }
+    return out;
+  }
+};
+
+
+
+        </preamble>
+        <code>
+double List::sumAll() {
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();
+    
+    std::string answer = '3 -&gt; 5 -&gt; 7 :  15\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    List l;
+    cout &lt;&lt; "empty list   :  " &lt;&lt; l.sumAll();
+    std::string answer = 'empty list   :  0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertStart(8);
+    cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();
+    std::string answer = '8 -&gt; 3 -&gt; 5 -&gt; 7 :  23\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-ListStringConvertConstructor-1" label="exe-sec-Homework-9-Linked-Lists-1-234473">
+      <statement>
+        <p dir="ltr">In this question you are given a standard linked list setup that holds double values, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a "convert constructor" that will convert a string to a list. The string is assumed to contain numbers separated by spaces, so you can read them if you turn the string into an istringstream. The sstream header has already been included, so you have access to the istringstream. For the purposes of this program, there are no insert functions available to you. You will need to do the work to create the needed nodes in your constructor.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+typedef double value_type;  // NOTE CHANGE from textbook version
+
+class Node {
+ public:
+    value_type value;
+    Node* next;
+ 
+    // CONSTRUCTOR
+    Node(value_type init_data = value_type(), Node* init_link = nullptr) :
+    value(init_data), next(init_link)
+    { }
+
+};
+
+class List {
+  public:
+    Node* head;
+
+  List() { head = nullptr; }
+
+    List(string s);
+
+  friend ostream&amp; operator&lt;&lt;(ostream&amp; out, const List&amp; l) {
+    Node* curr = l.head;
+    while (curr != nullptr) {
+      out &lt;&lt; curr-&gt;value;
+      if (curr-&gt;next != nullptr) cout &lt;&lt; " -&gt; ";
+      curr = curr-&gt;next;
+    }
+    return out;
+  }
+};
+
+
+
+        </preamble>
+        <code>
+List::List(string s) {
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    string s("4 6    7");
+    cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
+    
+    std::string answer = '"4 6    7" :  4 -&gt; 6 -&gt; 7\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    string s("");
+    cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
+    
+    std::string answer = '"" :\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    string s("4");
+    cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
+    
+    std::string answer = '"4" :  4\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    string s("  2    4 3   6    7  ");
+    cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
+    
+    std::string answer = '"  2    4 3   6    7  " :  2 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 7\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-ListInsertAt-1" label="exe-sec-Homework-9-Linked-Lists-1-234469">
+      <statement>
+        <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>insertAt(value, index)</alert> that will insert a new node with the provided value at the requested index, if that is a valid spot. On a list of size 6 for example, the valid spots are at indexes 0 through 6, 0 being the beginning of the list, 1 meaning immediately after the first element, and so on, with 6 being the spot after the last element. If you are given an invalid index (either negative or out of bounds) you should simply return without changing the list.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+typedef double value_type;  // NOTE CHANGE from textbook version
+
+class Node {
+ public:
+    value_type value;
+    Node* next;
+ 
+    // CONSTRUCTOR
+    Node(value_type init_data = value_type(), Node* init_link = nullptr) :
+    value(init_data), next(init_link)
+    { }
+
+};
+
+class List {
+  public:
+    Node* head;
+
+  List() { head = nullptr; }
+
+  void insertStart(value_type v) {
+    head = new Node(v, head);
+  }
+
+  void insertAt(value_type v, int i);
+
+  friend ostream&amp; operator&lt;&lt;(ostream&amp; out, List&amp; l) {
+    Node* curr = l.head;
+    while (curr != nullptr) {
+      out &lt;&lt; curr-&gt;value;
+      if (curr-&gt;next != nullptr) cout &lt;&lt; " -&gt; ";
+      curr = curr-&gt;next;
+    }
+    return out;
+  }
+};
+
+
+
+        </preamble>
+        <code>
+void List::insertAt(value_type v, int index) {
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertAt(8, 1);
+    cout &lt;&lt; list1;
+    std::string answer = '3 -&gt; 8 -&gt; 5 -&gt; 7'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertAt(8, 2);
+    cout &lt;&lt; list1;
+    std::string answer = '3 -&gt; 5 -&gt; 8 -&gt; 7'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertAt(8, 3);
+    cout &lt;&lt; list1;
+    std::string answer = '3 -&gt; 5 -&gt; 7 -&gt; 8'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertAt(8, 0);
+    cout &lt;&lt; list1;
+    std::string answer = '8 -&gt; 3 -&gt; 5 -&gt; 7'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    // empty list case
+    List l;
+    l.insertAt(5, 0);
+    cout &lt;&lt; l;
+    std::string answer = '5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    // list2 = 3
+    list2.insertAt(5, 0);
+    cout &lt;&lt; list2;
+    std::string answer = '5 -&gt; 3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    // list2 = 3
+    list2.insertAt(5, 1);
+    cout &lt;&lt; list2;
+    std::string answer = '3 -&gt; 5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertAt(8, -1);
+    cout &lt;&lt; list1;
+    std::string answer = '3 -&gt; 5 -&gt; 7'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    // list1 =  3 5 7
+    list1.insertAt(8, 4);
+    cout &lt;&lt; list1;
+    std::string answer = '3 -&gt; 5 -&gt; 7'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-KeepOddNumbered-1" label="exe-sec-Homework-9-Linked-Lists-1-234472">
+      <statement>
+        <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>keepOddNumbered()</alert> that will change the list as follows: It will remove every second node, starting with the second node. See the examples for how this might look. You can do this in two ways: One is using a helper index variable to keep track of the index (or a boolean variable to keep track of if you are odd or even, alternating each time). There is also a way to do this that does not use any helper variables other than one-two <alert>Node*</alert> variables. This last version is a bit trickier but more interesting.</p>
+        <p dir="ltr">(Although you should make sure you delete every removed node, the system will not check for that).</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+typedef double value_type;  // NOTE CHANGE from textbook version
+
+class Node {
+ public:
+    value_type value;
+    Node* next;
+ 
+    // CONSTRUCTOR
+    Node(value_type init_data = value_type(), Node* init_link = nullptr) :
+    value(init_data), next(init_link)
+    { }
+
+};
+
+class List {
+  public:
+    Node* head;
+
+  List() { head = nullptr; }
+
+  List(string s);
+
+  void insertStart(value_type v) {
+    head = new Node(v, head);
+  }
+
+  void insertEnd(value_type v);
+
+  void keepOddNumbered();
+
+  friend ostream&amp; operator&lt;&lt;(ostream&amp; out, List&amp; l) {
+    Node* curr = l.head;
+    while (curr != nullptr) {
+      out &lt;&lt; curr-&gt;value;
+      if (curr-&gt;next != nullptr) cout &lt;&lt; " -&gt; ";
+      curr = curr-&gt;next;
+    }
+    return out;
+  }
+};
+
+
+void List::insertEnd(value_type v) {
+    Node* newNode = new Node(v);
+    if (head == nullptr) { head = newNode; }
+    else {
+        Node* curr = head;
+        while (curr-&gt;next != nullptr) { curr = curr-&gt;next; }
+        curr-&gt;next = newNode;
+    }
+ }
+
+List::List(string s): List() {
+     istringstream in(s);
+     double v;
+     while (in &gt;&gt; v) { insertEnd(v); } 
+ }
+
+
+
+        </preamble>
+        <code>
+void List::keepOddNumbered() {
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    List list("3 5 7");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7\nAfter: 3 -&gt; 7\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    List list;
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before:\nAfter:\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    List list("3 5");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3 -&gt; 5\nAfter: 3\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    List list("3 5 7 9 11");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7 -&gt; 9 -&gt; 11\nAfter: 3 -&gt; 7 -&gt; 11\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    List list("3");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3\nAfter: 3\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    List list("3 5 7");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7\nAfter: 3 -&gt; 7\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    List list("3 5 7 9");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.keepOddNumbered();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7 -&gt; 9\nAfter: 3 -&gt; 7\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-LinkedListReverse-1" label="exe-sec-Homework-9-Linked-Lists-1-234471">
+      <statement>
+        <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>reverse()</alert> that will reverse the order of all the nodes (i.e. the last node will end up being the first). This is not long, but it is not an easy function to write, make sure you have a plan and draw some pictures before starting to code. Your instructor's solution is about 10 lines and uses 3 local variables to help keep track of stuff.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+typedef double value_type;  // NOTE CHANGE from textbook version
+
+class Node {
+ public:
+    value_type value;
+    Node* next;
+ 
+    // CONSTRUCTOR
+    Node(value_type init_data = value_type(), Node* init_link = nullptr) :
+    value(init_data), next(init_link)
+    { }
+
+};
+
+class List {
+  public:
+    Node* head;
+
+  List() { head = nullptr; }
+
+  List(string s);
+
+  void insertStart(value_type v) {
+    head = new Node(v, head);
+  }
+
+  void insertEnd(value_type v);
+
+  void reverse();
+
+  friend ostream&amp; operator&lt;&lt;(ostream&amp; out, List&amp; l) {
+    Node* curr = l.head;
+    while (curr != nullptr) {
+      out &lt;&lt; curr-&gt;value;
+      if (curr-&gt;next != nullptr) cout &lt;&lt; " -&gt; ";
+      curr = curr-&gt;next;
+    }
+    return out;
+  }
+};
+
+
+void List::insertEnd(value_type v) {
+    Node* newNode = new Node(v);
+    if (head == nullptr) { head = newNode; }
+    else {
+        Node* curr = head;
+        while (curr-&gt;next != nullptr) { curr = curr-&gt;next; }
+        curr-&gt;next = newNode;
+    }
+ }
+
+List::List(string s): List() {
+     istringstream in(s);
+     double v;
+     while (in &gt;&gt; v) { insertEnd(v); } 
+ }
+
+
+
+        </preamble>
+        <code>
+void List::reverse() {
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    List list("3 5 7");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7\nAfter: 7 -&gt; 5 -&gt; 3\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    List list;   // empty list
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before:\nAfter:\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    List list("1 3");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 1 -&gt; 3\nAfter: 3 -&gt; 1\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    List list("4");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 4\nAfter: 4\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    List list("1 3 7 9 13 20");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 1 -&gt; 3 -&gt; 7 -&gt; 9 -&gt; 13 -&gt; 20\nAfter: 20 -&gt; 13 -&gt; 9 -&gt; 7 -&gt; 3 -&gt; 1\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    List list("4");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 4\nAfter: 4\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    List list("4");
+    cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
+    list.reverse();
+    cout &lt;&lt; "After: " &lt;&lt; list;
+    std::string answer = 'Before: 4\nAfter: 4\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

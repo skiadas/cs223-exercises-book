@@ -1,0 +1,369 @@
+<section xml:id="sec-Homework-5-Input-Output-1">
+  <title>Homework 5: Input/Output</title>
+  <introduction>
+    <p>The goal of this assignment is to give you some practice working with C++ <alert>file I/O</alert> and to check your knowledge of some of the main concepts on this topic.</p>
+    <p />
+    <p />
+  </introduction>
+  <exercises>
+    <exercise xml:id="exer-JMPCH28i-file_stream_header-1" label="exe-sec-Homework-5-Input-Output-1-234229">
+      <statement>
+        <p>What is the name of the header file that you need to include if you want your C++ program to read from, or write to, a <alert>file</alert>?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>fstream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>iostream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stringstream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stdio</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MSAppendF_multi-input_streams-1" label="exe-sec-Homework-5-Input-Output-1-234233">
+      <statement>
+        <p>Which of the following can be used as input streams?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>cout</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>cin</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>an object of type ifstream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>an object of type ofstream</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JMPCH29-reading_using_cin-1" label="exe-sec-Homework-5-Input-Output-1-234231">
+      <statement>
+        <p>Suppose you have the following lines of code:</p>
+        <pre>int myint;
+char mychar;
+string mystring;
+ifstream infile("sample.txt");
+infile &gt;&gt; mystring;
+infile &gt;&gt; mychar;
+for (int i = 0; i &lt; 5; i++)
+{
+    infile &gt;&gt; myint;
+}
+infile.close()        </pre>
+        <p>Suppose that sample.txt contains the following data:</p>
+        <pre>whatchamacallit $ 11 8 2 5 16 9 42 0
+        </pre>
+        <p>What will be the value of 'myint' after this code has executed?</p>
+        <fillin answer="16" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>16</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MSAppendF_multi-newline_endl-1" label="exe-sec-Homework-5-Input-Output-1-234222">
+      <statement>
+        <p>Which of the following statements about the newline character '\n' and the <c>endl</c> object are true?</p>
+      </statement>
+      <choices multiple-correct="yes" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>When used at the end of writing to an output stream like `cout`, both '\n' and <c>endl</c> have the potential to leave data in the output buffer if the program crashes.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Both <c>cout &lt;&lt; '\n'</c> and <c>cout &lt;&lt; endl</c> will write an end-of-line (a newline character) to standard output.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>The difference between '\n' and <c>endl</c> is that <c>endl</c> will automatically flush the output buffer.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MSAppendF_multi-input_functions-1" label="exe-sec-Homework-5-Input-Output-1-234225">
+      <statement>
+        <p>Which one of the following when executed will look ahead and return the next character in the cin input stream without actually reading the character?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>cin.ignore()</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>cin.peek()</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>cin.get(c)</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>cin &gt;&gt; c</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MSAppendF_multi-failed_input-1" label="exe-sec-Homework-5-Input-Output-1-234223">
+      <statement>
+        <p>Which one of the following will cause a failure in the standard input stream (cin)?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Using chaining to read in several different values, one right after the other. For example: <c>cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</c></p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>Reading in illegal data for an input operation.  An example of this would be if the variable 'num' is an int, and when <c>cin &gt;&gt; num</c> is executed, the user enters a string instead of an integer.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Using 'cin' as the input stream argument for the getline function. For example, <c>getline(cin, message)</c> where 'message' is a string.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MSAppendF_multi-output_precision-1" label="exe-sec-Homework-5-Input-Output-1-234224">
+      <statement>
+        <p>What is the exact output from the following snippet of C++ code?</p>
+        <pre>double pi = 3.14159;
+cout.precision(3);
+cout &lt;&lt; pi &lt;&lt; endl;        </pre>
+        <fillin answer="3.14" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>3.14</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-Lesson2-file_first_chars-1" label="exe-sec-Homework-5-Input-Output-1-234226">
+      <statement>
+        <p>Write a complete C++ program that will open a file called 'mystrings.txt', and write to standard output the<alert>first character from each line</alert> in the file, with all output on the same line.</p>
+        <p>For example, if mystrings.txt contains the following data:</p>
+        <pre>happy smile laugh
+sad frown cry
+angsty hyper
+euphoric delightful wonderful lovely
+maudlin        </pre>
+        <p>your program would output:</p>
+        <pre>hsaem</pre>
+        <p>You may assume that mystrings.txt does not contain any blank lines.</p>
+        <p>HINT: Use <c>while(getline(&lt;your args here&gt;))</c> to loop over the lines of a file.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '4KB3PaQCbyJwDQMvahL96VIdR'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Lesson2-calc_from_file-1" label="exe-sec-Homework-5-Input-Output-1-234228">
+      <statement>
+        <p>The first line of the file 'calculate.txt' contains an integer. The following lines contain simple arithmetic expressions, one per line. The integer on the first line specifies how many calculations will follow.</p>
+        <p>
+          <ul>
+            <li>All calculations will contain numbers with decimal points; use variables of type `double` for reading the numbers in the expressions.</li>
+            <li>The math operators your program must handle are: +, -, * , /</li>
+          </ul>
+        </p>
+        <p>Below is a sample of what the file calculate.txt might look like:</p>
+        <p></p>
+        <pre>5
+11.1 + 3.2
+-2.0 - 8.0
+3.0 * 12.3
+9.0 / 3.010.0 / 9.0        </pre>
+        <p>Write a complete C++ program that will write the results of the calculations (one per line) to standard output WITH A PRECISION OF 3 (three significant figures). For example, if calculate.txt contains the data above, your program would output the following:</p>
+        <pre>14.3
+-10
+36.9
+31.11        </pre>
+        <p>HINT: Because the first line of the file tells you exactly how many more lines need to be read, and each line after the first contains 3 tokens in the format &lt;double&gt; &lt;char&gt; &lt;double&gt;, it's easier to read the arithmetic expressions using the input stream operator `&gt;&gt;` (also called the "stream extraction operator") rather than `getline`.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = '7.4\n-3.7\n-1.6\n12.5\n-15.6\n-10.9\n-17.4\n-1.4\n10\n-59.6\n673\n-47.5\n-14.4\n71.8\n-7.56\n1.72\n-6.4\n3\n-9.8\n7.07'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Lesson2-counting_cat_treats-1" label="exe-sec-Homework-5-Input-Output-1-234234">
+      <statement>
+        <p>For this problem, you are working with a text file, "cat_treats.txt".  Each line of the file contains the name of one of Dr. Wilson's cats (Cleo, Skye, Spike, or Ziggy) followed by one or more spaces and then an integer such as 2 (representing the gain of 2 treats for that cat) or -3 (representing the loss of 3 treats for that cat), except that the last line of the file has just the word "END".</p>
+        <p>Note: Some lines might start with a cat name which is <alert>not one of Dr. Wilson's cats</alert>.  In that case, your program should print an error message.  See the example below.</p>
+        <p>To help Dr. Wilson's cats keep track of their cat treat stashes, write a complete C++ program to read the text file and print a corresponding report. For each line in the input file (except the "END" line), your program needs to print the cat's name and the current total number of treats for that cat.</p>
+        <p>Assume that all cats start with zero treats.</p>
+        <p>Below is a sample of what the file cat_treats.txt might look like:</p>
+        <pre>Ziggy 1
+Cleo  4
+Ziggy 5
+Cleo    7
+Scar 28
+Ziggy -3
+Ziggy -2
+Skye 105
+Spike 16
+Mr.Grey 1000
+END        </pre>
+        <p>If the input file was exactly as shown above, then your program should produce the following output:</p>
+        <pre>Ziggy has 1
+Cleo has 4
+Ziggy has 6
+Cleo has 11
+Hey, Scar is not one of Dr. Wilson's cats!
+Ziggy has 3
+Ziggy has 1
+Cleo has 12
+Skye has 105
+Spike has 16
+Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    
+    std::string answer = "Ziggy has 5\nHey, Xerea is not one of Dr. Wilson's cats!\nCleo has 2\nSpike has 4\nCleo has 7\nZiggy has 1\nHey, Mr.Grey is not one of Dr. Wilson's cats!\nCleo has 19\nSpike has 12\nZiggy has 26\nSkye has 12\nHey, Mufasa is not one of Dr. Wilson's cats!\nZiggy has 12\nSpike has 13\nSkye has 22\nCleo has 28\nSkye has 32\nCleo has 48\nSpike has 12\n"
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

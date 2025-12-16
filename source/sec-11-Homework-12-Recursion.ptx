@@ -1,0 +1,402 @@
+<section xml:id="sec-Homework-12-Recursion-1">
+  <title>Homework 12 -- Recursion</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-JUMPING_CH16_TF-iteration_v_recursion-1" label="exe-sec-Homework-12-Recursion-1-234391">
+      <statement>
+        <p><alert>True or False?</alert></p>
+        <p>Like iteration, recursion is used to execute the same code repeatedly. However, unlike iteration, recursion does not use a loop to accomplish this.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>True</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>False</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-JUMPING_CH16_short-tail_recursion-1" label="exe-sec-Homework-12-Recursion-1-234392">
+      <statement>
+        <p>When the recursive call is the last thing a function does, this is called ________ recursion.</p>
+        <fillin answer="tail" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>tail</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>tail recursion</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JUMPING_CH16_multi-stack_frame-1" label="exe-sec-Homework-12-Recursion-1-234393">
+      <statement>
+        <p>When a new function call is made, which of the following is NOT saved as part of the activation record (a.k.a., stack frame) for that function when it is added to the top of the runtime stack?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>the number of times the function has been called</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>variables defined locally in the function</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>function parameters and their values</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>location in the calling program to return to when the current function ends</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_CH9_short-cheers-1" label="exe-sec-Homework-12-Recursion-1-234395">
+      <statement>
+        <p>Given the following recursive function definition:</p>
+        <pre>void cheers(int n)
+{
+    if (n &lt;= 1)
+    {
+        cout &lt;&lt; "Hoo" &lt;&lt; endl;
+    }
+    else
+    {
+        cout &lt;&lt; "Woo";
+        cheers(n-1);
+    }
+}        </pre>
+        <p>What will be the output produced by the function call:</p>
+        <pre>cheers(3);</pre>
+        <fillin answer="WooWooHoo" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>WooWooHoo</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-JUMPING_CH16_multi-printNums_output-1" label="exe-sec-Homework-12-Recursion-1-234388">
+      <statement>
+        <p>Given the following recursive function definition:</p>
+        <pre>void printNum(int num, int limit)
+{
+    cout &lt;&lt; num;
+    if (num &lt; limit)
+    {
+        printNum(num + 1, limit);
+    }
+    cout &lt;&lt; num;
+}        </pre>
+        <p>What will be the output produced by the function call:</p>
+        <pre>printNum(3, 6);</pre>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>34566543</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>3456776543</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>3456</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>76543</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-RECURSION_code-palindrome_reursive-1" label="exe-sec-Homework-12-Recursion-1-234398">
+      <statement>
+        <p>Write a <em>recursive</em> function, <c>rec_is_pal</c>, that takes a string and returns true if the string is a palindrome; otherwise, returns false. Each recursive call should be dealing with the question for a string with a smaller size.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+bool rec_is_pal(string s)
+{
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    if (rec_is_pal("racecar"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'PALINDROME'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    if (rec_is_pal("racebar"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'not a palindrome'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    if (rec_is_pal("abba"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'PALINDROME'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    if (rec_is_pal("ABCA"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'not a palindrome'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    if (rec_is_pal("!!"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'PALINDROME'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    if (rec_is_pal(":)"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'not a palindrome'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    if (rec_is_pal(""))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'PALINDROME'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    if (rec_is_pal("Q"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'PALINDROME'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    if (rec_is_pal("knickerbocker"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'not a palindrome'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test10" ) {
+    std::stringstream cout;
+    if (rec_is_pal("knickerrekcink"))
+        cout &lt;&lt; "PALINDROME";
+    else
+        cout &lt;&lt; "not a palindrome";
+    std::string answer = 'PALINDROME'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-RECURSION_code-n_choose_k-1" label="exe-sec-Homework-12-Recursion-1-234399">
+      <statement>
+        <p>Write a recursive function, <c>rec_choose</c>, that takes two integers, `n` and `k`, and returns the value of n choose k.</p>
+        <p>The value <em>[n choose k]</em> represents the number of ways of picking k distinct objects out of a set of n distinct objects.  For example, suppose we have four people; Alice (A), Balthazar (B), Charlize (C) and Douglass (D).  How many ways could you pick a pair of them? Six: AB, AC, AD, BC, BD and CD. That is 4 choose 2 = 6.</p>
+        <p>
+          The standard definition of n choose k involves factorials.  However, there is also a recursive definition (Pascal's Identity):
+          <ul>
+            <pre>                 <alert>n choose k = (n-1 choose k-1) + (n-1 choose k), for 0 &lt; k &lt; n</alert></pre>
+          </ul>
+        </p>
+        <p>The first base case is when k is out of range (k &lt; 0 or k &gt; n). It's impossible to choose k items in this case, so the answer is 0.</p>
+        <p>The second base case is when k is 0. There is only one way to choose nothing, so the answer is 1.</p>
+        <p>The third base case is when k equals n. There is only one way to choose n things from n things, so the answer is 1.</p>
+        <p>For the math behind this, see <url href="http://mathworld.wolfram.com/BinomialCoefficient.html">http://mathworld.wolfram.com/BinomialCoefficient.html</url>.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+int rec_choose(int n, int k)
+{
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(4, 2)
+    std::string answer = '6'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(3, 0)
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(10, 4)
+    std::string answer = '210'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(5, 4)
+    std::string answer = '5'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(20, 5)
+    std::string answer = '15504'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(42, 42)
+    std::string answer = '1'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(0, 1)
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(9, 5)
+    std::string answer = '126\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    cout &lt;&lt; rec_choose(25, 3)
+    std::string answer = '2300\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

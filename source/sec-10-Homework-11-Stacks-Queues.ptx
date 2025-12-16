@@ -1,0 +1,870 @@
+<section xml:id="sec-Homework-11-Stacks-Queues-1">
+  <title>Homework 11 -- Stacks &amp; Queues</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-MainSavCH7_short-array_stack-1" label="exe-sec-Homework-11-Stacks-Queues-1-234362">
+      <statement>
+        <p>You have an array-implemented stack containing 24 items. What is the index in the data array of the item at the top of the stack?</p>
+        <fillin answer="23" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>23</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH7_multi-linked-list_stack-1" label="exe-sec-Homework-11-Stacks-Queues-1-234363">
+      <statement>
+        <p>You have a singly-linked-list implemented stack containing 24 items. Where is the item at the top of the stack located?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>at the head of the linked list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>at the tail of the linked list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH8_short-array_queue_no_items-1" label="exe-sec-Homework-11-Stacks-Queues-1-234367">
+      <statement>
+        <p>Suppose you have a queue implemented using a circular array (see the class invariant for the queue class, Section 8.3). The queue has CAPACITY 10 and is <alert>currently empty</alert>. The instance variable `first` has the value 0.  What will be the value of instance variable `last`?</p>
+        <fillin answer="9" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>9</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH8_short-array_queue_one_item-1" label="exe-sec-Homework-11-Stacks-Queues-1-234366">
+      <statement>
+        <p>Suppose you have a queue implemented using a circular array with CAPACITY 10. The queue currently contains<alert>one item</alert>, and member variable `first` has the value 3.  What will be the value of member variable `last`?</p>
+        <fillin answer="3" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>3</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH8_short-array_queue_several_items-1" label="exe-sec-Homework-11-Stacks-Queues-1-234368">
+      <statement>
+        <p>Suppose you have a queue implemented using a circular array with CAPACITY 10. The queue currently contains six items, and member variable `first` has the value 7.  What will be the value of member variable `last`?</p>
+        <fillin answer="2" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>2</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH7_8_multi-FIFO-1" label="exe-sec-Homework-11-Stacks-Queues-1-234365">
+      <statement>
+        <p>Which of the following container classes can be described as first in first out (FIFO)?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stack</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>queue</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>bag</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MainSavCH7_8_multi-LIFO-1" label="exe-sec-Homework-11-Stacks-Queues-1-234364">
+      <statement>
+        <p>Which of the following container classes can be described as last in first out (LIFO)?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>stack</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>queue</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>bag</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh7_code-empty-1" label="exe-sec-Homework-11-Stacks-Queues-1-234354">
+      <statement>
+        <p>A stack class template is provided for you, with the following definition:</p>
+        <pre>        <alert>template &lt;typename T&gt;class Stack {  private:    class Node {      public:        T value;        Node* next;        Node(T v, Node* n = nullptr) : value(v), next(n) {}    };       Node* head;    public:    class EmptyException {};    Stack(): head(nullptr) {}    void push(T v);    T pop();    bool isEmpty();};</alert></pre>
+        <p>In this and the subsequent questions you will be asked to implement the various functions declared above. You will need to to write function templates that suitably implement these functions. For this assignment, you have to implement isEmpty. This is an easy question, you don't have to write much. The template syntax is also provided for you. In the subsequent questions you will need to provide your own.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+template &lt;typename T&gt;
+class Stack {
+  private:
+    class Node {
+      public:
+        T value;
+        Node* next;
+        Node(T v, Node* n = nullptr) : value(v), next(n) {}
+    };
+   
+    Node* head;  
+  public:
+    class EmptyException {};
+    Stack(): head(nullptr) {}
+    void push(T v);
+    T pop();
+    bool isEmpty();
+};
+
+template&lt;typename T&gt;
+void Stack&lt;T&gt;::push(T v) {
+    head = new Node(v, head);
+}
+
+template&lt;typename T&gt;
+T Stack&lt;T&gt;::pop() {
+    if (head == nullptr) throw EmptyException();
+    T v = head-&gt;value;
+    Node* oldHead = head;
+    head = head-&gt;next;
+    delete oldHead;
+    return v;
+}
+
+
+        </preamble>
+        <code>
+// Return value is true if and only if the stack is empty
+template&lt;typename T&gt;
+bool Stack&lt;T&gt;::isEmpty() { 
+    
+}
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("cat");
+    mystack.push("dog");
+    mystack.push("marmot");
+    if (mystack.isEmpty())
+        cout &lt;&lt; "true";
+    else
+        cout &lt;&lt; "false";
+    std::string answer = 'false'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    if (mystack.isEmpty())
+        cout &lt;&lt; "true";
+    else
+        cout &lt;&lt; "false";
+    std::string answer = 'true'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("mouse");
+    if (mystack.isEmpty())
+        cout &lt;&lt; "true";
+    else
+        cout &lt;&lt; "false";
+    std::string answer = 'false'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("xerea");
+    mystack.push("mr.gray");
+    if (mystack.isEmpty())
+        cout &lt;&lt; "gotcha";
+    else
+        cout &lt;&lt; "good job";
+    std::string answer = 'good job'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Stack&lt;int&gt; mystack;
+    if (mystack.isEmpty())
+        cout &lt;&lt; "yeppers";
+    else
+        cout &lt;&lt; "false";
+    std::string answer = 'yeppers'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh7_code-push_and_top-1" label="exe-sec-Homework-11-Stacks-Queues-1-234356">
+      <statement>
+        <p>A stack class template is provided for you, with the following definition:</p>
+        <pre>        <alert>template &lt;typename T&gt;class Stack {  private:    class Node {      public:        T value;        Node* next;        Node(T v, Node* n = nullptr) : value(v), next(n) {}    };       Node* head;    public:    class EmptyException {};    Stack(): head(nullptr) {}    void push(const T&amp; v);    T pop();    bool isEmpty() const;};</alert></pre>
+        <p>For this question, you have to implement <alert>push</alert>.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+template&lt;typename T&gt;
+class Stack; // forward declare to make function declaration possible
+ 
+template&lt;typename T&gt; // declaration
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Stack&lt;T&gt;&amp;);
+ 
+
+template &lt;typename T&gt;
+class Stack {
+  private:
+    class Node {
+      public:
+        T value;
+        Node* next;
+        Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
+    };
+   
+    Node* head;  
+  public:
+    class EmptyException {};
+    Stack(): head(nullptr) {}
+    void push(const T&amp; v);
+    T pop();
+    bool isEmpty() const;
+    friend std::ostream&amp; operator&lt;&lt; &lt;&gt;(std::ostream&amp; out, const Stack&lt;T&gt;&amp; stack);
+};
+
+
+template&lt;typename T&gt;
+T Stack&lt;T&gt;::pop() {
+    if (head == nullptr) throw EmptyException();
+    T v = head-&gt;value;
+    Node* oldHead = head;
+    head = head-&gt;next;
+    delete oldHead;
+    return v;
+}
+
+template&lt;typename T&gt;
+bool Stack&lt;T&gt;::isEmpty() const { return head == nullptr; }
+
+template&lt;typename T&gt;
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Stack&lt;T&gt;&amp; st) {
+    typename Stack&lt;T&gt;::Node * curr = st.head;
+    while (curr != nullptr) {
+        out &lt;&lt; curr-&gt;value;
+        curr = curr-&gt;next;
+        if (curr == nullptr) break;
+        else out &lt;&lt; "  ,  ";
+    }
+    return out;
+}
+
+
+        </preamble>
+        <code>
+// push
+// Postcondition: A new copy of entry has been pushed onto the stack.
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("mouse");
+    cout &lt;&lt; mystack;
+    std::string answer = 'mouse'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("platypus");
+    mystack.push("emu");
+    cout &lt;&lt; mystack;
+    
+    std::string answer = 'emu  ,  platypus\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("cat");
+    mystack.push("dog");
+    mystack.push("marmot");
+    cout &lt;&lt; mystack;
+    std::string answer = 'marmot  ,  dog  ,  cat\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("cat");
+    mystack.push("dog");
+    mystack.push("marmot");
+    mystack.push("bunny rabbit");
+    cout &lt;&lt; mystack;
+    std::string answer = 'bunny rabbit  ,  marmot  ,  dog  ,  cat\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("monkey");
+    cout &lt;&lt; mystack;
+    std::string answer = 'monkey'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-MAINSAVCh7_code-pop-1" label="exe-sec-Homework-11-Stacks-Queues-1-234358">
+      <statement>
+        <p>A stack class template is provided for you, with the following definition:</p>
+        <pre>        <alert>template &lt;typename T&gt;class Stack {  private:    class Node {      public:        T value;        Node* next;        Node(T v, Node* n = nullptr) : value(v), next(n) {}    };       Node* head;    public:    class EmptyException {};    Stack(): head(nullptr) {}    void push(const T&amp; v);    T pop();    bool isEmpty() const;};</alert></pre>
+        <p>For this question, you have to implement <alert>pop</alert>.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+
+template&lt;typename T&gt;
+class Stack; // forward declare to make function declaration possible
+ 
+template&lt;typename T&gt; // declaration
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Stack&lt;T&gt;&amp;);
+ 
+
+template &lt;typename T&gt;
+class Stack {
+  private:
+    class Node {
+      public:
+        T value;
+        Node* next;
+        Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
+    };
+   
+    Node* head;  
+  public:
+    class EmptyException {};
+    Stack(): head(nullptr) {}
+    void push(const T&amp; v);
+    T pop();
+    bool isEmpty() const;
+    friend std::ostream&amp; operator&lt;&lt; &lt;&gt;(std::ostream&amp; out, const Stack&lt;T&gt;&amp; stack);
+};
+
+template&lt;typename T&gt;
+void Stack&lt;T&gt;::push(const T&amp; v) {
+    head = new Node(v, head);
+}
+
+template&lt;typename T&gt;
+bool Stack&lt;T&gt;::isEmpty() const { return head == nullptr; }
+
+template&lt;typename T&gt;
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Stack&lt;T&gt;&amp; st) {
+    typename Stack&lt;T&gt;::Node * curr = st.head;
+    while (curr != nullptr) {
+        out &lt;&lt; curr-&gt;value;
+        curr = curr-&gt;next;
+        if (curr == nullptr) break;
+        else out &lt;&lt; "  ,  ";
+    }
+    return out;
+}
+
+
+
+        </preamble>
+        <code>
+// pop
+// Postcondition: If the stack was non-empty, the top item of the stack has been removed
+// Postcondition: If the stack was empty an exception has been thrown.
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("mouse");
+    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    
+    std::string answer = 'Before: mouse\nAfter:\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("platypus");
+    mystack.push("emu");
+    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    
+    std::string answer = 'Before: emu  ,  platypus\nAfter: platypus\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("cat");
+    mystack.push("dog");
+    mystack.push("marmot");
+    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    
+    std::string answer = 'Before: marmot  ,  dog  ,  cat\nAfter: dog  ,  cat\nAfter: cat\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Stack&lt;std::string&gt; mystack;
+    mystack.push("elephant");
+    mystack.push("zebra");
+    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    mystack.pop();
+    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    
+    std::string answer = 'Before: zebra  ,  elephant\nAfter: elephant\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-queue_with_list-enqueue-1" label="exe-sec-Homework-11-Stacks-Queues-1-234370">
+      <statement>
+        <p>A queue class template is provided for you, with the following definition:</p>
+        <pre>};</pre>
+        <p>This implementation uses a linked list with two pointers, one pointing to the head node and another pointing to the tail node. You can enqueue new values by placing them at the tail and advancing the tail pointer, and you can dequeue values by taking them out of the head and advancing the head pointer. As a result, the values in the linked list are stored effectively in opposite order, with newly inserted elements at the tail.</p>
+        <p>For this question, you have to implement the function <alert>enqueue</alert>. It must place a new node with the provided value at the tail of the list (and you can use the tail pointer to get to that location directly, then adjust the tail pointer). You must be careful for the special case where the list is empty.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+
+template&lt;typename T&gt;
+class Queue; // forward declare to make function declaration possible
+ 
+template&lt;typename T&gt; // declaration
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Queue&lt;T&gt;&amp;);
+ 
+
+template &lt;typename T&gt;
+class Queue {
+  private:
+    class Node {
+      public:
+        T value;
+        Node* next;
+        Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
+    };
+   
+  public:
+    Node* head;  
+    Node* tail;
+    class EmptyException {};
+    Queue(): head(nullptr), tail(nullptr) {}
+    void enqueue(const T&amp; v);
+    T dequeue();
+    bool isEmpty() const;
+    friend std::ostream&amp; operator&lt;&lt; &lt;&gt;(std::ostream&amp; out, const Queue&lt;T&gt;&amp; queue);
+};
+
+template&lt;typename T&gt;
+T Queue&lt;T&gt;::dequeue() {
+    if (head == nullptr) throw EmptyException();
+    T v = head-&gt;value;
+    Node* oldHead = head;
+    head = head-&gt;next;
+    delete oldHead;
+    if (head == nullptr) tail = nullptr;
+    return v;
+}
+
+template&lt;typename T&gt;
+bool Queue&lt;T&gt;::isEmpty() const { return head == nullptr; }
+
+template&lt;typename T&gt;
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Queue&lt;T&gt;&amp; st) {
+    typename Queue&lt;T&gt;::Node * curr = st.head;
+    while (curr != nullptr) {
+        out &lt;&lt; curr-&gt;value;
+        curr = curr-&gt;next;
+        if (curr == nullptr) break;
+        else out &lt;&lt; "  ,  ";
+    }
+    return out;
+}
+
+
+
+        </preamble>
+        <code>
+template&lt;typename T&gt;
+void Queue&lt;T&gt;::enqueue(const T&amp; v) {
+    
+}
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Queue&lt;std::string&gt; queue;
+    queue.enqueue("mouse");
+    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    
+    std::string answer = 'List: mouse\nHead: mouse\nTail: mouse\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Queue&lt;std::string&gt; queue;
+    queue.enqueue("mouse");
+    queue.enqueue("danger");
+    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    
+    std::string answer = 'List: mouse  ,  danger\nHead: mouse\nTail: danger\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Queue&lt;std::string&gt; queue;
+    queue.enqueue("mouse");
+    queue.enqueue("danger");
+    queue.enqueue("will robinson");
+    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    
+    std::string answer = 'List: mouse  ,  danger  ,  will robinson\nHead: mouse\nTail: will robinson\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Queue&lt;int&gt; queue;
+    queue.enqueue(3);
+    queue.enqueue(2);
+    queue.enqueue(1);
+    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    
+    std::string answer = 'List: 3  ,  2  ,  1\nHead: 3\nTail: 1\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-queue_with_list-dequeue-1" label="exe-sec-Homework-11-Stacks-Queues-1-234372">
+      <statement>
+        <p>A queue class template is provided for you, with the following definition:</p>
+        <pre>};</pre>
+        <p>This implementation uses a linked list with two pointers, one pointing to the head node and another pointing to the tail node. You can enqueue new values by placing them at the tail and advancing the tail pointer, and you can dequeue values by taking them out of the head and advancing the head pointer. As a result, the values in the linked list are stored effectively in opposite order, with newly inserted elements at the tail.</p>
+        <p>For this question, you have to implement the function <alert>dequeue</alert>. It must throw an error in the case of an empty list, and otherwise it must remove and return the next appropriate value, in a FIFO form. You must be careful for the special case where the list will be empty after the removal.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+
+template&lt;typename T&gt;
+class Queue; // forward declare to make function declaration possible
+ 
+template&lt;typename T&gt; // declaration
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Queue&lt;T&gt;&amp;);
+ 
+
+template &lt;typename T&gt;
+class Queue {
+  private:
+    class Node {
+      public:
+        T value;
+        Node* next;
+        Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
+    };
+   
+  public:
+    Node* head;  
+    Node* tail;
+    class EmptyException {};
+    Queue(): head(nullptr), tail(nullptr) {}
+    void enqueue(const T&amp; v);
+    T dequeue();
+    bool isEmpty() const;
+    friend std::ostream&amp; operator&lt;&lt; &lt;&gt;(std::ostream&amp; out, const Queue&lt;T&gt;&amp; queue);
+};
+
+template&lt;typename T&gt;
+void Queue&lt;T&gt;::enqueue(const T&amp; v) {
+    if (tail == nullptr) {
+      tail = new Node(v);
+      head = tail;
+    } else {
+      tail-&gt;next = new Node(v);
+      tail = tail-&gt;next;
+    }
+}
+
+
+template&lt;typename T&gt;
+bool Queue&lt;T&gt;::isEmpty() const { return head == nullptr; }
+
+template&lt;typename T&gt;
+std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Queue&lt;T&gt;&amp; st) {
+    typename Queue&lt;T&gt;::Node * curr = st.head;
+    while (curr != nullptr) {
+        out &lt;&lt; curr-&gt;value;
+        curr = curr-&gt;next;
+        if (curr == nullptr) break;
+        else out &lt;&lt; "  ,  ";
+    }
+    return out;
+}
+
+
+
+        </preamble>
+        <code>
+template&lt;typename T&gt;
+T Queue&lt;T&gt;::dequeue() {
+
+}
+
+        </code>
+        <postamble visible="no" />
+        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    Queue&lt;std::string&gt; queue;
+    queue.enqueue("mouse");
+    queue.enqueue("danger");
+    queue.enqueue("will robinson");
+    std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    
+    std::string answer = 'Initial List: mouse  ,  danger  ,  will robinson\nDequeue result: mouse\nNew List: danger  ,  will robinson\nHead: danger\nTail: will robinson\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    Queue&lt;std::string&gt; queue;
+    queue.enqueue("mouse");
+    queue.enqueue("danger");
+    std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    
+    std::string answer = 'Initial List: mouse  ,  danger\nDequeue result: mouse\nNew List: danger\nHead: danger\nTail: danger\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    Queue&lt;std::string&gt; queue;
+    queue.enqueue("mouse");
+    std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Head: " &lt;&lt; (queue.head == nullptr ? "null" : queue.head-&gt;value) &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Tail: " &lt;&lt; (queue.tail == nullptr ? "null" : queue.tail-&gt;value) &lt;&lt; std::endl;
+    
+    std::string answer = 'Initial List: mouse\nDequeue result: mouse\nNew List:\nHead: null\nTail: null\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Queue&lt;int&gt; queue;
+    std::cout &lt;&lt; "Removing from empty list should throw exception: ";
+    try {
+       queue.dequeue();
+       std::cout &lt;&lt; "FAILED!\n";
+    } catch (Queue&lt;int&gt;::EmptyException e) {
+       std::cout &lt;&lt; "YES!\n";
+    }
+    
+    std::string answer = 'Removing from empty list should throw exception: YES!\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>

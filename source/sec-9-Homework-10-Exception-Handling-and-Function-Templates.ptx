@@ -1,0 +1,1191 @@
+<section xml:id="sec-Homework-10-Exception-Handling-and-Function-Templates-1">
+  <title>Homework 10 -- Exception Handling and Function Templates</title>
+  <introduction />
+  <exercises>
+    <exercise xml:id="exer-Jumping_ch31_multi-exception_4-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234376">
+      <statement>
+        <p>One way to think about what an exception means is to imagine that the function throwing the exception returns immediately, <em>without returning a value</em>.  This is referred to as a <alert>failed</alert> function call.</p>
+        <p>When a function call fails, program execution returns to the location in the program's code that called the failed function. It is this location that can actually HANDLE the exception thrown by the failed function call.</p>
+        <p>To indicate <alert>programmatically</alert>where a failed function should return to for exception handling, use _________________ .</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>a try/catch block</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>an exception specification list</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>stack unwinding</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>a custom exception class</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_Appendiex_L_multi-exception_7-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234381">
+      <statement>
+        <p><alert>True, or false</alert>:  When an exception occurs during program execution, there is considerable overhead in the run-time environment.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>true</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_Appendix_L_short-standard_exceptions-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234380">
+      <statement>
+        <p>The C++ Library provides a set of exception classes, such as <c>domain_error</c>, <c>length_error</c>, and <c>out_of_range</c>.  Write the INCLUDE statement for including the C++ standard exceptions header.  Remember to start with '#' since this is a pre-processor directive.</p>
+        <p>HINT: The answer is NOT <c>#include &lt;exception&gt;</c>.</p>
+        <fillin answer="#include &lt;stdexcept&gt;" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>
+              #include
+              <stdexcept />
+            </strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-Jumping_ch31_multi-catch_1-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234377">
+      <statement>
+        <p>There may be multiple kinds of exceptions, each from a different exception class. This allows you to write multiple catch blocks, each handling a different kind of failure.</p>
+        <p>Which of the following is the CORRECT way to create a "catch all" block to handle any type of unhandled exception?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>catch ( ... )  { // exception handling code here }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>catch ( )  { // exception handling code here }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>catch ( all )  { // exception handling code here }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>catch ( * )  { // exception handling code here }</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-M-S_Appendix_L_short-named_exception-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234382">
+      <statement>
+        <p>An exception that is caught can be given a name -- the name "e" is most common -- to be used in the catch block.  For example, we might have a line of code such as:</p>
+        <pre>  catch (domain_error e) { // handler code here }</pre>
+        <p>By giving the exception a name, you can then activate various member functions that are associated with the exception.  The most useful member function <alert>returns the string that was attached to the exception object when it was created</alert>.</p>
+        <p>What is the name of this member function?</p>
+        <fillin answer="what( )" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>what( )</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>what()</strcmp>
+            <feedback />
+          </test>
+          <test>
+            <strcmp>what</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-Jumping_ch31_multi-exception_1-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234373">
+      <statement>
+        <p>Which of the following is FALSE?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>In the real word, error handling plays only a <alert>minor</alert> role in the time it takes to develop large software projects.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>Exceptions are a "clean" way of reporting errors encountered during program execution.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>You should only use exceptions for error situations, not for normal control flow of your program.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>When an exception is thrown by a function, the execution of that function is halted.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-Jumping_ch31_multi-exception_5-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234378">
+      <statement>
+        <p>Suppose that while your program is executing, an exception is thrown for which your code does not provide a handler.  What happens?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>The program execution ends in a "crash", caused by a system call to <c>terminate()</c>.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The compiler-supplied "default handler" kicks in to handle the situation gracefully.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>The program continues running, picking up from the line of code following the failed function call.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-Jumping_ch31_multi-exception_3-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-270547">
+      <statement>
+        <p><alert>True, or false</alert>:  Function <c>failableFunction</c> has the ability to throw an exception. If function <c>myFun</c> calls <c>failableFunction</c>, then <c>myFun</c> is REQUIRED by the compiler to handle any resulting exceptions; failure to provide a handler for each possible thrown exception will result in a compile-time error.</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>false</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>true</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-Jumping_ch31_multi-exception_2-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234374">
+      <statement>
+        <p>According to techterms.com,</p>
+        <blockquote class="">"...in the world of <url href="https://techterms.com/definition/software">software</url> development, "deprecated" refers to <url href="https://techterms.com/definition/function">functions</url> or elements that are in the process of being replaced by newer ones. The term comes from the verb "to deprecate," which means to disapprove of something. While deprecated items may work in the current version of a programming language, they may not function in future updates. Therefore, software developers are advised to replace deprecated items with other options."</blockquote>
+        <p>Which of the following is <alert>deprecated</alert> in C++11?</p>
+      </statement>
+      <choices multiple-correct="no" randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <p>exception specifications, such as including "throw(FileNotFoundException)" as part of a function protoype.</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>try/catch blocks</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>exception handling</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <p>the standard library exception class</p>
+            </p>
+          </statement>
+          <feedback />
+        </choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exer-Jumping_Ch31_short-stack_unwinding-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234379">
+      <statement>
+        <p>As your program executes, functions call functions, which in turn call other functions, etc.  This is all kept track of on the <alert>run-time stack</alert> -- each function call's information is stored in a <alert>frame</alert> on the run-time stack.</p>
+        <p>When a function call fails due to an exception being thrown, the system will "clean up" and remove the stack frame for the failed function and check the new topmost frame for an exception handler.  If no handler is found in the topmost frame, that frame will get "cleaned up" and removed, etc. This process repeats until a handler is found or there are no more frames to check.</p>
+        <p>This process of cleaning up and removing each stack frame that does not catch the exception is called "stack __________ " (Fill in the blank, one word).</p>
+        <fillin answer="unwinding" width="16" />
+      </statement>
+      <evaluation>
+        <evaluate>
+          <test correct="yes">
+            <strcmp>unwinding</strcmp>
+            <feedback />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+    <exercise xml:id="exer-Jumping_Ch31_code-try_catch_1-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234383">
+      <statement>
+        <p>We have defined a function, <c>mystery(int a, int b)</c>, that takes two integers, `a` and `b`, and returns a mysterious string result.  Sometimes the function may fail and throw an exception.</p>
+        <p>Write a second function, <c>myFun(int a, int b)</c>, that does the following:</p>
+        <p>- Call <c>mystery(a, b)</c>.</p>
+        <p>- If the call results in a normal return, return that result.</p>
+        <p>- If the call results in a <alert>domain_error</alert> exception, return the exception's "what" message.</p>
+        <p>- If the call results in any other kind of exception, return the string "FAILURE".</p>
+        <p><alert>Use a try-catch block to help you solve this problem.</alert></p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;cmath&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;stdexcept&gt;
+        
+using namespace std;
+#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
+
+// mystery
+// returns a mysterious result, or throws an exception
+string mystery(int a, int b)
+{
+    stringstream ss;
+	if (a == 4) { throw domain_error("I don't like those numbers"); }
+	if (b == 9) { throw domain_error("Those numbers are annoying me"); }
+	if (a == b) { throw invalid_argument("Wow, those are awful!"); }
+	if (a == -b) { throw invalid_argument("Not cool, man!"); }
+	ss &lt;&lt; (a * 15 + b * 2) % 11;
+	return ss.str();
+}
+
+
+
+        </preamble>
+        <code>
+string myFun(int a, int b)
+{
+    
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(0, 1);
+    std::string answer = '2'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(4, 5);
+    std::string answer = "I don't like those numbers"
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(5, 5);
+    std::string answer = 'FAILURE\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(1, 2);
+    std::string answer = '8'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(10, 9);
+    std::string answer = 'Those numbers are annoying me'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(-3, 3);
+    std::string answer = 'FAILURE\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(7, -7);
+    std::string answer = 'FAILURE\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(4, 0);
+    std::string answer = "I don't like those numbers"
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test9" ) {
+    std::stringstream cout;
+    cout &lt;&lt; myFun(11, 0);
+    std::string answer = '0'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test10" ) {
+    std::stringstream cout;
+    string val = myFun(-25, 25);
+    if (val == "FAILURE") cout &lt;&lt; "OK";
+    else cout &lt;&lt; "NOT OK";
+    std::string answer = 'OK'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test11" ) {
+    std::stringstream cout;
+    string val = myFun(4, 4);
+    if (val == "I don't like those numbers") cout &lt;&lt; "YEP";
+    else cout &lt;&lt; "NOPE";
+    std::string answer = 'YEP'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test12" ) {
+    std::stringstream cout;
+    string val = myFun(25, 125);
+    if (val == "FAILURE") cout &lt;&lt; "oops";
+    else cout &lt;&lt; val;
+    std::string answer = '9\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-Jumping_Chap31_code-throw_exception_1-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234384">
+      <statement>
+        <p>Write a function <c>array_sum</c> that takes two arguments: an integer array called 'nums' and an integer called 'size' representing the number of values stored in the array. The function accumulates the sum of the values in the 'nums' array and returns that sum.</p>
+        <p>If size &lt; 1, the function throws a domain_error exception with the message, "size &lt; 1 is not allowed".</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+        </preamble>
+        <code>
+// Precondition: size &gt;= 1
+// Postcondition: Adds the first size-many elements of `nums` and returns
+// the result.
+// Exception: Throws a domain_error if the precondition is violated.
+int array_sum(int nums[], int size)
+{
+
+}
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int arr[1] = {3};
+    int sum;
+    try { 
+       sum = array_sum(arr, 1); 
+       cout &lt;&lt; sum;
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "Your code threw an exception." &lt;&lt; endl;
+    }
+    std::string answer = '3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    int arr[5] = {1, 2, 3, 4, 5};
+    int sum;
+    try { 
+       sum = array_sum(arr, -4); 
+       cout &lt;&lt; sum;
+    }
+    catch(domain_error e)
+    {
+       cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+    }
+    std::string answer = 'size &lt; 1 is not allowed'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    int arr[5] = {1, 2, 3, 4, 5};
+    int sum;
+    try { 
+       sum = array_sum(arr, 5); 
+       cout &lt;&lt; sum;
+    }
+    catch(domain_error e)
+    {
+       cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+    }
+    std::string answer = '15'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    int arr[5] = {1, 10, 100, 1000, -3};
+    int sum;
+    try { 
+       sum = array_sum(arr, 0); 
+       cout &lt;&lt; sum;
+    }
+    catch(domain_error e)
+    {
+       cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+    }
+    std::string answer = 'size &lt; 1 is not allowed'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    int arr[5] = {1, 10, 100, 1000, -3};
+    int sum;
+    try { 
+       sum = array_sum(arr, 3); 
+       cout &lt;&lt; sum;
+    }
+    catch(domain_error e)
+    {
+       cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+    }
+    std::string answer = '111'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test6" ) {
+    std::stringstream cout;
+    int arr[5] = {0, 1, 3, -5, 8};
+    int sum;
+    try { 
+       sum = array_sum(arr, -1); 
+       cout &lt;&lt; sum;
+    }
+    catch(domain_error e)
+    {
+       cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+    }
+    
+    std::string answer = 'size &lt; 1 is not allowed\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    int arr[6] = {-10, 0, 1, 3, -5, 8};
+    int sum;
+    try { 
+       sum = array_sum(arr, -2); 
+       cout &lt;&lt; sum;
+    }
+    catch(domain_error e)
+    {
+       cout &lt;&lt; "correct";
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+    }
+    std::string answer = 'correct'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test8" ) {
+    std::stringstream cout;
+    int arr[6] = {-10, 0, 1, 3, -5, 8};
+    int sum;
+    try { 
+       sum = array_sum(arr, 3); 
+       if (sum == -9) cout &lt;&lt; "okey dokey";
+    }
+    catch(...)
+    {
+       cout &lt;&lt; "Houston, we have a problem." &lt;&lt; endl;
+    }
+    std::string answer = 'okey dokey'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-M-S_Ch6_1_code-template_fcn_compare-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234387">
+      <statement>
+        <p>Write a function template <c>compare</c> that takes two values of the same type and <em>prints</em> the message "Those are the same" if the items are equal; if they are unequal, the function prints the message "Those are different".</p>
+        <p>This template should work for any type that can use the "==" operator and the copy constructor.</p>
+        <p>NOTE: The <c>compare</c> template has a void return type.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;cmath&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include "Pixel.h"
+#include "Person.h"
+        
+using namespace std;
+#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
+
+class Pixel
+{
+   public:
+    // CONSTRUTOR
+    Pixel( int r=0, int g=0, int b=0 )
+    { rval = r; gval = g; bval = b; }
+
+    // MODIFICATION MEMBER FUNCTIONS
+    void set( int r, int g, int b )
+    { rval = r; gval = g; bval = b; }
+
+    void setRed( int r )
+    { rval = r; }
+
+    void setGreen( int g )
+    { gval = g; }
+
+    void setBlue( int b )
+    { bval = b; }
+
+    // ACCESSOR MEMBER FUNCTIONS
+    int getRed( ) const
+    { return rval; }
+
+    int getGreen( ) const
+    { return gval; }
+
+    int getBlue( ) const
+    { return bval; }
+
+    // FRIEND FUNCTIONS
+    friend std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix);
+    friend std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix);
+
+   private:
+    // INSTANCE VARIABLES
+    int rval;   // red level for RGB color model, 0 &lt;= rval &lt;=255
+    int gval;   // green level for RGB color model, 0 &lt;= rval &lt;=255
+    int bval;   // blue level for RGB color model, 0 &lt;= rval &lt;=255
+
+}; // end Pixel class definition
+
+/* operator==
+ * Equivalence operator for pixels.
+ */
+bool operator== (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return (pix1.getRed() == pix2.getRed()) &amp;&amp;
+          (pix1.getGreen() == pix2.getGreen()) &amp;&amp;
+          (pix1.getBlue() == pix2.getBlue());
+}
+
+bool operator&gt; (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+    int sum1 = pix1.getRed() + pix1.getGreen() + pix1.getBlue();
+    int sum2 = pix2.getRed() + pix2.getGreen() + pix2.getBlue();
+    return (sum1 &gt; sum2);
+}
+
+bool operator&lt; (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+    int sum1 = pix1.getRed() + pix1.getGreen() + pix1.getBlue();
+    int sum2 = pix2.getRed() + pix2.getGreen() + pix2.getBlue();
+    return (sum1 &lt; sum2);
+}
+
+/* operator!=
+ * Inequivalence operator for pixels.
+ */
+bool operator!= (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return !(pix1 == pix2);
+}
+
+/* operator&lt;&lt;
+ * Stream output operator (&lt;&lt;) for outputting the contents of a pixel.
+ * Example: A pixel with red value 100, green value 150, and blue value 200
+ *    will produce the following output:100 150 200
+ * Note: Returns the `out` parameter to allow chaining of stream output.
+ */
+std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix)
+{
+   out &lt;&lt; pix.getRed() &lt;&lt; " " &lt;&lt; pix.getGreen() &lt;&lt; " " &lt;&lt; pix.getBlue();
+
+   return out;
+}
+
+/* operator&gt;&gt;
+ * Stream input operator (&gt;&gt; for reading a pixel from an input stream.
+ * Precondition: `in` holds a string of three integers separated by spaces;
+ *    each integer must be in the range 0 to 255, inclusive.
+ * Postconditions:
+ *    -The red value of pix is set to the first integer.
+ *    -The blue value of pix is set to the third integer.
+ * Note: Returns the `in` parameter to allow chaining of stream input.
+ */
+std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
+{
+   int r, g, b;
+   in &gt;&gt; r &gt;&gt; g &gt;&gt; b;
+   pix.setRed(r);
+   pix.setGreen(g);
+   pix.setBlue(b);
+
+   return in;
+}
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    compare(3, 7);
+    
+    std::string answer = 'Those are different'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    compare("blueberry", "blueberry");
+    
+    std::string answer = 'Those are the same'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    double u = 3.14; double v = 1.0101;
+    compare(u, v);
+    
+    std::string answer = 'Those are different'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Pixel pix1(0, 1, 2); Pixel pix2(0, 1, 2);
+    compare(pix1, pix2);
+    std::string answer = 'Those are the same\n'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test5" ) {
+    std::stringstream cout;
+    Pixel pix1(0, 1, 2); Pixel pix2(2, 1, 0);
+    compare(pix1, pix2);
+    std::string answer = 'Those are different'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-M-S_Ch6_1_code-template_fcn_swap-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234385">
+      <statement>
+        <p>Write a function template <c>swapper</c> that takes two values <em>passed by reference</em> and swaps them.</p>
+        <p>NOTE: The <c>swapper</c> template has a void return type.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;cmath&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include "Pixel.h"
+        
+using namespace std;
+#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
+
+class Pixel
+{
+   public:
+    // CONSTRUTOR
+    Pixel( int r=0, int g=0, int b=0 )
+    { rval = r; gval = g; bval = b; }
+
+    // MODIFICATION MEMBER FUNCTIONS
+    void set( int r, int g, int b )
+    { rval = r; gval = g; bval = b; }
+
+    void setRed( int r )
+    { rval = r; }
+
+    void setGreen( int g )
+    { gval = g; }
+
+    void setBlue( int b )
+    { bval = b; }
+
+    // ACCESSOR MEMBER FUNCTIONS
+    int getRed( ) const
+    { return rval; }
+
+    int getGreen( ) const
+    { return gval; }
+
+    int getBlue( ) const
+    { return bval; }
+
+    // FRIEND FUNCTIONS
+    friend std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix);
+    friend std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix);
+
+   private:
+    // INSTANCE VARIABLES
+    int rval;   // red level for RGB color model, 0 &lt;= rval &lt;=255
+    int gval;   // green level for RGB color model, 0 &lt;= rval &lt;=255
+    int bval;   // blue level for RGB color model, 0 &lt;= rval &lt;=255
+
+}; // end Pixel class definition
+
+/* operator==
+ * Equivalence operator for pixels.
+ */
+bool operator== (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return (pix1.getRed() == pix2.getRed()) &amp;&amp;
+          (pix1.getGreen() == pix2.getGreen()) &amp;&amp;
+          (pix1.getBlue() == pix2.getBlue());
+}
+
+/* operator!=
+ * Inequivalence operator for pixels.
+ */
+bool operator!= (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return !(pix1 == pix2);
+}
+
+/* operator&lt;&lt;
+ * Stream output operator (&lt;&lt;) for outputting the contents of a pixel.
+ * Example: A pixel with red value 100, green value 150, and blue value 200
+ *    will produce the following output:100 150 200
+ * Note: Returns the `out` parameter to allow chaining of stream output.
+ */
+std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix)
+{
+   out &lt;&lt; pix.getRed() &lt;&lt; " " &lt;&lt; pix.getGreen() &lt;&lt; " " &lt;&lt; pix.getBlue();
+
+   return out;
+}
+
+/* operator&gt;&gt;
+ * Stream input operator (&gt;&gt; for reading a pixel from an input stream.
+ * Precondition: `in` holds a string of three integers separated by spaces;
+ *    each integer must be in the range 0 to 255, inclusive.
+ * Postconditions:
+ *    -The red value of pix is set to the first integer.
+ *    -The blue value of pix is set to the third integer.
+ * Note: Returns the `in` parameter to allow chaining of stream input.
+ */
+std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
+{
+   int r, g, b;
+   in &gt;&gt; r &gt;&gt; g &gt;&gt; b;
+   pix.setRed(r);
+   pix.setGreen(g);
+   pix.setBlue(b);
+
+   return in;
+}
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int x = 3; int y = 7;
+    swapper(x, y);
+    cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; " and y = " &lt;&lt; y &lt;&lt; endl;
+    
+    std::string answer = 'x = 7 and y = 3'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    string a = "raspberry"; string b = "preserves";
+    swapper(a, b);
+    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; " and b = " &lt;&lt; b &lt;&lt; endl;
+    
+    std::string answer = 'a = preserves and b = raspberry'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    double u = 3.14; double v = 1.0101;
+    swapper(u, v);
+    cout &lt;&lt; "u = " &lt;&lt; u &lt;&lt; " and v = " &lt;&lt; v &lt;&lt; endl;
+    
+    std::string answer = 'u = 1.0101 and v = 3.14'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Pixel pix1(0, 1, 2); Pixel pix2(10, 9, 5);
+    swapper(pix1, pix2);
+    cout &lt;&lt; "pix1 = " &lt;&lt; pix1 &lt;&lt; " and pix2 = " &lt;&lt; pix2 &lt;&lt; endl;
+    std::string answer = 'pix1 = 10 9 5 and pix2 = 0 1 2\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+    <exercise xml:id="exer-M-S_Ch6_1_code-template_fcn_maximum-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234386">
+      <statement>
+        <p>Write a function template <c>maximum</c> that takes two values of the same type and <em>returns</em> the larger value.  This template should work for any type that can use the "&gt;" operator and the copy constructor.</p>
+      </statement>
+      <program interactive="activecode" language="cpp">
+        <preamble visible="no">#include &lt;sstream&gt;
+
+
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;cmath&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include "Pixel.h"
+        
+using namespace std;
+#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
+
+class Pixel
+{
+   public:
+    // CONSTRUTOR
+    Pixel( int r=0, int g=0, int b=0 )
+    { rval = r; gval = g; bval = b; }
+
+    // MODIFICATION MEMBER FUNCTIONS
+    void set( int r, int g, int b )
+    { rval = r; gval = g; bval = b; }
+
+    void setRed( int r )
+    { rval = r; }
+
+    void setGreen( int g )
+    { gval = g; }
+
+    void setBlue( int b )
+    { bval = b; }
+
+    // ACCESSOR MEMBER FUNCTIONS
+    int getRed( ) const
+    { return rval; }
+
+    int getGreen( ) const
+    { return gval; }
+
+    int getBlue( ) const
+    { return bval; }
+
+    // FRIEND FUNCTIONS
+    friend std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix);
+    friend std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix);
+
+   private:
+    // INSTANCE VARIABLES
+    int rval;   // red level for RGB color model, 0 &lt;= rval &lt;=255
+    int gval;   // green level for RGB color model, 0 &lt;= rval &lt;=255
+    int bval;   // blue level for RGB color model, 0 &lt;= rval &lt;=255
+
+}; // end Pixel class definition
+
+/* operator==
+ * Equivalence operator for pixels.
+ */
+bool operator== (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return (pix1.getRed() == pix2.getRed()) &amp;&amp;
+          (pix1.getGreen() == pix2.getGreen()) &amp;&amp;
+          (pix1.getBlue() == pix2.getBlue());
+}
+
+bool operator&gt; (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+    int sum1 = pix1.getRed() + pix1.getGreen() + pix1.getBlue();
+    int sum2 = pix2.getRed() + pix2.getGreen() + pix2.getBlue();
+    return (sum1 &gt; sum2);
+}
+
+bool operator&lt; (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+    int sum1 = pix1.getRed() + pix1.getGreen() + pix1.getBlue();
+    int sum2 = pix2.getRed() + pix2.getGreen() + pix2.getBlue();
+    return (sum1 &lt; sum2);
+}
+
+/* operator!=
+ * Inequivalence operator for pixels.
+ */
+bool operator!= (const Pixel&amp; pix1, const Pixel&amp; pix2)
+{
+   return !(pix1 == pix2);
+}
+
+/* operator&lt;&lt;
+ * Stream output operator (&lt;&lt;) for outputting the contents of a pixel.
+ * Example: A pixel with red value 100, green value 150, and blue value 200
+ *    will produce the following output:100 150 200
+ * Note: Returns the `out` parameter to allow chaining of stream output.
+ */
+std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Pixel&amp; pix)
+{
+   out &lt;&lt; pix.getRed() &lt;&lt; " " &lt;&lt; pix.getGreen() &lt;&lt; " " &lt;&lt; pix.getBlue();
+
+   return out;
+}
+
+/* operator&gt;&gt;
+ * Stream input operator (&gt;&gt; for reading a pixel from an input stream.
+ * Precondition: `in` holds a string of three integers separated by spaces;
+ *    each integer must be in the range 0 to 255, inclusive.
+ * Postconditions:
+ *    -The red value of pix is set to the first integer.
+ *    -The blue value of pix is set to the third integer.
+ * Note: Returns the `in` parameter to allow chaining of stream input.
+ */
+std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
+{
+   int r, g, b;
+   in &gt;&gt; r &gt;&gt; g &gt;&gt; b;
+   pix.setRed(r);
+   pix.setGreen(g);
+   pix.setBlue(b);
+
+   return in;
+}
+
+
+        </preamble>
+        <code>
+
+        </code>
+        <postamble visible="no" />
+        <tests>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
+
+TEST_CASE( "test1" ) {
+    std::stringstream cout;
+    int x = 3; int y = 7;
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(x, y) &lt;&lt; endl;
+    
+    std::string answer = 'The maximum is 7'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test2" ) {
+    std::stringstream cout;
+    string a = "raspberry"; string b = "jelly";
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(a, b) &lt;&lt; endl;
+    
+    std::string answer = 'The maximum is raspberry'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test3" ) {
+    std::stringstream cout;
+    double u = 3.14; double v = 1.0101;
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(u, v) &lt;&lt; endl;
+    
+    std::string answer = 'The maximum is 3.14'
+    REQUIRE( cout.str() == answer );
+}
+
+
+TEST_CASE( "test4" ) {
+    std::stringstream cout;
+    Pixel pix1(0, 1, 2); Pixel pix2(10, 9, 5);
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(pix1, pix2) &lt;&lt; endl;
+    std::string answer = 'The maximum is 10 9 5\n'
+    REQUIRE( cout.str() == answer );
+}
+
+        </tests>
+      </program>
+    </exercise>
+  </exercises>
+</section>
