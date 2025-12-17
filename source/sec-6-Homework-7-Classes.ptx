@@ -542,7 +542,7 @@ TEST_CASE( "test1" ) {
     
     ;
     std::string answer = "7785";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -554,7 +554,7 @@ TEST_CASE( "test2" ) {
     
     ;
     std::string answer = "-3";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -566,7 +566,7 @@ TEST_CASE( "test3" ) {
     
     ;
     std::string answer = "123454321\n";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -580,7 +580,7 @@ TEST_CASE( "test4" ) {
     
     ;
     std::string answer = "-999999";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
         </tests>
@@ -627,7 +627,7 @@ TEST_CASE( "test1" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -637,7 +637,7 @@ TEST_CASE( "test2" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -647,7 +647,7 @@ TEST_CASE( "test3" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -657,7 +657,7 @@ TEST_CASE( "test4" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -667,7 +667,7 @@ TEST_CASE( "test5" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -677,7 +677,7 @@ TEST_CASE( "test6" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -687,7 +687,7 @@ TEST_CASE( "test7" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -697,7 +697,7 @@ TEST_CASE( "test8" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -707,7 +707,7 @@ TEST_CASE( "test9" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -717,7 +717,7 @@ TEST_CASE( "test10" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -727,7 +727,7 @@ TEST_CASE( "test11" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -737,7 +737,7 @@ TEST_CASE( "test12" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -748,7 +748,7 @@ TEST_CASE( "test13" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -758,7 +758,7 @@ TEST_CASE( "test14" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -768,7 +768,7 @@ TEST_CASE( "test15" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -778,7 +778,7 @@ TEST_CASE( "test16" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
         </tests>

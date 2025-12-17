@@ -190,7 +190,7 @@ TEST_CASE( "test1" ) {
     
     ;
     std::string answer = "PALINDROME";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -203,7 +203,7 @@ TEST_CASE( "test2" ) {
     
     ;
     std::string answer = "not a palindrome";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -216,7 +216,7 @@ TEST_CASE( "test3" ) {
     
     ;
     std::string answer = "PALINDROME";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -229,7 +229,7 @@ TEST_CASE( "test4" ) {
     
     ;
     std::string answer = "not a palindrome";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -242,7 +242,7 @@ TEST_CASE( "test5" ) {
     
     ;
     std::string answer = "PALINDROME";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -255,7 +255,7 @@ TEST_CASE( "test6" ) {
     
     ;
     std::string answer = "not a palindrome";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -268,7 +268,7 @@ TEST_CASE( "test7" ) {
     
     ;
     std::string answer = "PALINDROME";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -281,7 +281,7 @@ TEST_CASE( "test8" ) {
     
     ;
     std::string answer = "PALINDROME";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -294,7 +294,7 @@ TEST_CASE( "test9" ) {
     
     ;
     std::string answer = "not a palindrome";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -307,7 +307,7 @@ TEST_CASE( "test10" ) {
     
     ;
     std::string answer = "PALINDROME";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
         </tests>
@@ -350,7 +350,7 @@ TEST_CASE( "test1" ) {
     
     ;
     std::string answer = "6";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -360,7 +360,7 @@ TEST_CASE( "test2" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -370,7 +370,7 @@ TEST_CASE( "test3" ) {
     
     ;
     std::string answer = "210";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -380,7 +380,7 @@ TEST_CASE( "test4" ) {
     
     ;
     std::string answer = "5";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -390,7 +390,7 @@ TEST_CASE( "test5" ) {
     
     ;
     std::string answer = "15504";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -400,7 +400,7 @@ TEST_CASE( "test6" ) {
     
     ;
     std::string answer = "1";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -410,7 +410,7 @@ TEST_CASE( "test7" ) {
     
     ;
     std::string answer = "0";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -420,7 +420,7 @@ TEST_CASE( "test8" ) {
     
     ;
     std::string answer = "126\n";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
 
@@ -430,7 +430,7 @@ TEST_CASE( "test9" ) {
     
     ;
     std::string answer = "2300\n";
-    REQUIRE( cout.str() == answer );
+    CHECK( cout.str() == answer );
 }
 
         </tests>
