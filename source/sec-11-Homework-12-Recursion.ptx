@@ -187,7 +187,9 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'PALINDROME'
+    
+    ;
+    std::string answer = "PALINDROME";
     REQUIRE( cout.str() == answer );
 }
 
@@ -198,7 +200,9 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'not a palindrome'
+    
+    ;
+    std::string answer = "not a palindrome";
     REQUIRE( cout.str() == answer );
 }
 
@@ -209,7 +213,9 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'PALINDROME'
+    
+    ;
+    std::string answer = "PALINDROME";
     REQUIRE( cout.str() == answer );
 }
 
@@ -220,7 +226,9 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'not a palindrome'
+    
+    ;
+    std::string answer = "not a palindrome";
     REQUIRE( cout.str() == answer );
 }
 
@@ -231,7 +239,9 @@ TEST_CASE( "test5" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'PALINDROME'
+    
+    ;
+    std::string answer = "PALINDROME";
     REQUIRE( cout.str() == answer );
 }
 
@@ -242,7 +252,9 @@ TEST_CASE( "test6" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'not a palindrome'
+    
+    ;
+    std::string answer = "not a palindrome";
     REQUIRE( cout.str() == answer );
 }
 
@@ -253,7 +265,9 @@ TEST_CASE( "test7" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'PALINDROME'
+    
+    ;
+    std::string answer = "PALINDROME";
     REQUIRE( cout.str() == answer );
 }
 
@@ -264,7 +278,9 @@ TEST_CASE( "test8" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'PALINDROME'
+    
+    ;
+    std::string answer = "PALINDROME";
     REQUIRE( cout.str() == answer );
 }
 
@@ -275,7 +291,9 @@ TEST_CASE( "test9" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'not a palindrome'
+    
+    ;
+    std::string answer = "not a palindrome";
     REQUIRE( cout.str() == answer );
 }
 
@@ -286,7 +304,9 @@ TEST_CASE( "test10" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    std::string answer = 'PALINDROME'
+    
+    ;
+    std::string answer = "PALINDROME";
     REQUIRE( cout.str() == answer );
 }
 
@@ -327,7 +347,9 @@ int rec_choose(int n, int k)
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(4, 2)
-    std::string answer = '6'
+    
+    ;
+    std::string answer = "6";
     REQUIRE( cout.str() == answer );
 }
 
@@ -335,7 +357,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(3, 0)
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -343,7 +367,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(10, 4)
-    std::string answer = '210'
+    
+    ;
+    std::string answer = "210";
     REQUIRE( cout.str() == answer );
 }
 
@@ -351,7 +377,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(5, 4)
-    std::string answer = '5'
+    
+    ;
+    std::string answer = "5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -359,7 +387,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(20, 5)
-    std::string answer = '15504'
+    
+    ;
+    std::string answer = "15504";
     REQUIRE( cout.str() == answer );
 }
 
@@ -367,7 +397,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(42, 42)
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -375,7 +407,9 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test7" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(0, 1)
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -383,7 +417,9 @@ TEST_CASE( "test7" ) {
 TEST_CASE( "test8" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(9, 5)
-    std::string answer = '126\n'
+    
+    ;
+    std::string answer = "126\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -391,7 +427,9 @@ TEST_CASE( "test8" ) {
 TEST_CASE( "test9" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(25, 3)
-    std::string answer = '2300\n'
+    
+    ;
+    std::string answer = "2300\n";
     REQUIRE( cout.str() == answer );
 }
 

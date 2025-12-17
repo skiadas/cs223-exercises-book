@@ -70,7 +70,9 @@ TEST_CASE( "test1" ) {
     // list1 =  3 5 7
     cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();
     
-    std::string answer = '3 -&gt; 5 -&gt; 7 :  15\n'
+    
+    ;
+    std::string answer = "3 -&gt; 5 -&gt; 7 :  15\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -79,7 +81,9 @@ TEST_CASE( "test2" ) {
     std::stringstream cout;
     List l;
     cout &lt;&lt; "empty list   :  " &lt;&lt; l.sumAll();
-    std::string answer = 'empty list   :  0'
+    
+    ;
+    std::string answer = "empty list   :  0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -89,7 +93,9 @@ TEST_CASE( "test3" ) {
     // list1 =  3 5 7
     list1.insertStart(8);
     cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();
-    std::string answer = '8 -&gt; 3 -&gt; 5 -&gt; 7 :  23\n'
+    
+    ;
+    std::string answer = "8 -&gt; 3 -&gt; 5 -&gt; 7 :  23\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -160,7 +166,9 @@ TEST_CASE( "test1" ) {
     string s("4 6    7");
     cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
     
-    std::string answer = '"4 6    7" :  4 -&gt; 6 -&gt; 7\n'
+    
+    ;
+    std::string answer = "'"4 6    7" :  4 -&gt; 6 -&gt; 7\n';
     REQUIRE( cout.str() == answer );
 }
 
@@ -170,7 +178,9 @@ TEST_CASE( "test2" ) {
     string s("");
     cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
     
-    std::string answer = '"" :\n'
+    
+    ;
+    std::string answer = "'"" :\n';
     REQUIRE( cout.str() == answer );
 }
 
@@ -180,7 +190,9 @@ TEST_CASE( "test3" ) {
     string s("4");
     cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
     
-    std::string answer = '"4" :  4\n'
+    
+    ;
+    std::string answer = "'"4" :  4\n';
     REQUIRE( cout.str() == answer );
 }
 
@@ -190,7 +202,9 @@ TEST_CASE( "test4" ) {
     string s("  2    4 3   6    7  ");
     cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);
     
-    std::string answer = '"  2    4 3   6    7  " :  2 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 7\n'
+    
+    ;
+    std::string answer = "'"  2    4 3   6    7  " :  2 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 7\n';
     REQUIRE( cout.str() == answer );
 }
 
@@ -265,7 +279,9 @@ TEST_CASE( "test1" ) {
     // list1 =  3 5 7
     list1.insertAt(8, 1);
     cout &lt;&lt; list1;
-    std::string answer = '3 -&gt; 8 -&gt; 5 -&gt; 7'
+    
+    ;
+    std::string answer = "3 -&gt; 8 -&gt; 5 -&gt; 7";
     REQUIRE( cout.str() == answer );
 }
 
@@ -275,7 +291,9 @@ TEST_CASE( "test2" ) {
     // list1 =  3 5 7
     list1.insertAt(8, 2);
     cout &lt;&lt; list1;
-    std::string answer = '3 -&gt; 5 -&gt; 8 -&gt; 7'
+    
+    ;
+    std::string answer = "3 -&gt; 5 -&gt; 8 -&gt; 7";
     REQUIRE( cout.str() == answer );
 }
 
@@ -285,7 +303,9 @@ TEST_CASE( "test3" ) {
     // list1 =  3 5 7
     list1.insertAt(8, 3);
     cout &lt;&lt; list1;
-    std::string answer = '3 -&gt; 5 -&gt; 7 -&gt; 8'
+    
+    ;
+    std::string answer = "3 -&gt; 5 -&gt; 7 -&gt; 8";
     REQUIRE( cout.str() == answer );
 }
 
@@ -295,7 +315,9 @@ TEST_CASE( "test4" ) {
     // list1 =  3 5 7
     list1.insertAt(8, 0);
     cout &lt;&lt; list1;
-    std::string answer = '8 -&gt; 3 -&gt; 5 -&gt; 7'
+    
+    ;
+    std::string answer = "8 -&gt; 3 -&gt; 5 -&gt; 7";
     REQUIRE( cout.str() == answer );
 }
 
@@ -306,7 +328,9 @@ TEST_CASE( "test5" ) {
     List l;
     l.insertAt(5, 0);
     cout &lt;&lt; l;
-    std::string answer = '5'
+    
+    ;
+    std::string answer = "5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -316,7 +340,9 @@ TEST_CASE( "test6" ) {
     // list2 = 3
     list2.insertAt(5, 0);
     cout &lt;&lt; list2;
-    std::string answer = '5 -&gt; 3'
+    
+    ;
+    std::string answer = "5 -&gt; 3";
     REQUIRE( cout.str() == answer );
 }
 
@@ -326,7 +352,9 @@ TEST_CASE( "test7" ) {
     // list2 = 3
     list2.insertAt(5, 1);
     cout &lt;&lt; list2;
-    std::string answer = '3 -&gt; 5'
+    
+    ;
+    std::string answer = "3 -&gt; 5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -336,7 +364,9 @@ TEST_CASE( "test8" ) {
     // list1 =  3 5 7
     list1.insertAt(8, -1);
     cout &lt;&lt; list1;
-    std::string answer = '3 -&gt; 5 -&gt; 7'
+    
+    ;
+    std::string answer = "3 -&gt; 5 -&gt; 7";
     REQUIRE( cout.str() == answer );
 }
 
@@ -346,7 +376,9 @@ TEST_CASE( "test9" ) {
     // list1 =  3 5 7
     list1.insertAt(8, 4);
     cout &lt;&lt; list1;
-    std::string answer = '3 -&gt; 5 -&gt; 7'
+    
+    ;
+    std::string answer = "3 -&gt; 5 -&gt; 7";
     REQUIRE( cout.str() == answer );
 }
 
@@ -444,7 +476,9 @@ TEST_CASE( "test1" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7\nAfter: 3 -&gt; 7\n'
+    
+    ;
+    std::string answer = "Before: 3 -&gt; 5 -&gt; 7\nAfter: 3 -&gt; 7\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -455,7 +489,9 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before:\nAfter:\n'
+    
+    ;
+    std::string answer = "Before:\nAfter:\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -466,7 +502,9 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3 -&gt; 5\nAfter: 3\n'
+    
+    ;
+    std::string answer = "Before: 3 -&gt; 5\nAfter: 3\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -477,7 +515,9 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7 -&gt; 9 -&gt; 11\nAfter: 3 -&gt; 7 -&gt; 11\n'
+    
+    ;
+    std::string answer = "Before: 3 -&gt; 5 -&gt; 7 -&gt; 9 -&gt; 11\nAfter: 3 -&gt; 7 -&gt; 11\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -488,7 +528,9 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3\nAfter: 3\n'
+    
+    ;
+    std::string answer = "Before: 3\nAfter: 3\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -499,7 +541,9 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7\nAfter: 3 -&gt; 7\n'
+    
+    ;
+    std::string answer = "Before: 3 -&gt; 5 -&gt; 7\nAfter: 3 -&gt; 7\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -510,7 +554,9 @@ TEST_CASE( "test7" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.keepOddNumbered();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7 -&gt; 9\nAfter: 3 -&gt; 7\n'
+    
+    ;
+    std::string answer = "Before: 3 -&gt; 5 -&gt; 7 -&gt; 9\nAfter: 3 -&gt; 7\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -607,7 +653,9 @@ TEST_CASE( "test1" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 3 -&gt; 5 -&gt; 7\nAfter: 7 -&gt; 5 -&gt; 3\n'
+    
+    ;
+    std::string answer = "Before: 3 -&gt; 5 -&gt; 7\nAfter: 7 -&gt; 5 -&gt; 3\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -618,7 +666,9 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before:\nAfter:\n'
+    
+    ;
+    std::string answer = "Before:\nAfter:\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -629,7 +679,9 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 1 -&gt; 3\nAfter: 3 -&gt; 1\n'
+    
+    ;
+    std::string answer = "Before: 1 -&gt; 3\nAfter: 3 -&gt; 1\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -640,7 +692,9 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 4\nAfter: 4\n'
+    
+    ;
+    std::string answer = "Before: 4\nAfter: 4\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -651,7 +705,9 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 1 -&gt; 3 -&gt; 7 -&gt; 9 -&gt; 13 -&gt; 20\nAfter: 20 -&gt; 13 -&gt; 9 -&gt; 7 -&gt; 3 -&gt; 1\n'
+    
+    ;
+    std::string answer = "Before: 1 -&gt; 3 -&gt; 7 -&gt; 9 -&gt; 13 -&gt; 20\nAfter: 20 -&gt; 13 -&gt; 9 -&gt; 7 -&gt; 3 -&gt; 1\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -662,7 +718,9 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 4\nAfter: 4\n'
+    
+    ;
+    std::string answer = "Before: 4\nAfter: 4\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -673,7 +731,9 @@ TEST_CASE( "test7" ) {
     cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";
     list.reverse();
     cout &lt;&lt; "After: " &lt;&lt; list;
-    std::string answer = 'Before: 4\nAfter: 4\n'
+    
+    ;
+    std::string answer = "Before: 4\nAfter: 4\n";
     REQUIRE( cout.str() == answer );
 }
 

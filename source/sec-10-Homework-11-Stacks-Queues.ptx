@@ -233,7 +233,9 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "true";
     else
         cout &lt;&lt; "false";
-    std::string answer = 'false'
+    
+    ;
+    std::string answer = "false";
     REQUIRE( cout.str() == answer );
 }
 
@@ -245,7 +247,9 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "true";
     else
         cout &lt;&lt; "false";
-    std::string answer = 'true'
+    
+    ;
+    std::string answer = "true";
     REQUIRE( cout.str() == answer );
 }
 
@@ -258,7 +262,9 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "true";
     else
         cout &lt;&lt; "false";
-    std::string answer = 'false'
+    
+    ;
+    std::string answer = "false";
     REQUIRE( cout.str() == answer );
 }
 
@@ -272,7 +278,9 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "gotcha";
     else
         cout &lt;&lt; "good job";
-    std::string answer = 'good job'
+    
+    ;
+    std::string answer = "good job";
     REQUIRE( cout.str() == answer );
 }
 
@@ -284,7 +292,9 @@ TEST_CASE( "test5" ) {
         cout &lt;&lt; "yeppers";
     else
         cout &lt;&lt; "false";
-    std::string answer = 'yeppers'
+    
+    ;
+    std::string answer = "yeppers";
     REQUIRE( cout.str() == answer );
 }
 
@@ -376,7 +386,9 @@ TEST_CASE( "test1" ) {
     Stack&lt;std::string&gt; mystack;
     mystack.push("mouse");
     cout &lt;&lt; mystack;
-    std::string answer = 'mouse'
+    
+    ;
+    std::string answer = "mouse";
     REQUIRE( cout.str() == answer );
 }
 
@@ -388,7 +400,9 @@ TEST_CASE( "test2" ) {
     mystack.push("emu");
     cout &lt;&lt; mystack;
     
-    std::string answer = 'emu  ,  platypus\n'
+    
+    ;
+    std::string answer = "emu  ,  platypus\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -400,7 +414,9 @@ TEST_CASE( "test3" ) {
     mystack.push("dog");
     mystack.push("marmot");
     cout &lt;&lt; mystack;
-    std::string answer = 'marmot  ,  dog  ,  cat\n'
+    
+    ;
+    std::string answer = "marmot  ,  dog  ,  cat\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -413,7 +429,9 @@ TEST_CASE( "test4" ) {
     mystack.push("marmot");
     mystack.push("bunny rabbit");
     cout &lt;&lt; mystack;
-    std::string answer = 'bunny rabbit  ,  marmot  ,  dog  ,  cat\n'
+    
+    ;
+    std::string answer = "bunny rabbit  ,  marmot  ,  dog  ,  cat\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -423,7 +441,9 @@ TEST_CASE( "test5" ) {
     Stack&lt;std::string&gt; mystack;
     mystack.push("monkey");
     cout &lt;&lt; mystack;
-    std::string answer = 'monkey'
+    
+    ;
+    std::string answer = "monkey";
     REQUIRE( cout.str() == answer );
 }
 
@@ -514,7 +534,9 @@ TEST_CASE( "test1" ) {
     std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
     
-    std::string answer = 'Before: mouse\nAfter:\n'
+    
+    ;
+    std::string answer = "Before: mouse\nAfter:\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -530,7 +552,9 @@ TEST_CASE( "test2" ) {
     mystack.pop();
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
     
-    std::string answer = 'Before: emu  ,  platypus\nAfter: platypus\n'
+    
+    ;
+    std::string answer = "Before: emu  ,  platypus\nAfter: platypus\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -549,7 +573,9 @@ TEST_CASE( "test3" ) {
     mystack.pop();
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
     
-    std::string answer = 'Before: marmot  ,  dog  ,  cat\nAfter: dog  ,  cat\nAfter: cat\n'
+    
+    ;
+    std::string answer = "Before: marmot  ,  dog  ,  cat\nAfter: dog  ,  cat\nAfter: cat\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -565,7 +591,9 @@ TEST_CASE( "test4" ) {
     mystack.pop();
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
     
-    std::string answer = 'Before: zebra  ,  elephant\nAfter: elephant\n'
+    
+    ;
+    std::string answer = "Before: zebra  ,  elephant\nAfter: elephant\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -664,7 +692,9 @@ TEST_CASE( "test1" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
     
-    std::string answer = 'List: mouse\nHead: mouse\nTail: mouse\n'
+    
+    ;
+    std::string answer = "List: mouse\nHead: mouse\nTail: mouse\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -678,7 +708,9 @@ TEST_CASE( "test2" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
     
-    std::string answer = 'List: mouse  ,  danger\nHead: mouse\nTail: danger\n'
+    
+    ;
+    std::string answer = "List: mouse  ,  danger\nHead: mouse\nTail: danger\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -693,7 +725,9 @@ TEST_CASE( "test3" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
     
-    std::string answer = 'List: mouse  ,  danger  ,  will robinson\nHead: mouse\nTail: will robinson\n'
+    
+    ;
+    std::string answer = "List: mouse  ,  danger  ,  will robinson\nHead: mouse\nTail: will robinson\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -708,7 +742,9 @@ TEST_CASE( "test4" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
     
-    std::string answer = 'List: 3  ,  2  ,  1\nHead: 3\nTail: 1\n'
+    
+    ;
+    std::string answer = "List: 3  ,  2  ,  1\nHead: 3\nTail: 1\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -812,7 +848,9 @@ TEST_CASE( "test1" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
     
-    std::string answer = 'Initial List: mouse  ,  danger  ,  will robinson\nDequeue result: mouse\nNew List: danger  ,  will robinson\nHead: danger\nTail: will robinson\n'
+    
+    ;
+    std::string answer = "Initial List: mouse  ,  danger  ,  will robinson\nDequeue result: mouse\nNew List: danger  ,  will robinson\nHead: danger\nTail: will robinson\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -828,7 +866,9 @@ TEST_CASE( "test2" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
     
-    std::string answer = 'Initial List: mouse  ,  danger\nDequeue result: mouse\nNew List: danger\nHead: danger\nTail: danger\n'
+    
+    ;
+    std::string answer = "Initial List: mouse  ,  danger\nDequeue result: mouse\nNew List: danger\nHead: danger\nTail: danger\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -843,7 +883,9 @@ TEST_CASE( "test3" ) {
     std::cout &lt;&lt; "Head: " &lt;&lt; (queue.head == nullptr ? "null" : queue.head-&gt;value) &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; (queue.tail == nullptr ? "null" : queue.tail-&gt;value) &lt;&lt; std::endl;
     
-    std::string answer = 'Initial List: mouse\nDequeue result: mouse\nNew List:\nHead: null\nTail: null\n'
+    
+    ;
+    std::string answer = "Initial List: mouse\nDequeue result: mouse\nNew List:\nHead: null\nTail: null\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -859,7 +901,9 @@ TEST_CASE( "test4" ) {
        std::cout &lt;&lt; "YES!\n";
     }
     
-    std::string answer = 'Removing from empty list should throw exception: YES!\n'
+    
+    ;
+    std::string answer = "Removing from empty list should throw exception: YES!\n";
     REQUIRE( cout.str() == answer );
 }
 

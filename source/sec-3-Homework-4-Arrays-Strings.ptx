@@ -328,7 +328,9 @@ TEST_CASE( "test1" ) {
     int arr[1] = {3};
     // call the function with arr = [3], size = 1
     cout &lt;&lt; array_sum(arr, 1)
-    std::string answer = '3'
+    
+    ;
+    std::string answer = "3";
     REQUIRE( cout.str() == answer );
 }
 
@@ -338,7 +340,9 @@ TEST_CASE( "test2" ) {
     int arr[5] = {1, 2, 3, 4, 5};
     // call the function with size = 4
     cout &lt;&lt; array_sum(arr, 4)
-    std::string answer = '10'
+    
+    ;
+    std::string answer = "10";
     REQUIRE( cout.str() == answer );
 }
 
@@ -348,7 +352,9 @@ TEST_CASE( "test3" ) {
     int arr[5]; // values are random garbage
     // call the function with size = 0
     cout &lt;&lt; array_sum(arr, 0)
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -358,7 +364,9 @@ TEST_CASE( "test4" ) {
     int arr[5]; // values are random garbage
     // call the function with size = -43
     cout &lt;&lt; array_sum(arr, -43)
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -368,7 +376,9 @@ TEST_CASE( "test5" ) {
     int arr[6] = {1, 2, 3, 4, 5, 6};
     // call the function with size = 6
     cout &lt;&lt; array_sum(arr, 6)
-    std::string answer = '21'
+    
+    ;
+    std::string answer = "21";
     REQUIRE( cout.str() == answer );
 }
 
@@ -379,7 +389,9 @@ TEST_CASE( "test6" ) {
     for(int i=0; i&lt;=10; i++) {arr[i] = 2*i - 1;}
     // call the function with arr = [-1, 1, 3, 5, ..., 19] and size = 11
     cout &lt;&lt; array_sum(arr, 11);
-    std::string answer = '99'
+    
+    ;
+    std::string answer = "99";
     REQUIRE( cout.str() == answer );
 }
 
@@ -416,7 +428,9 @@ TEST_CASE( "test1" ) {
        }
     }
     cout &lt;&lt; array_max(arr)
-    std::string answer = '4'
+    
+    ;
+    std::string answer = "4";
     REQUIRE( cout.str() == answer );
 }
 
@@ -431,7 +445,9 @@ TEST_CASE( "test2" ) {
     }
     arr[0][0] = 100;
     cout &lt;&lt; array_max(arr)
-    std::string answer = '100'
+    
+    ;
+    std::string answer = "100";
     REQUIRE( cout.str() == answer );
 }
 
@@ -446,7 +462,9 @@ TEST_CASE( "test3" ) {
     }
     arr[0][4] = 1000;
     cout &lt;&lt; array_max(arr)
-    std::string answer = '1000'
+    
+    ;
+    std::string answer = "1000";
     REQUIRE( cout.str() == answer );
 }
 
@@ -461,7 +479,9 @@ TEST_CASE( "test4" ) {
     }
     arr[2][0] = 99;
     cout &lt;&lt; array_max(arr)
-    std::string answer = '99'
+    
+    ;
+    std::string answer = "99";
     REQUIRE( cout.str() == answer );
 }
 
@@ -476,7 +496,9 @@ TEST_CASE( "test5" ) {
     }
     arr[2][4] = 15;
     cout &lt;&lt; array_max(arr)
-    std::string answer = '15'
+    
+    ;
+    std::string answer = "15";
     REQUIRE( cout.str() == answer );
 }
 
@@ -491,7 +513,9 @@ TEST_CASE( "test6" ) {
     }
     arr[1][2] = 876;
     cout &lt;&lt; array_max(arr)
-    std::string answer = '876'
+    
+    ;
+    std::string answer = "876";
     REQUIRE( cout.str() == answer );
 }
 
@@ -523,7 +547,9 @@ TEST_CASE( "test1" ) {
     int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};
     // no repeats
     cout &lt;&lt; unique_elements(arr, 10);
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -533,7 +559,9 @@ TEST_CASE( "test2" ) {
     int arr[5] = {0, 1, 2, 3, 1};
     // has repeat
     cout &lt;&lt; unique_elements(arr, 5);
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -543,7 +571,9 @@ TEST_CASE( "test3" ) {
     int arr[1] = {999};
     // no repeats, size is 1
     cout &lt;&lt; unique_elements(arr, 1);
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -553,7 +583,9 @@ TEST_CASE( "test4" ) {
     int arr[8] = {100, 1, 2, 3, 5, 100, 7};
     // has repeat
     cout &lt;&lt; unique_elements(arr, 8);
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -563,7 +595,9 @@ TEST_CASE( "test5" ) {
     int arr[2] = {100, 99};
     // no repeat
     cout &lt;&lt; unique_elements(arr, 2);
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -573,7 +607,9 @@ TEST_CASE( "test6" ) {
     int arr[2] = {53, 53};
     // has repeat
     cout &lt;&lt; unique_elements(arr, 2);
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -585,7 +621,9 @@ TEST_CASE( "test7" ) {
     arr[3] = arr[17];
     // arr = [0, 1, 2, 17, 4, 5, ...., 16, 17, 18, 19], has repeat
     cout &lt;&lt; unique_elements(arr, 20);
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -616,7 +654,9 @@ TEST_CASE( "test1" ) {
     int arr[10] = {0, 1, 3, 4, 6, 7, 9, 10, 12, 13};
     // n = 3, answer is 1
     cout &lt;&lt; count_evens(arr, 3); 
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -626,7 +666,9 @@ TEST_CASE( "test2" ) {
     int arr[10] = {0, 1, 3, 4, 6, 7, 9, 10, 12, 13};
     // n = 10, answer is 5
     cout &lt;&lt; count_evens(arr, 10); 
-    std::string answer = '5'
+    
+    ;
+    std::string answer = "5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -636,7 +678,9 @@ TEST_CASE( "test3" ) {
     int arr[10] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
     // n = 1, answer is 0
     cout &lt;&lt; count_evens(arr, 1); 
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -646,7 +690,9 @@ TEST_CASE( "test4" ) {
     int arr[10] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
     // n = 10, answer is 0
     cout &lt;&lt; count_evens(arr, 10); 
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -660,7 +706,9 @@ TEST_CASE( "test5" ) {
     // arr = [2, 4, 6, ..., 100]
     // n = 1, answer is 1
     cout &lt;&lt; count_evens(arr, 1); 
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -674,7 +722,9 @@ TEST_CASE( "test6" ) {
     // arr = [2, 4, 6, ..., 100]
     // n = 49, answer is 49
     cout &lt;&lt; count_evens(arr, 49); 
-    std::string answer = '49'
+    
+    ;
+    std::string answer = "49";
     REQUIRE( cout.str() == answer );
 }
 
@@ -705,7 +755,9 @@ TEST_CASE( "test1" ) {
     int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
     // size = 4, n = 1, should return 2
     cout &lt;&lt; count_occurrences(arr, 4, 1); 
-    std::string answer = '2'
+    
+    ;
+    std::string answer = "2";
     REQUIRE( cout.str() == answer );
 }
 
@@ -715,7 +767,9 @@ TEST_CASE( "test2" ) {
     int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
     // size = 4, n = -1, should return 0
     cout &lt;&lt; count_occurrences(arr, 4, -1); 
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -727,7 +781,9 @@ TEST_CASE( "test3" ) {
     // arr = [7, 7, ..., 7]
     // size = 4, n = 7, should return 4
     cout &lt;&lt; count_occurrences(arr, 4, 7); 
-    std::string answer = '4'
+    
+    ;
+    std::string answer = "4";
     REQUIRE( cout.str() == answer );
 }
 
@@ -739,7 +795,9 @@ TEST_CASE( "test4" ) {
     // arr = [7, 7, ..., 7]
     // size = 10, n = 7, should return 10
     cout &lt;&lt; count_occurrences(arr, 10, 7); 
-    std::string answer = '10'
+    
+    ;
+    std::string answer = "10";
     REQUIRE( cout.str() == answer );
 }
 
@@ -751,7 +809,9 @@ TEST_CASE( "test5" ) {
     // arr = [0, 7, 0, 7, ..., 0, 7]
     // size = 3, n = 7, should return 1
     cout &lt;&lt; count_occurrences(arr, 3, 7); 
-    std::string answer = '1'
+    
+    ;
+    std::string answer = "1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -763,7 +823,9 @@ TEST_CASE( "test6" ) {
     // arr = [0, 7, 0, 7, ..., 0, 7]
     // size = 100, n = 7, should return 50
     cout &lt;&lt; count_occurrences(arr, 100, 7); 
-    std::string answer = '50'
+    
+    ;
+    std::string answer = "50";
     REQUIRE( cout.str() == answer );
 }
 
@@ -794,7 +856,9 @@ TEST_CASE( "test1" ) {
     int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
     // with size = 6 and n = 1, should return 3
     cout &lt;&lt; last_index(arr, 6, 1); 
-    std::string answer = '3'
+    
+    ;
+    std::string answer = "3";
     REQUIRE( cout.str() == answer );
 }
 
@@ -804,7 +868,9 @@ TEST_CASE( "test2" ) {
     int arr[10] = {0, 4, 8, 0, 4, 8, 0, 4, 8, 0};
     // with size = 1 and n = 4, should return -1
     cout &lt;&lt; last_index(arr, 1, 4); 
-    std::string answer = '-1'
+    
+    ;
+    std::string answer = "-1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -814,7 +880,9 @@ TEST_CASE( "test3" ) {
     int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
     // with size = 10 and n = 4, should return 9
     cout &lt;&lt; last_index(arr, 10, 4); 
-    std::string answer = '9'
+    
+    ;
+    std::string answer = "9";
     REQUIRE( cout.str() == answer );
 }
 
@@ -824,7 +892,9 @@ TEST_CASE( "test4" ) {
     int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
     // with size = 6 and n = 2, should return 5
     cout &lt;&lt; last_index(arr, 6, 2); 
-    std::string answer = '5'
+    
+    ;
+    std::string answer = "5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -834,7 +904,9 @@ TEST_CASE( "test5" ) {
     int arr[10] = {0, 0, 1, 1, 0, 0, 1, 1, 0, 0};
     // with size = 10 and n = 1, should return 7
     cout &lt;&lt; last_index(arr, 10, 1); 
-    std::string answer = '7'
+    
+    ;
+    std::string answer = "7";
     REQUIRE( cout.str() == answer );
 }
 
@@ -844,7 +916,9 @@ TEST_CASE( "test6" ) {
     int arr[10] = {50, 0, 1, 1, 2, 2, 3, 3, 4, 4};
     // with size = 6 and n = 50, should return 0
     cout &lt;&lt; last_index(arr, 6, 50); 
-    std::string answer = '0'
+    
+    ;
+    std::string answer = "0";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1012,7 +1086,9 @@ cout &lt;&lt; input[1];        </pre>
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'Mr. Grey is fluffy'
+    
+    ;
+    std::string answer = "Mr. Grey is fluffy";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1020,7 +1096,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = 'too long'
+    
+    ;
+    std::string answer = "too long";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1028,7 +1106,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = 'Ruthie wants to play'
+    
+    ;
+    std::string answer = "Ruthie wants to play";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1036,7 +1116,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = 'too long'
+    
+    ;
+    std::string answer = "too long";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1137,7 +1219,9 @@ Luke Kuechly        </pre>
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'Skye\nSpike\nCleo\nZiggy'
+    
+    ;
+    std::string answer = "Skye\nSpike\nCleo\nZiggy";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1145,7 +1229,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = 'Bulldog\nBeagle\nPlott Hound\nBoxer\nPoodle'
+    
+    ;
+    std::string answer = "Bulldog\nBeagle\nPlott Hound\nBoxer\nPoodle";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1153,7 +1239,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = 'SQL\nJava\nPython\nC#\nR\nJavascript\nCobol'
+    
+    ;
+    std::string answer = "SQL\nJava\nPython\nC#\nR\nJavascript\nCobol";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1161,7 +1249,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = 'Luke Skywalker\nKylo Ren\nSupreme Leader Snoke\nRey\nLeia Organa\n'
+    
+    ;
+    std::string answer = "Luke Skywalker\nKylo Ren\nSupreme Leader Snoke\nRey\nLeia Organa\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1169,7 +1259,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     
-    std::string answer = 'Winnie the Pooh\nTigger\nPiglet\nEeyore\nRoo\nChristopher Robin\n'
+    
+    ;
+    std::string answer = "Winnie the Pooh\nTigger\nPiglet\nEeyore\nRoo\nChristopher Robin\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1203,7 +1295,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("Freddie Mercury")
-    std::string answer = 'Mercury'
+    
+    ;
+    std::string answer = "Mercury";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1211,7 +1305,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("David Bowie")
-    std::string answer = 'Bowie'
+    
+    ;
+    std::string answer = "Bowie";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1219,7 +1315,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("Pink Floyd")
-    std::string answer = 'Floyd'
+    
+    ;
+    std::string answer = "Floyd";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1227,7 +1325,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("AC/DC")
-    std::string answer = 'DC'
+    
+    ;
+    std::string answer = "DC";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1235,7 +1335,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("Ramones")
-    std::string answer = 'nes'
+    
+    ;
+    std::string answer = "nes";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1243,7 +1345,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("Who")
-    std::string answer = 'o'
+    
+    ;
+    std::string answer = "o";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1251,7 +1355,9 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test7" ) {
     std::stringstream cout;
     cout &lt;&lt; second_half("The Rolling Stones")
-    std::string answer = 'ng Stones'
+    
+    ;
+    std::string answer = "ng Stones";
     REQUIRE( cout.str() == answer );
 }
 

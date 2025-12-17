@@ -261,7 +261,9 @@ TEST_CASE( "test1" ) {
     n1.append("Mr. Gray");
     cout &lt;&lt; n1 &lt;&lt; endl;
     
-    std::string answer = 'Ziggy, Mr. Gray\n'
+    
+    ;
+    std::string answer = "Ziggy, Mr. Gray\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -274,7 +276,9 @@ TEST_CASE( "test2" ) {
     n1.append("goofball");
     cout &lt;&lt; n1 &lt;&lt; endl;
     
-    std::string answer = 'softball, basketball, oddball, goofball\n'
+    
+    ;
+    std::string answer = "softball, basketball, oddball, goofball\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -286,7 +290,9 @@ TEST_CASE( "test3" ) {
     n1.append("java");
     cout &lt;&lt; n1 &lt;&lt; endl;
     
-    std::string answer = 'python, C++, java\n'
+    
+    ;
+    std::string answer = "python, C++, java\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -536,7 +542,9 @@ TEST_CASE( "test1" ) {
     n1.append("Mr. Gray");
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
     
-    std::string answer = 'Ziggy, Mr. Gray\n'
+    
+    ;
+    std::string answer = "Ziggy, Mr. Gray\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -550,7 +558,9 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
          &lt;&lt; n1.retrieve(2) &lt;&lt; ", " &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
     
-    std::string answer = 'softball, basketball, oddball, goofball\n'
+    
+    ;
+    std::string answer = "softball, basketball, oddball, goofball\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -563,7 +573,9 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
          &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
     
-    std::string answer = 'python, C++, java\n'
+    
+    ;
+    std::string answer = "python, C++, java\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -572,7 +584,9 @@ TEST_CASE( "test4" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; endl;
-    std::string answer = 'Ziggy'
+    
+    ;
+    std::string answer = "Ziggy";
     REQUIRE( cout.str() == answer );
 }
 
@@ -587,7 +601,9 @@ TEST_CASE( "test5" ) {
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", " 
     &lt;&lt; n1.retrieve(2) &lt;&lt; ", " 
     &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
-    std::string answer = 'Ziggy, Mr. Gray, Ruthie, Snoopy'
+    
+    ;
+    std::string answer = "Ziggy, Mr. Gray, Ruthie, Snoopy";
     REQUIRE( cout.str() == answer );
 }
 
@@ -856,7 +872,9 @@ TEST_CASE( "test1" ) {
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
     &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
     
-    std::string answer = 'Ziggy, Mr. Gray\n'
+    
+    ;
+    std::string answer = "Ziggy, Mr. Gray\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -872,7 +890,9 @@ TEST_CASE( "test2" ) {
     &lt;&lt; n1.retrieve(2) &lt;&lt; ", " 
     &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
     
-    std::string answer = 'softball, basketball, oddball, goofball\n'
+    
+    ;
+    std::string answer = "softball, basketball, oddball, goofball\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -885,7 +905,9 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
-    std::string answer = 'python, C++, java\n'
+    
+    ;
+    std::string answer = "python, C++, java\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -897,7 +919,9 @@ TEST_CASE( "test4" ) {
     n1.append("c");
     n1.insertAt(1, "new");
     cout &lt;&lt; n1;
-    std::string answer = 'a, new, b, c\n'
+    
+    ;
+    std::string answer = "a, new, b, c\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -909,7 +933,9 @@ TEST_CASE( "test5" ) {
     n1.append("c");
     n1.insertAt(2, "new");
     cout &lt;&lt; n1;
-    std::string answer = 'a, b, new, c\n'
+    
+    ;
+    std::string answer = "a, b, new, c\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -921,7 +947,9 @@ TEST_CASE( "test6" ) {
     n1.append("c");
     n1.insertAt(3, "new");
     cout &lt;&lt; n1;
-    std::string answer = 'a, b, c, new\n'
+    
+    ;
+    std::string answer = "a, b, c, new\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1215,7 +1243,9 @@ TEST_CASE( "test1" ) {
     cout &lt;&lt; "removing: " 
     &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
     
-    std::string answer = 'removing: Mr. Gray\n'
+    
+    ;
+    std::string answer = "removing: Mr. Gray\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1233,7 +1263,9 @@ TEST_CASE( "test2" ) {
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
     
-    std::string answer = 'removing: oddball\nsoftball, basketball, goofball\n'
+    
+    ;
+    std::string answer = "removing: oddball\nsoftball, basketball, goofball\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1247,7 +1279,9 @@ TEST_CASE( "test3" ) {
     &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
     &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
-    std::string answer = 'removing: C++\npython, java\n'
+    
+    ;
+    std::string answer = "removing: C++\npython, java\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1260,7 +1294,9 @@ TEST_CASE( "test4" ) {
     n1.append("d");
     n1.removeFrom(1);
     cout &lt;&lt; n1;
-    std::string answer = 'a, c, d\n'
+    
+    ;
+    std::string answer = "a, c, d\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1273,7 +1309,9 @@ TEST_CASE( "test5" ) {
     n1.append("d");
     n1.removeFrom(2);
     cout &lt;&lt; n1;
-    std::string answer = 'a, b, d\n'
+    
+    ;
+    std::string answer = "a, b, d\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1286,7 +1324,9 @@ TEST_CASE( "test6" ) {
     n1.append("d");
     n1.removeFrom(3);
     cout &lt;&lt; n1;
-    std::string answer = 'a, b, c\n'
+    
+    ;
+    std::string answer = "a, b, c\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1609,7 +1649,9 @@ TEST_CASE( "test1" ) {
     n1.append("Mr. Gray");
     cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
     
-    std::string answer = 'size is: 2\n'
+    
+    ;
+    std::string answer = "size is: 2\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1622,7 +1664,9 @@ TEST_CASE( "test2" ) {
     n1.append("goofball");
     cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
     
-    std::string answer = 'size is: 4\n'
+    
+    ;
+    std::string answer = "size is: 4\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1633,7 +1677,9 @@ TEST_CASE( "test3" ) {
     n1.append("C++");
     n1.append("java");
     cout &lt;&lt; "check out my size: " &lt;&lt; n1.size() &lt;&lt; endl;
-    std::string answer = 'check out my size: 3'
+    
+    ;
+    std::string answer = "check out my size: 3";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1648,7 +1694,9 @@ TEST_CASE( "test4" ) {
     int n = n1.size();
     if (n == 5) cout &lt;&lt; "OK";
     else cout &lt;&lt; "NOPE";
-    std::string answer = 'OK'
+    
+    ;
+    std::string answer = "OK";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1997,7 +2045,9 @@ TEST_CASE( "test1" ) {
     else
         cout &lt;&lt; "Eek! No, n1 != n2. Check your code!" &lt;&lt; endl;
     
-    std::string answer = 'Right, those two are NOT equivalent!\n'
+    
+    ;
+    std::string answer = "Right, those two are NOT equivalent!\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2010,7 +2060,9 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
-    std::string answer = 'Right, those two ARE equivalent!'
+    
+    ;
+    std::string answer = "Right, those two ARE equivalent!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2023,7 +2075,9 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
-    std::string answer = 'Right, those two are NOT equivalent!'
+    
+    ;
+    std::string answer = "Right, those two are NOT equivalent!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2036,7 +2090,9 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
-    std::string answer = 'Right, those two are NOT equivalent!'
+    
+    ;
+    std::string answer = "Right, those two are NOT equivalent!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2050,7 +2106,9 @@ TEST_CASE( "test5" ) {
     else
         cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
     
-    std::string answer = 'Right, those two ARE equivalent!\n'
+    
+    ;
+    std::string answer = "Right, those two ARE equivalent!\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2063,7 +2121,9 @@ TEST_CASE( "test6" ) {
         cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
-    std::string answer = 'Right, those two ARE equivalent!'
+    
+    ;
+    std::string answer = "Right, those two ARE equivalent!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2675,7 +2735,9 @@ TEST_CASE( "test1" ) {
     else
         cout &lt;&lt; "Incorrect.";
     
-    std::string answer = 'Right!\n'
+    
+    ;
+    std::string answer = "Right!\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2688,7 +2750,9 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "Right!";
     else
         cout &lt;&lt; "Incorrect.";
-    std::string answer = 'Right!\n'
+    
+    ;
+    std::string answer = "Right!\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2703,7 +2767,9 @@ TEST_CASE( "test3" ) {
     else
         cout &lt;&lt; "Incorrect. ";
     cout &lt;&lt; l1;
-    std::string answer = 'Right! pickle, relish\n'
+    
+    ;
+    std::string answer = "Right! pickle, relish\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2719,7 +2785,9 @@ TEST_CASE( "test4" ) {
     else
         cout &lt;&lt; "Incorrect. ";
     cout &lt;&lt; l1;
-    std::string answer = 'Right! pickle, relish, mustard\n'
+    
+    ;
+    std::string answer = "Right! pickle, relish, mustard\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2732,7 +2800,9 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; l1.retrieve(0) 
          &lt;&lt; " " &lt;&lt; l1.retrieve(1) 
          &lt;&lt; endl;
-    std::string answer = 'pickle relish\n'
+    
+    ;
+    std::string answer = "pickle relish\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2743,7 +2813,9 @@ TEST_CASE( "test6" ) {
     l1.append("picklers"); 
     cout &lt;&lt; l1.retrieve(0) 
          &lt;&lt; endl;
-    std::string answer = 'picklers\n'
+    
+    ;
+    std::string answer = "picklers\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -2757,7 +2829,9 @@ TEST_CASE( "test7" ) {
     cout &lt;&lt; l1.retrieve(0) &lt;&lt; " " 
          &lt;&lt; l1.retrieve(1) &lt;&lt; " " 
          &lt;&lt; l1.retrieve(2) &lt;&lt; endl;
-    std::string answer = 'picklers relishers xxxxx\n'
+    
+    ;
+    std::string answer = "picklers relishers xxxxx\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -3335,7 +3409,9 @@ TEST_CASE( "test1" ) {
     else 
        cout &lt;&lt; "Incorrect.";
     
-    std::string answer = 'Size is 0.\n'
+    
+    ;
+    std::string answer = "Size is 0.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -3353,7 +3429,9 @@ TEST_CASE( "test2" ) {
        cout &lt;&lt; "Size is 6.";
     else 
        cout &lt;&lt; "Incorrect.";
-    std::string answer = 'Size is 6.\n'
+    
+    ;
+    std::string answer = "Size is 6.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -3368,7 +3446,9 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; "size is " 
          &lt;&lt; L1.size() 
          &lt;&lt; endl;
-    std::string answer = 'size is 4\n'
+    
+    ;
+    std::string answer = "size is 4\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -3377,7 +3457,9 @@ TEST_CASE( "test4" ) {
     std::stringstream cout;
     List L1;
     cout &lt;&lt; L1.size();
-    std::string answer = '0\n'
+    
+    ;
+    std::string answer = "0\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -3393,7 +3475,9 @@ TEST_CASE( "test5" ) {
     if (L1.size() == 5) 
        cout &lt;&lt; "FIVE";
     else cout &lt;&lt; "Incorrect.";
-    std::string answer = 'FIVE'
+    
+    ;
+    std::string answer = "FIVE";
     REQUIRE( cout.str() == answer );
 }
 
@@ -3406,7 +3490,9 @@ TEST_CASE( "test6" ) {
        cout &lt;&lt; "ONE";
     else 
        cout &lt;&lt; "Incorrect.";
-    std::string answer = 'ONE'
+    
+    ;
+    std::string answer = "ONE";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4006,7 +4092,9 @@ TEST_CASE( "test1" ) {
     L1.insertAt(0, "Ziggy");
     cout &lt;&lt; L1;
     
-    std::string answer = 'Ziggy\n'
+    
+    ;
+    std::string answer = "Ziggy\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4017,7 +4105,9 @@ TEST_CASE( "test2" ) {
     L1.insertAt(0, "Skye");
     L1.insertAt(0, "Ziggy");
     cout &lt;&lt; L1;
-    std::string answer = 'Ziggy, Skye\n'
+    
+    ;
+    std::string answer = "Ziggy, Skye\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4032,7 +4122,9 @@ TEST_CASE( "test3" ) {
     L1.insertAt(2, "Ruthie");
     L1.insertAt(1, "Spot");
     cout &lt;&lt; L1;
-    std::string answer = 'Skye, Spot, Ziggy, Ruthie, Mr. Gray, Xerea\n'
+    
+    ;
+    std::string answer = "Skye, Spot, Ziggy, Ruthie, Mr. Gray, Xerea\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4049,7 +4141,9 @@ TEST_CASE( "test4" ) {
     L1.insertAt(3, "k");
     L1.insertAt(1, "w");
     cout &lt;&lt; L1;
-    std::string answer = 'Skye, w, Z, x, k, M, X, d\n'
+    
+    ;
+    std::string answer = "Skye, w, Z, x, k, M, X, d\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4062,7 +4156,9 @@ TEST_CASE( "test5" ) {
     L1.append("pear");
     cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'apple\nbanana, pear\n'
+    
+    ;
+    std::string answer = "apple\nbanana, pear\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4075,7 +4171,9 @@ TEST_CASE( "test6" ) {
     L1.append("pear");
     cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'banana\napple, pear\n'
+    
+    ;
+    std::string answer = "banana\napple, pear\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4088,7 +4186,9 @@ TEST_CASE( "test7" ) {
     L1.append("pear");
     cout &lt;&lt; L1.removeFrom(2) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'pear\napple, banana\n'
+    
+    ;
+    std::string answer = "pear\napple, banana\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4099,7 +4199,9 @@ TEST_CASE( "test8" ) {
     L1.append("apple");
     cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'apple\n&lt;empty list&gt;\n'
+    
+    ;
+    std::string answer = "apple\n&lt;empty list&gt;\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4111,7 +4213,9 @@ TEST_CASE( "test9" ) {
     L1.append("banana");
     cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'apple\nbanana\n'
+    
+    ;
+    std::string answer = "apple\nbanana\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4123,7 +4227,9 @@ TEST_CASE( "test10" ) {
     L1.append("banana");
     cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'banana\napple\n'
+    
+    ;
+    std::string answer = "banana\napple\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -4140,7 +4246,9 @@ TEST_CASE( "test11" ) {
     cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; L1.removeFrom(2) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    std::string answer = 'a\nc\ne\nb, d\n'
+    
+    ;
+    std::string answer = "a\nc\ne\nb, d\n";
     REQUIRE( cout.str() == answer );
 }
 

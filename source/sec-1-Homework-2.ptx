@@ -94,7 +94,9 @@
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '5.5 + 2.01 = 7.51'
+    
+    ;
+    std::string answer = "5.5 + 2.01 = 7.51";
     REQUIRE( cout.str() == answer );
 }
 
@@ -102,7 +104,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '-75.75 - 4.11 = -79.86'
+    
+    ;
+    std::string answer = "-75.75 - 4.11 = -79.86";
     REQUIRE( cout.str() == answer );
 }
 
@@ -110,7 +114,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = '1.5 * -2.1 = -3.15'
+    
+    ;
+    std::string answer = "1.5 * -2.1 = -3.15";
     REQUIRE( cout.str() == answer );
 }
 
@@ -118,7 +124,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = '111.111 / 10 = 11.1111'
+    
+    ;
+    std::string answer = "111.111 / 10 = 11.1111";
     REQUIRE( cout.str() == answer );
 }
 
@@ -144,7 +152,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '3 is less than 5'
+    
+    ;
+    std::string answer = "3 is less than 5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -152,7 +162,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '6 is greater than 1'
+    
+    ;
+    std::string answer = "6 is greater than 1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -160,7 +172,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = '-42 is equal to -42'
+    
+    ;
+    std::string answer = "-42 is equal to -42";
     REQUIRE( cout.str() == answer );
 }
 
@@ -168,7 +182,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = '-35 is greater than -40'
+    
+    ;
+    std::string answer = "-35 is greater than -40";
     REQUIRE( cout.str() == answer );
 }
 
@@ -176,7 +192,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     
-    std::string answer = '-44 is less than 80'
+    
+    ;
+    std::string answer = "-44 is less than 80";
     REQUIRE( cout.str() == answer );
 }
 
@@ -184,7 +202,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     
-    std::string answer = '4 is greater than -62'
+    
+    ;
+    std::string answer = "4 is greater than -62";
     REQUIRE( cout.str() == answer );
 }
 
@@ -479,7 +499,9 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '3.14 is positive'
+    
+    ;
+    std::string answer = "3.14 is positive";
     REQUIRE( cout.str() == answer );
 }
 
@@ -487,7 +509,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '-42.889 is negative'
+    
+    ;
+    std::string answer = "-42.889 is negative";
     REQUIRE( cout.str() == answer );
 }
 
@@ -495,7 +519,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = '0 is zero'
+    
+    ;
+    std::string answer = "0 is zero";
     REQUIRE( cout.str() == answer );
 }
 
@@ -503,7 +529,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = '-97.8 is negative'
+    
+    ;
+    std::string answer = "-97.8 is negative";
     REQUIRE( cout.str() == answer );
 }
 
@@ -511,7 +539,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     
-    std::string answer = '59.26 is positive'
+    
+    ;
+    std::string answer = "59.26 is positive";
     REQUIRE( cout.str() == answer );
 }
 
@@ -537,7 +567,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = "'cat' is greater than 'bear'"
+    
+    ;
+    std::string answer = "'cat' is greater than 'bear'";
     REQUIRE( cout.str() == answer );
 }
 
@@ -545,7 +577,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = "'dog' is less than 'whale'"
+    
+    ;
+    std::string answer = "'dog' is less than 'whale'";
     REQUIRE( cout.str() == answer );
 }
 
@@ -553,7 +587,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = "both words are '2018'"
+    
+    ;
+    std::string answer = "both words are '2018'";
     REQUIRE( cout.str() == answer );
 }
 
@@ -561,7 +597,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = "'Boolean' is less than 'C++'"
+    
+    ;
+    std::string answer = "'Boolean' is less than 'C++'";
     REQUIRE( cout.str() == answer );
 }
 
@@ -569,7 +607,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     
-    std::string answer = "'String' is greater than 'Comparison'"
+    
+    ;
+    std::string answer = "'String' is greater than 'Comparison'";
     REQUIRE( cout.str() == answer );
 }
 
@@ -714,7 +754,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '5 squared is 25\n4 squared is 16\n3 squared is 9\n2 squared is 4\n1 squared is 1\n'
+    
+    ;
+    std::string answer = "5 squared is 25\n4 squared is 16\n3 squared is 9\n2 squared is 4\n1 squared is 1\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -722,7 +764,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '1 squared is 1\n'
+    
+    ;
+    std::string answer = "1 squared is 1\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -730,7 +774,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = '3 squared is 9\n2 squared is 4\n1 squared is 1'
+    
+    ;
+    std::string answer = "3 squared is 9\n2 squared is 4\n1 squared is 1";
     REQUIRE( cout.str() == answer );
 }
 
@@ -738,7 +784,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = '7 squared is 49\n6 squared is 36\n5 squared is 25\n4 squared is 16\n3 squared is 9\n2 squared is 4\n1 squared is 1\n'
+    
+    ;
+    std::string answer = "7 squared is 49\n6 squared is 36\n5 squared is 25\n4 squared is 16\n3 squared is 9\n2 squared is 4\n1 squared is 1\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -768,7 +816,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'CORRECT!\n'
+    
+    ;
+    std::string answer = "CORRECT!\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -776,7 +826,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = 'CORRECT!\n'
+    
+    ;
+    std::string answer = "CORRECT!\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -784,7 +836,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = 'CORRECT!'
+    
+    ;
+    std::string answer = "CORRECT!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -792,7 +846,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = 'WRONG!'
+    
+    ;
+    std::string answer = "WRONG!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -800,7 +856,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     
-    std::string answer = 'WRONG!'
+    
+    ;
+    std::string answer = "WRONG!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -808,7 +866,9 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     
-    std::string answer = 'WRONG!'
+    
+    ;
+    std::string answer = "WRONG!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -816,7 +876,9 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test7" ) {
     std::stringstream cout;
     
-    std::string answer = 'CORRECT!'
+    
+    ;
+    std::string answer = "CORRECT!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -843,7 +905,9 @@ TEST_CASE( "test7" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'The sum of the positive numbers is 10.\n'
+    
+    ;
+    std::string answer = "The sum of the positive numbers is 10.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -851,7 +915,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = 'The sum of the positive numbers is 0.\n'
+    
+    ;
+    std::string answer = "The sum of the positive numbers is 0.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -859,7 +925,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = 'The sum of the positive numbers is 28.'
+    
+    ;
+    std::string answer = "The sum of the positive numbers is 28.";
     REQUIRE( cout.str() == answer );
 }
 
@@ -867,7 +935,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = 'The sum of the positive numbers is 5.'
+    
+    ;
+    std::string answer = "The sum of the positive numbers is 5.";
     REQUIRE( cout.str() == answer );
 }
 
@@ -894,7 +964,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'You entered 3 numbers &lt;= 1000.\n'
+    
+    ;
+    std::string answer = "You entered 3 numbers &lt;= 1000.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -902,7 +974,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = 'You entered 0 numbers &lt;= 1000.\n'
+    
+    ;
+    std::string answer = "You entered 0 numbers &lt;= 1000.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -910,7 +984,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = 'You entered 5 numbers &lt;= 1000.'
+    
+    ;
+    std::string answer = "You entered 5 numbers &lt;= 1000.";
     REQUIRE( cout.str() == answer );
 }
 
@@ -918,7 +994,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = 'You entered 3 numbers &lt;= 1000.'
+    
+    ;
+    std::string answer = "You entered 3 numbers &lt;= 1000.";
     REQUIRE( cout.str() == answer );
 }
 

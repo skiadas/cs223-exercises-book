@@ -260,7 +260,9 @@ maudlin        </pre>
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '4KB3PaQCbyJwDQMvahL96VIdR'
+    
+    ;
+    std::string answer = "4KB3PaQCbyJwDQMvahL96VIdR";
     REQUIRE( cout.str() == answer );
 }
 
@@ -305,7 +307,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '7.4\n-3.7\n-1.6\n12.5\n-15.6\n-10.9\n-17.4\n-1.4\n10\n-59.6\n673\n-47.5\n-14.4\n71.8\n-7.56\n1.72\n-6.4\n3\n-9.8\n7.07'
+    
+    ;
+    std::string answer = "7.4\n-3.7\n-1.6\n12.5\n-15.6\n-10.9\n-17.4\n-1.4\n10\n-59.6\n673\n-47.5\n-14.4\n71.8\n-7.56\n1.72\n-6.4\n3\n-9.8\n7.07";
     REQUIRE( cout.str() == answer );
 }
 
@@ -358,7 +362,9 @@ Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = "Ziggy has 5\nHey, Xerea is not one of Dr. Wilson's cats!\nCleo has 2\nSpike has 4\nCleo has 7\nZiggy has 1\nHey, Mr.Grey is not one of Dr. Wilson's cats!\nCleo has 19\nSpike has 12\nZiggy has 26\nSkye has 12\nHey, Mufasa is not one of Dr. Wilson's cats!\nZiggy has 12\nSpike has 13\nSkye has 22\nCleo has 28\nSkye has 32\nCleo has 48\nSpike has 12\n"
+    
+    ;
+    std::string answer = "Ziggy has 5\nHey, Xerea is not one of Dr. Wilson's cats!\nCleo has 2\nSpike has 4\nCleo has 7\nZiggy has 1\nHey, Mr.Grey is not one of Dr. Wilson's cats!\nCleo has 19\nSpike has 12\nZiggy has 26\nSkye has 12\nHey, Mufasa is not one of Dr. Wilson's cats!\nZiggy has 12\nSpike has 13\nSkye has 22\nCleo has 28\nSkye has 32\nCleo has 48\nSpike has 12\n";
     REQUIRE( cout.str() == answer );
 }
 

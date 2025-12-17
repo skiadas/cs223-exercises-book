@@ -500,7 +500,9 @@ TEST_CASE( "test1" ) {
     if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
     else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
     
-    std::string answer = 'this is NOT a white pixel.\n'
+    
+    ;
+    std::string answer = "this is NOT a white pixel.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -510,7 +512,9 @@ TEST_CASE( "test2" ) {
     Pixel pix(253, 254, 255);
     if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
     else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-    std::string answer = 'this is NOT a white pixel.\n'
+    
+    ;
+    std::string answer = "this is NOT a white pixel.\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -520,7 +524,9 @@ TEST_CASE( "test3" ) {
     Pixel pix(255, 255, 255);
     if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
     else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-    std::string answer = 'this is a white pixel!\n\n'
+    
+    ;
+    std::string answer = "this is a white pixel!\n\n";
     REQUIRE( cout.str() == answer );
 }
 
@@ -530,7 +536,9 @@ TEST_CASE( "test4" ) {
     Pixel pix(0, 255, 255);
     if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
     else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-    std::string answer = 'this is NOT a white pixel.'
+    
+    ;
+    std::string answer = "this is NOT a white pixel.";
     REQUIRE( cout.str() == answer );
 }
 
@@ -540,7 +548,9 @@ TEST_CASE( "test5" ) {
     Pixel pix(255, 255, 254);
     if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
     else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-    std::string answer = 'this is NOT a white pixel.'
+    
+    ;
+    std::string answer = "this is NOT a white pixel.";
     REQUIRE( cout.str() == answer );
 }
 
@@ -550,7 +560,9 @@ TEST_CASE( "test6" ) {
     Pixel pix(254, 255, 255);
     if (pix.is_white()) { cout &lt;&lt; "nope" &lt;&lt; endl; }
     else { cout &lt;&lt; "OK" &lt;&lt; endl; }
-    std::string answer = 'OK'
+    
+    ;
+    std::string answer = "OK";
     REQUIRE( cout.str() == answer );
 }
 
@@ -560,7 +572,9 @@ TEST_CASE( "test7" ) {
     Pixel pix(255, 255, 255);
     if (pix.is_white()) { cout &lt;&lt; "Yes!" &lt;&lt; endl; }
     else { cout &lt;&lt; "No" &lt;&lt; endl; }
-    std::string answer = 'Yes!'
+    
+    ;
+    std::string answer = "Yes!";
     REQUIRE( cout.str() == answer );
 }
 
@@ -570,7 +584,9 @@ TEST_CASE( "test8" ) {
     Pixel pix(255, 253, 255);
     if (pix.is_white()) { cout &lt;&lt; "Yes!" &lt;&lt; endl; }
     else { cout &lt;&lt; "No" &lt;&lt; endl; }
-    std::string answer = 'No'
+    
+    ;
+    std::string answer = "No";
     REQUIRE( cout.str() == answer );
 }
 
@@ -673,7 +689,9 @@ TEST_CASE( "test1" ) {
     point pt1(-1.5, 3.75);
     point pt2(0.5, 0.5);
     cout &lt;&lt; pt1 + pt2;
-    std::string answer = '(-1, 4.25)'
+    
+    ;
+    std::string answer = "(-1, 4.25)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -683,7 +701,9 @@ TEST_CASE( "test2" ) {
     point pt1(10, 3);
     point pt2(-1, -1);
     cout &lt;&lt; pt1 + pt2;
-    std::string answer = '(9, 2)'
+    
+    ;
+    std::string answer = "(9, 2)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -693,7 +713,9 @@ TEST_CASE( "test3" ) {
     point pt1(80, -55.2);
     point pt2(-50, -50);
     cout &lt;&lt; pt1 + pt2;
-    std::string answer = '(30, -105.2)'
+    
+    ;
+    std::string answer = "(30, -105.2)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -703,7 +725,9 @@ TEST_CASE( "test4" ) {
     point pt1(-12.8, -18.5);
     point pt2(3.5, 6.5);
     cout &lt;&lt; pt1 + pt2;
-    std::string answer = '(-9.3, -12)'
+    
+    ;
+    std::string answer = "(-9.3, -12)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -806,7 +830,9 @@ TEST_CASE( "test1" ) {
     point pt1(-1.5, 3.75);
     point pt2(0.5, 0.5);
     cout &lt;&lt; pt1 * pt2;
-    std::string answer = '1.125'
+    
+    ;
+    std::string answer = "1.125";
     REQUIRE( cout.str() == answer );
 }
 
@@ -816,7 +842,9 @@ TEST_CASE( "test2" ) {
     point pt1(10, 3);
     point pt2(-1, -1);
     cout &lt;&lt; pt1 * pt2;
-    std::string answer = '-13'
+    
+    ;
+    std::string answer = "-13";
     REQUIRE( cout.str() == answer );
 }
 
@@ -826,7 +854,9 @@ TEST_CASE( "test3" ) {
     point pt1(80, -55.2);
     point pt2(-50, -50);
     cout &lt;&lt; pt1 * pt2;
-    std::string answer = '-1240'
+    
+    ;
+    std::string answer = "-1240";
     REQUIRE( cout.str() == answer );
 }
 
@@ -836,7 +866,9 @@ TEST_CASE( "test4" ) {
     point pt1(-12, -18.5);
     point pt2(3.5, 6.5);
     cout &lt;&lt; pt1 * pt2;
-    std::string answer = '-162.25'
+    
+    ;
+    std::string answer = "-162.25";
     REQUIRE( cout.str() == answer );
 }
 
@@ -938,7 +970,9 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "equivalent";
     else
         cout &lt;&lt; "not equivalent";
-    std::string answer = 'equivalent'
+    
+    ;
+    std::string answer = "equivalent";
     REQUIRE( cout.str() == answer );
 }
 
@@ -951,7 +985,9 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "equivalent";
     else
         cout &lt;&lt; "not equivalent";
-    std::string answer = 'not equivalent'
+    
+    ;
+    std::string answer = "not equivalent";
     REQUIRE( cout.str() == answer );
 }
 
@@ -964,7 +1000,9 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "equivalent";
     else
         cout &lt;&lt; "not equivalent";
-    std::string answer = 'not equivalent'
+    
+    ;
+    std::string answer = "not equivalent";
     REQUIRE( cout.str() == answer );
 }
 
@@ -977,7 +1015,9 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "equivalent";
     else
         cout &lt;&lt; "not equivalent";
-    std::string answer = 'not equivalent'
+    
+    ;
+    std::string answer = "not equivalent";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1088,7 +1128,9 @@ TEST_CASE( "test1" ) {
     point pt(0, 0);
     message &gt;&gt; pt;
     cout &lt;&lt; pt;
-    std::string answer = '(-1.5, 3.75)'
+    
+    ;
+    std::string answer = "(-1.5, 3.75)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1100,7 +1142,9 @@ TEST_CASE( "test2" ) {
     point pt(0, 0);
     message &gt;&gt; pt;
     cout &lt;&lt; pt;
-    std::string answer = '(10, 3)'
+    
+    ;
+    std::string answer = "(10, 3)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1112,7 +1156,9 @@ TEST_CASE( "test3" ) {
     point pt(0, 0);
     message &gt;&gt; pt;
     cout &lt;&lt; pt;
-    std::string answer = '(80, -55.2)'
+    
+    ;
+    std::string answer = "(80, -55.2)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1124,7 +1170,9 @@ TEST_CASE( "test4" ) {
     point pt(0, 0);
     message &gt;&gt; pt;
     cout &lt;&lt; pt;
-    std::string answer = '(-12.8, -18.5)'
+    
+    ;
+    std::string answer = "(-12.8, -18.5)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1136,7 +1184,9 @@ TEST_CASE( "test5" ) {
     point pt1(0, 0);
     message &gt;&gt; pt1 &gt;&gt; pt1;
     cout &lt;&lt; pt1;
-    std::string answer = '(1.1, 2.2)'
+    
+    ;
+    std::string answer = "(1.1, 2.2)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1237,7 +1287,9 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     point pt(-1.5, 3.75);
     cout &lt;&lt; pt;
-    std::string answer = '(-1.5, 3.75)'
+    
+    ;
+    std::string answer = "(-1.5, 3.75)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1246,7 +1298,9 @@ TEST_CASE( "test2" ) {
     std::stringstream cout;
     point pt(10, 3);
     cout &lt;&lt; pt;
-    std::string answer = '(10, 3)'
+    
+    ;
+    std::string answer = "(10, 3)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1255,7 +1309,9 @@ TEST_CASE( "test3" ) {
     std::stringstream cout;
     point pt(80, -55.2);
     cout &lt;&lt; pt;
-    std::string answer = '(80, -55.2)'
+    
+    ;
+    std::string answer = "(80, -55.2)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1264,7 +1320,9 @@ TEST_CASE( "test4" ) {
     std::stringstream cout;
     point pt(-12.8, -18.5);
     cout &lt;&lt; pt;
-    std::string answer = '(-12.8, -18.5)'
+    
+    ;
+    std::string answer = "(-12.8, -18.5)";
     REQUIRE( cout.str() == answer );
 }
 
@@ -1274,7 +1332,9 @@ TEST_CASE( "test5" ) {
     point pt1(80, -55.2);
     point pt2(5.3, -5.3);
     cout &lt;&lt; pt1 &lt;&lt; " and " &lt;&lt; pt2;
-    std::string answer = '(80, -55.2) and (5.3, -5.3)'
+    
+    ;
+    std::string answer = "(80, -55.2) and (5.3, -5.3)";
     REQUIRE( cout.str() == answer );
 }
 

@@ -27,7 +27,9 @@ using namespace std;
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = "Howdy, partner!\nWhat's new in town?"
+    
+    ;
+    std::string answer = "Howdy, partner!\nWhat's new in town?";
     REQUIRE( cout.str() == answer );
 }
 
@@ -56,7 +58,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'Cleo\nMr. Grey\nSkye\nSpike\nXerea\nZiggy'
+    
+    ;
+    std::string answer = "Cleo\nMr. Grey\nSkye\nSpike\nXerea\nZiggy";
     REQUIRE( cout.str() == answer );
 }
 
@@ -373,7 +377,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '11'
+    
+    ;
+    std::string answer = "11";
     REQUIRE( cout.str() == answer );
 }
 
@@ -381,7 +387,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '1000'
+    
+    ;
+    std::string answer = "1000";
     REQUIRE( cout.str() == answer );
 }
 
@@ -389,7 +397,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = '2'
+    
+    ;
+    std::string answer = "2";
     REQUIRE( cout.str() == answer );
 }
 
@@ -397,7 +407,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = '-84'
+    
+    ;
+    std::string answer = "-84";
     REQUIRE( cout.str() == answer );
 }
 
@@ -423,7 +435,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '6.25'
+    
+    ;
+    std::string answer = "6.25";
     REQUIRE( cout.str() == answer );
 }
 
@@ -431,7 +445,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '-17.0707'
+    
+    ;
+    std::string answer = "-17.0707";
     REQUIRE( cout.str() == answer );
 }
 
@@ -439,7 +455,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = '3.2'
+    
+    ;
+    std::string answer = "3.2";
     REQUIRE( cout.str() == answer );
 }
 
@@ -447,7 +465,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = '10.8'
+    
+    ;
+    std::string answer = "10.8";
     REQUIRE( cout.str() == answer );
 }
 
@@ -490,7 +510,9 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = '5.5 + 2.5 = 8\n5.5 - 2.5 = 3\n5.5 * 2.5 = 13.75\n5.5 / 2.5 = 2.2'
+    
+    ;
+    std::string answer = "5.5 + 2.5 = 8\n5.5 - 2.5 = 3\n5.5 * 2.5 = 13.75\n5.5 / 2.5 = 2.2";
     REQUIRE( cout.str() == answer );
 }
 
@@ -498,7 +520,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = '-6.65 + 0.1 = -6.55\n-6.65 - 0.1 = -6.75\n-6.65 * 0.1 = -0.665\n-6.65 / 0.1 = -66.5'
+    
+    ;
+    std::string answer = "-6.65 + 0.1 = -6.55\n-6.65 - 0.1 = -6.75\n-6.65 * 0.1 = -0.665\n-6.65 / 0.1 = -66.5";
     REQUIRE( cout.str() == answer );
 }
 
@@ -656,7 +680,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     
-    std::string answer = 'Person: Charles S. Chaplin'
+    
+    ;
+    std::string answer = "Person: Charles S. Chaplin";
     REQUIRE( cout.str() == answer );
 }
 
@@ -664,7 +690,9 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     
-    std::string answer = 'Person: Alan M. Turing'
+    
+    ;
+    std::string answer = "Person: Alan M. Turing";
     REQUIRE( cout.str() == answer );
 }
 
@@ -672,7 +700,9 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     
-    std::string answer = 'Person: Xerea L. Davis'
+    
+    ;
+    std::string answer = "Person: Xerea L. Davis";
     REQUIRE( cout.str() == answer );
 }
 
@@ -680,7 +710,9 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     
-    std::string answer = 'Person: Steven P. Jobs'
+    
+    ;
+    std::string answer = "Person: Steven P. Jobs";
     REQUIRE( cout.str() == answer );
 }
 
