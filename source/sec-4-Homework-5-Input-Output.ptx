@@ -255,10 +255,12 @@ maudlin        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>&lt;iotest&gt;
-    &lt;input&gt;&lt;/input&gt;
-    &lt;output&gt;4KB3PaQCbyJwDQMvahL96VIdR&lt;/output&gt;
-  &lt;/iotest&gt;</iotests>
+        <iotests>
+          <iotest>
+            <input />
+            <output>4KB3PaQCbyJwDQMvahL96VIdR</output>
+          </iotest>
+        </iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-Lesson2-calc_from_file-1" label="exe-sec-Homework-5-Input-Output-1-234228">
@@ -294,9 +296,10 @@ maudlin        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>&lt;iotest&gt;
-    &lt;input&gt;&lt;/input&gt;
-    &lt;output&gt;7.4
+        <iotests>
+          <iotest>
+            <input />
+            <output>7.4
 -3.7
 -1.6
 12.5
@@ -315,8 +318,9 @@ maudlin        </pre>
 -6.4
 3
 -9.8
-7.07&lt;/output&gt;
-  &lt;/iotest&gt;</iotests>
+7.07            </output>
+          </iotest>
+        </iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-Lesson2-counting_cat_treats-1" label="exe-sec-Homework-5-Input-Output-1-234234">
@@ -360,9 +364,10 @@ Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>&lt;iotest&gt;
-    &lt;input&gt;&lt;/input&gt;
-    &lt;output&gt;Ziggy has 5
+        <iotests>
+          <iotest>
+            <input />
+            <output>Ziggy has 5
 Hey, Xerea is not one of Dr. Wilson's cats!
 Cleo has 2
 Spike has 4
@@ -381,8 +386,9 @@ Cleo has 28
 Skye has 32
 Cleo has 48
 Spike has 12
-&lt;/output&gt;
-  &lt;/iotest&gt;</iotests>
+            </output>
+          </iotest>
+        </iotests>
       </program>
     </exercise>
   </exercises>

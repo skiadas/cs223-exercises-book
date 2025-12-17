@@ -1081,25 +1081,28 @@ cout &lt;&lt; input[1];        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>&lt;iotest&gt;
-    &lt;input&gt;Mr. Grey is fluffy&lt;/input&gt;
-    &lt;output&gt;Mr. Grey is fluffy&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;Xerea Lu is a cow-colored cat&lt;/input&gt;
-    &lt;output&gt;too long&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;Ruthie wants to play&lt;/input&gt;
-    &lt;output&gt;Ruthie wants to play&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;Ziggy Wilson gets into trouble sometimes&lt;/input&gt;
-    &lt;output&gt;too long&lt;/output&gt;
-  &lt;/iotest&gt;</iotests>
+        <iotests>
+          <iotest>
+            <input />
+            Mr. Grey is fluffy
+            <output>Mr. Grey is fluffy</output>
+          </iotest>
+          <iotest>
+            <input />
+            Xerea Lu is a cow-colored cat
+            <output>too long</output>
+          </iotest>
+          <iotest>
+            <input />
+            Ruthie wants to play
+            <output>Ruthie wants to play</output>
+          </iotest>
+          <iotest>
+            <input />
+            Ziggy Wilson gets into trouble sometimes
+            <output>too long</output>
+          </iotest>
+        </iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH19_multi-string_npos-1" label="exe-sec-Homework-4-Arrays-Strings-1-234218">
@@ -1191,54 +1194,57 @@ Luke Kuechly        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>&lt;iotest&gt;
-    &lt;input&gt;Skye,Spike,Cleo,Ziggy,,&lt;/input&gt;
-    &lt;output&gt;Skye
+        <iotests>
+          <iotest>
+            <input />
+            Skye,Spike,Cleo,Ziggy,,
+            <output>Skye
 Spike
 Cleo
-Ziggy&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;Bulldog,Beagle,Plott Hound,Boxer,Poodle,,&lt;/input&gt;
-    &lt;output&gt;Bulldog
+Ziggy            </output>
+          </iotest>
+          <iotest>
+            <input />
+            Bulldog,Beagle,Plott Hound,Boxer,Poodle,,
+            <output>Bulldog
 Beagle
 Plott Hound
 Boxer
-Poodle&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;SQL,Java,Python,C#,R,Javascript,Cobol,,&lt;/input&gt;
-    &lt;output&gt;SQL
+Poodle            </output>
+          </iotest>
+          <iotest>
+            <input />
+            SQL,Java,Python,C#,R,Javascript,Cobol,,
+            <output>SQL
 Java
 Python
 C#
 R
 Javascript
-Cobol&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;Luke Skywalker,Kylo Ren,Supreme Leader Snoke,Rey,Leia Organa,,&lt;/input&gt;
-    &lt;output&gt;Luke Skywalker
+Cobol            </output>
+          </iotest>
+          <iotest>
+            <input />
+            Luke Skywalker,Kylo Ren,Supreme Leader Snoke,Rey,Leia Organa,,
+            <output>Luke Skywalker
 Kylo Ren
 Supreme Leader Snoke
 Rey
 Leia Organa
-&lt;/output&gt;
-  &lt;/iotest&gt;
-
-  &lt;iotest&gt;
-    &lt;input&gt;Winnie the Pooh,Tigger,Piglet,Eeyore,Roo,Christopher Robin,,&lt;/input&gt;
-    &lt;output&gt;Winnie the Pooh
+            </output>
+          </iotest>
+          <iotest>
+            <input />
+            Winnie the Pooh,Tigger,Piglet,Eeyore,Roo,Christopher Robin,,
+            <output>Winnie the Pooh
 Tigger
 Piglet
 Eeyore
 Roo
 Christopher Robin
-&lt;/output&gt;
-  &lt;/iotest&gt;</iotests>
+            </output>
+          </iotest>
+        </iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH19_code-second_half_of_string-1" label="exe-sec-Homework-4-Arrays-Strings-1-234221">
