@@ -14,26 +14,19 @@ What's new in town?        </pre>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 #include &lt;iostream&gt;
 using namespace std;
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-
-
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Howdy, partner!\nWhat's new in town?";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;&lt;/input&gt;
+    &lt;output&gt;Howdy, partner!
+What's new in town?&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH2_code-names-cpp-1" label="exe-sec-Homework-1-1-234118">
@@ -46,25 +39,22 @@ TEST_CASE( "test1" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-
-
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Cleo\nMr. Grey\nSkye\nSpike\nXerea\nZiggy";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;&lt;/input&gt;
+    &lt;output&gt;Cleo
+Mr. Grey
+Skye
+Spike
+Xerea
+Ziggy&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH2_multi-program-basics-1" label="exe-sec-Homework-1-1-234135">
@@ -365,55 +355,36 @@ TEST_CASE( "test1" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;3
+8&lt;/input&gt;
+    &lt;output&gt;11&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;999
+1&lt;/input&gt;
+    &lt;output&gt;1000&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "11";
-    CHECK( cout.str() == answer );
-}
+  &lt;iotest&gt;
+    &lt;input&gt;-503
+505&lt;/input&gt;
+    &lt;output&gt;2&lt;/output&gt;
+  &lt;/iotest&gt;
 
-
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "1000";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test3" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "2";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test4" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "-84";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;-42
+-42&lt;/input&gt;
+    &lt;output&gt;-84&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH3_code-subtraction-cpp-1" label="exe-sec-Homework-1-1-234129">
@@ -423,55 +394,36 @@ TEST_CASE( "test4" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;10.5
+4.25&lt;/input&gt;
+    &lt;output&gt;6.25&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;-7.0707
+10&lt;/input&gt;
+    &lt;output&gt;-17.0707&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "6.25";
-    CHECK( cout.str() == answer );
-}
+  &lt;iotest&gt;
+    &lt;input&gt;-1.2
+-4.4&lt;/input&gt;
+    &lt;output&gt;3.2&lt;/output&gt;
+  &lt;/iotest&gt;
 
-
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "-17.0707";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test3" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "3.2";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test4" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "10.8";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;5.4
+-5.4&lt;/input&gt;
+    &lt;output&gt;10.8&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH3_code-calc1-cpp-1" label="exe-sec-Homework-1-1-234130">
@@ -498,35 +450,30 @@ TEST_CASE( "test4" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;5.5
+2.5&lt;/input&gt;
+    &lt;output&gt;5.5 + 2.5 = 8
+5.5 - 2.5 = 3
+5.5 * 2.5 = 13.75
+5.5 / 2.5 = 2.2&lt;/output&gt;
+  &lt;/iotest&gt;
 
-
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "5.5 + 2.5 = 8\n5.5 - 2.5 = 3\n5.5 * 2.5 = 13.75\n5.5 / 2.5 = 2.2";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "-6.65 + 0.1 = -6.55\n-6.65 - 0.1 = -6.75\n-6.65 * 0.1 = -0.665\n-6.65 / 0.1 = -66.5";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;-6.65
+0.1&lt;/input&gt;
+    &lt;output&gt;-6.65 + 0.1 = -6.55
+-6.65 - 0.1 = -6.75
+-6.65 * 0.1 = -0.665
+-6.65 / 0.1 = -66.5&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH3_multi-data-types-1" label="exe-sec-Homework-1-1-234136">
@@ -668,55 +615,40 @@ TEST_CASE( "test2" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;Chaplin
+Charles
+S&lt;/input&gt;
+    &lt;output&gt;Person: Charles S. Chaplin&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;Turing
+Alan
+M&lt;/input&gt;
+    &lt;output&gt;Person: Alan M. Turing&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Person: Charles S. Chaplin";
-    CHECK( cout.str() == answer );
-}
+  &lt;iotest&gt;
+    &lt;input&gt;Davis
+Xerea
+L&lt;/input&gt;
+    &lt;output&gt;Person: Xerea L. Davis&lt;/output&gt;
+  &lt;/iotest&gt;
 
-
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Person: Alan M. Turing";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test3" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Person: Xerea L. Davis";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test4" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Person: Steven P. Jobs";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;Jobs
+Steven
+P&lt;/input&gt;
+    &lt;output&gt;Person: Steven P. Jobs&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH3_multi-user-input-1" label="exe-sec-Homework-1-1-234126">

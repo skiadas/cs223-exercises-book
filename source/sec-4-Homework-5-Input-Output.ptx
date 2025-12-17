@@ -248,25 +248,17 @@ maudlin        </pre>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-
-
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "4KB3PaQCbyJwDQMvahL96VIdR";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;&lt;/input&gt;
+    &lt;output&gt;4KB3PaQCbyJwDQMvahL96VIdR&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-Lesson2-calc_from_file-1" label="exe-sec-Homework-5-Input-Output-1-234228">
@@ -295,25 +287,36 @@ TEST_CASE( "test1" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-
-
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "7.4\n-3.7\n-1.6\n12.5\n-15.6\n-10.9\n-17.4\n-1.4\n10\n-59.6\n673\n-47.5\n-14.4\n71.8\n-7.56\n1.72\n-6.4\n3\n-9.8\n7.07";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;&lt;/input&gt;
+    &lt;output&gt;7.4
+-3.7
+-1.6
+12.5
+-15.6
+-10.9
+-17.4
+-1.4
+10
+-59.6
+673
+-47.5
+-14.4
+71.8
+-7.56
+1.72
+-6.4
+3
+-9.8
+7.07&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-Lesson2-counting_cat_treats-1" label="exe-sec-Homework-5-Input-Output-1-234234">
@@ -350,25 +353,36 @@ Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-
-
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Ziggy has 5\nHey, Xerea is not one of Dr. Wilson's cats!\nCleo has 2\nSpike has 4\nCleo has 7\nZiggy has 1\nHey, Mr.Grey is not one of Dr. Wilson's cats!\nCleo has 19\nSpike has 12\nZiggy has 26\nSkye has 12\nHey, Mufasa is not one of Dr. Wilson's cats!\nZiggy has 12\nSpike has 13\nSkye has 22\nCleo has 28\nSkye has 32\nCleo has 48\nSpike has 12\n";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;&lt;/input&gt;
+    &lt;output&gt;Ziggy has 5
+Hey, Xerea is not one of Dr. Wilson's cats!
+Cleo has 2
+Spike has 4
+Cleo has 7
+Ziggy has 1
+Hey, Mr.Grey is not one of Dr. Wilson's cats!
+Cleo has 19
+Spike has 12
+Ziggy has 26
+Skye has 12
+Hey, Mufasa is not one of Dr. Wilson's cats!
+Ziggy has 12
+Spike has 13
+Skye has 22
+Cleo has 28
+Skye has 32
+Cleo has 48
+Spike has 12
+&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
   </exercises>

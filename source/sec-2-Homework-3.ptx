@@ -623,56 +623,44 @@ TEST_CASE( "test5" ) {
         <preamble visible="no">#include &lt;sstream&gt;
 
 
+
+cout &lt;&lt; accumulate_acronym()
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;Cats
+Rule
+STOP&lt;/input&gt;
+    &lt;output&gt;CR&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;Association
+Computing
+Machinery
+STOP&lt;/input&gt;
+    &lt;output&gt;ACM&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    cout &lt;&lt; accumulate_acronym()
-    
-    ;
-    std::string answer = "CR";
-    CHECK( cout.str() == answer );
-}
+  &lt;iotest&gt;
+    &lt;input&gt;Faster
+Than
+Light
+STOP&lt;/input&gt;
+    &lt;output&gt;FTL&lt;/output&gt;
+  &lt;/iotest&gt;
 
-
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    cout &lt;&lt; accumulate_acronym()
-    
-    ;
-    std::string answer = "ACM";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test3" ) {
-    std::stringstream cout;
-    cout &lt;&lt; accumulate_acronym()
-    
-    ;
-    std::string answer = "FTL";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test4" ) {
-    std::stringstream cout;
-    cout &lt;&lt; accumulate_acronym()
-    
-    ;
-    std::string answer = "yolo";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;you
+only 
+live
+once
+STOP&lt;/input&gt;
+    &lt;output&gt;yolo&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH7_multi-switch1-1" label="exe-sec-Homework-3-1-234185">

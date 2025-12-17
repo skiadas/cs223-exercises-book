@@ -1074,55 +1074,32 @@ cout &lt;&lt; input[1];        </pre>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;Mr. Grey is fluffy&lt;/input&gt;
+    &lt;output&gt;Mr. Grey is fluffy&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;Xerea Lu is a cow-colored cat&lt;/input&gt;
+    &lt;output&gt;too long&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Mr. Grey is fluffy";
-    CHECK( cout.str() == answer );
-}
+  &lt;iotest&gt;
+    &lt;input&gt;Ruthie wants to play&lt;/input&gt;
+    &lt;output&gt;Ruthie wants to play&lt;/output&gt;
+  &lt;/iotest&gt;
 
-
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "too long";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test3" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Ruthie wants to play";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test4" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "too long";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;Ziggy Wilson gets into trouble sometimes&lt;/input&gt;
+    &lt;output&gt;too long&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH19_multi-string_npos-1" label="exe-sec-Homework-4-Arrays-Strings-1-234218">
@@ -1207,65 +1184,61 @@ Luke Kuechly        </pre>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
+
+
         </preamble>
         <code>
 
         </code>
         <postamble visible="no" />
-        <tests>#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+        <iotests>&lt;iotest&gt;
+    &lt;input&gt;Skye,Spike,Cleo,Ziggy,,&lt;/input&gt;
+    &lt;output&gt;Skye
+Spike
+Cleo
+Ziggy&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;Bulldog,Beagle,Plott Hound,Boxer,Poodle,,&lt;/input&gt;
+    &lt;output&gt;Bulldog
+Beagle
+Plott Hound
+Boxer
+Poodle&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test1" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Skye\nSpike\nCleo\nZiggy";
-    CHECK( cout.str() == answer );
-}
+  &lt;iotest&gt;
+    &lt;input&gt;SQL,Java,Python,C#,R,Javascript,Cobol,,&lt;/input&gt;
+    &lt;output&gt;SQL
+Java
+Python
+C#
+R
+Javascript
+Cobol&lt;/output&gt;
+  &lt;/iotest&gt;
 
+  &lt;iotest&gt;
+    &lt;input&gt;Luke Skywalker,Kylo Ren,Supreme Leader Snoke,Rey,Leia Organa,,&lt;/input&gt;
+    &lt;output&gt;Luke Skywalker
+Kylo Ren
+Supreme Leader Snoke
+Rey
+Leia Organa
+&lt;/output&gt;
+  &lt;/iotest&gt;
 
-TEST_CASE( "test2" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Bulldog\nBeagle\nPlott Hound\nBoxer\nPoodle";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test3" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "SQL\nJava\nPython\nC#\nR\nJavascript\nCobol";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test4" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Luke Skywalker\nKylo Ren\nSupreme Leader Snoke\nRey\nLeia Organa\n";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test5" ) {
-    std::stringstream cout;
-    
-    
-    ;
-    std::string answer = "Winnie the Pooh\nTigger\nPiglet\nEeyore\nRoo\nChristopher Robin\n";
-    CHECK( cout.str() == answer );
-}
-
-        </tests>
+  &lt;iotest&gt;
+    &lt;input&gt;Winnie the Pooh,Tigger,Piglet,Eeyore,Roo,Christopher Robin,,&lt;/input&gt;
+    &lt;output&gt;Winnie the Pooh
+Tigger
+Piglet
+Eeyore
+Roo
+Christopher Robin
+&lt;/output&gt;
+  &lt;/iotest&gt;</iotests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH19_code-second_half_of_string-1" label="exe-sec-Homework-4-Arrays-Strings-1-234221">
