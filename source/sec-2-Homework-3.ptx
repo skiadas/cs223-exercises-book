@@ -630,40 +630,36 @@ cout &lt;&lt; accumulate_acronym()
 
         </code>
         <postamble visible="no" />
-        <iotests>
-          <iotest>
-            <input />
-            Cats
+        <tests>
+        <iotest>
+        <input></input>Cats
 Rule
 STOP
             <output>CR</output>
-          </iotest>
-          <iotest>
-            <input />
-            Association
+        </iotest>
+        <iotest>
+        <input></input>Association
 Computing
 Machinery
 STOP
             <output>ACM</output>
-          </iotest>
-          <iotest>
-            <input />
-            Faster
+        </iotest>
+        <iotest>
+        <input></input>Faster
 Than
 Light
 STOP
             <output>FTL</output>
-          </iotest>
-          <iotest>
-            <input />
-            you
+        </iotest>
+        <iotest>
+        <input></input>you
 only 
 live
 once
 STOP
             <output>yolo</output>
-          </iotest>
-        </iotests>
+        </iotest>
+        </tests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH7_multi-switch1-1" label="exe-sec-Homework-3-1-234185">

@@ -1081,28 +1081,24 @@ cout &lt;&lt; input[1];        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>
-          <iotest>
-            <input />
-            Mr. Grey is fluffy
+        <tests>
+        <iotest>
+        <input></input>Mr. Grey is fluffy
             <output>Mr. Grey is fluffy</output>
-          </iotest>
-          <iotest>
-            <input />
-            Xerea Lu is a cow-colored cat
+        </iotest>
+        <iotest>
+        <input></input>Xerea Lu is a cow-colored cat
             <output>too long</output>
-          </iotest>
-          <iotest>
-            <input />
-            Ruthie wants to play
+        </iotest>
+        <iotest>
+        <input></input>Ruthie wants to play
             <output>Ruthie wants to play</output>
-          </iotest>
-          <iotest>
-            <input />
-            Ziggy Wilson gets into trouble sometimes
+        </iotest>
+        <iotest>
+        <input></input>Ziggy Wilson gets into trouble sometimes
             <output>too long</output>
-          </iotest>
-        </iotests>
+        </iotest>
+        </tests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH19_multi-string_npos-1" label="exe-sec-Homework-4-Arrays-Strings-1-234218">
@@ -1194,57 +1190,52 @@ Luke Kuechly        </pre>
 
         </code>
         <postamble visible="no" />
-        <iotests>
-          <iotest>
-            <input />
-            Skye,Spike,Cleo,Ziggy,,
+        <tests>
+        <iotest>
+        <input></input>Skye,Spike,Cleo,Ziggy,,
             <output>Skye
 Spike
 Cleo
-Ziggy            </output>
-          </iotest>
-          <iotest>
-            <input />
-            Bulldog,Beagle,Plott Hound,Boxer,Poodle,,
+Ziggy        </output>
+        </iotest>
+        <iotest>
+        <input></input>Bulldog,Beagle,Plott Hound,Boxer,Poodle,,
             <output>Bulldog
 Beagle
 Plott Hound
 Boxer
-Poodle            </output>
-          </iotest>
-          <iotest>
-            <input />
-            SQL,Java,Python,C#,R,Javascript,Cobol,,
+Poodle        </output>
+        </iotest>
+        <iotest>
+        <input></input>SQL,Java,Python,C#,R,Javascript,Cobol,,
             <output>SQL
 Java
 Python
 C#
 R
 Javascript
-Cobol            </output>
-          </iotest>
-          <iotest>
-            <input />
-            Luke Skywalker,Kylo Ren,Supreme Leader Snoke,Rey,Leia Organa,,
+Cobol        </output>
+        </iotest>
+        <iotest>
+        <input></input>Luke Skywalker,Kylo Ren,Supreme Leader Snoke,Rey,Leia Organa,,
             <output>Luke Skywalker
 Kylo Ren
 Supreme Leader Snoke
 Rey
 Leia Organa
-            </output>
-          </iotest>
-          <iotest>
-            <input />
-            Winnie the Pooh,Tigger,Piglet,Eeyore,Roo,Christopher Robin,,
+        </output>
+        </iotest>
+        <iotest>
+        <input></input>Winnie the Pooh,Tigger,Piglet,Eeyore,Roo,Christopher Robin,,
             <output>Winnie the Pooh
 Tigger
 Piglet
 Eeyore
 Roo
 Christopher Robin
-            </output>
-          </iotest>
-        </iotests>
+        </output>
+        </iotest>
+        </tests>
       </program>
     </exercise>
     <exercise xml:id="exer-JMPCH19_code-second_half_of_string-1" label="exe-sec-Homework-4-Arrays-Strings-1-234221">
