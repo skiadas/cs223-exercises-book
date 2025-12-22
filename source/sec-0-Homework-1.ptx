@@ -23,11 +23,11 @@ using namespace std;
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>
-        <output>Howdy, partner!
-What's new in town?        </output>
-        </iotest>
+  <iotest>
+    <input></input>
+    <output>Howdy, partner!
+What's new in town?</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -49,15 +49,15 @@ What's new in town?        </output>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>
-        <output>Cleo
+  <iotest>
+    <input></input>
+    <output>Cleo
 Mr. Grey
 Skye
 Spike
 Xerea
-Ziggy        </output>
-        </iotest>
+Ziggy</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -367,26 +367,29 @@ Ziggy        </output>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>3
-8
-            <output>11</output>
-        </iotest>
-        <iotest>
-        <input></input>999
-1
-            <output>1000</output>
-        </iotest>
-        <iotest>
-        <input></input>-503
-505
-            <output>2</output>
-        </iotest>
-        <iotest>
-        <input></input>-42
--42
-            <output>-84</output>
-        </iotest>
+  <iotest>
+    <input>3
+8</input>
+    <output>11</output>
+  </iotest>
+
+  <iotest>
+    <input>999
+1</input>
+    <output>1000</output>
+  </iotest>
+
+  <iotest>
+    <input>-503
+505</input>
+    <output>2</output>
+  </iotest>
+
+  <iotest>
+    <input>-42
+-42</input>
+    <output>-84</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -405,26 +408,29 @@ Ziggy        </output>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>10.5
-4.25
-            <output>6.25</output>
-        </iotest>
-        <iotest>
-        <input></input>-7.0707
-10
-            <output>-17.0707</output>
-        </iotest>
-        <iotest>
-        <input></input>-1.2
--4.4
-            <output>3.2</output>
-        </iotest>
-        <iotest>
-        <input></input>5.4
--5.4
-            <output>10.8</output>
-        </iotest>
+  <iotest>
+    <input>10.5
+4.25</input>
+    <output>6.25</output>
+  </iotest>
+
+  <iotest>
+    <input>-7.0707
+10</input>
+    <output>-17.0707</output>
+  </iotest>
+
+  <iotest>
+    <input>-1.2
+-4.4</input>
+    <output>3.2</output>
+  </iotest>
+
+  <iotest>
+    <input>5.4
+-5.4</input>
+    <output>10.8</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -460,22 +466,23 @@ Ziggy        </output>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>5.5
-2.5
-            <output>5.5 + 2.5 = 8
+  <iotest>
+    <input>5.5
+2.5</input>
+    <output>5.5 + 2.5 = 8
 5.5 - 2.5 = 3
 5.5 * 2.5 = 13.75
-5.5 / 2.5 = 2.2        </output>
-        </iotest>
-        <iotest>
-        <input></input>-6.65
-0.1
-            <output>-6.65 + 0.1 = -6.55
+5.5 / 2.5 = 2.2</output>
+  </iotest>
+
+  <iotest>
+    <input>-6.65
+0.1</input>
+    <output>-6.65 + 0.1 = -6.55
 -6.65 - 0.1 = -6.75
 -6.65 * 0.1 = -0.665
--6.65 / 0.1 = -66.5        </output>
-        </iotest>
+-6.65 / 0.1 = -66.5</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -626,30 +633,33 @@ Ziggy        </output>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>Chaplin
+  <iotest>
+    <input>Chaplin
 Charles
-S
-            <output>Person: Charles S. Chaplin</output>
-        </iotest>
-        <iotest>
-        <input></input>Turing
+S</input>
+    <output>Person: Charles S. Chaplin</output>
+  </iotest>
+
+  <iotest>
+    <input>Turing
 Alan
-M
-            <output>Person: Alan M. Turing</output>
-        </iotest>
-        <iotest>
-        <input></input>Davis
+M</input>
+    <output>Person: Alan M. Turing</output>
+  </iotest>
+
+  <iotest>
+    <input>Davis
 Xerea
-L
-            <output>Person: Xerea L. Davis</output>
-        </iotest>
-        <iotest>
-        <input></input>Jobs
+L</input>
+    <output>Person: Xerea L. Davis</output>
+  </iotest>
+
+  <iotest>
+    <input>Jobs
 Steven
-P
-            <output>Person: Steven P. Jobs</output>
-        </iotest>
+P</input>
+    <output>Person: Steven P. Jobs</output>
+  </iotest>
         </tests>
       </program>
     </exercise>

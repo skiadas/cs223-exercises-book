@@ -256,10 +256,10 @@ maudlin        </pre>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>
-        <output>4KB3PaQCbyJwDQMvahL96VIdR</output>
-        </iotest>
+  <iotest>
+    <input></input>
+    <output>4KB3PaQCbyJwDQMvahL96VIdR</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -297,9 +297,9 @@ maudlin        </pre>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>
-        <output>7.4
+  <iotest>
+    <input></input>
+    <output>7.4
 -3.7
 -1.6
 12.5
@@ -318,8 +318,8 @@ maudlin        </pre>
 -6.4
 3
 -9.8
-7.07        </output>
-        </iotest>
+7.07</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -365,9 +365,9 @@ Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>
-        <output>Ziggy has 5
+  <iotest>
+    <input></input>
+    <output>Ziggy has 5
 Hey, Xerea is not one of Dr. Wilson's cats!
 Cleo has 2
 Spike has 4
@@ -386,8 +386,8 @@ Cleo has 28
 Skye has 32
 Cleo has 48
 Spike has 12
-        </output>
-        </iotest>
+</output>
+  </iotest>
         </tests>
       </program>
     </exercise>

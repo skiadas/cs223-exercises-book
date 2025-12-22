@@ -169,7 +169,7 @@ double add_doubles(double a, double b)
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; add_doubles(3.2, 4.6)
-    
+
     ;
     std::string answer = "7.8";
     CHECK( cout.str() == answer );
@@ -179,7 +179,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; add_doubles(1.1, -3)
-    
+
     ;
     std::string answer = "-1.9";
     CHECK( cout.str() == answer );
@@ -189,7 +189,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; add_doubles(-10.5, 90.0)
-    
+
     ;
     std::string answer = "79.5";
     CHECK( cout.str() == answer );
@@ -199,7 +199,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; add_doubles(-0.25, -0.025)
-    
+
     ;
     std::string answer = "-0.275";
     CHECK( cout.str() == answer );
@@ -229,7 +229,7 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; add_strings("Happy ", "New Year!")
-    
+
     ;
     std::string answer = "Happy New Year!";
     CHECK( cout.str() == answer );
@@ -239,7 +239,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; add_strings("Jumping", "")
-    
+
     ;
     std::string answer = "Jumping";
     CHECK( cout.str() == answer );
@@ -249,7 +249,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; add_strings("Pota", "to")
-    
+
     ;
     std::string answer = "Potato";
     CHECK( cout.str() == answer );
@@ -259,7 +259,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; add_strings("975", "579")
-    
+
     ;
     std::string answer = "975579";
     CHECK( cout.str() == answer );
@@ -485,7 +485,7 @@ TEST_CASE( "test4" ) {
       <statement>
         <p>What is the exact output that will be produced by the following C++ code?</p>
         <pre>void myfun(int x)
-{     
+{
     x = x + 5;
 }
 
@@ -564,7 +564,7 @@ int main()
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; factorial(5);
-    
+
     ;
     std::string answer = "120";
     CHECK( cout.str() == answer );
@@ -574,7 +574,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; factorial(10);
-    
+
     ;
     std::string answer = "3628800";
     CHECK( cout.str() == answer );
@@ -584,7 +584,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; factorial(0);
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -594,7 +594,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; factorial(1);
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -604,7 +604,7 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; factorial(3);
-    
+
     ;
     std::string answer = "6";
     CHECK( cout.str() == answer );
@@ -631,34 +631,37 @@ cout &lt;&lt; accumulate_acronym()
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>Cats
+  <iotest>
+    <input>Cats
 Rule
-STOP
-            <output>CR</output>
-        </iotest>
-        <iotest>
-        <input></input>Association
+STOP</input>
+    <output>CR</output>
+  </iotest>
+
+  <iotest>
+    <input>Association
 Computing
 Machinery
-STOP
-            <output>ACM</output>
-        </iotest>
-        <iotest>
-        <input></input>Faster
+STOP</input>
+    <output>ACM</output>
+  </iotest>
+
+  <iotest>
+    <input>Faster
 Than
 Light
-STOP
-            <output>FTL</output>
-        </iotest>
-        <iotest>
-        <input></input>you
-only 
+STOP</input>
+    <output>FTL</output>
+  </iotest>
+
+  <iotest>
+    <input>you
+only
 live
 once
-STOP
-            <output>yolo</output>
-        </iotest>
+STOP</input>
+    <output>yolo</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -811,7 +814,7 @@ switch(n)
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(13, 1);
-    
+
     ;
     std::string answer = "14";
     CHECK( cout.str() == answer );
@@ -821,7 +824,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(10, 16);
-    
+
     ;
     std::string answer = "23";
     CHECK( cout.str() == answer );
@@ -831,7 +834,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(-4, 42);
-    
+
     ;
     std::string answer = "38";
     CHECK( cout.str() == answer );
@@ -841,7 +844,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(-1, -12);
-    
+
     ;
     std::string answer = "-16";
     CHECK( cout.str() == answer );
@@ -851,7 +854,7 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(14, -15);
-    
+
     ;
     std::string answer = "-1";
     CHECK( cout.str() == answer );
@@ -861,7 +864,7 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(13, 0);
-    
+
     ;
     std::string answer = "10";
     CHECK( cout.str() == answer );
@@ -871,7 +874,7 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test7" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(100, -35);
-    
+
     ;
     std::string answer = "62";
     CHECK( cout.str() == answer );
@@ -881,7 +884,7 @@ TEST_CASE( "test7" ) {
 TEST_CASE( "test8" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(-5, 5);
-    
+
     ;
     std::string answer = "-3";
     CHECK( cout.str() == answer );
@@ -891,7 +894,7 @@ TEST_CASE( "test8" ) {
 TEST_CASE( "test9" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(5, 7);
-    
+
     ;
     std::string answer = "12";
     CHECK( cout.str() == answer );
@@ -901,7 +904,7 @@ TEST_CASE( "test9" ) {
 TEST_CASE( "test10" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(7, 7);
-    
+
     ;
     std::string answer = "14";
     CHECK( cout.str() == answer );
@@ -911,7 +914,7 @@ TEST_CASE( "test10" ) {
 TEST_CASE( "test11" ) {
     std::stringstream cout;
     cout &lt;&lt; weird_sum(-13, -12);
-    
+
     ;
     std::string answer = "-25";
     CHECK( cout.str() == answer );
@@ -941,7 +944,7 @@ TEST_CASE( "test11" ) {
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; first_alpha("uno", "dos", "tres")
-    
+
     ;
     std::string answer = "dos";
     CHECK( cout.str() == answer );
@@ -951,7 +954,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; first_alpha("mouse", "dog", "cat")
-    
+
     ;
     std::string answer = "cat";
     CHECK( cout.str() == answer );
@@ -961,7 +964,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; first_alpha("eraser", "pen", "pencil")
-    
+
     ;
     std::string answer = "eraser";
     CHECK( cout.str() == answer );
@@ -971,7 +974,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; first_alpha("three", "random", "words")
-    
+
     ;
     std::string answer = "random";
     CHECK( cout.str() == answer );
@@ -981,7 +984,7 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; first_alpha("baseball", "basketball", "bocceball")
-    
+
     ;
     std::string answer = "baseball";
     CHECK( cout.str() == answer );
@@ -991,7 +994,7 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     cout &lt;&lt; first_alpha("pickle", "marshmallow", "artichoke")
-    
+
     ;
     std::string answer = "artichoke";
     CHECK( cout.str() == answer );

@@ -11,7 +11,7 @@
         <p>What is the exact output that will be produced by the following C++ code?</p>
         <pre>    int a = 5;
     int b = 10;
-    
+
     if (a &lt; b)
         cout &lt;&lt; a &lt;&lt; " is less than " &lt;&lt; b &lt;&lt; endl;        </pre>
         <fillin answer="5 is less than 10" width="16" />
@@ -30,7 +30,7 @@
         <p>What is the exact output that will be produced by the following C++ code?  Note: study the code carefully and remember that indentation is ignored by the C++ compiler.</p>
         <pre>    int a = 3;
     int b = 7;
-    
+
     if (a &gt; b)
         cout &lt;&lt; "SUPER ";
         cout &lt;&lt; "DUPER ";    if (a &lt;= b)        cout &lt;&lt; "SNOOPER ";        </pre>
@@ -50,7 +50,7 @@
         <p>What is the exact output that will be produced by the following C++ code?</p>
         <pre>    int a = 3;
     int b = 7;
-    
+
     if (a &gt; b)
     {
         cout &lt;&lt; "SUPER" &lt;&lt; b;
@@ -90,22 +90,25 @@
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>+ 5.5 2.01
-            <output>5.5 + 2.01 = 7.51</output>
-        </iotest>
-        <iotest>
-        <input></input>- -75.75 4.11
-            <output>-75.75 - 4.11 = -79.86</output>
-        </iotest>
-        <iotest>
-        <input></input>* 1.5 -2.1
-            <output>1.5 * -2.1 = -3.15</output>
-        </iotest>
-        <iotest>
-        <input></input>/ 111.111 10
-            <output>111.111 / 10 = 11.1111</output>
-        </iotest>
+  <iotest>
+    <input>+ 5.5 2.01</input>
+    <output>5.5 + 2.01 = 7.51</output>
+  </iotest>
+
+  <iotest>
+    <input>- -75.75 4.11</input>
+    <output>-75.75 - 4.11 = -79.86</output>
+  </iotest>
+
+  <iotest>
+    <input>* 1.5 -2.1</input>
+    <output>1.5 * -2.1 = -3.15</output>
+  </iotest>
+
+  <iotest>
+    <input>/ 111.111 10</input>
+    <output>111.111 / 10 = 11.1111</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -124,36 +127,41 @@
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>3
-5
-            <output>3 is less than 5</output>
-        </iotest>
-        <iotest>
-        <input></input>6
-1
-            <output>6 is greater than 1</output>
-        </iotest>
-        <iotest>
-        <input></input>-42
--42
-            <output>-42 is equal to -42</output>
-        </iotest>
-        <iotest>
-        <input></input>-35
--40
-            <output>-35 is greater than -40</output>
-        </iotest>
-        <iotest>
-        <input></input>-44
-80
-            <output>-44 is less than 80</output>
-        </iotest>
-        <iotest>
-        <input></input>4
--62
-            <output>4 is greater than -62</output>
-        </iotest>
+  <iotest>
+    <input>3
+5</input>
+    <output>3 is less than 5</output>
+  </iotest>
+
+  <iotest>
+    <input>6
+1</input>
+    <output>6 is greater than 1</output>
+  </iotest>
+
+  <iotest>
+    <input>-42
+-42</input>
+    <output>-42 is equal to -42</output>
+  </iotest>
+
+  <iotest>
+    <input>-35
+-40</input>
+    <output>-35 is greater than -40</output>
+  </iotest>
+
+  <iotest>
+    <input>-44
+80</input>
+    <output>-44 is less than 80</output>
+  </iotest>
+
+  <iotest>
+    <input>4
+-62</input>
+    <output>4 is greater than -62</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -441,26 +449,30 @@
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>3.14
-            <output>3.14 is positive</output>
-        </iotest>
-        <iotest>
-        <input></input>-42.889
-            <output>-42.889 is negative</output>
-        </iotest>
-        <iotest>
-        <input></input>0.0
-            <output>0 is zero</output>
-        </iotest>
-        <iotest>
-        <input></input>-97.8
-            <output>-97.8 is negative</output>
-        </iotest>
-        <iotest>
-        <input></input>59.26
-            <output>59.26 is positive</output>
-        </iotest>
+  <iotest>
+    <input>3.14</input>
+    <output>3.14 is positive</output>
+  </iotest>
+
+  <iotest>
+    <input>-42.889</input>
+    <output>-42.889 is negative</output>
+  </iotest>
+
+  <iotest>
+    <input>0.0</input>
+    <output>0 is zero</output>
+  </iotest>
+
+  <iotest>
+    <input>-97.8</input>
+    <output>-97.8 is negative</output>
+  </iotest>
+
+  <iotest>
+    <input>59.26</input>
+    <output>59.26 is positive</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -479,31 +491,35 @@
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>cat
-bear
-            <output>'cat' is greater than 'bear'</output>
-        </iotest>
-        <iotest>
-        <input></input>dog
-whale
-            <output>'dog' is less than 'whale'</output>
-        </iotest>
-        <iotest>
-        <input></input>2018
-2018
-            <output>both words are '2018'</output>
-        </iotest>
-        <iotest>
-        <input></input>Boolean
-C++
-            <output>'Boolean' is less than 'C++'</output>
-        </iotest>
-        <iotest>
-        <input></input>String
-Comparison
-            <output>'String' is greater than 'Comparison'</output>
-        </iotest>
+  <iotest>
+    <input>cat
+bear</input>
+    <output>'cat' is greater than 'bear'</output>
+  </iotest>
+
+  <iotest>
+    <input>dog
+whale</input>
+    <output>'dog' is less than 'whale'</output>
+  </iotest>
+
+  <iotest>
+    <input>2018
+2018</input>
+    <output>both words are '2018'</output>
+  </iotest>
+
+  <iotest>
+    <input>Boolean
+C++</input>
+    <output>'Boolean' is less than 'C++'</output>
+  </iotest>
+
+  <iotest>
+    <input>String
+Comparison</input>
+    <output>'String' is greater than 'Comparison'</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -641,37 +657,40 @@ Comparison
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>5
-            <output>5 squared is 25
+  <iotest>
+    <input>5</input>
+    <output>5 squared is 25
 4 squared is 16
 3 squared is 9
 2 squared is 4
 1 squared is 1
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>1
-            <output>1 squared is 1
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>3
-            <output>3 squared is 9
+</output>
+  </iotest>
+
+  <iotest>
+    <input>1</input>
+    <output>1 squared is 1
+</output>
+  </iotest>
+
+  <iotest>
+    <input>3</input>
+    <output>3 squared is 9
 2 squared is 4
-1 squared is 1        </output>
-        </iotest>
-        <iotest>
-        <input></input>7
-            <output>7 squared is 49
+1 squared is 1</output>
+  </iotest>
+
+  <iotest>
+    <input>7</input>
+    <output>7 squared is 49
 6 squared is 36
 5 squared is 25
 4 squared is 16
 3 squared is 9
 2 squared is 4
 1 squared is 1
-        </output>
-        </iotest>
+</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -694,21 +713,23 @@ Comparison
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>my_password
-            <output>CORRECT!
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>your_password
+  <iotest>
+    <input>my_password</input>
+    <output>CORRECT!
+</output>
+  </iotest>
+
+  <iotest>
+    <input>your_password
 monkeymonkeymonkey
 1234
-my_password
-            <output>CORRECT!
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>1
+my_password</input>
+    <output>CORRECT!
+</output>
+  </iotest>
+
+  <iotest>
+    <input>1
 2
 3
 4
@@ -718,11 +739,12 @@ my_password
 8
 9
 my_password
+</input>
+    <output>CORRECT!</output>
+  </iotest>
 
-            <output>CORRECT!</output>
-        </iotest>
-        <iotest>
-        <input></input>x1
+  <iotest>
+    <input>x1
 x2
 x3
 x4
@@ -733,11 +755,12 @@ x8
 x9
 x99
 
+</input>
+    <output>WRONG!</output>
+  </iotest>
 
-            <output>WRONG!</output>
-        </iotest>
-        <iotest>
-        <input></input>cat
+  <iotest>
+    <input>cat
 pig
 horse
 cow
@@ -747,11 +770,12 @@ giraffe
 shark
 bat
 sheep
+</input>
+    <output>WRONG!</output>
+  </iotest>
 
-            <output>WRONG!</output>
-        </iotest>
-        <iotest>
-        <input></input>a
+  <iotest>
+    <input>a
 b
 c
 d
@@ -761,11 +785,12 @@ g
 h
 i
 j
+</input>
+    <output>WRONG!</output>
+  </iotest>
 
-            <output>WRONG!</output>
-        </iotest>
-        <iotest>
-        <input></input>a
+  <iotest>
+    <input>a
 b
 c
 d
@@ -774,9 +799,9 @@ f
 g
 h
 i
-my_password
-            <output>CORRECT!</output>
-        </iotest>
+my_password</input>
+    <output>CORRECT!</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -796,36 +821,39 @@ my_password
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>4
+  <iotest>
+    <input>4
 6
--5
-            <output>The sum of the positive numbers is 10.
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>-65
-            <output>The sum of the positive numbers is 0.
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>7
+-5</input>
+    <output>The sum of the positive numbers is 10.
+</output>
+  </iotest>
+
+  <iotest>
+    <input>-65</input>
+    <output>The sum of the positive numbers is 0.
+</output>
+  </iotest>
+
+  <iotest>
+    <input>7
 7
 7
 7
--7
-            <output>The sum of the positive numbers is 28.</output>
-        </iotest>
-        <iotest>
-        <input></input>0
+-7</input>
+    <output>The sum of the positive numbers is 28.</output>
+  </iotest>
+
+  <iotest>
+    <input>0
 0
 3
 0
 2
 0
--2
-            <output>The sum of the positive numbers is 5.</output>
-        </iotest>
+-2</input>
+    <output>The sum of the positive numbers is 5.</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
@@ -845,36 +873,39 @@ my_password
         </code>
         <postamble visible="no" />
         <tests>
-        <iotest>
-        <input></input>45
+  <iotest>
+    <input>45
 823
 1000
 1001
+</input>
+    <output>You entered 3 numbers &lt;= 1000.
+</output>
+  </iotest>
 
-            <output>You entered 3 numbers &lt;= 1000.
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>2018
-            <output>You entered 0 numbers &lt;= 1000.
-        </output>
-        </iotest>
-        <iotest>
-        <input></input>1
+  <iotest>
+    <input>2018</input>
+    <output>You entered 0 numbers &lt;= 1000.
+</output>
+  </iotest>
+
+  <iotest>
+    <input>1
 2
 3
 4
 5
-5000
-            <output>You entered 5 numbers &lt;= 1000.</output>
-        </iotest>
-        <iotest>
-        <input></input>-3
+5000</input>
+    <output>You entered 5 numbers &lt;= 1000.</output>
+  </iotest>
+
+  <iotest>
+    <input>-3
 2
 7
-1010101
-            <output>You entered 3 numbers &lt;= 1000.</output>
-        </iotest>
+1010101</input>
+    <output>You entered 3 numbers &lt;= 1000.</output>
+  </iotest>
         </tests>
       </program>
     </exercise>
