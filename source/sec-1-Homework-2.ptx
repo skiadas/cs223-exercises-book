@@ -976,7 +976,7 @@ my_password</input>
     </exercise>
     <exercise xml:id="exer-LINUX_absolute_path-1" label="exe-sec-Homework-2-1-234168">
       <statement>
-        <p>In Linux (and in other systems), a <em>path</em>gives the unique location of a file or a folder in a file system..</p>
+        <p>In Linux (and in other systems), a <em>path</em> gives the unique location of a file or a folder in a file system..</p>
         <p>Alternatively referred to as the <em>full path</em>, the ___________ <alert>path</alert> for a file specifies the <url href="https://www.computerhope.com/jargon/r/root.htm">root</url> <url href="https://www.computerhope.com/jargon/d/director.htm">directory</url> and all other <url href="https://www.computerhope.com/jargon/s/subdirec.htm">subdirectories</url> in which the file is contained.</p>
       </statement>
       <choices multiple-correct="no" randomize="yes">
@@ -1008,7 +1008,7 @@ my_password</input>
     </exercise>
     <exercise xml:id="exer-LINUX_relative_path-1" label="exe-sec-Homework-2-1-234169">
       <statement>
-        <p>In Linux (and in other systems), a <em>path</em>gives the unique location of a file or a folder in a file system..</p>
+        <p>In Linux (and in other systems), a <em>path</em> gives the unique location of a file or a folder in a file system..</p>
         <p>The <alert>relative</alert> <alert>path</alert> for a file specifies the file's location relative to ...</p>
       </statement>
       <choices multiple-correct="no" randomize="yes">
