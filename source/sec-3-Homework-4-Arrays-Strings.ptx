@@ -11,33 +11,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>bool my_bools[20];</p>
-            </p>
+            <p>bool my_bools[20];</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>bool[20] my_bools;</p>
-            </p>
+            <p>bool[20] my_bools;</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>bool[] my_bools = new bool[20];</p>
-            </p>
+            <p>bool[] my_bools = new bool[20];</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>bool[] = my_bools[20]</p>
-            </p>
+            <p>bool[] = my_bools[20]</p>
           </statement>
           <feedback />
         </choice>
@@ -50,33 +42,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>0</p>
-            </p>
+            <p>0</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>1</p>
-            </p>
+            <p>1</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>-1</p>
-            </p>
+            <p>-1</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>5</p>
-            </p>
+            <p>5</p>
           </statement>
           <feedback />
         </choice>
@@ -89,33 +73,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>4</p>
-            </p>
+            <p>4</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>5</p>
-            </p>
+            <p>5</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>-1</p>
-            </p>
+            <p>-1</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>6</p>
-            </p>
+            <p>6</p>
           </statement>
           <feedback />
         </choice>
@@ -128,33 +104,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>arr[3];</p>
-            </p>
+            <p>arr[3];</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>arr[4];</p>
-            </p>
+            <p>arr[4];</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>arr(3);</p>
-            </p>
+            <p>arr(3);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>arr(4);</p>
-            </p>
+            <p>arr(4);</p>
           </statement>
           <feedback />
         </choice>
@@ -189,33 +157,25 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>during preprocessing</p>
-            </p>
+            <p>during preprocessing</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>during compilation</p>
-            </p>
+            <p>during compilation</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>during linking</p>
-            </p>
+            <p>during linking</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>none of the above</p>
-            </p>
+            <p>none of the above</p>
           </statement>
           <feedback />
         </choice>
@@ -228,33 +188,25 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>int my_grid[3][5];</p>
-            </p>
+            <p>int my_grid[3][5];</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int[3][5] my_grid;</p>
-            </p>
+            <p>int[3][5] my_grid;</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int[][] my_grid = new int[3][5];</p>
-            </p>
+            <p>int[][] my_grid = new int[3][5];</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int[][] = my_grid[3][5];</p>
-            </p>
+            <p>int[][] = my_grid[3][5];</p>
           </statement>
           <feedback />
         </choice>
@@ -267,25 +219,19 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>int my_fun( bool x[ ][ 20 ] );</p>
-            </p>
+            <p>int my_fun( bool x[ ][ 20 ] );</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>int my_fun( bool x[ 10 ][ 20 ] );</p>
-            </p>
+            <p>int my_fun( bool x[ 10 ][ 20 ] );</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int my_fun( bool x[ ][ ] );</p>
-            </p>
+            <p>int my_fun( bool x[ ][ ] );</p>
           </statement>
           <feedback>
             <p>int my_fun( bool x[ ] );</p>
@@ -293,9 +239,7 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int my_fun( bool array x );</p>
-            </p>
+            <p>int my_fun( bool array x );</p>
           </statement>
           <feedback />
         </choice>
@@ -932,33 +876,25 @@ TEST_CASE( "test6" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>output writer</p>
-            </p>
+            <p>output writer</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>input reader</p>
-            </p>
+            <p>input reader</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>output stream</p>
-            </p>
+            <p>output stream</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>input stream</p>
-            </p>
+            <p>input stream</p>
           </statement>
           <feedback />
         </choice>
@@ -992,33 +928,25 @@ cout &lt;&lt; input;        </pre>
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>s.length();</p>
-            </p>
+            <p>s.length();</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>s.size();</p>
-            </p>
+            <p>s.size();</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>s.num_chars();</p>
-            </p>
+            <p>s.num_chars();</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>s.len();</p>
-            </p>
+            <p>s.len();</p>
           </statement>
           <feedback />
         </choice>
@@ -1034,17 +962,13 @@ cout &lt;&lt; input;        </pre>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>true</p>
-            </p>
+            <p>true</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>false</p>
-            </p>
+            <p>false</p>
           </statement>
           <feedback />
         </choice>
@@ -1111,33 +1035,25 @@ cout &lt;&lt; input[1];        </pre>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>string::npos</p>
-            </p>
+            <p>string::npos</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>-1</p>
-            </p>
+            <p>-1</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>nothing is returned, it creates an error message</p>
-            </p>
+            <p>nothing is returned, it creates an error message</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>None</p>
-            </p>
+            <p>None</p>
           </statement>
           <feedback />
         </choice>

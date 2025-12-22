@@ -11,41 +11,31 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>function body (implementation)</p>
-            </p>
+            <p>function body (implementation)</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>return type</p>
-            </p>
+            <p>return type</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>function name</p>
-            </p>
+            <p>function name</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>parameter list</p>
-            </p>
+            <p>parameter list</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>access modifier</p>
-            </p>
+            <p>access modifier</p>
           </statement>
           <feedback />
         </choice>
@@ -58,41 +48,31 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>function body (implementation)</p>
-            </p>
+            <p>function body (implementation)</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>return type</p>
-            </p>
+            <p>return type</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>function name</p>
-            </p>
+            <p>function name</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>parameter list</p>
-            </p>
+            <p>parameter list</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>access modifier</p>
-            </p>
+            <p>access modifier</p>
           </statement>
           <feedback />
         </choice>
@@ -105,41 +85,31 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>int myFun();</p>
-            </p>
+            <p>int myFun();</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>void mystery() {}</p>
-            </p>
+            <p>void mystery() {}</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>int addEmUp(int x, int y) { return x + y; }</p>
-            </p>
+            <p>int addEmUp(int x, int y) { return x + y; }</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int thingy(a, b) { return a; }</p>
-            </p>
+            <p>int thingy(a, b) { return a; }</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>yolo() { return "YOLO"; }</p>
-            </p>
+            <p>yolo() { return "YOLO"; }</p>
           </statement>
           <feedback />
         </choice>
@@ -275,33 +245,25 @@ TEST_CASE( "test4" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>char getChar();</p>
-            </p>
+            <p>char getChar();</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>void minString(string s1, string s2);</p>
-            </p>
+            <p>void minString(string s1, string s2);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>double(int x, int y);</p>
-            </p>
+            <p>double(int x, int y);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int funfun17(char x);</p>
-            </p>
+            <p>int funfun17(char x);</p>
           </statement>
           <feedback />
         </choice>
@@ -314,25 +276,19 @@ TEST_CASE( "test4" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>multinaming</p>
-            </p>
+            <p>multinaming</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>emulating</p>
-            </p>
+            <p>emulating</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>overloading</p>
-            </p>
+            <p>overloading</p>
           </statement>
           <feedback />
         </choice>
@@ -345,33 +301,25 @@ TEST_CASE( "test4" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>void</p>
-            </p>
+            <p>void</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>null</p>
-            </p>
+            <p>null</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>None</p>
-            </p>
+            <p>None</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>nada</p>
-            </p>
+            <p>nada</p>
           </statement>
           <feedback />
         </choice>
@@ -410,33 +358,25 @@ TEST_CASE( "test4" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>local</p>
-            </p>
+            <p>local</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>automatic</p>
-            </p>
+            <p>automatic</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>global</p>
-            </p>
+            <p>global</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>temporary</p>
-            </p>
+            <p>temporary</p>
           </statement>
           <feedback />
         </choice>
@@ -449,33 +389,25 @@ TEST_CASE( "test4" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>local</p>
-            </p>
+            <p>local</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>regular</p>
-            </p>
+            <p>regular</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>global</p>
-            </p>
+            <p>global</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>normal</p>
-            </p>
+            <p>normal</p>
           </statement>
           <feedback />
         </choice>
@@ -672,33 +604,25 @@ STOP</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>break;</p>
-            </p>
+            <p>break;</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>end;</p>
-            </p>
+            <p>end;</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>stop;</p>
-            </p>
+            <p>stop;</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>a semicolon</p>
-            </p>
+            <p>a semicolon</p>
           </statement>
           <feedback />
         </choice>
@@ -732,33 +656,25 @@ switch(n)
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>Every time you need a random number</p>
-            </p>
+            <p>Every time you need a random number</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Never, it's just window dressing</p>
-            </p>
+            <p>Never, it's just window dressing</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Once, at the start of your program</p>
-            </p>
+            <p>Once, at the start of your program</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Occasionally, after you've used rand for a while</p>
-            </p>
+            <p>Occasionally, after you've used rand for a while</p>
           </statement>
           <feedback />
         </choice>
@@ -1010,17 +926,13 @@ TEST_CASE( "test6" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>underscores</p>
-            </p>
+            <p>underscores</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>embedded spaces</p>
-            </p>
+            <p>embedded spaces</p>
           </statement>
           <feedback />
         </choice>
@@ -1048,33 +960,25 @@ TEST_CASE( "test6" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>less</p>
-            </p>
+            <p>less</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>quick_read</p>
-            </p>
+            <p>quick_read</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>skim</p>
-            </p>
+            <p>skim</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>browse</p>
-            </p>
+            <p>browse</p>
           </statement>
           <feedback />
         </choice>
@@ -1087,33 +991,25 @@ TEST_CASE( "test6" ) {
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>by default, it does not ask for *confirmation*, it just goes ahead and deletes</p>
-            </p>
+            <p>by default, it does not ask for *confirmation*, it just goes ahead and deletes</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>it can be combined with flags, like -r and -f, to delete the entire contents of the file system</p>
-            </p>
+            <p>it can be combined with flags, like -r and -f, to delete the entire contents of the file system</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>it can be used with patterns, like *.*, to delete many many files at once</p>
-            </p>
+            <p>it can be used with patterns, like *.*, to delete many many files at once</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>all of the above</p>
-            </p>
+            <p>all of the above</p>
           </statement>
           <feedback />
         </choice>

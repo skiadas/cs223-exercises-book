@@ -172,41 +172,31 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>==</p>
-            </p>
+            <p>==</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>equal</p>
-            </p>
+            <p>equal</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>=</p>
-            </p>
+            <p>=</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>.equals</p>
-            </p>
+            <p>.equals</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>$</p>
-            </p>
+            <p>$</p>
           </statement>
           <feedback />
         </choice>
@@ -219,49 +209,37 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p><c>0</c></p>
-            </p>
+            <p><c>0</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p><c>true</c></p>
-            </p>
+            <p><c>true</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>1<c /></p>
-            </p>
+            <p><c>1</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p><c>(10 &lt;= 3)</c></p>
-            </p>
+            <p><c>(10 &lt;= 3)</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>! <c>(10 &lt;= 3)</c></p>
-            </p>
+            <p><c>!(10 &lt;= 3)</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p><c>false</c></p>
-            </p>
+            <p><c>false</c></p>
           </statement>
           <feedback />
         </choice>
@@ -275,7 +253,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>true &amp;&amp; false</p>
+              <c>true &amp;&amp; false</c>
             </p>
           </statement>
           <feedback />
@@ -283,7 +261,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>! ( false || (false &amp;&amp; true) )</p>
+              <c>! ( false || (false &amp;&amp; true) )</c>
             </p>
           </statement>
           <feedback />
@@ -291,7 +269,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>true || (false &amp;&amp; ! true)<c /></p>
+              <c>true || (false &amp;&amp; ! true)<c /></c>
             </p>
           </statement>
           <feedback />
@@ -299,7 +277,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>(true &amp;&amp; false) || ! (true || false)</p>
+              <c>(true &amp;&amp; false) || ! (true || false)</c>
             </p>
           </statement>
           <feedback />
@@ -307,7 +285,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>false || ! false</p>
+              <c>false || ! false</c>
             </p>
           </statement>
           <feedback />
@@ -315,7 +293,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>false &amp;&amp; ! false</p>
+              <c>false &amp;&amp; ! false</c>
             </p>
           </statement>
           <feedback />
@@ -331,7 +309,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>x = -1, y = 10</p>
+              <c>x = -1, y = 10</c>
             </p>
           </statement>
           <feedback />
@@ -339,7 +317,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = -3, y = -5</p>
+              <c>x = -3, y = -5</c>
             </p>
           </statement>
           <feedback />
@@ -347,7 +325,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>x = -1, y = 0</p>
+              <c>x = -1, y = 0</c>
             </p>
           </statement>
           <feedback />
@@ -355,7 +333,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = 4, y = 3</p>
+              <c>x = 4, y = 3</c>
             </p>
           </statement>
           <feedback />
@@ -363,7 +341,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = -10, y = -1</p>
+              <c>x = -10, y = -1</c>
             </p>
           </statement>
           <feedback />
@@ -371,7 +349,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = 0, y = 0</p>
+              <c>x = 0, y = 0</c>
             </p>
           </statement>
           <feedback />
@@ -387,7 +365,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = -1, y = 0</p>
+              <c>x = -1, y = 0</c>
             </p>
           </statement>
           <feedback />
@@ -395,7 +373,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>x = -1, y = 2</p>
+              <c>x = -1, y = 2</c>
             </p>
           </statement>
           <feedback />
@@ -403,7 +381,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <p>x = 4, y = 10</p>
+              <c>x = 4, y = 10</c>
             </p>
           </statement>
           <feedback />
@@ -411,7 +389,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = 5, y = 0</p>
+              <c>x = 5, y = 0</c>
             </p>
           </statement>
           <feedback />
@@ -419,7 +397,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = 5, y = 2</p>
+              <c>x = 5, y = 2</c>
             </p>
           </statement>
           <feedback />
@@ -427,7 +405,7 @@
         <choice correct="no">
           <statement>
             <p>
-              <p>x = 8, y = 10</p>
+              <c>x = 8, y = 10</c>
             </p>
           </statement>
           <feedback />
@@ -531,25 +509,19 @@ Comparison</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>Variable initialization</p>
-            </p>
+            <p>Variable initialization</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Loop condition</p>
-            </p>
+            <p>Loop condition</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Variable update<c /></p>
-            </p>
+            <p>Variable update</p>
           </statement>
           <feedback />
         </choice>
@@ -563,25 +535,19 @@ Comparison</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>Variable initialization</p>
-            </p>
+            <p>Variable initialization</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Loop condition</p>
-            </p>
+            <p>Loop condition</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Variable update<c /></p>
-            </p>
+            <p>Variable update</p>
           </statement>
           <feedback />
         </choice>
@@ -609,33 +575,25 @@ Comparison</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>for</p>
-            </p>
+            <p>for</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>do-while</p>
-            </p>
+            <p>do-while</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>while<c /></p>
-            </p>
+            <p>while<c /></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>repeat</p>
-            </p>
+            <p>repeat</p>
           </statement>
           <feedback />
         </choice>
@@ -916,33 +874,25 @@ my_password</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>print name of current/working directory</p>
-            </p>
+            <p>print name of current/working directory</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>change password</p>
-            </p>
+            <p>change password</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>path wrapper disable<c /></p>
-            </p>
+            <p>path wrapper disable<c /></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>pluggable window module</p>
-            </p>
+            <p>pluggable window module</p>
           </statement>
           <feedback />
         </choice>
@@ -955,33 +905,25 @@ my_password</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>change directory</p>
-            </p>
+            <p>change directory</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>change distribution</p>
-            </p>
+            <p>change distribution</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>check daemon<c /></p>
-            </p>
+            <p>check daemon<c /></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>check disk capacity</p>
-            </p>
+            <p>check disk capacity</p>
           </statement>
           <feedback />
         </choice>
@@ -994,33 +936,25 @@ my_password</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>take you to your home directory</p>
-            </p>
+            <p>take you to your home directory</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>cache your current directory path</p>
-            </p>
+            <p>cache your current directory path</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>check current document for spelling errors<c /></p>
-            </p>
+            <p>check current document for spelling errors<c /></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>list all the files in your current directory</p>
-            </p>
+            <p>list all the files in your current directory</p>
           </statement>
           <feedback />
         </choice>
@@ -1048,33 +982,25 @@ my_password</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>absolute</p>
-            </p>
+            <p>absolute</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>relative</p>
-            </p>
+            <p>relative</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>proper</p>
-            </p>
+            <p>proper</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>normal</p>
-            </p>
+            <p>normal</p>
           </statement>
           <feedback />
         </choice>
@@ -1088,33 +1014,25 @@ my_password</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>the current working directory</p>
-            </p>
+            <p>the current working directory</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>the root of the file system</p>
-            </p>
+            <p>the root of the file system</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>the <alert>parent</alert>of the current working directory</p>
-            </p>
+            <p>the <alert>parent</alert>of the current working directory</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>the user's home directory</p>
-            </p>
+            <p>the user's home directory</p>
           </statement>
           <feedback />
         </choice>

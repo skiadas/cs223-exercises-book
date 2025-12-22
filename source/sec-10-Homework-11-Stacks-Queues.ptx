@@ -23,17 +23,13 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>at the head of the linked list</p>
-            </p>
+            <p>at the head of the linked list</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>at the tail of the linked list</p>
-            </p>
+            <p>at the tail of the linked list</p>
           </statement>
           <feedback />
         </choice>
@@ -88,33 +84,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>stack</p>
-            </p>
+            <p>stack</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>queue</p>
-            </p>
+            <p>queue</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>bag</p>
-            </p>
+            <p>bag</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>list</p>
-            </p>
+            <p>list</p>
           </statement>
           <feedback />
         </choice>
@@ -127,33 +115,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>stack</p>
-            </p>
+            <p>stack</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>queue</p>
-            </p>
+            <p>queue</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>bag</p>
-            </p>
+            <p>bag</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>list</p>
-            </p>
+            <p>list</p>
           </statement>
           <feedback />
         </choice>
@@ -183,8 +163,8 @@ class Stack {
         Node* next;
         Node(T v, Node* n = nullptr) : value(v), next(n) {}
     };
-   
-    Node* head;  
+
+    Node* head;
   public:
     class EmptyException {};
     Stack(): head(nullptr) {}
@@ -213,8 +193,8 @@ T Stack&lt;T&gt;::pop() {
         <code>
 // Return value is true if and only if the stack is empty
 template&lt;typename T&gt;
-bool Stack&lt;T&gt;::isEmpty() { 
-    
+bool Stack&lt;T&gt;::isEmpty() {
+
 }
 
         </code>
@@ -233,7 +213,7 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "true";
     else
         cout &lt;&lt; "false";
-    
+
     ;
     std::string answer = "false";
     CHECK( cout.str() == answer );
@@ -247,7 +227,7 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "true";
     else
         cout &lt;&lt; "false";
-    
+
     ;
     std::string answer = "true";
     CHECK( cout.str() == answer );
@@ -262,7 +242,7 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "true";
     else
         cout &lt;&lt; "false";
-    
+
     ;
     std::string answer = "false";
     CHECK( cout.str() == answer );
@@ -278,7 +258,7 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "gotcha";
     else
         cout &lt;&lt; "good job";
-    
+
     ;
     std::string answer = "good job";
     CHECK( cout.str() == answer );
@@ -292,7 +272,7 @@ TEST_CASE( "test5" ) {
         cout &lt;&lt; "yeppers";
     else
         cout &lt;&lt; "false";
-    
+
     ;
     std::string answer = "yeppers";
     CHECK( cout.str() == answer );
@@ -318,10 +298,10 @@ using namespace std;
 
 template&lt;typename T&gt;
 class Stack; // forward declare to make function declaration possible
- 
+
 template&lt;typename T&gt; // declaration
 std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Stack&lt;T&gt;&amp;);
- 
+
 
 template &lt;typename T&gt;
 class Stack {
@@ -332,8 +312,8 @@ class Stack {
         Node* next;
         Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
     };
-   
-    Node* head;  
+
+    Node* head;
   public:
     class EmptyException {};
     Stack(): head(nullptr) {}
@@ -386,7 +366,7 @@ TEST_CASE( "test1" ) {
     Stack&lt;std::string&gt; mystack;
     mystack.push("mouse");
     cout &lt;&lt; mystack;
-    
+
     ;
     std::string answer = "mouse";
     CHECK( cout.str() == answer );
@@ -399,8 +379,8 @@ TEST_CASE( "test2" ) {
     mystack.push("platypus");
     mystack.push("emu");
     cout &lt;&lt; mystack;
-    
-    
+
+
     ;
     std::string answer = "emu  ,  platypus\n";
     CHECK( cout.str() == answer );
@@ -414,7 +394,7 @@ TEST_CASE( "test3" ) {
     mystack.push("dog");
     mystack.push("marmot");
     cout &lt;&lt; mystack;
-    
+
     ;
     std::string answer = "marmot  ,  dog  ,  cat\n";
     CHECK( cout.str() == answer );
@@ -429,7 +409,7 @@ TEST_CASE( "test4" ) {
     mystack.push("marmot");
     mystack.push("bunny rabbit");
     cout &lt;&lt; mystack;
-    
+
     ;
     std::string answer = "bunny rabbit  ,  marmot  ,  dog  ,  cat\n";
     CHECK( cout.str() == answer );
@@ -441,7 +421,7 @@ TEST_CASE( "test5" ) {
     Stack&lt;std::string&gt; mystack;
     mystack.push("monkey");
     cout &lt;&lt; mystack;
-    
+
     ;
     std::string answer = "monkey";
     CHECK( cout.str() == answer );
@@ -466,10 +446,10 @@ TEST_CASE( "test5" ) {
 
 template&lt;typename T&gt;
 class Stack; // forward declare to make function declaration possible
- 
+
 template&lt;typename T&gt; // declaration
 std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Stack&lt;T&gt;&amp;);
- 
+
 
 template &lt;typename T&gt;
 class Stack {
@@ -480,8 +460,8 @@ class Stack {
         Node* next;
         Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
     };
-   
-    Node* head;  
+
+    Node* head;
   public:
     class EmptyException {};
     Stack(): head(nullptr) {}
@@ -533,8 +513,8 @@ TEST_CASE( "test1" ) {
     mystack.pop();
     std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
-    
-    
+
+
     ;
     std::string answer = "Before: mouse\nAfter:\n";
     CHECK( cout.str() == answer );
@@ -551,8 +531,8 @@ TEST_CASE( "test2" ) {
     std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
-    
-    
+
+
     ;
     std::string answer = "Before: emu  ,  platypus\nAfter: platypus\n";
     CHECK( cout.str() == answer );
@@ -572,8 +552,8 @@ TEST_CASE( "test3" ) {
     std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
-    
-    
+
+
     ;
     std::string answer = "Before: marmot  ,  dog  ,  cat\nAfter: dog  ,  cat\nAfter: cat\n";
     CHECK( cout.str() == answer );
@@ -590,8 +570,8 @@ TEST_CASE( "test4" ) {
     std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
     if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
-    
-    
+
+
     ;
     std::string answer = "Before: zebra  ,  elephant\nAfter: elephant\n";
     CHECK( cout.str() == answer );
@@ -617,10 +597,10 @@ TEST_CASE( "test4" ) {
 
 template&lt;typename T&gt;
 class Queue; // forward declare to make function declaration possible
- 
+
 template&lt;typename T&gt; // declaration
 std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Queue&lt;T&gt;&amp;);
- 
+
 
 template &lt;typename T&gt;
 class Queue {
@@ -631,9 +611,9 @@ class Queue {
         Node* next;
         Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
     };
-   
+
   public:
-    Node* head;  
+    Node* head;
     Node* tail;
     class EmptyException {};
     Queue(): head(nullptr), tail(nullptr) {}
@@ -675,7 +655,7 @@ std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Queue&lt;T&gt;&a
         <code>
 template&lt;typename T&gt;
 void Queue&lt;T&gt;::enqueue(const T&amp; v) {
-    
+
 }
 
         </code>
@@ -691,8 +671,8 @@ TEST_CASE( "test1" ) {
     std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "List: mouse\nHead: mouse\nTail: mouse\n";
     CHECK( cout.str() == answer );
@@ -707,8 +687,8 @@ TEST_CASE( "test2" ) {
     std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "List: mouse  ,  danger\nHead: mouse\nTail: danger\n";
     CHECK( cout.str() == answer );
@@ -724,8 +704,8 @@ TEST_CASE( "test3" ) {
     std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "List: mouse  ,  danger  ,  will robinson\nHead: mouse\nTail: will robinson\n";
     CHECK( cout.str() == answer );
@@ -741,8 +721,8 @@ TEST_CASE( "test4" ) {
     std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "List: 3  ,  2  ,  1\nHead: 3\nTail: 1\n";
     CHECK( cout.str() == answer );
@@ -768,10 +748,10 @@ TEST_CASE( "test4" ) {
 
 template&lt;typename T&gt;
 class Queue; // forward declare to make function declaration possible
- 
+
 template&lt;typename T&gt; // declaration
 std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const Queue&lt;T&gt;&amp;);
- 
+
 
 template &lt;typename T&gt;
 class Queue {
@@ -782,9 +762,9 @@ class Queue {
         Node* next;
         Node(const T&amp; v, Node* n = nullptr) : value(v), next(n) {}
     };
-   
+
   public:
-    Node* head;  
+    Node* head;
     Node* tail;
     class EmptyException {};
     Queue(): head(nullptr), tail(nullptr) {}
@@ -847,8 +827,8 @@ TEST_CASE( "test1" ) {
     std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "Initial List: mouse  ,  danger  ,  will robinson\nDequeue result: mouse\nNew List: danger  ,  will robinson\nHead: danger\nTail: will robinson\n";
     CHECK( cout.str() == answer );
@@ -865,8 +845,8 @@ TEST_CASE( "test2" ) {
     std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "Initial List: mouse  ,  danger\nDequeue result: mouse\nNew List: danger\nHead: danger\nTail: danger\n";
     CHECK( cout.str() == answer );
@@ -882,8 +862,8 @@ TEST_CASE( "test3" ) {
     std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
     std::cout &lt;&lt; "Head: " &lt;&lt; (queue.head == nullptr ? "null" : queue.head-&gt;value) &lt;&lt; std::endl;
     std::cout &lt;&lt; "Tail: " &lt;&lt; (queue.tail == nullptr ? "null" : queue.tail-&gt;value) &lt;&lt; std::endl;
-    
-    
+
+
     ;
     std::string answer = "Initial List: mouse\nDequeue result: mouse\nNew List:\nHead: null\nTail: null\n";
     CHECK( cout.str() == answer );
@@ -900,8 +880,8 @@ TEST_CASE( "test4" ) {
     } catch (Queue&lt;int&gt;::EmptyException e) {
        std::cout &lt;&lt; "YES!\n";
     }
-    
-    
+
+
     ;
     std::string answer = "Removing from empty list should throw exception: YES!\n";
     CHECK( cout.str() == answer );

@@ -70,17 +70,13 @@ Ziggy</output>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Take the code from the file called <alert>iostream</alert> and paste it into the program before creating the executable.</p>
-            </p>
+            <p>Take the code from the file called <alert>iostream</alert> and paste it into the program before creating the executable.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Execute the code in the file called <alert>iostream</alert> before creating the executable for the current program.</p>
-            </p>
+            <p>Execute the code in the file called <alert>iostream</alert> before creating the executable for the current program.</p>
           </statement>
           <feedback />
         </choice>
@@ -126,17 +122,13 @@ Ziggy</output>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>There is a function named <alert><c>main</c></alert> that returns an integer.</p>
-            </p>
+            <p>There is a function named <alert><c>main</c></alert> that returns an integer.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>There is a variable named <alert><c>main</c></alert> that is of type integer.</p>
-            </p>
+            <p>There is a variable named <alert><c>main</c></alert> that is of type integer.</p>
           </statement>
           <feedback />
         </choice>
@@ -200,9 +192,7 @@ Ziggy</output>
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>nothing, because <c>cout</c> is available by default</p>
-            </p>
+            <p>nothing, because <c>cout</c> is available by default</p>
           </statement>
           <feedback />
         </choice>
@@ -229,17 +219,13 @@ Ziggy</output>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>There is a function named <alert><c>myvar</c></alert> that returns an integer.</p>
-            </p>
+            <p>There is a function named <alert><c>myvar</c></alert> that returns an integer.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>There is a variable named <alert><c>myvar</c></alert> that is of type integer.</p>
-            </p>
+            <p>There is a variable named <alert><c>myvar</c></alert> that is of type integer.</p>
           </statement>
           <feedback />
         </choice>
@@ -302,33 +288,25 @@ Ziggy</output>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p><c>int a, b, c, d;</c></p>
-            </p>
+            <p><c>int a, b, c, d;</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p><c>double pi = 3.14159;</c></p>
-            </p>
+            <p><c>double pi = 3.14159;</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p><c>cin &gt;&gt; thisisanumber;</c></p>
-            </p>
+            <p><c>cin &gt;&gt; thisisanumber;</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p><c>char letter;</c></p>
-            </p>
+            <p><c>char letter;</c></p>
           </statement>
           <feedback />
         </choice>
@@ -493,33 +471,25 @@ Ziggy</output>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>string</p>
-            </p>
+            <p>string</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>int</p>
-            </p>
+            <p>int</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>char</p>
-            </p>
+            <p>char</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>double</p>
-            </p>
+            <p>double</p>
           </statement>
           <feedback />
         </choice>
@@ -689,25 +659,19 @@ P</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Using a variable without first initializing it.</p>
-            </p>
+            <p>Using a variable without first initializing it.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Using a variable without first declaring it.</p>
-            </p>
+            <p>Using a variable without first declaring it.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Declaring a variable more than once in the same block of code.</p>
-            </p>
+            <p>Declaring a variable more than once in the same block of code.</p>
           </statement>
           <feedback />
         </choice>
@@ -721,33 +685,25 @@ P</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>subtract 5 from the current value of 'x'</p>
-            </p>
+            <p>subtract 5 from the current value of 'x'</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>assign the value 5 to 'x'</p>
-            </p>
+            <p>assign the value 5 to 'x'</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>add 5 to the current value of 'x'</p>
-            </p>
+            <p>add 5 to the current value of 'x'</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>compare the value of `x` to 5</p>
-            </p>
+            <p>compare the value of `x` to 5</p>
           </statement>
           <feedback />
         </choice>
@@ -778,33 +734,25 @@ P</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Postprocessing</p>
-            </p>
+            <p>Postprocessing</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Preprocessing</p>
-            </p>
+            <p>Preprocessing</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Compiling</p>
-            </p>
+            <p>Compiling</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Linking</p>
-            </p>
+            <p>Linking</p>
           </statement>
           <feedback />
         </choice>
@@ -817,33 +765,25 @@ P</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>During the link phase</p>
-            </p>
+            <p>During the link phase</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>During the compilation phase</p>
-            </p>
+            <p>During the compilation phase</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>At program startup</p>
-            </p>
+            <p>At program startup</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>When your executable calls the function for the first time</p>
-            </p>
+            <p>When your executable calls the function for the first time</p>
           </statement>
           <feedback />
         </choice>
@@ -856,25 +796,19 @@ P</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>It allows only changed files to be recompiled, saving compilation time.</p>
-            </p>
+            <p>It allows only changed files to be recompiled, saving compilation time.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>None, it's confusing and it probably makes things slower since you have multiple programs running together.</p>
-            </p>
+            <p>None, it's confusing and it probably makes things slower since you have multiple programs running together.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>It makes it easier to diagnose errors because you know whether the problem is from the linker or the compiler.</p>
-            </p>
+            <p>It makes it easier to diagnose errors because you know whether the problem is from the linker or the compiler.</p>
           </statement>
           <feedback />
         </choice>

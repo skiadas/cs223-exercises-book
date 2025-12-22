@@ -10,17 +10,13 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>True</p>
-            </p>
+            <p>True</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>False</p>
-            </p>
+            <p>False</p>
           </statement>
           <feedback />
         </choice>
@@ -51,33 +47,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>the number of times the function has been called</p>
-            </p>
+            <p>the number of times the function has been called</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>variables defined locally in the function</p>
-            </p>
+            <p>variables defined locally in the function</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>function parameters and their values</p>
-            </p>
+            <p>function parameters and their values</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>location in the calling program to return to when the current function ends</p>
-            </p>
+            <p>location in the calling program to return to when the current function ends</p>
           </statement>
           <feedback />
         </choice>
@@ -129,33 +117,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>34566543</p>
-            </p>
+            <p>34566543</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>3456776543</p>
-            </p>
+            <p>3456776543</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>3456</p>
-            </p>
+            <p>3456</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>76543</p>
-            </p>
+            <p>76543</p>
           </statement>
           <feedback />
         </choice>
@@ -187,7 +167,7 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "PALINDROME";
     CHECK( cout.str() == answer );
@@ -200,7 +180,7 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "not a palindrome";
     CHECK( cout.str() == answer );
@@ -213,7 +193,7 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "PALINDROME";
     CHECK( cout.str() == answer );
@@ -226,7 +206,7 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "not a palindrome";
     CHECK( cout.str() == answer );
@@ -239,7 +219,7 @@ TEST_CASE( "test5" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "PALINDROME";
     CHECK( cout.str() == answer );
@@ -252,7 +232,7 @@ TEST_CASE( "test6" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "not a palindrome";
     CHECK( cout.str() == answer );
@@ -265,7 +245,7 @@ TEST_CASE( "test7" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "PALINDROME";
     CHECK( cout.str() == answer );
@@ -278,7 +258,7 @@ TEST_CASE( "test8" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "PALINDROME";
     CHECK( cout.str() == answer );
@@ -291,7 +271,7 @@ TEST_CASE( "test9" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "not a palindrome";
     CHECK( cout.str() == answer );
@@ -304,7 +284,7 @@ TEST_CASE( "test10" ) {
         cout &lt;&lt; "PALINDROME";
     else
         cout &lt;&lt; "not a palindrome";
-    
+
     ;
     std::string answer = "PALINDROME";
     CHECK( cout.str() == answer );
@@ -347,7 +327,7 @@ int rec_choose(int n, int k)
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(4, 2)
-    
+
     ;
     std::string answer = "6";
     CHECK( cout.str() == answer );
@@ -357,7 +337,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(3, 0)
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -367,7 +347,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(10, 4)
-    
+
     ;
     std::string answer = "210";
     CHECK( cout.str() == answer );
@@ -377,7 +357,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(5, 4)
-    
+
     ;
     std::string answer = "5";
     CHECK( cout.str() == answer );
@@ -387,7 +367,7 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(20, 5)
-    
+
     ;
     std::string answer = "15504";
     CHECK( cout.str() == answer );
@@ -397,7 +377,7 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(42, 42)
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -407,7 +387,7 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test7" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(0, 1)
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -417,7 +397,7 @@ TEST_CASE( "test7" ) {
 TEST_CASE( "test8" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(9, 5)
-    
+
     ;
     std::string answer = "126\n";
     CHECK( cout.str() == answer );
@@ -427,7 +407,7 @@ TEST_CASE( "test8" ) {
 TEST_CASE( "test9" ) {
     std::stringstream cout;
     cout &lt;&lt; rec_choose(25, 3)
-    
+
     ;
     std::string answer = "2300\n";
     CHECK( cout.str() == answer );

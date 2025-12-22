@@ -9,25 +9,19 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>object-oriented programming</p>
-            </p>
+            <p>object-oriented programming</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>open object paradigm</p>
-            </p>
+            <p>open object paradigm</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>output operator programming</p>
-            </p>
+            <p>output operator programming</p>
           </statement>
           <feedback />
         </choice>
@@ -68,17 +62,13 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>True</p>
-            </p>
+            <p>True</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>False</p>
-            </p>
+            <p>False</p>
           </statement>
           <feedback />
         </choice>
@@ -107,33 +97,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>scope resolution operator</p>
-            </p>
+            <p>scope resolution operator</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>double colon operator</p>
-            </p>
+            <p>double colon operator</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>four dots operator</p>
-            </p>
+            <p>four dots operator</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>namespace specifier</p>
-            </p>
+            <p>namespace specifier</p>
           </statement>
           <feedback />
         </choice>
@@ -160,33 +142,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>declared</p>
-            </p>
+            <p>declared</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>accessed</p>
-            </p>
+            <p>accessed</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>evaluated</p>
-            </p>
+            <p>evaluated</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>destroyed</p>
-            </p>
+            <p>destroyed</p>
           </statement>
           <feedback />
         </choice>
@@ -199,41 +173,31 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>quadratic(a, b, c);</p>
-            </p>
+            <p>quadratic(a, b, c);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>quadratic(double a, double b, double c);</p>
-            </p>
+            <p>quadratic(double a, double b, double c);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>double quadratic(double a, double b, double c);</p>
-            </p>
+            <p>double quadratic(double a, double b, double c);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>quadratic_constructor(double a, double b, double c);</p>
-            </p>
+            <p>quadratic_constructor(double a, double b, double c);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>void quadratic_constructor(double a, double b, double c);</p>
-            </p>
+            <p>void quadratic_constructor(double a, double b, double c);</p>
           </statement>
           <feedback />
         </choice>
@@ -282,33 +246,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>default</p>
-            </p>
+            <p>default</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>deficient</p>
-            </p>
+            <p>deficient</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>simple</p>
-            </p>
+            <p>simple</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>working</p>
-            </p>
+            <p>working</p>
           </statement>
           <feedback />
         </choice>
@@ -321,17 +277,13 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>true</p>
-            </p>
+            <p>true</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>false</p>
-            </p>
+            <p>false</p>
           </statement>
           <feedback />
         </choice>
@@ -344,33 +296,25 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>assignment operator</p>
-            </p>
+            <p>assignment operator</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>copy constructor</p>
-            </p>
+            <p>copy constructor</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>default constructor</p>
-            </p>
+            <p>default constructor</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>stream output operator (&lt;&lt;)</p>
-            </p>
+            <p>stream output operator (&lt;&lt;)</p>
           </statement>
           <feedback />
         </choice>
@@ -383,33 +327,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>throttle(const throttle &amp;t);</p>
-            </p>
+            <p>throttle(const throttle &amp;t);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>throttle(int size);</p>
-            </p>
+            <p>throttle(int size);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>void throttle(throttle t);</p>
-            </p>
+            <p>void throttle(throttle t);</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>void throttle(int size);</p>
-            </p>
+            <p>void throttle(int size);</p>
           </statement>
           <feedback />
         </choice>
@@ -422,33 +358,25 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>an extended comment which tells folks how to USE the class</p>
-            </p>
+            <p>an extended comment which tells folks how to USE the class</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>the class definition, including prototypes for member functions and declarations for member variables</p>
-            </p>
+            <p>the class definition, including prototypes for member functions and declarations for member variables</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>a macro guard to prevent duplicate definition</p>
-            </p>
+            <p>a macro guard to prevent duplicate definition</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>complete implementations for all member functions</p>
-            </p>
+            <p>complete implementations for all member functions</p>
           </statement>
           <feedback />
         </choice>
@@ -461,17 +389,13 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>false</p>
-            </p>
+            <p>false</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>true</p>
-            </p>
+            <p>true</p>
           </statement>
           <feedback />
         </choice>
@@ -518,7 +442,7 @@ int main()
 #include &lt;string&gt;
 #include &lt;sstream&gt;
 #include &lt;cassert&gt;  // provides "assert"
-        
+
 using namespace std;
 #define SEPARATOR "#&lt;ab@17943918#@&gt;#"
 
@@ -539,7 +463,7 @@ TEST_CASE( "test1" ) {
     string val = int_to_string(7785);
     assert(val.length() == 4);
     cout &lt;&lt; val;
-    
+
     ;
     std::string answer = "7785";
     CHECK( cout.str() == answer );
@@ -551,7 +475,7 @@ TEST_CASE( "test2" ) {
     string val = int_to_string(-3);
     assert(val.length() == 2);
     cout &lt;&lt; val;
-    
+
     ;
     std::string answer = "-3";
     CHECK( cout.str() == answer );
@@ -563,7 +487,7 @@ TEST_CASE( "test3" ) {
     string val = int_to_string(123454321);
     assert(val.length() == 9);
     cout &lt;&lt; val;
-    
+
     ;
     std::string answer = "123454321\n";
     CHECK( cout.str() == answer );
@@ -577,7 +501,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; "wrong"; }
     else {
     cout &lt;&lt; val; }
-    
+
     ;
     std::string answer = "-999999";
     CHECK( cout.str() == answer );
@@ -605,7 +529,7 @@ TEST_CASE( "test4" ) {
 #include &lt;fstream&gt;
 #include &lt;string&gt;
 #include &lt;sstream&gt;
-        
+
 using namespace std;
 #define SEPARATOR "#&lt;ab@17943918#@&gt;#"
 
@@ -624,7 +548,7 @@ using namespace std;
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("3.14159");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -634,7 +558,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("this_is_a_non_numerical_string");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -644,7 +568,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("-5");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -654,7 +578,7 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("17_is_prime");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -664,7 +588,7 @@ TEST_CASE( "test4" ) {
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("-1&lt;0");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -674,7 +598,7 @@ TEST_CASE( "test5" ) {
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("359-7");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -684,7 +608,7 @@ TEST_CASE( "test6" ) {
 TEST_CASE( "test7" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("5.3.0");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -694,7 +618,7 @@ TEST_CASE( "test7" ) {
 TEST_CASE( "test8" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("-.");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -704,7 +628,7 @@ TEST_CASE( "test8" ) {
 TEST_CASE( "test9" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical(".99999");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -714,7 +638,7 @@ TEST_CASE( "test9" ) {
 TEST_CASE( "test10" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("-.5");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -724,7 +648,7 @@ TEST_CASE( "test10" ) {
 TEST_CASE( "test11" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical(".1-.2");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -734,7 +658,7 @@ TEST_CASE( "test11" ) {
 TEST_CASE( "test12" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("");
-    
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -744,8 +668,8 @@ TEST_CASE( "test12" ) {
 TEST_CASE( "test13" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical(".-");
-    
-    
+
+
     ;
     std::string answer = "0";
     CHECK( cout.str() == answer );
@@ -755,7 +679,7 @@ TEST_CASE( "test13" ) {
 TEST_CASE( "test14" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("-123.123123123123123");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -765,7 +689,7 @@ TEST_CASE( "test14" ) {
 TEST_CASE( "test15" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("55.");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );
@@ -775,7 +699,7 @@ TEST_CASE( "test15" ) {
 TEST_CASE( "test16" ) {
     std::stringstream cout;
     cout &lt;&lt; is_numerical("01234567890123456789");
-    
+
     ;
     std::string answer = "1";
     CHECK( cout.str() == answer );

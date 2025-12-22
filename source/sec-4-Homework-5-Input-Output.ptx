@@ -13,33 +13,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>fstream</p>
-            </p>
+            <p>fstream</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>iostream</p>
-            </p>
+            <p>iostream</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>stringstream</p>
-            </p>
+            <p>stringstream</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>stdio</p>
-            </p>
+            <p>stdio</p>
           </statement>
           <feedback />
         </choice>
@@ -52,33 +44,25 @@
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>cout</p>
-            </p>
+            <p>cout</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>cin</p>
-            </p>
+            <p>cin</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>an object of type ifstream</p>
-            </p>
+            <p>an object of type ifstream</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>an object of type ofstream</p>
-            </p>
+            <p>an object of type ofstream</p>
           </statement>
           <feedback />
         </choice>
@@ -120,25 +104,19 @@ infile.close()        </pre>
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>When used at the end of writing to an output stream like `cout`, both '\n' and <c>endl</c> have the potential to leave data in the output buffer if the program crashes.</p>
-            </p>
+            <p>When used at the end of writing to an output stream like `cout`, both '\n' and <c>endl</c> have the potential to leave data in the output buffer if the program crashes.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Both <c>cout &lt;&lt; '\n'</c> and <c>cout &lt;&lt; endl</c> will write an end-of-line (a newline character) to standard output.</p>
-            </p>
+            <p>Both <c>cout &lt;&lt; '\n'</c> and <c>cout &lt;&lt; endl</c> will write an end-of-line (a newline character) to standard output.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>The difference between '\n' and <c>endl</c> is that <c>endl</c> will automatically flush the output buffer.</p>
-            </p>
+            <p>The difference between '\n' and <c>endl</c> is that <c>endl</c> will automatically flush the output buffer.</p>
           </statement>
           <feedback />
         </choice>
@@ -151,33 +129,25 @@ infile.close()        </pre>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>cin.ignore()</p>
-            </p>
+            <p>cin.ignore()</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>cin.peek()</p>
-            </p>
+            <p>cin.peek()</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>cin.get(c)</p>
-            </p>
+            <p>cin.get(c)</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>cin &gt;&gt; c</p>
-            </p>
+            <p>cin &gt;&gt; c</p>
           </statement>
           <feedback />
         </choice>
@@ -190,25 +160,19 @@ infile.close()        </pre>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>Using chaining to read in several different values, one right after the other. For example: <c>cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</c></p>
-            </p>
+            <p>Using chaining to read in several different values, one right after the other. For example: <c>cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>Reading in illegal data for an input operation.  An example of this would be if the variable 'num' is an int, and when <c>cin &gt;&gt; num</c> is executed, the user enters a string instead of an integer.</p>
-            </p>
+            <p>Reading in illegal data for an input operation.  An example of this would be if the variable 'num' is an int, and when <c>cin &gt;&gt; num</c> is executed, the user enters a string instead of an integer.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>Using 'cin' as the input stream argument for the getline function. For example, <c>getline(cin, message)</c> where 'message' is a string.</p>
-            </p>
+            <p>Using 'cin' as the input stream argument for the getline function. For example, <c>getline(cin, message)</c> where 'message' is a string.</p>
           </statement>
           <feedback />
         </choice>

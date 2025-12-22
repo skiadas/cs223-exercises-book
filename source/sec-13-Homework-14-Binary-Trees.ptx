@@ -58,25 +58,19 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>This is a binary tree of depth 4.</p>
-            </p>
+            <p>This is a binary tree of depth 4.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>This is a binary tree of depth 5.</p>
-            </p>
+            <p>This is a binary tree of depth 5.</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>This is NOT a binary tree.</p>
-            </p>
+            <p>This is NOT a binary tree.</p>
           </statement>
           <feedback />
         </choice>
@@ -89,33 +83,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
           <statement>
-            <p>
-              <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
-            </p>
+            <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
-            </p>
+            <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
-            </p>
+            <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>ontario, vostok, ladoga, taymyr, winnipeg</p>
-            </p>
+            <p>ontario, vostok, ladoga, taymyr, winnipeg</p>
           </statement>
           <feedback />
         </choice>
@@ -128,33 +114,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
-            </p>
+            <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
-            </p>
+            <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
-            </p>
+            <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>ladoga, ontario, taymyr, vostok, winnipeg</p>
-            </p>
+            <p>ladoga, ontario, taymyr, vostok, winnipeg</p>
           </statement>
           <feedback />
         </choice>
@@ -167,33 +145,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
-            </p>
+            <p>ontario, winnipeg, vostok, ladoga, taymyr</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
-            </p>
+            <p>winnipeg, ontario, ladoga, vostok, taymyr</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
-            </p>
+            <p>winnipeg, ladoga, taymyr, vostok, ontario</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>winnipeg, vostok, taymyr, ontario, ladoga</p>
-            </p>
+            <p>winnipeg, vostok, taymyr, ontario, ladoga</p>
           </statement>
           <feedback />
         </choice>
@@ -210,33 +180,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>A</p>
-            </p>
+            <p>A</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>D</p>
-            </p>
+            <p>D</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>G</p>
-            </p>
+            <p>G</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>H</p>
-            </p>
+            <p>H</p>
           </statement>
           <feedback />
         </choice>
@@ -252,33 +214,25 @@
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>
-              <p>A</p>
-            </p>
+            <p>A</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>D</p>
-            </p>
+            <p>D</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>
-              <p>G</p>
-            </p>
+            <p>G</p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-              <p>H</p>
-            </p>
+            <p>H</p>
           </statement>
           <feedback />
         </choice>
