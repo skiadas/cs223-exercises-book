@@ -323,9 +323,9 @@ Ziggy</output>
             <strcmp>double</strcmp>
             <feedback />
           </test>
-          <test>
+          <test correct="no">
             <strcmp>float</strcmp>
-            <feedback>Close, and not precise enough.</feedback>
+            <feedback>Not precise enough.</feedback>
           </test>
         </evaluate>
       </evaluation>
