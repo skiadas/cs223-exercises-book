@@ -574,19 +574,7 @@ Ziggy</output>
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>count++;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>++count;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>++count</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>count++</strcmp>
+            <strcmp>((count\+\+)|(\+\+count));?</strcmp>
             <feedback />
           </test>
         </evaluate>
@@ -600,19 +588,7 @@ Ziggy</output>
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>--guesses;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>guesses--;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>--guesses</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>guesses--</strcmp>
+            <strcmp>((\-\-guesses)|(guesses\-\-));?</strcmp>
             <feedback />
           </test>
         </evaluate>
