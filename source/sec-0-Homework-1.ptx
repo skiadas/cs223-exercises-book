@@ -521,7 +521,7 @@ Ziggy</output>
         <choice correct="yes">
           <statement>
             <p>
-              <pre>    num += 3</pre>
+              <pre>    num += 3;</pre>
             </p>
           </statement>
           <feedback />
