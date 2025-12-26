@@ -888,7 +888,7 @@ my_password</input>
         </choice>
         <choice correct="no">
           <statement>
-            <p>path wrapper disable<c /></p>
+            <p>path wrapper disable</p>
           </statement>
           <feedback />
         </choice>
