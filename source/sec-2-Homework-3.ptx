@@ -546,14 +546,14 @@ TEST_CASE( "test5" ) {
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
-
-
-cout &lt;&lt; accumulate_acronym()
+using namespace std;
         </preamble>
         <code>
 
         </code>
-        <postamble visible="no" />
+        <postamble visible="no">
+cout &lt;&lt; accumulate_acronym();
+        </postamble>
         <tests>
   <iotest>
     <input>Cats
