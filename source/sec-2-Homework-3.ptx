@@ -545,6 +545,7 @@ TEST_CASE( "test5" ) {
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
+#include &lt;iostream&gt;
 
 using namespace std;
 
