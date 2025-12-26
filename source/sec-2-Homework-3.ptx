@@ -547,13 +547,18 @@ TEST_CASE( "test5" ) {
         <preamble visible="no">#include &lt;sstream&gt;
 
 using namespace std;
+
+int accumulate_acronym();
+
+int main() {
+  cout &lt;&lt; accumulate_acronym();
+}
+
         </preamble>
         <code>
 
         </code>
-        <postamble visible="no">
-cout &lt;&lt; accumulate_acronym();
-        </postamble>
+        <postamble visible="no" />
         <tests>
   <iotest>
     <input>Cats
