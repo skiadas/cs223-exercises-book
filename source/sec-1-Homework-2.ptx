@@ -556,7 +556,9 @@ Comparison</input>
     <exercise xml:id="exer-JMPCH5_short-for_1-1" label="exe-sec-Homework-2-1-234160">
       <statement>
         <p>What is the exact output that will be produced by the following C++ code?</p>
-        <pre>int x;for (x = 0; x &lt; 50; x++) {}cout &lt;&lt; x &lt;&lt; endl;</pre>
+        <pre>int x;
+for (x = 0; x &lt; 50; x++) {}
+cout &lt;&lt; x &lt;&lt; endl;</pre>
         <fillin answer="50" width="16" />
       </statement>
       <evaluation>
@@ -575,25 +577,25 @@ Comparison</input>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="no">
           <statement>
-            <p>for</p>
+            <p><c>for</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>do-while</p>
+            <p><c>do-while</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>while<c /></p>
+            <p><c>while</c></p>
           </statement>
           <feedback />
         </choice>
         <choice correct="yes">
           <statement>
-            <p>repeat</p>
+            <p><c>repeat</c></p>
           </statement>
           <feedback />
         </choice>
