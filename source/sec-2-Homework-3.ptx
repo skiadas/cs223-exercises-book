@@ -548,7 +548,7 @@ TEST_CASE( "test5" ) {
 
 using namespace std;
 
-int accumulate_acronym();
+string accumulate_acronym();
 
 int main() {
   cout &lt;&lt; accumulate_acronym();
