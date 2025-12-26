@@ -337,15 +337,7 @@ TEST_CASE( "test4" ) {
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>int add (int x, int y);</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>int add(int x, int y);</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>int add(int x,int y);</strcmp>
+            <strcmp>int add\s*\(int x,\s*int y\);</strcmp>
             <feedback />
           </test>
         </evaluate>
