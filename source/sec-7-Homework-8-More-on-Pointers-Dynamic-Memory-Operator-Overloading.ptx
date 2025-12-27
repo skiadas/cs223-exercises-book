@@ -429,99 +429,43 @@ bool Pixel::is_white()
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     Pixel pix;
-    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-
-
-    ;
-    std::string answer = "this is NOT a white pixel.\n";
-    CHECK( cout.str() == answer );
+    CHECK( pix.is_white() == false);
 }
 
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     Pixel pix(253, 254, 255);
-    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-
-    ;
-    std::string answer = "this is NOT a white pixel.\n";
-    CHECK( cout.str() == answer );
+    CHECK( pix.is_white() == false);
 }
 
 
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     Pixel pix(255, 255, 255);
-    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-
-    ;
-    std::string answer = "this is a white pixel!\n\n";
-    CHECK( cout.str() == answer );
+    CHECK( pix.is_white() == true);
 }
 
 
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     Pixel pix(0, 255, 255);
-    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-
-    ;
-    std::string answer = "this is NOT a white pixel.";
-    CHECK( cout.str() == answer );
+    CHECK( pix.is_white() == false);
 }
 
 
 TEST_CASE( "test5" ) {
     std::stringstream cout;
     Pixel pix(255, 255, 254);
-    if (pix.is_white()) { cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl; }
-
-    ;
-    std::string answer = "this is NOT a white pixel.";
-    CHECK( cout.str() == answer );
+    CHECK( pix.is_white() == false);
 }
 
 
 TEST_CASE( "test6" ) {
     std::stringstream cout;
     Pixel pix(254, 255, 255);
-    if (pix.is_white()) { cout &lt;&lt; "nope" &lt;&lt; endl; }
-    else { cout &lt;&lt; "OK" &lt;&lt; endl; }
-
-    ;
-    std::string answer = "OK";
-    CHECK( cout.str() == answer );
+    CHECK( pix.is_white() == false);
 }
-
-
-TEST_CASE( "test7" ) {
-    std::stringstream cout;
-    Pixel pix(255, 255, 255);
-    if (pix.is_white()) { cout &lt;&lt; "Yes!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "No" &lt;&lt; endl; }
-
-    ;
-    std::string answer = "Yes!";
-    CHECK( cout.str() == answer );
-}
-
-
-TEST_CASE( "test8" ) {
-    std::stringstream cout;
-    Pixel pix(255, 253, 255);
-    if (pix.is_white()) { cout &lt;&lt; "Yes!" &lt;&lt; endl; }
-    else { cout &lt;&lt; "No" &lt;&lt; endl; }
-
-    ;
-    std::string answer = "No";
-    CHECK( cout.str() == answer );
-}
-
         </tests>
       </program>
     </exercise>
