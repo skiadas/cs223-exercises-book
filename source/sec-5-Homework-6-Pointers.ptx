@@ -445,23 +445,7 @@ mystr = "cats";        </pre>
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>Person\* ptr = new Person;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>Person \*ptr = new Person;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>Person\* ptr=new Person;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>Person \*ptr=new Person;</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>Person \* ptr=new Person;</strcmp>
+            <strcmp>Person(\* | \*)ptr = new Person;</strcmp>
             <feedback />
           </test>
         </evaluate>
@@ -483,31 +467,7 @@ mystr = "cats";        </pre>
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>char\* arr = new char[4];</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>char \*arr = new char[4];</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>char\* arr=new char[4];</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>char \*arr=new char[4];</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>char\* arr = new char[4]</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>char \*arr=new char[4]</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>char \*arr = new char[4]</strcmp>
+            <strcmp>char(\* | \*)arr = new char\[4\];</strcmp>
             <feedback />
           </test>
         </evaluate>
