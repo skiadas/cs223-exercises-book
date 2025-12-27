@@ -210,7 +210,7 @@ int** m = &amp;p;        </pre>
         <choice correct="yes">
           <statement>
             <p>
-                <image decorative="yes" source="images/596951-Screen%20Shot%202018-02-11%20at%2011.38.29%20AM.png" width="90%" />
+                <image decorative="yes" source="images/596951-Screen%20Shot%202018-02-11%20at%2011.38.29%20AM.png" width="40%" />
               </p>
           </statement>
           <feedback />
@@ -218,16 +218,14 @@ int** m = &amp;p;        </pre>
         <choice correct="no">
           <statement>
             <p>
-                <image decorative="yes" source="images/596952-Screen%20Shot%202018-02-11%20at%2011.40.15%20AM.png" width="90%" />
+                <image decorative="yes" source="images/596952-Screen%20Shot%202018-02-11%20at%2011.40.15%20AM.png" width="40%" />
               </p>
           </statement>
           <feedback />
         </choice>
         <choice correct="no">
           <statement>
-            <p>
-                <image decorative="yes" source="images/596953-Screen%20Shot%202018-02-11%20at%2011.41.35%20AM.png" width="90%" />
-              </p>
+            <image decorative="yes" source="images/596953-Screen%20Shot%202018-02-11%20at%2011.41.35%20AM.png" width="40%" />
           </statement>
           <feedback />
         </choice>
@@ -247,7 +245,7 @@ Person* Q = ptr;
         <choice correct="yes">
           <statement>
             <p>
-                <image decorative="yes" source="images/596962-Screen%20Shot%202018-02-11%20at%201.34.21%20PM.png" width="90%" />
+                <image decorative="yes" source="images/596962-Screen%20Shot%202018-02-11%20at%201.34.21%20PM.png" width="40%" />
               </p>
           </statement>
           <feedback />
@@ -255,7 +253,7 @@ Person* Q = ptr;
         <choice correct="no">
           <statement>
             <p>
-                <image decorative="yes" source="images/596963-Screen%20Shot%202018-02-11%20at%201.35.44%20PM.png" width="90%" />
+                <image decorative="yes" source="images/596963-Screen%20Shot%202018-02-11%20at%201.35.44%20PM.png" width="40%" />
               </p>
           </statement>
           <feedback />
@@ -263,7 +261,7 @@ Person* Q = ptr;
         <choice correct="no">
           <statement>
             <p>
-                <image decorative="yes" source="images/596964-Screen%20Shot%202018-02-11%20at%201.38.10%20PM.png" width="90%" />
+                <image decorative="yes" source="images/596964-Screen%20Shot%202018-02-11%20at%201.38.10%20PM.png" width="40%" />
               </p>
           </statement>
           <feedback />
@@ -284,7 +282,7 @@ delete p_array;        </pre>
         <choice correct="yes">
           <statement>
             <p>
-                <image decorative="yes" source="images/596965-Screen%20Shot%202018-02-11%20at%201.49.27%20PM.png" width="90%" />
+                <image decorative="yes" source="images/596965-Screen%20Shot%202018-02-11%20at%201.49.27%20PM.png" width="40%" />
               </p>
           </statement>
           <feedback />
@@ -292,7 +290,7 @@ delete p_array;        </pre>
         <choice correct="no">
           <statement>
             <p>
-                <image decorative="yes" source="images/596966-Screen%20Shot%202018-02-11%20at%201.52.13%20PM.png" width="90%" />
+                <image decorative="yes" source="images/596966-Screen%20Shot%202018-02-11%20at%201.52.13%20PM.png" width="40%" />
               </p>
           </statement>
           <feedback />
@@ -300,7 +298,7 @@ delete p_array;        </pre>
         <choice correct="no">
           <statement>
             <p>
-                <image decorative="yes" source="images/596967-Screen%20Shot%202018-02-11%20at%201.50.36%20PM.png" width="90%" />
+                <image decorative="yes" source="images/596967-Screen%20Shot%202018-02-11%20at%201.50.36%20PM.png" width="40%" />
               </p>
           </statement>
           <feedback />
