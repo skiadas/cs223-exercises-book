@@ -209,7 +209,10 @@ maudlin        </pre>
         <p>You may assume that mystrings.txt does not contain any blank lines.</p>
         <p>HINT: Use <c>while(getline(&lt;your args here&gt;))</c> to loop over the lines of a file.</p>
       </statement>
-      <program interactive="activecode" language="cpp">
+      <datafile label="mystrings-datafile" xml:id="mystrings-datafile" filename="mystrings.txt" editable="no" hide="yes">
+        <pre source="datafiles/mystrings.txt" />
+      </datafile>
+      <program interactive="activecode" language="cpp" add-files="mystrings-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
