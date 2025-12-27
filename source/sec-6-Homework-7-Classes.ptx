@@ -168,7 +168,7 @@
     </exercise>
     <exercise xml:id="exer-MainSavCH2SEC2_multi-constructor2-1" label="exe-sec-Homework-7-Classes-1-234254">
       <statement>
-        <p>Which of these is a syntactically correct prototype for the <alert>constructor</alert> of a class called `quadratic`?</p>
+        <p>Which of these is a syntactically correct prototype for the <alert>constructor</alert> of a class called <c>quadratic</c>?</p>
       </statement>
       <choices multiple-correct="yes" randomize="yes">
         <choice correct="no">
