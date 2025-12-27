@@ -229,11 +229,7 @@
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>throttle(int size);</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>throttle (int size);</strcmp>
+            <strcmp>throttle\(int size\);</strcmp>
             <feedback />
           </test>
         </evaluate>
