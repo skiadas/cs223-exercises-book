@@ -485,7 +485,7 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; val;
 
     ;
-    std::string answer = "123454321\n";
+    std::string answer = "123454321";
     CHECK( cout.str() == answer );
 }
 
