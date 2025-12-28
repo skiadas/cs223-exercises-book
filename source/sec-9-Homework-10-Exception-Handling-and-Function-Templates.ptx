@@ -637,7 +637,13 @@ TEST_CASE( "test8" ) {
         <p>This template should work for any type that can use the "==" operator and the copy constructor.</p>
         <p>NOTE: The <c>compare</c> template has a void return type.</p>
       </statement>
-      <program interactive="activecode" language="cpp">
+      <datafile label="pixelh-datafile" xml:id="pixelh-datafile" filename="Pixel.h" editable="no" hide="yes">
+        <pre source="datafiles/Pixel.h" />
+      </datafile>
+      <datafile label="personh-datafile" xml:id="personh-datafile" filename="Person.h" editable="no" hide="yes">
+        <pre source="datafiles/Person.h" />
+      </datafile>
+      <program interactive="activecode" language="cpp" add-files="pixelh-datafile,personh-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
