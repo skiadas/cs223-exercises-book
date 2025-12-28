@@ -834,7 +834,7 @@ TEST_CASE( "test5" ) {
         <p>Write a function template <c>swapper</c> that takes two values <em>passed by reference</em> and swaps them.</p>
         <p>NOTE: The <c>swapper</c> template has a void return type.</p>
       </statement>
-      <program interactive="activecode" language="cpp">
+      <program interactive="activecode" language="cpp" add-files="pixelh-datafile personh-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
@@ -847,9 +847,6 @@ TEST_CASE( "test5" ) {
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
 #include "Pixel.h"
-
-using namespace std;
-#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
 
 class Pixel
 {
@@ -961,8 +958,6 @@ TEST_CASE( "test1" ) {
     swapper(x, y);
     cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; " and y = " &lt;&lt; y &lt;&lt; endl;
 
-
-    ;
     std::string answer = "x = 7 and y = 3";
     CHECK( cout.str() == answer );
 }
@@ -974,8 +969,6 @@ TEST_CASE( "test2" ) {
     swapper(a, b);
     cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; " and b = " &lt;&lt; b &lt;&lt; endl;
 
-
-    ;
     std::string answer = "a = preserves and b = raspberry";
     CHECK( cout.str() == answer );
 }
@@ -987,8 +980,6 @@ TEST_CASE( "test3" ) {
     swapper(u, v);
     cout &lt;&lt; "u = " &lt;&lt; u &lt;&lt; " and v = " &lt;&lt; v &lt;&lt; endl;
 
-
-    ;
     std::string answer = "u = 1.0101 and v = 3.14";
     CHECK( cout.str() == answer );
 }
@@ -1000,7 +991,6 @@ TEST_CASE( "test4" ) {
     swapper(pix1, pix2);
     cout &lt;&lt; "pix1 = " &lt;&lt; pix1 &lt;&lt; " and pix2 = " &lt;&lt; pix2 &lt;&lt; endl;
 
-    ;
     std::string answer = "pix1 = 10 9 5 and pix2 = 0 1 2\n";
     CHECK( cout.str() == answer );
 }
@@ -1012,7 +1002,7 @@ TEST_CASE( "test4" ) {
       <statement>
         <p>Write a function template <c>maximum</c> that takes two values of the same type and <em>returns</em> the larger value.  This template should work for any type that can use the "&gt;" operator and the copy constructor.</p>
       </statement>
-      <program interactive="activecode" language="cpp">
+      <program interactive="activecode" language="cpp" add-files="pixelh-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
@@ -1025,9 +1015,6 @@ TEST_CASE( "test4" ) {
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
 #include "Pixel.h"
-
-using namespace std;
-#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
 
 class Pixel
 {
@@ -1150,7 +1137,7 @@ std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     int x = 3; int y = 7;
-    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(x, y) &lt;&lt; endl;
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(x, y);
 
 
     ;
@@ -1162,7 +1149,7 @@ TEST_CASE( "test1" ) {
 TEST_CASE( "test2" ) {
     std::stringstream cout;
     string a = "raspberry"; string b = "jelly";
-    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(a, b) &lt;&lt; endl;
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(a, b);
 
 
     ;
@@ -1174,7 +1161,7 @@ TEST_CASE( "test2" ) {
 TEST_CASE( "test3" ) {
     std::stringstream cout;
     double u = 3.14; double v = 1.0101;
-    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(u, v) &lt;&lt; endl;
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(u, v);
 
 
     ;
@@ -1186,10 +1173,10 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     Pixel pix1(0, 1, 2); Pixel pix2(10, 9, 5);
-    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(pix1, pix2) &lt;&lt; endl;
+    cout &lt;&lt; "The maximum is " &lt;&lt; maximum(pix1, pix2);
 
     ;
-    std::string answer = "The maximum is 10 9 5\n";
+    std::string answer = "The maximum is 10 9 5";
     CHECK( cout.str() == answer );
 }
 
