@@ -280,6 +280,10 @@ void List::insertAt(value_type v, int index) {
 
 TEST_CASE( "test1" ) {
     std::stringstream cout;
+    List list1;
+    list1.insertStart(7);
+    list1.insertStart(5);
+    list1.insertStart(3);
     // list1 =  3 5 7
     list1.insertAt(8, 1);
     cout &lt;&lt; list1;
@@ -292,6 +296,10 @@ TEST_CASE( "test1" ) {
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
+    List list1;
+    list1.insertStart(7);
+    list1.insertStart(5);
+    list1.insertStart(3);
     // list1 =  3 5 7
     list1.insertAt(8, 2);
     cout &lt;&lt; list1;
@@ -304,6 +312,10 @@ TEST_CASE( "test2" ) {
 
 TEST_CASE( "test3" ) {
     std::stringstream cout;
+    List list1;
+    list1.insertStart(7);
+    list1.insertStart(5);
+    list1.insertStart(3);
     // list1 =  3 5 7
     list1.insertAt(8, 3);
     cout &lt;&lt; list1;
@@ -316,6 +328,10 @@ TEST_CASE( "test3" ) {
 
 TEST_CASE( "test4" ) {
     std::stringstream cout;
+    List list1;
+    list1.insertStart(7);
+    list1.insertStart(5);
+    list1.insertStart(3);
     // list1 =  3 5 7
     list1.insertAt(8, 0);
     cout &lt;&lt; list1;
@@ -341,6 +357,8 @@ TEST_CASE( "test5" ) {
 
 TEST_CASE( "test6" ) {
     std::stringstream cout;
+    List list2;
+    list2.insertStart(3);
     // list2 = 3
     list2.insertAt(5, 0);
     cout &lt;&lt; list2;
@@ -353,6 +371,8 @@ TEST_CASE( "test6" ) {
 
 TEST_CASE( "test7" ) {
     std::stringstream cout;
+    List list2;
+    list2.insertStart(3);
     // list2 = 3
     list2.insertAt(5, 1);
     cout &lt;&lt; list2;
@@ -365,6 +385,10 @@ TEST_CASE( "test7" ) {
 
 TEST_CASE( "test8" ) {
     std::stringstream cout;
+    List list1;
+    list1.insertStart(7);
+    list1.insertStart(5);
+    list1.insertStart(3);
     // list1 =  3 5 7
     list1.insertAt(8, -1);
     cout &lt;&lt; list1;
@@ -377,6 +401,10 @@ TEST_CASE( "test8" ) {
 
 TEST_CASE( "test9" ) {
     std::stringstream cout;
+    List list1;
+    list1.insertStart(7);
+    list1.insertStart(5);
+    list1.insertStart(3);
     // list1 =  3 5 7
     list1.insertAt(8, 4);
     cout &lt;&lt; list1;
