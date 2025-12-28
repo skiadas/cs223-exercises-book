@@ -323,7 +323,7 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; myFun(5, 5);
 
     ;
-    std::string answer = "FAILURE\n";
+    std::string answer = "FAILURE";
     CHECK( cout.str() == answer );
 }
 
@@ -353,7 +353,7 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; myFun(-3, 3);
 
     ;
-    std::string answer = "FAILURE\n";
+    std::string answer = "FAILURE";
     CHECK( cout.str() == answer );
 }
 
@@ -363,7 +363,7 @@ TEST_CASE( "test7" ) {
     cout &lt;&lt; myFun(7, -7);
 
     ;
-    std::string answer = "FAILURE\n";
+    std::string answer = "FAILURE";
     CHECK( cout.str() == answer );
 }
 
@@ -419,7 +419,7 @@ TEST_CASE( "test12" ) {
     else cout &lt;&lt; val;
 
     ;
-    std::string answer = "9\n";
+    std::string answer = "9";
     CHECK( cout.str() == answer );
 }
 
