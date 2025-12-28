@@ -462,7 +462,7 @@ TEST_CASE( "test1" ) {
     }
     catch(...)
     {
-       cout &lt;&lt; "Your code threw an exception." &lt;&lt; endl;
+       cout &lt;&lt; "Your code threw an exception.";
     }
 
     ;
@@ -481,11 +481,11 @@ TEST_CASE( "test2" ) {
     }
     catch(domain_error e)
     {
-       cout &lt;&lt; e.what() &lt;&lt; endl;
+       cout &lt;&lt; e.what();
     }
     catch(...)
     {
-       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+       cout &lt;&lt; "wrong exception type";
     }
 
     ;
@@ -504,11 +504,11 @@ TEST_CASE( "test3" ) {
     }
     catch(domain_error e)
     {
-       cout &lt;&lt; e.what() &lt;&lt; endl;
+       cout &lt;&lt; e.what();
     }
     catch(...)
     {
-       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+       cout &lt;&lt; "wrong exception type";
     }
 
     ;
@@ -527,11 +527,11 @@ TEST_CASE( "test4" ) {
     }
     catch(domain_error e)
     {
-       cout &lt;&lt; e.what() &lt;&lt; endl;
+       cout &lt;&lt; e.what();
     }
     catch(...)
     {
-       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+       cout &lt;&lt; "wrong exception type";
     }
 
     ;
@@ -550,11 +550,11 @@ TEST_CASE( "test5" ) {
     }
     catch(domain_error e)
     {
-       cout &lt;&lt; e.what() &lt;&lt; endl;
+       cout &lt;&lt; e.what();
     }
     catch(...)
     {
-       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+       cout &lt;&lt; "wrong exception type";
     }
 
     ;
@@ -573,16 +573,16 @@ TEST_CASE( "test6" ) {
     }
     catch(domain_error e)
     {
-       cout &lt;&lt; e.what() &lt;&lt; endl;
+       cout &lt;&lt; e.what();
     }
     catch(...)
     {
-       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+       cout &lt;&lt; "wrong exception type";
     }
 
 
     ;
-    std::string answer = "size &lt; 1 is not allowed\n";
+    std::string answer = "size &lt; 1 is not allowed";
     CHECK( cout.str() == answer );
 }
 
@@ -601,7 +601,7 @@ TEST_CASE( "test7" ) {
     }
     catch(...)
     {
-       cout &lt;&lt; "wrong exception type" &lt;&lt; endl;
+       cout &lt;&lt; "wrong exception type";
     }
 
     ;
@@ -620,7 +620,7 @@ TEST_CASE( "test8" ) {
     }
     catch(...)
     {
-       cout &lt;&lt; "Houston, we have a problem." &lt;&lt; endl;
+       cout &lt;&lt; "Houston, we have a problem.";
     }
 
     ;
