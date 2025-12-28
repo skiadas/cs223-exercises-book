@@ -479,7 +479,7 @@ TEST_CASE( "test2" ) {
        sum = array_sum(arr, -4);
        cout &lt;&lt; sum;
     }
-    catch(std::domain_error e)
+    catch(const std::domain_error&amp; e)
     {
        cout &lt;&lt; e.what();
     }
@@ -502,7 +502,7 @@ TEST_CASE( "test3" ) {
        sum = array_sum(arr, 5);
        cout &lt;&lt; sum;
     }
-    catch(std::domain_error e)
+    catch(const std::domain_error&amp; e)
     {
        cout &lt;&lt; e.what();
     }
@@ -525,7 +525,7 @@ TEST_CASE( "test4" ) {
        sum = array_sum(arr, 0);
        cout &lt;&lt; sum;
     }
-    catch(std::domain_error e)
+    catch(const std::domain_error&amp; e)
     {
        cout &lt;&lt; e.what();
     }
@@ -548,7 +548,7 @@ TEST_CASE( "test5" ) {
        sum = array_sum(arr, 3);
        cout &lt;&lt; sum;
     }
-    catch(std::domain_error e)
+    catch(const std::domain_error&amp; e)
     {
        cout &lt;&lt; e.what();
     }
@@ -571,7 +571,7 @@ TEST_CASE( "test6" ) {
        sum = array_sum(arr, -1);
        cout &lt;&lt; sum;
     }
-    catch(std::domain_error e)
+    catch(const std::domain_error&amp; e)
     {
        cout &lt;&lt; e.what();
     }
@@ -595,7 +595,7 @@ TEST_CASE( "test7" ) {
        sum = array_sum(arr, -2);
        cout &lt;&lt; sum;
     }
-    catch(std::domain_error e)
+    catch(const std::domain_error&amp; e)
     {
        cout &lt;&lt; "correct";
     }
