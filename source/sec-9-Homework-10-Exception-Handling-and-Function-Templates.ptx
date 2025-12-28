@@ -965,7 +965,7 @@ TEST_CASE( "test1" ) {
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
-    string a = "raspberry"; string b = "preserves";
+    std::string a = "raspberry"; std::string b = "preserves";
     swapper(a, b);
     cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; " and b = " &lt;&lt; b;
 
