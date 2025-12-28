@@ -772,7 +772,7 @@ std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
    return in;
 }
 
-
+std::stringstream cout;
         </preamble>
         <code>
 
@@ -784,56 +784,47 @@ std::istream&amp; operator&gt;&gt; (std::istream&amp; in, Pixel&amp; pix)
 
 
 TEST_CASE( "test1" ) {
-    std::stringstream cout;
+    cout = std::stringstream();
     compare(3, 7);
-
-
-    ;
     std::string answer = "Those are different";
     CHECK( cout.str() == answer );
 }
 
 
 TEST_CASE( "test2" ) {
-    std::stringstream cout;
+    cout = std::stringstream();
     compare("blueberry", "blueberry");
 
-
-    ;
     std::string answer = "Those are the same";
     CHECK( cout.str() == answer );
 }
 
 
 TEST_CASE( "test3" ) {
-    std::stringstream cout;
+    cout = std::stringstream();
     double u = 3.14; double v = 1.0101;
     compare(u, v);
 
-
-    ;
     std::string answer = "Those are different";
     CHECK( cout.str() == answer );
 }
 
 
 TEST_CASE( "test4" ) {
-    std::stringstream cout;
+    cout = std::stringstream();
     Pixel pix1(0, 1, 2); Pixel pix2(0, 1, 2);
     compare(pix1, pix2);
 
-    ;
     std::string answer = "Those are the same\n";
     CHECK( cout.str() == answer );
 }
 
 
 TEST_CASE( "test5" ) {
-    std::stringstream cout;
+    cout = std::stringstream();
     Pixel pix1(0, 1, 2); Pixel pix2(2, 1, 0);
     compare(pix1, pix2);
 
-    ;
     std::string answer = "Those are different";
     CHECK( cout.str() == answer );
 }
