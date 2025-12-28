@@ -172,7 +172,7 @@ TEST_CASE( "test1" ) {
 
 
     ;
-    std::string answer = "'"4 6    7" :  4 -&gt; 6 -&gt; 7\n';
+    std::string answer = "\"4 6    7\" :  4 -&gt; 6 -&gt; 7";
     CHECK( cout.str() == answer );
 }
 
@@ -184,7 +184,7 @@ TEST_CASE( "test2" ) {
 
 
     ;
-    std::string answer = "'"" :\n';
+    std::string answer = "\"\" :  ";
     CHECK( cout.str() == answer );
 }
 
@@ -196,7 +196,7 @@ TEST_CASE( "test3" ) {
 
 
     ;
-    std::string answer = "'"4" :  4\n';
+    std::string answer = "\"4\" :  4";
     CHECK( cout.str() == answer );
 }
 
@@ -208,7 +208,7 @@ TEST_CASE( "test4" ) {
 
 
     ;
-    std::string answer = "'"  2    4 3   6    7  " :  2 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 7\n';
+    std::string answer = "\"  2    4 3   6    7  \" :  2 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 7";
     CHECK( cout.str() == answer );
 }
 
