@@ -1,4 +1,4 @@
-<section xml:id="sec-Homework-10-Exception-Handling-and-Function-Templates-1">
+<section xml:id="sec-Homework-10-Exception-Handling-and-Function-Templates-1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Homework 10 -- Exception Handling and Function Templates</title>
   <introduction />
   <exercises>
@@ -638,12 +638,16 @@ TEST_CASE( "test8" ) {
         <p>NOTE: The <c>compare</c> template has a void return type.</p>
       </statement>
       <datafile label="pixelh-datafile" xml:id="pixelh-datafile" filename="Pixel.h" editable="no" hide="yes">
-        <pre source="datafiles/Pixel.h" />
+        <pre>
+          <xi:include parse="text" href="../assets/datafiles/Pixel.h" />
+        </pre>
       </datafile>
       <datafile label="personh-datafile" xml:id="personh-datafile" filename="Person.h" editable="no" hide="yes">
-        <pre source="datafiles/Person.h" />
+        <pre>
+          <xi:include parse="text" href="../assets/datafiles/Person.h" />
+        </pre>
       </datafile>
-      <program interactive="activecode" language="cpp" add-files="pixelh-datafile,personh-datafile">
+      <program interactive="activecode" language="cpp" add-files="pixelh-datafile personh-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
