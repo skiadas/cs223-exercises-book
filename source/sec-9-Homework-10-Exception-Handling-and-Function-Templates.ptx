@@ -63,10 +63,7 @@
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>
-              #include
-              <stdexcept />
-            </strcmp>
+            <strcmp>#include &lt;stdexcept&gt;</strcmp>
             <feedback />
           </test>
         </evaluate>
