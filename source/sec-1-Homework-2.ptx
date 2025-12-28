@@ -919,7 +919,7 @@ my_password</input>
         </choice>
         <choice correct="no">
           <statement>
-            <p>check daemon<c /></p>
+            <p>check daemon</p>
           </statement>
           <feedback />
         </choice>
@@ -950,7 +950,7 @@ my_password</input>
         </choice>
         <choice correct="no">
           <statement>
-            <p>check current document for spelling errors<c /></p>
+            <p>check current document for spelling errors</p>
           </statement>
           <feedback />
         </choice>
@@ -970,7 +970,7 @@ my_password</input>
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>cd ..</strcmp>
+            <strcmp>cd \.\.</strcmp>
             <feedback />
           </test>
         </evaluate>
@@ -1010,8 +1010,8 @@ my_password</input>
     </exercise>
     <exercise xml:id="exer-LINUX_relative_path-1" label="exe-sec-Homework-2-1-234169">
       <statement>
-        <p>In Linux (and in other systems), a <em>path</em> gives the unique location of a file or a folder in a file system..</p>
-        <p>The <alert>relative</alert> <alert>path</alert> for a file specifies the file's location relative to ...</p>
+        <p>In Linux (and in other systems), a <em>path</em> gives the unique location of a file or a folder in a file system.</p>
+        <p>The <alert>relative path</alert> for a file specifies the file's location relative to ...</p>
       </statement>
       <choices multiple-correct="no" randomize="yes">
         <choice correct="yes">
