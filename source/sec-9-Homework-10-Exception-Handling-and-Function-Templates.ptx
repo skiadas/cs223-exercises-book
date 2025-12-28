@@ -112,15 +112,7 @@
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>what( )</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>what()</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>what</strcmp>
+            <strcmp>what\(\s*\)</strcmp>
             <feedback />
           </test>
         </evaluate>
