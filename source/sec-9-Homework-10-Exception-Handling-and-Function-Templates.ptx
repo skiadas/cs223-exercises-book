@@ -812,7 +812,7 @@ TEST_CASE( "test4" ) {
     Pixel pix1(0, 1, 2); Pixel pix2(0, 1, 2);
     compare(pix1, pix2);
 
-    std::string answer = "Those are the same\n";
+    std::string answer = "Those are the same";
     CHECK( cout.str() == answer );
 }
 
