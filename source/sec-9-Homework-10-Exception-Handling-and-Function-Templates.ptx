@@ -662,9 +662,6 @@ TEST_CASE( "test8" ) {
 #include "Pixel.h"
 #include "Person.h"
 
-using namespace std;
-#define SEPARATOR "#&lt;ab@17943918#@&gt;#"
-
 class Pixel
 {
    public:
