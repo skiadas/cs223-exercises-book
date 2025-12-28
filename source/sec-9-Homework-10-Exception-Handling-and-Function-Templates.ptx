@@ -1139,8 +1139,6 @@ TEST_CASE( "test1" ) {
     int x = 3; int y = 7;
     cout &lt;&lt; "The maximum is " &lt;&lt; maximum(x, y);
 
-
-    ;
     std::string answer = "The maximum is 7";
     CHECK( cout.str() == answer );
 }
@@ -1148,11 +1146,9 @@ TEST_CASE( "test1" ) {
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
-    string a = "raspberry"; string b = "jelly";
+    std::string a = "raspberry"; std::string b = "jelly";
     cout &lt;&lt; "The maximum is " &lt;&lt; maximum(a, b);
 
-
-    ;
     std::string answer = "The maximum is raspberry";
     CHECK( cout.str() == answer );
 }
@@ -1163,8 +1159,6 @@ TEST_CASE( "test3" ) {
     double u = 3.14; double v = 1.0101;
     cout &lt;&lt; "The maximum is " &lt;&lt; maximum(u, v);
 
-
-    ;
     std::string answer = "The maximum is 3.14";
     CHECK( cout.str() == answer );
 }
