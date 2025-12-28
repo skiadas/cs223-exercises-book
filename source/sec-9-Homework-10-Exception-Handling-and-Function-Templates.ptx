@@ -196,7 +196,9 @@
     <exercise xml:id="exer-Jumping_ch31_multi-exception_2-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234374">
       <statement>
         <p>According to techterms.com,</p>
-        <blockquote class="">"...in the world of <url href="https://techterms.com/definition/software">software</url> development, "deprecated" refers to <url href="https://techterms.com/definition/function">functions</url> or elements that are in the process of being replaced by newer ones. The term comes from the verb "to deprecate," which means to disapprove of something. While deprecated items may work in the current version of a programming language, they may not function in future updates. Therefore, software developers are advised to replace deprecated items with other options."</blockquote>
+          <blockquote>
+            <p>...in the world of <url href="https://techterms.com/definition/software">software</url> development, "deprecated" refers to <url href="https://techterms.com/definition/function">functions</url> or elements that are in the process of being replaced by newer ones. The term comes from the verb "to deprecate," which means to disapprove of something. While deprecated items may work in the current version of a programming language, they may not function in future updates. Therefore, software developers are advised to replace deprecated items with other options.</p>
+          </blockquote>
         <p>Which of the following is <alert>deprecated</alert> in C++11?</p>
       </statement>
       <choices multiple-correct="no" randomize="yes">
