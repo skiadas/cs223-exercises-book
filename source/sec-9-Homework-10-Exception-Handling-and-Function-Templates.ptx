@@ -956,7 +956,7 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     int x = 3; int y = 7;
     swapper(x, y);
-    cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; " and y = " &lt;&lt; y &lt;&lt; endl;
+    cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; " and y = " &lt;&lt; y;
 
     std::string answer = "x = 7 and y = 3";
     CHECK( cout.str() == answer );
@@ -967,7 +967,7 @@ TEST_CASE( "test2" ) {
     std::stringstream cout;
     string a = "raspberry"; string b = "preserves";
     swapper(a, b);
-    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; " and b = " &lt;&lt; b &lt;&lt; endl;
+    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; " and b = " &lt;&lt; b;
 
     std::string answer = "a = preserves and b = raspberry";
     CHECK( cout.str() == answer );
@@ -978,7 +978,7 @@ TEST_CASE( "test3" ) {
     std::stringstream cout;
     double u = 3.14; double v = 1.0101;
     swapper(u, v);
-    cout &lt;&lt; "u = " &lt;&lt; u &lt;&lt; " and v = " &lt;&lt; v &lt;&lt; endl;
+    cout &lt;&lt; "u = " &lt;&lt; u &lt;&lt; " and v = " &lt;&lt; v;
 
     std::string answer = "u = 1.0101 and v = 3.14";
     CHECK( cout.str() == answer );
@@ -989,9 +989,9 @@ TEST_CASE( "test4" ) {
     std::stringstream cout;
     Pixel pix1(0, 1, 2); Pixel pix2(10, 9, 5);
     swapper(pix1, pix2);
-    cout &lt;&lt; "pix1 = " &lt;&lt; pix1 &lt;&lt; " and pix2 = " &lt;&lt; pix2 &lt;&lt; endl;
+    cout &lt;&lt; "pix1 = " &lt;&lt; pix1 &lt;&lt; " and pix2 = " &lt;&lt; pix2;
 
-    std::string answer = "pix1 = 10 9 5 and pix2 = 0 1 2\n";
+    std::string answer = "pix1 = 10 9 5 and pix2 = 0 1 2";
     CHECK( cout.str() == answer );
 }
 
