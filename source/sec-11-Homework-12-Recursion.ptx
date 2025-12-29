@@ -148,7 +148,7 @@
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
 
-
+using namespace std;
         </preamble>
         <code>
 bool rec_is_pal(string s)
