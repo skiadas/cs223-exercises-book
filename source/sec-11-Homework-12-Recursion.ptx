@@ -299,10 +299,8 @@ TEST_CASE( "test10" ) {
         <p>The value <em>[n choose k]</em> represents the number of ways of picking k distinct objects out of a set of n distinct objects.  For example, suppose we have four people; Alice (A), Balthazar (B), Charlize (C) and Douglass (D).  How many ways could you pick a pair of them? Six: AB, AC, AD, BC, BD and CD. That is 4 choose 2 = 6.</p>
         <p>
           The standard definition of n choose k involves factorials.  However, there is also a recursive definition (Pascal's Identity):
-          <ul>
-            <pre>                 <alert>n choose k = (n-1 choose k-1) + (n-1 choose k), for 0 &lt; k &lt; n</alert></pre>
-          </ul>
         </p>
+        <pre>n choose k = (n-1 choose k-1) + (n-1 choose k), for 0 &lt; k &lt; n</pre>
         <p>The first base case is when k is out of range (k &lt; 0 or k &gt; n). It's impossible to choose k items in this case, so the answer is 0.</p>
         <p>The second base case is when k is 0. There is only one way to choose nothing, so the answer is 1.</p>
         <p>The third base case is when k equals n. There is only one way to choose n things from n things, so the answer is 1.</p>
@@ -316,6 +314,7 @@ TEST_CASE( "test10" ) {
         <code>
 int rec_choose(int n, int k)
 {
+
 }
         </code>
         <postamble visible="no" />
@@ -399,7 +398,7 @@ TEST_CASE( "test8" ) {
     cout &lt;&lt; rec_choose(9, 5)
 
     ;
-    std::string answer = "126\n";
+    std::string answer = "126";
     CHECK( cout.str() == answer );
 }
 
@@ -409,7 +408,7 @@ TEST_CASE( "test9" ) {
     cout &lt;&lt; rec_choose(25, 3)
 
     ;
-    std::string answer = "2300\n";
+    std::string answer = "2300";
     CHECK( cout.str() == answer );
 }
 
