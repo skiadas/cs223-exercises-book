@@ -467,7 +467,7 @@ mystr = "cats";        </pre>
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>char(\* | \*)arr = new char\[4\];</strcmp>
+            <strcmp>char\s?\*\s?arr = new char\[4\];</strcmp>
             <feedback />
           </test>
         </evaluate>
