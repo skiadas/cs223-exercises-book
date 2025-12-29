@@ -643,7 +643,28 @@ TEST_CASE( "test4" ) {
     <exercise xml:id="exer-queue_with_list-enqueue-1" label="exe-sec-Homework-11-Stacks-Queues-1-234370">
       <statement>
         <p>A queue class template is provided for you, with the following definition:</p>
-        <pre>};</pre>
+        <pre>
+template <typename T>
+class Queue {
+private:
+  class Node {
+  public:
+    T value;
+    Node* next;
+    Node(const T& v, Node* n = nullptr) : value(v), next(n) {}
+  };
+
+  Node* head;
+  Node* tail;
+
+public:
+  class EmptyException {};
+  Queue(): head(nullptr), tail(nullptr) {}
+  void enqueue(const T& v);
+  T dequeue();
+  bool isEmpty() const;
+};
+        </pre>
         <p>This implementation uses a linked list with two pointers, one pointing to the head node and another pointing to the tail node. You can enqueue new values by placing them at the tail and advancing the tail pointer, and you can dequeue values by taking them out of the head and advancing the head pointer. As a result, the values in the linked list are stored effectively in opposite order, with newly inserted elements at the tail.</p>
         <p>For this question, you have to implement the function <alert>enqueue</alert>. It must place a new node with the provided value at the tail of the list (and you can use the tail pointer to get to that location directly, then adjust the tail pointer). You must be careful for the special case where the list is empty.</p>
       </statement>
@@ -794,7 +815,28 @@ TEST_CASE( "test4" ) {
     <exercise xml:id="exer-queue_with_list-dequeue-1" label="exe-sec-Homework-11-Stacks-Queues-1-234372">
       <statement>
         <p>A queue class template is provided for you, with the following definition:</p>
-        <pre>};</pre>
+        <pre>
+template <typename T>
+class Queue {
+private:
+  class Node {
+  public:
+    T value;
+    Node* next;
+    Node(const T& v, Node* n = nullptr) : value(v), next(n) {}
+  };
+
+  Node* head;
+  Node* tail;
+
+public:
+  class EmptyException {};
+  Queue(): head(nullptr), tail(nullptr) {}
+  void enqueue(const T& v);
+  T dequeue();
+  bool isEmpty() const;
+};
+        </pre>
         <p>This implementation uses a linked list with two pointers, one pointing to the head node and another pointing to the tail node. You can enqueue new values by placing them at the tail and advancing the tail pointer, and you can dequeue values by taking them out of the head and advancing the head pointer. As a result, the values in the linked list are stored effectively in opposite order, with newly inserted elements at the tail.</p>
         <p>For this question, you have to implement the function <alert>dequeue</alert>. It must throw an error in the case of an empty list, and otherwise it must remove and return the next appropriate value, in a FIFO form. You must be careful for the special case where the list will be empty after the removal.</p>
       </statement>
