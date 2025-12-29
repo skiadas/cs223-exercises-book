@@ -13,19 +13,7 @@
       <evaluation>
         <evaluate>
           <test correct="yes">
-            <strcmp>winnipeg vostok</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>vostok winnipeg</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>winnipeg, vostok</strcmp>
-            <feedback />
-          </test>
-          <test>
-            <strcmp>vostok, winnipeg</strcmp>
+            <strcmp>(winnipeg vostok|vostok winnipeg)</strcmp>
             <feedback />
           </test>
         </evaluate>
