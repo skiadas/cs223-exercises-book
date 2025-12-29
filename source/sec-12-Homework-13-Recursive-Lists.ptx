@@ -91,7 +91,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -128,11 +128,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -145,8 +145,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -155,7 +155,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -168,15 +168,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -259,11 +259,11 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
     n1.append("Mr. Gray");
-    cout &lt;&lt; n1 &lt;&lt; endl;
-    
-    
+    cout &lt;&lt; n1;
+
+
     ;
-    std::string answer = "Ziggy, Mr. Gray\n";
+    std::string answer = "Ziggy, Mr. Gray";
     CHECK( cout.str() == answer );
 }
 
@@ -274,11 +274,11 @@ TEST_CASE( "test2" ) {
     n1.append("basketball");
     n1.append("oddball");
     n1.append("goofball");
-    cout &lt;&lt; n1 &lt;&lt; endl;
-    
-    
+    cout &lt;&lt; n1;
+
+
     ;
-    std::string answer = "softball, basketball, oddball, goofball\n";
+    std::string answer = "softball, basketball, oddball, goofball";
     CHECK( cout.str() == answer );
 }
 
@@ -288,11 +288,11 @@ TEST_CASE( "test3" ) {
     Rec_node n1("python");
     n1.append("C++");
     n1.append("java");
-    cout &lt;&lt; n1 &lt;&lt; endl;
-    
-    
+    cout &lt;&lt; n1;
+
+
     ;
-    std::string answer = "python, C++, java\n";
+    std::string answer = "python, C++, java";
     CHECK( cout.str() == answer );
 }
 
@@ -362,7 +362,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -396,11 +396,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -413,8 +413,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -423,7 +423,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -436,15 +436,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -540,11 +540,11 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
     n1.append("Mr. Gray");
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
-    
-    
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1);
+
+
     ;
-    std::string answer = "Ziggy, Mr. Gray\n";
+    std::string answer = "Ziggy, Mr. Gray";
     CHECK( cout.str() == answer );
 }
 
@@ -556,11 +556,11 @@ TEST_CASE( "test2" ) {
     n1.append("oddball");
     n1.append("goofball");
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
-         &lt;&lt; n1.retrieve(2) &lt;&lt; ", " &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
-    
-    
+         &lt;&lt; n1.retrieve(2) &lt;&lt; ", " &lt;&lt; n1.retrieve(3);
+
+
     ;
-    std::string answer = "softball, basketball, oddball, goofball\n";
+    std::string answer = "softball, basketball, oddball, goofball";
     CHECK( cout.str() == answer );
 }
 
@@ -571,11 +571,11 @@ TEST_CASE( "test3" ) {
     n1.append("C++");
     n1.append("java");
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
-         &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
-    
-    
+         &lt;&lt; n1.retrieve(2);
+
+
     ;
-    std::string answer = "python, C++, java\n";
+    std::string answer = "python, C++, java";
     CHECK( cout.str() == answer );
 }
 
@@ -583,8 +583,8 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; endl;
-    
+    cout &lt;&lt; n1.retrieve(0);
+
     ;
     std::string answer = "Ziggy";
     CHECK( cout.str() == answer );
@@ -597,11 +597,11 @@ TEST_CASE( "test5" ) {
     n1.append("Mr. Gray");
     n1.append("Ruthie");
     n1.append("Snoopy");
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
-    &lt;&lt; n1.retrieve(1) &lt;&lt; ", " 
-    &lt;&lt; n1.retrieve(2) &lt;&lt; ", " 
-    &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
-    
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
+    &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
+    &lt;&lt; n1.retrieve(2) &lt;&lt; ", "
+    &lt;&lt; n1.retrieve(3);
+
     ;
     std::string answer = "Ziggy, Mr. Gray, Ruthie, Snoopy";
     CHECK( cout.str() == answer );
@@ -618,7 +618,7 @@ TEST_CASE( "test5" ) {
    *  Insert a new node containing `val` at index `n` relative to this node.
    *  Precondition: 1 &lt;= n &lt;= length
    *
-   *  For example, if n is 1, a new node containing val will be inserted 
+   *  For example, if n is 1, a new node containing val will be inserted
    *  immediately after this node.
    */
    void Rec_node::insertAt(int n, string val)        </pre>
@@ -671,7 +671,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -705,11 +705,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -722,8 +722,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -732,7 +732,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -745,15 +745,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -855,7 +855,7 @@ ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
 void Rec_node::insertAt(int n, string val)
 {
     // base case
-       
+
     // recursive case
 
 }
@@ -869,10 +869,10 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
     n1.insertAt(1, "Mr. Gray");
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "Ziggy, Mr. Gray\n";
     CHECK( cout.str() == answer );
@@ -885,12 +885,12 @@ TEST_CASE( "test2" ) {
     n1.append("basketball");
     n1.append("oddball");
     n1.insertAt(3, "goofball");
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
-    &lt;&lt; n1.retrieve(2) &lt;&lt; ", " 
+    &lt;&lt; n1.retrieve(2) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "softball, basketball, oddball, goofball\n";
     CHECK( cout.str() == answer );
@@ -902,10 +902,10 @@ TEST_CASE( "test3" ) {
     Rec_node n1("python");
     n1.append("java");
     n1.insertAt(1, "C++");
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
-    
+
     ;
     std::string answer = "python, C++, java\n";
     CHECK( cout.str() == answer );
@@ -919,7 +919,7 @@ TEST_CASE( "test4" ) {
     n1.append("c");
     n1.insertAt(1, "new");
     cout &lt;&lt; n1;
-    
+
     ;
     std::string answer = "a, new, b, c\n";
     CHECK( cout.str() == answer );
@@ -933,7 +933,7 @@ TEST_CASE( "test5" ) {
     n1.append("c");
     n1.insertAt(2, "new");
     cout &lt;&lt; n1;
-    
+
     ;
     std::string answer = "a, b, new, c\n";
     CHECK( cout.str() == answer );
@@ -947,7 +947,7 @@ TEST_CASE( "test6" ) {
     n1.append("c");
     n1.insertAt(3, "new");
     cout &lt;&lt; n1;
-    
+
     ;
     std::string answer = "a, b, c, new\n";
     CHECK( cout.str() == answer );
@@ -1021,7 +1021,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -1055,11 +1055,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -1072,8 +1072,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -1082,7 +1082,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -1095,15 +1095,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -1214,7 +1214,7 @@ void Rec_node::insertAt(int n, string val)
         rest = new Rec_node(val, rest);
         return;
     }
-       
+
     // recursive case
     rest -&gt; insertAt(n - 1, val);
 }
@@ -1228,7 +1228,7 @@ string Rec_node::removeFrom(int n)
 
 
     // recursive case
-    
+
 }
         </code>
         <postamble visible="no" />
@@ -1240,10 +1240,10 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
     n1.append("Mr. Gray");
-    cout &lt;&lt; "removing: " 
+    cout &lt;&lt; "removing: "
     &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "removing: Mr. Gray\n";
     CHECK( cout.str() == answer );
@@ -1256,14 +1256,14 @@ TEST_CASE( "test2" ) {
     n1.append("basketball");
     n1.append("oddball");
     n1.append("goofball");
-    cout &lt;&lt; "removing: " 
-    &lt;&lt; n1.removeFrom(2) 
+    cout &lt;&lt; "removing: "
+    &lt;&lt; n1.removeFrom(2)
     &lt;&lt; endl;
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "removing: oddball\nsoftball, basketball, goofball\n";
     CHECK( cout.str() == answer );
@@ -1275,11 +1275,11 @@ TEST_CASE( "test3" ) {
     Rec_node n1("python");
     n1.append("C++");
     n1.append("java");
-    cout &lt;&lt; "removing: " 
+    cout &lt;&lt; "removing: "
     &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
-    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " 
+    cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
-    
+
     ;
     std::string answer = "removing: C++\npython, java\n";
     CHECK( cout.str() == answer );
@@ -1294,7 +1294,7 @@ TEST_CASE( "test4" ) {
     n1.append("d");
     n1.removeFrom(1);
     cout &lt;&lt; n1;
-    
+
     ;
     std::string answer = "a, c, d\n";
     CHECK( cout.str() == answer );
@@ -1309,7 +1309,7 @@ TEST_CASE( "test5" ) {
     n1.append("d");
     n1.removeFrom(2);
     cout &lt;&lt; n1;
-    
+
     ;
     std::string answer = "a, b, d\n";
     CHECK( cout.str() == answer );
@@ -1324,7 +1324,7 @@ TEST_CASE( "test6" ) {
     n1.append("d");
     n1.removeFrom(3);
     cout &lt;&lt; n1;
-    
+
     ;
     std::string answer = "a, b, c\n";
     CHECK( cout.str() == answer );
@@ -1392,7 +1392,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -1426,11 +1426,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -1443,8 +1443,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -1453,7 +1453,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -1466,15 +1466,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -1484,7 +1484,7 @@ class Rec_node
       *   Note: MUST be implemented with recursion.
       */
       void orderedInsert(string val);
-      
+
       /*
       *  size
       *  Postcondition: Return the number of nodes in the list headed by this node.
@@ -1593,7 +1593,7 @@ void Rec_node::insertAt(int n, string val)
         rest = new Rec_node(val, rest);
         return;
     }
-       
+
     // recursive case
     rest -&gt; insertAt(n - 1, val);
 }
@@ -1648,8 +1648,8 @@ TEST_CASE( "test1" ) {
     Rec_node n1("Ziggy");
     n1.append("Mr. Gray");
     cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "size is: 2\n";
     CHECK( cout.str() == answer );
@@ -1663,8 +1663,8 @@ TEST_CASE( "test2" ) {
     n1.append("oddball");
     n1.append("goofball");
     cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "size is: 4\n";
     CHECK( cout.str() == answer );
@@ -1677,7 +1677,7 @@ TEST_CASE( "test3" ) {
     n1.append("C++");
     n1.append("java");
     cout &lt;&lt; "check out my size: " &lt;&lt; n1.size() &lt;&lt; endl;
-    
+
     ;
     std::string answer = "check out my size: 3";
     CHECK( cout.str() == answer );
@@ -1694,7 +1694,7 @@ TEST_CASE( "test4" ) {
     int n = n1.size();
     if (n == 5) cout &lt;&lt; "OK";
     else cout &lt;&lt; "NOPE";
-    
+
     ;
     std::string answer = "OK";
     CHECK( cout.str() == answer );
@@ -1709,20 +1709,20 @@ TEST_CASE( "test4" ) {
         <pre>   /*
    *  operator==
    *     The lists headed by n1 and n2 are equivalent if n1 and n2 have the same data and
-   *     the list at the head of n1's rest is equivalent to the list at the head of n2's rest.      
-   *     
-   *  Postcondition: Return true if the lists headed by n1 and n2 are equivalent. 
+   *     the list at the head of n1's rest is equivalent to the list at the head of n2's rest.
+   *
+   *  Postcondition: Return true if the lists headed by n1 and n2 are equivalent.
    *
    *  Note: MUST be implemented with recursion.
    */
    bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
-   
-   
+
+
    /*
    *  operator!=
-   *     The lists headed by n1 and n2 not equivalent if n1 and n2 have different data or 
-   *     the list at the head of n1's rest is not equivalent to the list at the head of n2's rest.        
-   *     
+   *     The lists headed by n1 and n2 not equivalent if n1 and n2 have different data or
+   *     the list at the head of n1's rest is not equivalent to the list at the head of n2's rest.
+   *
    *  Postcondition: Return true if the lists headed by n1 and n2 are not equivalent.
    *
    *  Note: DO NOT IMPLEMENT WITH RECURSION; implement by calling ==.
@@ -1777,7 +1777,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -1811,11 +1811,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -1828,8 +1828,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -1838,7 +1838,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -1851,15 +1851,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -1869,7 +1869,7 @@ class Rec_node
       *   Note: MUST be implemented with recursion.
       */
       void orderedInsert(string val);
-      
+
       /*
       *  size
       *  Postcondition: Return the number of nodes in the list headed by this node.
@@ -1944,7 +1944,7 @@ void Rec_node::insertAt(int n, string val)
         rest = new Rec_node(val, rest);
         return;
     }
-       
+
     // recursive case
     rest -&gt; insertAt(n - 1, val);
 }
@@ -1987,7 +1987,7 @@ bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2);
     // recursive case
     if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
         return *n1.rest == *n2.rest;
-       
+
     // base cases:
     if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
         return true;
@@ -2021,14 +2021,14 @@ ostream&amp; operator&lt;&lt; (ostream &amp;out, const Rec_node &amp;node)
 bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
 {
     // recursive case
-       
+
     // base cases:
 
 }
 
 bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2)
 {
- 
+
 }
         </code>
         <postamble visible="no" />
@@ -2044,8 +2044,8 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1 != n2. Check your code!" &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "Right, those two are NOT equivalent!\n";
     CHECK( cout.str() == answer );
@@ -2060,7 +2060,7 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
-    
+
     ;
     std::string answer = "Right, those two ARE equivalent!";
     CHECK( cout.str() == answer );
@@ -2075,7 +2075,7 @@ TEST_CASE( "test3" ) {
         cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
-    
+
     ;
     std::string answer = "Right, those two are NOT equivalent!";
     CHECK( cout.str() == answer );
@@ -2090,7 +2090,7 @@ TEST_CASE( "test4" ) {
         cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
-    
+
     ;
     std::string answer = "Right, those two are NOT equivalent!";
     CHECK( cout.str() == answer );
@@ -2105,8 +2105,8 @@ TEST_CASE( "test5" ) {
         cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
-    
-    
+
+
     ;
     std::string answer = "Right, those two ARE equivalent!\n";
     CHECK( cout.str() == answer );
@@ -2121,7 +2121,7 @@ TEST_CASE( "test6" ) {
         cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
     else
         cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
-    
+
     ;
     std::string answer = "Right, those two ARE equivalent!";
     CHECK( cout.str() == answer );
@@ -2161,8 +2161,8 @@ TEST_CASE( "test6" ) {
       *     returns false.
       */
       bool isEmpty() const;
-      
-      
+
+
       /*
       *  append
       *   Postcondition: A new item, `val`, is added to the end of the list.
@@ -2171,8 +2171,8 @@ TEST_CASE( "test6" ) {
       *      nature of of Rec_nodes to accomplish any iteration.
       */
       void append(string val);
-      
-      
+
+
       /*
       *  retrieve
       *   Precondition: 0 &lt;= n &lt; length of list
@@ -2233,7 +2233,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -2267,11 +2267,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -2284,8 +2284,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -2294,7 +2294,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -2307,15 +2307,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -2325,7 +2325,7 @@ class Rec_node
       *   Note: MUST be implemented with recursion.
       */
       void orderedInsert(string val);
-      
+
       /*
       *  size
       *  Postcondition: Return the number of nodes in the list headed by this node.
@@ -2400,7 +2400,7 @@ void Rec_node::insertAt(int n, string val)
         rest = new Rec_node(val, rest);
         return;
     }
-       
+
     // recursive case
     rest -&gt; insertAt(n - 1, val);
 }
@@ -2444,7 +2444,7 @@ bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
     // recursive case
     if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
         return *n1.rest == *n2.rest;
-       
+
     // base cases:
     if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
         return true;
@@ -2508,7 +2508,7 @@ class List
       *      nature of of Rec_nodes to accomplish any iteration.
       */
       string retrieve(int n) const;
-      
+
       /*
       *  size
       *   Postcondition: Returns the number of items in the list.
@@ -2529,7 +2529,7 @@ class List
       *   Postcondition: The item at index `n` in the list is now `val`.
       *   Postcondition: The relative positions of the previously-existing
       *     items are unchanged.
-      *   
+      *
       *   Note 1: Do not worry about invalid values for `n`.
       *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
       *      nature of of Rec_nodes to accomplish any iteration.
@@ -2609,11 +2609,11 @@ List::~List()
     {
         return;
     }
-    
+
     Rec_node* temp;
     while (head_ptr -&gt; getRest() != NULL)
     {
-        temp = head_ptr -&gt; getRest(); 
+        temp = head_ptr -&gt; getRest();
         head_ptr -&gt; setRest(temp -&gt; getRest());
         delete temp;
     }
@@ -2632,7 +2632,7 @@ void List::append(string val)
     if (isEmpty())
         head_ptr = new Rec_node(val);
     else
-        head_ptr -&gt; append(val);   
+        head_ptr -&gt; append(val);
 }
 
 
@@ -2643,12 +2643,12 @@ string List::retrieve(int n) const
 
 void List::insertAt(int n, string val)
 {
-    
+
 }
 
 string List::removeFrom(int n)
 {
-    
+
 }
 */
 
@@ -2695,12 +2695,12 @@ std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L)
     {
         out &lt;&lt; "&lt;empty list&gt;";
     }
-    
+
     else
     {
         out &lt;&lt; *(L.head_ptr);
     }
-    
+
     return out;
 }
 
@@ -2719,7 +2719,7 @@ void List::append(string val)
 
 string List::retrieve(int n) const
 {
-    
+
 }
         </code>
         <postamble visible="no" />
@@ -2734,8 +2734,8 @@ TEST_CASE( "test1" ) {
         cout &lt;&lt; "Right!";
     else
         cout &lt;&lt; "Incorrect.";
-    
-    
+
+
     ;
     std::string answer = "Right!\n";
     CHECK( cout.str() == answer );
@@ -2744,13 +2744,13 @@ TEST_CASE( "test1" ) {
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
-    List l1; 
+    List l1;
     l1.append("Ziggy");
     if (!l1.isEmpty())
         cout &lt;&lt; "Right!";
     else
         cout &lt;&lt; "Incorrect.";
-    
+
     ;
     std::string answer = "Right!\n";
     CHECK( cout.str() == answer );
@@ -2759,15 +2759,15 @@ TEST_CASE( "test2" ) {
 
 TEST_CASE( "test3" ) {
     std::stringstream cout;
-    List l1; 
-    l1.append("pickle"); 
+    List l1;
+    l1.append("pickle");
     l1.append("relish");
     if (!l1.isEmpty())
         cout &lt;&lt; "Right! ";
     else
         cout &lt;&lt; "Incorrect. ";
     cout &lt;&lt; l1;
-    
+
     ;
     std::string answer = "Right! pickle, relish\n";
     CHECK( cout.str() == answer );
@@ -2776,8 +2776,8 @@ TEST_CASE( "test3" ) {
 
 TEST_CASE( "test4" ) {
     std::stringstream cout;
-    List l1; 
-    l1.append("pickle"); 
+    List l1;
+    l1.append("pickle");
     l1.append("relish");
     l1.append("mustard");
     if (!l1.isEmpty())
@@ -2785,7 +2785,7 @@ TEST_CASE( "test4" ) {
     else
         cout &lt;&lt; "Incorrect. ";
     cout &lt;&lt; l1;
-    
+
     ;
     std::string answer = "Right! pickle, relish, mustard\n";
     CHECK( cout.str() == answer );
@@ -2794,13 +2794,13 @@ TEST_CASE( "test4" ) {
 
 TEST_CASE( "test5" ) {
     std::stringstream cout;
-    List l1; 
-    l1.append("pickle"); 
+    List l1;
+    l1.append("pickle");
     l1.append("relish");
-    cout &lt;&lt; l1.retrieve(0) 
-         &lt;&lt; " " &lt;&lt; l1.retrieve(1) 
+    cout &lt;&lt; l1.retrieve(0)
+         &lt;&lt; " " &lt;&lt; l1.retrieve(1)
          &lt;&lt; endl;
-    
+
     ;
     std::string answer = "pickle relish\n";
     CHECK( cout.str() == answer );
@@ -2809,11 +2809,11 @@ TEST_CASE( "test5" ) {
 
 TEST_CASE( "test6" ) {
     std::stringstream cout;
-    List l1; 
-    l1.append("picklers"); 
-    cout &lt;&lt; l1.retrieve(0) 
+    List l1;
+    l1.append("picklers");
+    cout &lt;&lt; l1.retrieve(0)
          &lt;&lt; endl;
-    
+
     ;
     std::string answer = "picklers\n";
     CHECK( cout.str() == answer );
@@ -2822,14 +2822,14 @@ TEST_CASE( "test6" ) {
 
 TEST_CASE( "test7" ) {
     std::stringstream cout;
-    List l1; 
-    l1.append("picklers"); 
+    List l1;
+    l1.append("picklers");
     l1.append("relishers");
     l1.append("xxxxx");
-    cout &lt;&lt; l1.retrieve(0) &lt;&lt; " " 
-         &lt;&lt; l1.retrieve(1) &lt;&lt; " " 
+    cout &lt;&lt; l1.retrieve(0) &lt;&lt; " "
+         &lt;&lt; l1.retrieve(1) &lt;&lt; " "
          &lt;&lt; l1.retrieve(2) &lt;&lt; endl;
-    
+
     ;
     std::string answer = "picklers relishers xxxxx\n";
     CHECK( cout.str() == answer );
@@ -2895,7 +2895,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -2929,11 +2929,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -2946,8 +2946,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -2956,7 +2956,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -2969,15 +2969,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -2987,7 +2987,7 @@ class Rec_node
       *   Note: MUST be implemented with recursion.
       */
       void orderedInsert(string val);
-      
+
       /*
       *  size
       *  Postcondition: Return the number of nodes in the list headed by this node.
@@ -3062,7 +3062,7 @@ void Rec_node::insertAt(int n, string val)
         rest = new Rec_node(val, rest);
         return;
     }
-       
+
     // recursive case
     rest -&gt; insertAt(n - 1, val);
 }
@@ -3105,7 +3105,7 @@ bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
     // recursive case
     if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
         return *n1.rest == *n2.rest;
-       
+
     // base cases:
     if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
         return true;
@@ -3166,7 +3166,7 @@ class List
       *   Note: Make a call to Rec_node::retrieve.
       */
       string retrieve(int n) const;
-      
+
       /*
       *  size
       *   Postcondition: Returns the number of items in the list.
@@ -3187,7 +3187,7 @@ class List
       *   Postcondition: The item at index `n` in the list is now `val`.
       *   Postcondition: The relative positions of the previously-existing
       *     items are unchanged.
-      *   
+      *
       *   Note 1: Do not worry about invalid values for `n`.
       *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
       *      nature of of Rec_nodes to accomplish any iteration.
@@ -3267,11 +3267,11 @@ List::~List()
     {
         return;
     }
-    
+
     Rec_node* temp;
     while (head_ptr -&gt; getRest() != NULL)
     {
-        temp = head_ptr -&gt; getRest(); 
+        temp = head_ptr -&gt; getRest();
         head_ptr -&gt; setRest(temp -&gt; getRest());
         delete temp;
     }
@@ -3288,7 +3288,7 @@ void List::append(string val)
     if (isEmpty())
         head_ptr = new Rec_node(val);
     else
-        head_ptr -&gt; append(val);   
+        head_ptr -&gt; append(val);
 }
 
 string List::retrieve(int n) const
@@ -3309,7 +3309,7 @@ void List::insertAt(int n, string val)
     else
     {
         head_ptr -&gt; insertAt(n, val);
-    }   
+    }
 }
 
 string List::removeFrom(int n)
@@ -3325,7 +3325,7 @@ string List::removeFrom(int n)
     else
     {
         return head_ptr -&gt; removeFrom(n);
-    } 
+    }
 }
 
 
@@ -3378,12 +3378,12 @@ std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L)
     {
         out &lt;&lt; "&lt;empty list&gt;";
     }
-    
+
     else
     {
         out &lt;&lt; *(L.head_ptr);
     }
-    
+
     return out;
 }
 
@@ -3404,12 +3404,12 @@ int List::size() const
 TEST_CASE( "test1" ) {
     std::stringstream cout;
     List L1;
-    if (L1.size() == 0) 
+    if (L1.size() == 0)
        cout &lt;&lt; "Size is 0.";
-    else 
+    else
        cout &lt;&lt; "Incorrect.";
-    
-    
+
+
     ;
     std::string answer = "Size is 0.\n";
     CHECK( cout.str() == answer );
@@ -3418,18 +3418,18 @@ TEST_CASE( "test1" ) {
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
-    List L1; 
-    L1.append("Ziggy"); 
+    List L1;
+    L1.append("Ziggy");
     L1.append("Spike");
-    L1.append("Spike"); 
-    L1.append("Spike"); 
-    L1.append("Spike"); 
     L1.append("Spike");
-    if (L1.size() == 6) 
+    L1.append("Spike");
+    L1.append("Spike");
+    L1.append("Spike");
+    if (L1.size() == 6)
        cout &lt;&lt; "Size is 6.";
-    else 
+    else
        cout &lt;&lt; "Incorrect.";
-    
+
     ;
     std::string answer = "Size is 6.\n";
     CHECK( cout.str() == answer );
@@ -3438,15 +3438,15 @@ TEST_CASE( "test2" ) {
 
 TEST_CASE( "test3" ) {
     std::stringstream cout;
-    List L1; 
-    L1.append("Ziggy"); 
-    L1.append("Spike"); 
-    L1.append("Cleo"); 
+    List L1;
+    L1.append("Ziggy");
+    L1.append("Spike");
+    L1.append("Cleo");
     L1.append("Skye");
-    cout &lt;&lt; "size is " 
-         &lt;&lt; L1.size() 
+    cout &lt;&lt; "size is "
+         &lt;&lt; L1.size()
          &lt;&lt; endl;
-    
+
     ;
     std::string answer = "size is 4\n";
     CHECK( cout.str() == answer );
@@ -3457,7 +3457,7 @@ TEST_CASE( "test4" ) {
     std::stringstream cout;
     List L1;
     cout &lt;&lt; L1.size();
-    
+
     ;
     std::string answer = "0\n";
     CHECK( cout.str() == answer );
@@ -3466,16 +3466,16 @@ TEST_CASE( "test4" ) {
 
 TEST_CASE( "test5" ) {
     std::stringstream cout;
-    List L1; 
-    L1.append("Ziggy"); 
+    List L1;
+    L1.append("Ziggy");
     L1.append("Spike");
-    L1.append("Spike"); 
-    L1.append("Spike"); 
-    L1.append("Spike"); 
-    if (L1.size() == 5) 
+    L1.append("Spike");
+    L1.append("Spike");
+    L1.append("Spike");
+    if (L1.size() == 5)
        cout &lt;&lt; "FIVE";
     else cout &lt;&lt; "Incorrect.";
-    
+
     ;
     std::string answer = "FIVE";
     CHECK( cout.str() == answer );
@@ -3484,13 +3484,13 @@ TEST_CASE( "test5" ) {
 
 TEST_CASE( "test6" ) {
     std::stringstream cout;
-    List L1; 
-    L1.append("Ziggy"); 
-    if (L1.size() == 1) 
+    List L1;
+    L1.append("Ziggy");
+    if (L1.size() == 1)
        cout &lt;&lt; "ONE";
-    else 
+    else
        cout &lt;&lt; "Incorrect.";
-    
+
     ;
     std::string answer = "ONE";
     CHECK( cout.str() == answer );
@@ -3510,14 +3510,14 @@ TEST_CASE( "test6" ) {
       *   Postcondition: The item at index `n` in the list is now `val`.
       *   Postcondition: The relative positions of the previously-existing
       *     items are unchanged.
-      *   
+      *
       *   Note 1: Do not worry about invalid values for `n`.
       *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
       *      nature of of Rec_nodes to accomplish any iteration.
       */
       void insertAt(int n, string val);
-      
-      
+
+
       /*
       *  removeFrom
       *   Delete a node at a given index `n` and return its data.
@@ -3525,7 +3525,7 @@ TEST_CASE( "test6" ) {
       *   Postcondition: The list is now one item shorter. The node at position
       *     `n` has been deleted.  The relative positions of the other items
       *     are unchanged.
-      
+
       *   Note 1: Do not worry about invalid values for `n`.
       *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
       *      nature of of Rec_nodes to accomplish any iteration.
@@ -3580,7 +3580,7 @@ class Rec_node
 
       /*
       *  append
-      *   Postcondition: `val` is the new last item of the list headed by 
+      *   Postcondition: `val` is the new last item of the list headed by
       *     this node; the list is not changed in any other way.
       *
       *  Note: MUST be implemented with recursion.
@@ -3614,11 +3614,11 @@ class Rec_node
 
       /*
       *  removeFrom
-      *   Delete the node at index `n` from the list headed by this node and 
+      *   Delete the node at index `n` from the list headed by this node and
       *     return its data; index `n` is relative to this node.
       *   Precondition: 1 &lt;= n &lt; length
-      *   Postcondition: The list headed by this node is one node shorter; 
-      *     the node that had index `n` relative to this node is now deleted 
+      *   Postcondition: The list headed by this node is one node shorter;
+      *     the node that had index `n` relative to this node is now deleted
       *     and its data returned; the list is not changed in any other way.
       *   Exception: Throws domain_error if `n` is too large.
       *
@@ -3631,8 +3631,8 @@ class Rec_node
       /*
       * clearRest
       *  Removes all nodes that come after this node from the list headed by
-      *     this node. 
-      *  Postcondition: The node pointed to by `rest` and all nodes following 
+      *     this node.
+      *  Postcondition: The node pointed to by `rest` and all nodes following
       *     that node are deallocated.
       *  Postcondition: `rest` is set to NULL.
       */
@@ -3641,7 +3641,7 @@ class Rec_node
       /*
       *  isOrdered
       *   Checks if the list headed by this node is in ascending order.
-      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less 
+      *   Postcondition: Returns true if for each i such that 0 &lt;= i &lt; one less
       *     than length of the list headed by this node, retrieve(i) is less than
       *     or equal to retrieve(i + 1); otherwise, returns false.
       *
@@ -3654,15 +3654,15 @@ class Rec_node
       /*
       *  orderedInsert
       *   Inserts `val` into its proper place in the ordered list headed by
-      *     this node. 
-      *   Precondition: The list headed by this node is ordered, and 
+      *     this node.
+      *   Precondition: The list headed by this node is ordered, and
       *     P is &lt;= the data in this node.
-      *   Postcondition: `val` is inserted into the list headed by this node; 
+      *   Postcondition: `val` is inserted into the list headed by this node;
       *     otherwise, the list is unchanged.
       *   Postcondition: The list headed by this node is in ascending ordered.
       *
       *   Note: Do not check the precondition. List.orderedInsert will throw a
-      *     domain_error if a precondition fails. Rec_node should simply *assume* 
+      *     domain_error if a precondition fails. Rec_node should simply *assume*
       *     the preconditions are true.
       *
       *   Note: In the case of inserting a new first node (P &lt; this -&gt; data),
@@ -3672,7 +3672,7 @@ class Rec_node
       *   Note: MUST be implemented with recursion.
       */
       void orderedInsert(string val);
-      
+
       /*
       *  size
       *  Postcondition: Return the number of nodes in the list headed by this node.
@@ -3747,7 +3747,7 @@ void Rec_node::insertAt(int n, string val)
         rest = new Rec_node(val, rest);
         return;
     }
-       
+
     // recursive case
     rest -&gt; insertAt(n - 1, val);
 }
@@ -3791,7 +3791,7 @@ bool operator== (const Rec_node &amp;n1, const Rec_node &amp;n2)
     // recursive case
     if (n1.data == n2.data and n1.rest != NULL and n2.rest != NULL)
         return *n1.rest == *n2.rest;
-       
+
     // base cases:
     if (n1.data == n2.data and n1.rest == NULL and n2.rest == NULL)
         return true;
@@ -3852,7 +3852,7 @@ class List
       *   Note: Make a call to Rec_node::retrieve.
       */
       string retrieve(int n) const;
-      
+
       /*
       *  size
       *   Postcondition: Returns the number of items in the list.
@@ -3873,7 +3873,7 @@ class List
       *   Postcondition: The item at index `n` in the list is now `val`.
       *   Postcondition: The relative positions of the previously-existing
       *     items are unchanged.
-      *   
+      *
       *   Note 1: Do not worry about invalid values for `n`.
       *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
       *      nature of of Rec_nodes to accomplish any iteration.
@@ -3953,11 +3953,11 @@ List::~List()
     {
         return;
     }
-    
+
     Rec_node* temp;
     while (head_ptr -&gt; getRest() != NULL)
     {
-        temp = head_ptr -&gt; getRest(); 
+        temp = head_ptr -&gt; getRest();
         head_ptr -&gt; setRest(temp -&gt; getRest());
         delete temp;
     }
@@ -3974,7 +3974,7 @@ void List::append(string val)
     if (isEmpty())
         head_ptr = new Rec_node(val);
     else
-        head_ptr -&gt; append(val);   
+        head_ptr -&gt; append(val);
 }
 
 string List::retrieve(int n) const
@@ -3996,7 +3996,7 @@ void List::insertAt(int n, string val)
     else
     {
         head_ptr -&gt; insertAt(n, val);
-    }   
+    }
 }
 
 string List::removeFrom(int n)
@@ -4012,7 +4012,7 @@ string List::removeFrom(int n)
     else
     {
         return head_ptr -&gt; removeFrom(n);
-    } 
+    }
 }
 */
 
@@ -4060,12 +4060,12 @@ std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, const List &amp;L)
     {
         out &lt;&lt; "&lt;empty list&gt;";
     }
-    
+
     else
     {
         out &lt;&lt; *(L.head_ptr);
     }
-    
+
     return out;
 }
 
@@ -4088,11 +4088,11 @@ string List::removeFrom(int n)
 
 TEST_CASE( "test1" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.insertAt(0, "Ziggy");
     cout &lt;&lt; L1;
-    
-    
+
+
     ;
     std::string answer = "Ziggy\n";
     CHECK( cout.str() == answer );
@@ -4101,11 +4101,11 @@ TEST_CASE( "test1" ) {
 
 TEST_CASE( "test2" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.insertAt(0, "Skye");
     L1.insertAt(0, "Ziggy");
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "Ziggy, Skye\n";
     CHECK( cout.str() == answer );
@@ -4114,7 +4114,7 @@ TEST_CASE( "test2" ) {
 
 TEST_CASE( "test3" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.insertAt(0, "Skye");
     L1.insertAt(1, "Ziggy");
     L1.insertAt(2, "Mr. Gray");
@@ -4122,7 +4122,7 @@ TEST_CASE( "test3" ) {
     L1.insertAt(2, "Ruthie");
     L1.insertAt(1, "Spot");
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "Skye, Spot, Ziggy, Ruthie, Mr. Gray, Xerea\n";
     CHECK( cout.str() == answer );
@@ -4131,7 +4131,7 @@ TEST_CASE( "test3" ) {
 
 TEST_CASE( "test4" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.insertAt(0, "Skye");
     L1.insertAt(1, "Z");
     L1.insertAt(2, "M");
@@ -4141,7 +4141,7 @@ TEST_CASE( "test4" ) {
     L1.insertAt(3, "k");
     L1.insertAt(1, "w");
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "Skye, w, Z, x, k, M, X, d\n";
     CHECK( cout.str() == answer );
@@ -4150,13 +4150,13 @@ TEST_CASE( "test4" ) {
 
 TEST_CASE( "test5" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("apple");
     L1.append("banana");
     L1.append("pear");
     cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "apple\nbanana, pear\n";
     CHECK( cout.str() == answer );
@@ -4165,13 +4165,13 @@ TEST_CASE( "test5" ) {
 
 TEST_CASE( "test6" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("apple");
     L1.append("banana");
     L1.append("pear");
     cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "banana\napple, pear\n";
     CHECK( cout.str() == answer );
@@ -4180,13 +4180,13 @@ TEST_CASE( "test6" ) {
 
 TEST_CASE( "test7" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("apple");
     L1.append("banana");
     L1.append("pear");
     cout &lt;&lt; L1.removeFrom(2) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "pear\napple, banana\n";
     CHECK( cout.str() == answer );
@@ -4195,11 +4195,11 @@ TEST_CASE( "test7" ) {
 
 TEST_CASE( "test8" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("apple");
     cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "apple\n&lt;empty list&gt;\n";
     CHECK( cout.str() == answer );
@@ -4208,12 +4208,12 @@ TEST_CASE( "test8" ) {
 
 TEST_CASE( "test9" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("apple");
     L1.append("banana");
     cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "apple\nbanana\n";
     CHECK( cout.str() == answer );
@@ -4222,12 +4222,12 @@ TEST_CASE( "test9" ) {
 
 TEST_CASE( "test10" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("apple");
     L1.append("banana");
     cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "banana\napple\n";
     CHECK( cout.str() == answer );
@@ -4236,7 +4236,7 @@ TEST_CASE( "test10" ) {
 
 TEST_CASE( "test11" ) {
     std::stringstream cout;
-    List L1; 
+    List L1;
     L1.append("a");
     L1.append("b");
     L1.append("c");
@@ -4246,7 +4246,7 @@ TEST_CASE( "test11" ) {
     cout &lt;&lt; L1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; L1.removeFrom(2) &lt;&lt; endl;
     cout &lt;&lt; L1;
-    
+
     ;
     std::string answer = "a\nc\ne\nb, d\n";
     CHECK( cout.str() == answer );
