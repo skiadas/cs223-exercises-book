@@ -569,10 +569,10 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Stack&lt;std::string&gt; mystack;
     mystack.push("mouse");
-    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
-    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    if (! mystack.isEmpty()) cout &lt;&lt; "pop error";
 
 
     ;
@@ -586,11 +586,11 @@ TEST_CASE( "test2" ) {
     Stack&lt;std::string&gt; mystack;
     mystack.push("platypus");
     mystack.push("emu");
-    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    if (! mystack.isEmpty()) cout &lt;&lt; "pop error";
 
 
     ;
@@ -605,13 +605,13 @@ TEST_CASE( "test3" ) {
     mystack.push("cat");
     mystack.push("dog");
     mystack.push("marmot");
-    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    if (! mystack.isEmpty()) cout &lt;&lt; "pop error";
 
 
     ;
@@ -625,11 +625,11 @@ TEST_CASE( "test4" ) {
     Stack&lt;std::string&gt; mystack;
     mystack.push("elephant");
     mystack.push("zebra");
-    std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
+    cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;
     mystack.pop();
-    if (! mystack.isEmpty()) std::cout &lt;&lt; "pop error";
+    if (! mystack.isEmpty()) cout &lt;&lt; "pop error";
 
 
     ;
@@ -728,9 +728,9 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Queue&lt;std::string&gt; queue;
     queue.enqueue("mouse");
-    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
 
 
     ;
@@ -744,9 +744,9 @@ TEST_CASE( "test2" ) {
     Queue&lt;std::string&gt; queue;
     queue.enqueue("mouse");
     queue.enqueue("danger");
-    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
 
 
     ;
@@ -761,9 +761,9 @@ TEST_CASE( "test3" ) {
     queue.enqueue("mouse");
     queue.enqueue("danger");
     queue.enqueue("will robinson");
-    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
 
 
     ;
@@ -778,9 +778,9 @@ TEST_CASE( "test4" ) {
     queue.enqueue(3);
     queue.enqueue(2);
     queue.enqueue(1);
-    std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
 
 
     ;
@@ -882,11 +882,11 @@ TEST_CASE( "test1" ) {
     queue.enqueue("mouse");
     queue.enqueue("danger");
     queue.enqueue("will robinson");
-    std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
-    std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
+    cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
 
 
     ;
@@ -900,11 +900,11 @@ TEST_CASE( "test2" ) {
     Queue&lt;std::string&gt; queue;
     queue.enqueue("mouse");
     queue.enqueue("danger");
-    std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
-    std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
+    cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;
 
 
     ;
@@ -917,11 +917,11 @@ TEST_CASE( "test3" ) {
     std::stringstream cout;
     Queue&lt;std::string&gt; queue;
     queue.enqueue("mouse");
-    std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
-    std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Head: " &lt;&lt; (queue.head == nullptr ? "null" : queue.head-&gt;value) &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Tail: " &lt;&lt; (queue.tail == nullptr ? "null" : queue.tail-&gt;value) &lt;&lt; std::endl;
+    cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;
+    cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;
+    cout &lt;&lt; "Head: " &lt;&lt; (queue.head == nullptr ? "null" : queue.head-&gt;value) &lt;&lt; std::endl;
+    cout &lt;&lt; "Tail: " &lt;&lt; (queue.tail == nullptr ? "null" : queue.tail-&gt;value) &lt;&lt; std::endl;
 
 
     ;
@@ -933,12 +933,12 @@ TEST_CASE( "test3" ) {
 TEST_CASE( "test4" ) {
     std::stringstream cout;
     Queue&lt;int&gt; queue;
-    std::cout &lt;&lt; "Removing from empty list should throw exception: ";
+    cout &lt;&lt; "Removing from empty list should throw exception: ";
     try {
        queue.dequeue();
-       std::cout &lt;&lt; "FAILED!\n";
+       cout &lt;&lt; "FAILED!\n";
     } catch (Queue&lt;int&gt;::EmptyException e) {
-       std::cout &lt;&lt; "YES!\n";
+       cout &lt;&lt; "YES!\n";
     }
 
 
