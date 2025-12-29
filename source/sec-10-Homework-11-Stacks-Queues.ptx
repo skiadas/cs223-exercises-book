@@ -644,7 +644,7 @@ TEST_CASE( "test4" ) {
       <statement>
         <p>A queue class template is provided for you, with the following definition:</p>
         <pre>
-<<![CDATA[
+<![CDATA[
 template <typename T>
 class Queue {
 private:
