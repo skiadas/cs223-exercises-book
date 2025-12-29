@@ -142,7 +142,27 @@
     <exercise xml:id="exer-MAINSAVCh7_code-empty-1" label="exe-sec-Homework-11-Stacks-Queues-1-234354">
       <statement>
         <p>A stack class template is provided for you, with the following definition:</p>
-        <pre>        <alert>template &lt;typename T&gt;class Stack {  private:    class Node {      public:        T value;        Node* next;        Node(T v, Node* n = nullptr) : value(v), next(n) {}    };       Node* head;    public:    class EmptyException {};    Stack(): head(nullptr) {}    void push(T v);    T pop();    bool isEmpty();};</alert></pre>
+        <pre>
+template &lt;typename T&gt;
+class Stack {
+private:
+  class Node {
+  public:
+    T value;
+    Node* next;
+    Node(T v, Node* n = nullptr) : value(v), next(n) {}
+  };
+
+  Node* head;
+
+public:
+  class EmptyException {};
+  Stack(): head(nullptr) {}
+  void push(T v);
+  T pop();
+  bool isEmpty();
+};
+</pre>
         <p>In this and the subsequent questions you will be asked to implement the various functions declared above. You will need to to write function templates that suitably implement these functions. For this assignment, you have to implement isEmpty. This is an easy question, you don't have to write much. The template syntax is also provided for you. In the subsequent questions you will need to provide your own.</p>
       </statement>
       <program interactive="activecode" language="cpp">
@@ -284,7 +304,27 @@ TEST_CASE( "test5" ) {
     <exercise xml:id="exer-MAINSAVCh7_code-push_and_top-1" label="exe-sec-Homework-11-Stacks-Queues-1-234356">
       <statement>
         <p>A stack class template is provided for you, with the following definition:</p>
-        <pre>        <alert>template &lt;typename T&gt;class Stack {  private:    class Node {      public:        T value;        Node* next;        Node(T v, Node* n = nullptr) : value(v), next(n) {}    };       Node* head;    public:    class EmptyException {};    Stack(): head(nullptr) {}    void push(const T&amp; v);    T pop();    bool isEmpty() const;};</alert></pre>
+        <pre>
+template &lt;typename T&gt;
+class Stack {
+private:
+  class Node {
+  public:
+    T value;
+    Node* next;
+    Node(T v, Node* n = nullptr) : value(v), next(n) {}
+  };
+
+  Node* head;
+
+public:
+  class EmptyException {};
+  Stack(): head(nullptr) {}
+  void push(T v);
+  T pop();
+  bool isEmpty();
+};
+</pre>
         <p>For this question, you have to implement <alert>push</alert>.</p>
       </statement>
       <program interactive="activecode" language="cpp">
@@ -382,7 +422,7 @@ TEST_CASE( "test2" ) {
 
 
     ;
-    std::string answer = "emu  ,  platypus\n";
+    std::string answer = "emu  ,  platypus";
     CHECK( cout.str() == answer );
 }
 
@@ -396,7 +436,7 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; mystack;
 
     ;
-    std::string answer = "marmot  ,  dog  ,  cat\n";
+    std::string answer = "marmot  ,  dog  ,  cat";
     CHECK( cout.str() == answer );
 }
 
@@ -411,7 +451,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; mystack;
 
     ;
-    std::string answer = "bunny rabbit  ,  marmot  ,  dog  ,  cat\n";
+    std::string answer = "bunny rabbit  ,  marmot  ,  dog  ,  cat";
     CHECK( cout.str() == answer );
 }
 
@@ -433,7 +473,27 @@ TEST_CASE( "test5" ) {
     <exercise xml:id="exer-MAINSAVCh7_code-pop-1" label="exe-sec-Homework-11-Stacks-Queues-1-234358">
       <statement>
         <p>A stack class template is provided for you, with the following definition:</p>
-        <pre>        <alert>template &lt;typename T&gt;class Stack {  private:    class Node {      public:        T value;        Node* next;        Node(T v, Node* n = nullptr) : value(v), next(n) {}    };       Node* head;    public:    class EmptyException {};    Stack(): head(nullptr) {}    void push(const T&amp; v);    T pop();    bool isEmpty() const;};</alert></pre>
+        <pre>
+template &lt;typename T&gt;
+class Stack {
+private:
+  class Node {
+  public:
+    T value;
+    Node* next;
+    Node(T v, Node* n = nullptr) : value(v), next(n) {}
+  };
+
+  Node* head;
+
+public:
+  class EmptyException {};
+  Stack(): head(nullptr) {}
+  void push(T v);
+  T pop();
+  bool isEmpty();
+};
+</pre>
         <p>For this question, you have to implement <alert>pop</alert>.</p>
       </statement>
       <program interactive="activecode" language="cpp">
