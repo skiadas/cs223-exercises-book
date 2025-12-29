@@ -576,7 +576,7 @@ TEST_CASE( "test1" ) {
 
 
     ;
-    std::string answer = "Before: mouse\nAfter:\n";
+    std::string answer = "Before: mouse\nAfter: \n";
     CHECK( cout.str() == answer );
 }
 
