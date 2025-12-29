@@ -1,0 +1,21 @@
+Ziggy 5
+Xerea 222
+Cleo 2
+Spike 4
+Cleo 5
+Ziggy -4
+Mr.Grey 3
+Cleo 12
+Spike 8
+Ziggy 25
+Skye 12
+Mufasa 1
+Ziggy -14
+Spike 1
+Skye 10
+Cleo 9
+Skye 10
+Cleo 20
+Spike -1
+END
+

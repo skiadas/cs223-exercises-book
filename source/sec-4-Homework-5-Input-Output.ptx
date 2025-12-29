@@ -1,4 +1,4 @@
-<section xml:id="sec-Homework-5-Input-Output-1">
+<section xml:id="sec-Homework-5-Input-Output-1"  xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Homework 5: Input/Output</title>
   <introduction>
     <p>The goal of this assignment is to give you some practice working with C++ <alert>file I/O</alert> and to check your knowledge of some of the main concepts on this topic.</p>
@@ -210,7 +210,9 @@ maudlin        </pre>
         <p>HINT: Use <c>while(getline(&lt;your args here&gt;))</c> to loop over the lines of a file.</p>
       </statement>
       <datafile label="mystrings-datafile" xml:id="mystrings-datafile" filename="mystrings.txt" editable="no" hide="yes">
-        <pre source="datafiles/mystrings.txt" />
+        <pre>
+          <xi:include parse="text" href="../assets/datafiles/mystrings.txt" />
+        </pre>
       </datafile>
       <program interactive="activecode" language="cpp" add-files="mystrings-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
@@ -253,7 +255,12 @@ maudlin        </pre>
 31.11        </pre>
         <p>HINT: Because the first line of the file tells you exactly how many more lines need to be read, and each line after the first contains 3 tokens in the format &lt;double&gt; &lt;char&gt; &lt;double&gt;, it's easier to read the arithmetic expressions using the input stream operator `&gt;&gt;` (also called the "stream extraction operator") rather than `getline`.</p>
       </statement>
-      <program interactive="activecode" language="cpp">
+      <datafile label="calculate-datafile" xml:id="calculate-datafile" filename="calculate.txt" editable="no" hide="yes">
+        <pre>
+          <xi:include parse="text" href="../assets/datafiles/calculate.txt" />
+        </pre>
+      </datafile>
+      <program interactive="activecode" language="cpp" add-files="calculate-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
@@ -321,7 +328,12 @@ Skye has 105
 Spike has 16
 Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
       </statement>
-      <program interactive="activecode" language="cpp">
+      <datafile label="cat-treats-datafile" xml:id="cat-treats-datafile" filename="cat-treats.txt" editable="no" hide="yes">
+        <pre>
+          <xi:include parse="text" href="../assets/datafiles/cat_treats.txt" />
+        </pre>
+      </datafile>
+      <program interactive="activecode" language="cpp" add-files="cat-treats-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
 
 
