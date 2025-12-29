@@ -480,8 +480,8 @@ TEST_CASE( "test6" ) {
  * the y value for the result is the sum of the y values for the two points being added.
  * returns a new point that is the sum of two other points
  *
- * Example:  if point1 is (4, -2) and point2 is (3, 1), then
- *           point1 + point2 will return the point (7, -1)
+ * Example:  if point1 is (4.0, -2.0) and point2 is (3.5, 1.0), then
+ *           point1 + point2 will return the point (7.5, -1.0)
  */        </pre>
         <p>Write the code to turn the given stub definition for the function into a complete implementation. Note that you will need to use get_x and get_y to reach the values, as the operator is not defined as a friend of the class.</p>
       </statement>
