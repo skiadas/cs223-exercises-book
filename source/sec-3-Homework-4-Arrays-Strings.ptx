@@ -344,7 +344,7 @@ TEST_CASE( "test6" ) {
     </exercise>
     <exercise xml:id="exer-JMPCH10_code-array2-1" label="exe-sec-Homework-4-Arrays-Strings-1-234203">
       <statement>
-        <p>Write a function <alert>array_max</alert> that takes one argument: a two-dimensional array of integers 'arr' which will always have 3 rows and 5 columns. The function returns the <alert>largest element in the array</alert>.</p>
+        <p>Write a function <alert>array_max</alert> that takes one argument: a two-dimensional array of integers 'nums' which will always have 3 rows and 5 columns. The function returns the <alert>largest element in the array</alert>.</p>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
