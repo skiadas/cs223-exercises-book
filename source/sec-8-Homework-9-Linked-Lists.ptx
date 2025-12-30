@@ -700,7 +700,7 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before:\nAfter: ";
+    std::string answer = "Before: \nAfter: ";
     CHECK( cout.str() == answer );
 }
 
