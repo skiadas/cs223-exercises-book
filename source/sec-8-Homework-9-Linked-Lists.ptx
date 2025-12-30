@@ -145,7 +145,7 @@ class List {
     Node* curr = l.head;
     while (curr != nullptr) {
       out &lt;&lt; curr-&gt;value;
-      if (curr-&gt;next != nullptr) cout &lt;&lt; " -&gt; ";
+      if (curr-&gt;next != nullptr) out &lt;&lt; " -&gt; ";
       curr = curr-&gt;next;
     }
     return out;
