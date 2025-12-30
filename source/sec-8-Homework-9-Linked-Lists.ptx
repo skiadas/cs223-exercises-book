@@ -687,7 +687,7 @@ TEST_CASE( "test1" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before: 3 -&gt; 5 -&gt; 7\nAfter: 7 -&gt; 5 -&gt; 3\n";
+    std::string answer = "Before: 3 -&gt; 5 -&gt; 7\nAfter: 7 -&gt; 5 -&gt; 3";
     CHECK( cout.str() == answer );
 }
 
@@ -700,7 +700,7 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before:\nAfter:\n";
+    std::string answer = "Before:\nAfter: ";
     CHECK( cout.str() == answer );
 }
 
@@ -713,7 +713,7 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before: 1 -&gt; 3\nAfter: 3 -&gt; 1\n";
+    std::string answer = "Before: 1 -&gt; 3\nAfter: 3 -&gt; 1";
     CHECK( cout.str() == answer );
 }
 
@@ -726,7 +726,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before: 4\nAfter: 4\n";
+    std::string answer = "Before: 4\nAfter: 4";
     CHECK( cout.str() == answer );
 }
 
@@ -739,7 +739,7 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before: 1 -&gt; 3 -&gt; 7 -&gt; 9 -&gt; 13 -&gt; 20\nAfter: 20 -&gt; 13 -&gt; 9 -&gt; 7 -&gt; 3 -&gt; 1\n";
+    std::string answer = "Before: 1 -&gt; 3 -&gt; 7 -&gt; 9 -&gt; 13 -&gt; 20\nAfter: 20 -&gt; 13 -&gt; 9 -&gt; 7 -&gt; 3 -&gt; 1";
     CHECK( cout.str() == answer );
 }
 
@@ -752,7 +752,7 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before: 4\nAfter: 4\n";
+    std::string answer = "Before: 4\nAfter: 4";
     CHECK( cout.str() == answer );
 }
 
@@ -765,7 +765,7 @@ TEST_CASE( "test7" ) {
     cout &lt;&lt; "After: " &lt;&lt; list;
 
     ;
-    std::string answer = "Before: 4\nAfter: 4\n";
+    std::string answer = "Before: 4\nAfter: 4";
     CHECK( cout.str() == answer );
 }
 
