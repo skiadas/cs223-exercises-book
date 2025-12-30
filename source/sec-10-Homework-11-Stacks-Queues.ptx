@@ -971,7 +971,7 @@ TEST_CASE( "test3" ) {
 
 
     ;
-    std::string answer = "Initial List: mouse\nDequeue result: mouse\nNew List:\nHead: null\nTail: null\n";
+    std::string answer = "Initial List: mouse\nDequeue result: mouse\nNew List: \nHead: null\nTail: null\n";
     CHECK( cout.str() == answer );
 }
 
