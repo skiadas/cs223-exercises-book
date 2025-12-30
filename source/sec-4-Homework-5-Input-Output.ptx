@@ -328,7 +328,7 @@ Skye has 105
 Spike has 16
 Hey, Mr.Grey is not one of Dr. Wilson's cats!        </pre>
       </statement>
-      <datafile label="cat-treats-datafile" xml:id="cat-treats-datafile" filename="cat-treats.txt" editable="no" hide="yes">
+      <datafile label="cat-treats-datafile" xml:id="cat-treats-datafile" filename="cat_treats.txt" editable="no" hide="yes">
         <pre>
           <xi:include parse="text" href="../assets/datafiles/cat_treats.txt" />
         </pre>
