@@ -2041,13 +2041,13 @@ TEST_CASE( "test1" ) {
     Rec_node n1("Ziggy"); n1.append("Spike"); n1.append("Skye");
     Rec_node n2("Ziggy"); n2.append("Spike"); n2.append("Cleo");
     if (not (n1 == n2))
-        cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
+        cout &lt;&lt; "Right, those two are NOT equivalent!";
     else
-        cout &lt;&lt; "Eek! No, n1 != n2. Check your code!" &lt;&lt; endl;
+        cout &lt;&lt; "Eek! No, n1 != n2. Check your code!";
 
 
     ;
-    std::string answer = "Right, those two are NOT equivalent!\n";
+    std::string answer = "Right, those two are NOT equivalent!";
     CHECK( cout.str() == answer );
 }
 
@@ -2057,9 +2057,9 @@ TEST_CASE( "test2" ) {
     Rec_node n1("Scooby Doo"); n1.append("Snoopy");
     Rec_node n2("Scooby Doo"); n2.append("Snoopy");
     if (n1 == n2)
-        cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
+        cout &lt;&lt; "Right, those two ARE equivalent!";
     else
-        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
+        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!";
 
     ;
     std::string answer = "Right, those two ARE equivalent!";
@@ -2072,9 +2072,9 @@ TEST_CASE( "test3" ) {
     Rec_node n1("Scooby Doo"); n1.append("Snoopy");
     Rec_node n2("Snoopy"); n2.append("Scooby Doo");
     if (not (n1 == n2))
-        cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
+        cout &lt;&lt; "Right, those two are NOT equivalent!";
     else
-        cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
+        cout &lt;&lt; "Eek! No, n1!= n2. Check your code!";
 
     ;
     std::string answer = "Right, those two are NOT equivalent!";
@@ -2087,9 +2087,9 @@ TEST_CASE( "test4" ) {
     Rec_node n1("Garfield"); n1.append("Odie");
     Rec_node n2("Odie"); n2.append("Garfield");
     if (n1 != n2)
-        cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;
+        cout &lt;&lt; "Right, those two are NOT equivalent!";
     else
-        cout &lt;&lt; "Eek! No, n1!= n2. Check your code!" &lt;&lt; endl;
+        cout &lt;&lt; "Eek! No, n1!= n2. Check your code!";
 
     ;
     std::string answer = "Right, those two are NOT equivalent!";
@@ -2102,13 +2102,13 @@ TEST_CASE( "test5" ) {
     Rec_node n1("Woohoo!");
     Rec_node n2("Woohoo!");
     if (not (n1 != n2))
-        cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
+        cout &lt;&lt; "Right, those two ARE equivalent!";
     else
-        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
+        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!";
 
 
     ;
-    std::string answer = "Right, those two ARE equivalent!\n";
+    std::string answer = "Right, those two ARE equivalent!";
     CHECK( cout.str() == answer );
 }
 
@@ -2118,9 +2118,9 @@ TEST_CASE( "test6" ) {
     Rec_node n1("python"); n1.append("C++"); n1.append("java");
     Rec_node n2("python"); n2.append("C++"); n2.append("java");
     if (n1 == n2)
-        cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;
+        cout &lt;&lt; "Right, those two ARE equivalent!";
     else
-        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;
+        cout &lt;&lt; "Eek! No, n1 == n2. Check your code!";
 
     ;
     std::string answer = "Right, those two ARE equivalent!";
