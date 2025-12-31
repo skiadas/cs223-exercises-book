@@ -1311,7 +1311,7 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; n1;
 
     ;
-    std::string answer = "a, b, d\n";
+    std::string answer = "a, b, d";
     CHECK( cout.str() == answer );
 }
 
@@ -1326,7 +1326,7 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; n1;
 
     ;
-    std::string answer = "a, b, c\n";
+    std::string answer = "a, b, c";
     CHECK( cout.str() == answer );
 }
 
@@ -1647,11 +1647,11 @@ TEST_CASE( "test1" ) {
     std::stringstream cout;
     Rec_node n1("Ziggy");
     n1.append("Mr. Gray");
-    cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
+    cout &lt;&lt; "size is: " &lt;&lt; n1.size();
 
 
     ;
-    std::string answer = "size is: 2\n";
+    std::string answer = "size is: 2";
     CHECK( cout.str() == answer );
 }
 
@@ -1662,11 +1662,11 @@ TEST_CASE( "test2" ) {
     n1.append("basketball");
     n1.append("oddball");
     n1.append("goofball");
-    cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;
+    cout &lt;&lt; "size is: " &lt;&lt; n1.size();
 
 
     ;
-    std::string answer = "size is: 4\n";
+    std::string answer = "size is: 4";
     CHECK( cout.str() == answer );
 }
 
@@ -1676,7 +1676,7 @@ TEST_CASE( "test3" ) {
     Rec_node n1("python");
     n1.append("C++");
     n1.append("java");
-    cout &lt;&lt; "check out my size: " &lt;&lt; n1.size() &lt;&lt; endl;
+    cout &lt;&lt; "check out my size: " &lt;&lt; n1.size();
 
     ;
     std::string answer = "check out my size: 3";
