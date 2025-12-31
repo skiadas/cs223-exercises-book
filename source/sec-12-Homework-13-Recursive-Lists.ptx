@@ -2149,41 +2149,47 @@ TEST_CASE( "test6" ) {
    List&amp; operator=(const List &amp;other);        </pre>
         <p>Most functions for this List implementation are very straightforward: simply call the corresponding function on the <c>Rec_node</c> being pointed to by <c>head_ptr</c>.  Just be sure to handle the special case when the list is empty.</p>
         <p>For reference, here are the getters and setters for the Rec_node class:</p>
-        <p>// *** Getters and Setters, Defined HERE In-Line *** //      string getData() const { return data; }      Rec_node * getRest() const { return rest; }      void setData(string val) { data = val; }      void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }</p>
+        <pre>
+            // *** Getters and Setters, Defined HERE In-Line *** //
+            string getData() const { return data; }
+            Rec_node * getRest() const { return rest; }
+            void setData(string val) { data = val; }
+            void setRest(Rec_node * rest_ptr) { rest = rest_ptr; }
+        </pre>
       </statement>
     </exercise>
     <exercise xml:id="exer-Recursion-List-isEmpty_append_retrieve-1" label="exe-sec-Homework-13-Recursive-Lists-1-234407">
       <statement>
         <p>Implement the <c>isEmpty</c>, <c>append</c> , and <c>retrieve</c> member functions for the recursive <c>List</c> class.  The <c>Rec_node::size()</c> method has been disabled.</p>
-        <pre>      /*
-      *  isEmpty
-      *   Postcondition: Returns true if this is an empty list; otherwise,
-      *     returns false.
-      */
-      bool isEmpty() const;
+        <pre>
+           /*
+            *  isEmpty
+            *   Postcondition: Returns true if this is an empty list; otherwise,
+            *     returns false.
+            */
+           bool isEmpty() const;
+           /*
+            *  append
+            *   Postcondition: A new item, `val`, is added to the end of the list.
+            *
+            *   Note: Do NOT use a for loop or a while loop. Instead, use the recursive
+            *      nature of of Rec_nodes to accomplish any iteration.
+            */
+           void append(string val);
 
 
-      /*
-      *  append
-      *   Postcondition: A new item, `val`, is added to the end of the list.
-      *
-      *   Note: Do NOT use a for loop or a while loop. Instead, use the recursive
-      *      nature of of Rec_nodes to accomplish any iteration.
-      */
-      void append(string val);
-
-
-      /*
-      *  retrieve
-      *   Precondition: 0 &lt;= n &lt; length of list
-      *   Postcondition: Item at index `n` (counting from 0 at the head node)
-      *     is returned.
-      *
-      *   Note 1: Do not worry about invalid values for `n`.
-      *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
-      *      nature of of Rec_nodes to accomplish any iteration.
-      */
-      string retrieve(int n) const;        </pre>
+           /*
+            *  retrieve
+            *   Precondition: 0 &lt;= n &lt; length of list
+            *   Postcondition: Item at index `n` (counting from 0 at the head node)
+            *     is returned.
+            *
+            *   Note 1: Do not worry about invalid values for `n`.
+            *   Note 2: Do NOT use a for loop or a while loop. Instead, use the recursive
+            *      nature of of Rec_nodes to accomplish any iteration.
+            */
+            string retrieve(int n) const;
+        </pre>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
@@ -2737,7 +2743,7 @@ TEST_CASE( "test1" ) {
 
 
     ;
-    std::string answer = "Right!\n";
+    std::string answer = "Right!";
     CHECK( cout.str() == answer );
 }
 
@@ -2752,7 +2758,7 @@ TEST_CASE( "test2" ) {
         cout &lt;&lt; "Incorrect.";
 
     ;
-    std::string answer = "Right!\n";
+    std::string answer = "Right!";
     CHECK( cout.str() == answer );
 }
 
@@ -2769,7 +2775,7 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; l1;
 
     ;
-    std::string answer = "Right! pickle, relish\n";
+    std::string answer = "Right! pickle, relish";
     CHECK( cout.str() == answer );
 }
 
@@ -2787,7 +2793,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; l1;
 
     ;
-    std::string answer = "Right! pickle, relish, mustard\n";
+    std::string answer = "Right! pickle, relish, mustard";
     CHECK( cout.str() == answer );
 }
 
@@ -2798,11 +2804,10 @@ TEST_CASE( "test5" ) {
     l1.append("pickle");
     l1.append("relish");
     cout &lt;&lt; l1.retrieve(0)
-         &lt;&lt; " " &lt;&lt; l1.retrieve(1)
-         &lt;&lt; endl;
+         &lt;&lt; " " &lt;&lt; l1.retrieve(1);
 
     ;
-    std::string answer = "pickle relish\n";
+    std::string answer = "pickle relish";
     CHECK( cout.str() == answer );
 }
 
@@ -2811,11 +2816,10 @@ TEST_CASE( "test6" ) {
     std::stringstream cout;
     List l1;
     l1.append("picklers");
-    cout &lt;&lt; l1.retrieve(0)
-         &lt;&lt; endl;
+    cout &lt;&lt; l1.retrieve(0);
 
     ;
-    std::string answer = "picklers\n";
+    std::string answer = "picklers";
     CHECK( cout.str() == answer );
 }
 
@@ -2828,10 +2832,10 @@ TEST_CASE( "test7" ) {
     l1.append("xxxxx");
     cout &lt;&lt; l1.retrieve(0) &lt;&lt; " "
          &lt;&lt; l1.retrieve(1) &lt;&lt; " "
-         &lt;&lt; l1.retrieve(2) &lt;&lt; endl;
+         &lt;&lt; l1.retrieve(2);
 
     ;
-    std::string answer = "picklers relishers xxxxx\n";
+    std::string answer = "picklers relishers xxxxx";
     CHECK( cout.str() == answer );
 }
 
@@ -3411,7 +3415,7 @@ TEST_CASE( "test1" ) {
 
 
     ;
-    std::string answer = "Size is 0.\n";
+    std::string answer = "Size is 0.";
     CHECK( cout.str() == answer );
 }
 
@@ -3431,7 +3435,7 @@ TEST_CASE( "test2" ) {
        cout &lt;&lt; "Incorrect.";
 
     ;
-    std::string answer = "Size is 6.\n";
+    std::string answer = "Size is 6.";
     CHECK( cout.str() == answer );
 }
 
@@ -3444,11 +3448,10 @@ TEST_CASE( "test3" ) {
     L1.append("Cleo");
     L1.append("Skye");
     cout &lt;&lt; "size is "
-         &lt;&lt; L1.size()
-         &lt;&lt; endl;
+         &lt;&lt; L1.size();
 
     ;
-    std::string answer = "size is 4\n";
+    std::string answer = "size is 4";
     CHECK( cout.str() == answer );
 }
 
@@ -3459,7 +3462,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; L1.size();
 
     ;
-    std::string answer = "0\n";
+    std::string answer = "0";
     CHECK( cout.str() == answer );
 }
 
@@ -4094,7 +4097,7 @@ TEST_CASE( "test1" ) {
 
 
     ;
-    std::string answer = "Ziggy\n";
+    std::string answer = "Ziggy";
     CHECK( cout.str() == answer );
 }
 
@@ -4107,7 +4110,7 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "Ziggy, Skye\n";
+    std::string answer = "Ziggy, Skye";
     CHECK( cout.str() == answer );
 }
 
@@ -4124,7 +4127,7 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "Skye, Spot, Ziggy, Ruthie, Mr. Gray, Xerea\n";
+    std::string answer = "Skye, Spot, Ziggy, Ruthie, Mr. Gray, Xerea";
     CHECK( cout.str() == answer );
 }
 
@@ -4143,7 +4146,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "Skye, w, Z, x, k, M, X, d\n";
+    std::string answer = "Skye, w, Z, x, k, M, X, d";
     CHECK( cout.str() == answer );
 }
 
@@ -4158,7 +4161,7 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "apple\nbanana, pear\n";
+    std::string answer = "apple\nbanana, pear";
     CHECK( cout.str() == answer );
 }
 
@@ -4173,7 +4176,7 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "banana\napple, pear\n";
+    std::string answer = "banana\napple, pear";
     CHECK( cout.str() == answer );
 }
 
@@ -4188,7 +4191,7 @@ TEST_CASE( "test7" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "pear\napple, banana\n";
+    std::string answer = "pear\napple, banana";
     CHECK( cout.str() == answer );
 }
 
@@ -4201,7 +4204,7 @@ TEST_CASE( "test8" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "apple\n&lt;empty list&gt;\n";
+    std::string answer = "apple\n&lt;empty list&gt;";
     CHECK( cout.str() == answer );
 }
 
@@ -4215,7 +4218,7 @@ TEST_CASE( "test9" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "apple\nbanana\n";
+    std::string answer = "apple\nbanana";
     CHECK( cout.str() == answer );
 }
 
@@ -4229,7 +4232,7 @@ TEST_CASE( "test10" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "banana\napple\n";
+    std::string answer = "banana\napple";
     CHECK( cout.str() == answer );
 }
 
@@ -4248,7 +4251,7 @@ TEST_CASE( "test11" ) {
     cout &lt;&lt; L1;
 
     ;
-    std::string answer = "a\nc\ne\nb, d\n";
+    std::string answer = "a\nc\ne\nb, d";
     CHECK( cout.str() == answer );
 }
 
