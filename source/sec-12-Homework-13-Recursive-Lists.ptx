@@ -870,11 +870,11 @@ TEST_CASE( "test1" ) {
     Rec_node n1("Ziggy");
     n1.insertAt(1, "Mr. Gray");
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
-    &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
+    &lt;&lt; n1.retrieve(1);
 
 
     ;
-    std::string answer = "Ziggy, Mr. Gray\n";
+    std::string answer = "Ziggy, Mr. Gray";
     CHECK( cout.str() == answer );
 }
 
@@ -888,11 +888,11 @@ TEST_CASE( "test2" ) {
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(2) &lt;&lt; ", "
-    &lt;&lt; n1.retrieve(3) &lt;&lt; endl;
+    &lt;&lt; n1.retrieve(3);
 
 
     ;
-    std::string answer = "softball, basketball, oddball, goofball\n";
+    std::string answer = "softball, basketball, oddball, goofball";
     CHECK( cout.str() == answer );
 }
 
@@ -904,10 +904,10 @@ TEST_CASE( "test3" ) {
     n1.insertAt(1, "C++");
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
-    &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
+    &lt;&lt; n1.retrieve(2);
 
     ;
-    std::string answer = "python, C++, java\n";
+    std::string answer = "python, C++, java";
     CHECK( cout.str() == answer );
 }
 
@@ -921,7 +921,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; n1;
 
     ;
-    std::string answer = "a, new, b, c\n";
+    std::string answer = "a, new, b, c";
     CHECK( cout.str() == answer );
 }
 
@@ -935,7 +935,7 @@ TEST_CASE( "test5" ) {
     cout &lt;&lt; n1;
 
     ;
-    std::string answer = "a, b, new, c\n";
+    std::string answer = "a, b, new, c";
     CHECK( cout.str() == answer );
 }
 
@@ -949,7 +949,7 @@ TEST_CASE( "test6" ) {
     cout &lt;&lt; n1;
 
     ;
-    std::string answer = "a, b, c, new\n";
+    std::string answer = "a, b, c, new";
     CHECK( cout.str() == answer );
 }
 
