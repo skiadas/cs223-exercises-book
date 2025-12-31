@@ -74,7 +74,7 @@ TEST_CASE( "test1" ) {
     // list1 =  3 5 7
     cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();
 
-    std::string answer = "3 -&gt; 5 -&gt; 7 :  15\n";
+    std::string answer = "3 -&gt; 5 -&gt; 7 :  15";
     CHECK( cout.str() == answer );
 }
 
@@ -100,7 +100,7 @@ TEST_CASE( "test3" ) {
     list1.insertStart(8);
     cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();
 
-    std::string answer = "8 -&gt; 3 -&gt; 5 -&gt; 7 :  23\n";
+    std::string answer = "8 -&gt; 3 -&gt; 5 -&gt; 7 :  23";
     CHECK( cout.str() == answer );
 }
         </tests>
