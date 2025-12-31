@@ -1241,11 +1241,11 @@ TEST_CASE( "test1" ) {
     Rec_node n1("Ziggy");
     n1.append("Mr. Gray");
     cout &lt;&lt; "removing: "
-    &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
+    &lt;&lt; n1.removeFrom(1);
 
 
     ;
-    std::string answer = "removing: Mr. Gray\n";
+    std::string answer = "removing: Mr. Gray";
     CHECK( cout.str() == answer );
 }
 
@@ -1261,11 +1261,11 @@ TEST_CASE( "test2" ) {
     &lt;&lt; endl;
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "
-    &lt;&lt; n1.retrieve(2) &lt;&lt; endl;
+    &lt;&lt; n1.retrieve(2);
 
 
     ;
-    std::string answer = "removing: oddball\nsoftball, basketball, goofball\n";
+    std::string answer = "removing: oddball\nsoftball, basketball, goofball";
     CHECK( cout.str() == answer );
 }
 
@@ -1278,10 +1278,10 @@ TEST_CASE( "test3" ) {
     cout &lt;&lt; "removing: "
     &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;
     cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "
-    &lt;&lt; n1.retrieve(1) &lt;&lt; endl;
+    &lt;&lt; n1.retrieve(1);
 
     ;
-    std::string answer = "removing: C++\npython, java\n";
+    std::string answer = "removing: C++\npython, java";
     CHECK( cout.str() == answer );
 }
 
@@ -1296,7 +1296,7 @@ TEST_CASE( "test4" ) {
     cout &lt;&lt; n1;
 
     ;
-    std::string answer = "a, c, d\n";
+    std::string answer = "a, c, d";
     CHECK( cout.str() == answer );
 }
 
