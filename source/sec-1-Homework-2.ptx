@@ -137,6 +137,47 @@
     <exercise xml:id="exer-JMPCH4_code-numcomp-cpp-1" label="exe-sec-Homework-2-1-234150">
       <statement>
         <p>Write a C++ program that reads in two integers, and then outputs whether the first number is greater than the second, the first number is less than the second, or the two numbers are equal. See the examples for the correct format of the output.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>3</line>
+              <line>5</line>
+            </cell>
+            <cell right="medium">
+              <line>3 is less than 5</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>6</line>
+              <line>1</line>
+            </cell>
+            <cell right="medium">
+              <line>6 is greater than 1</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>-42</line>
+              <line>-42</line>
+            </cell>
+            <cell right="medium">
+              <line>-42 is equal to -42</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
