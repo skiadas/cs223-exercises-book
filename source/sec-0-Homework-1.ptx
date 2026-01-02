@@ -336,18 +336,20 @@ Ziggy</output>
       <p>For example:</p>
         <table>
           <tabular top="medium">
-            <row bottom="medium">
-              <cell left="medium" right="medium">
+            <col top="medium" width="30%" />
+            <col top="medium" width="70%" />
+            <row header="yes" left="medium" bottom="medium">
+              <cell bottom="medium" right="medium">
                 Input
               </cell>
               <cell right="medium">
                 Result
               </cell>
             </row>
-            <row bottom="medium">
+            <row left="medium" bottom="medium">
               <cell left="medium" right="medium">
-                3
-                8
+                <line>3</line>
+                <line>8</line>
               </cell>
               <cell right="medium">
                 11
