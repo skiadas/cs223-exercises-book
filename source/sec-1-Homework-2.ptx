@@ -747,6 +747,31 @@ cout &lt;&lt; x &lt;&lt; endl;</pre>
       <statement>
         <p>Write a C++ program that gets a positive integer from standard input, then outputs the square of all integers from the entered number down to one.  See the example for the correct format of the output.</p>
         <p>Note: Use a 'for' loop to solve this problem.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>5</line>
+            </cell>
+            <cell right="medium">
+              <line>5 squared is 25</line>
+              <line>4 squared is 16</line>
+              <line>3 squared is 9</line>
+              <line>2 squared is 4</line>
+              <line>1 squared is 1</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
