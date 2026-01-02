@@ -640,6 +640,30 @@ Ziggy</output>
     <exercise xml:id="exer-JMPCH3_code-person_name-cpp-1" label="exe-sec-Homework-1-1-234132">
       <statement>
         <p>Write a simple C++ program that will read in from standard input three strings representing a person's last name, first name, and middle initial, and then output the person's full name formatted like the given example.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>Chaplin</line>
+              <line>Charles</line>
+              <line>S</line>
+            </cell>
+            <cell right="medium">
+              <line>Person: Charles S. Chaplin</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
