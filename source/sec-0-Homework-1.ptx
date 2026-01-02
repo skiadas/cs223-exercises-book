@@ -334,6 +334,27 @@ Ziggy</output>
       <statement>
         <p>Write a C++ program that reads in two integers entered by the user, adds them together, and outputs the sum.</p>
       <p>For example:</p>
+        <table>
+          <tabular top="medium">
+            <row bottom="medium">
+              <cell left="medium" right="medium">
+                Input
+              </cell>
+              <cell right="medium">
+                Result
+              </cell>
+            </row>
+            <row bottom="medium">
+              <cell left="medium" right="medium">
+                3
+                8
+              </cell>
+              <cell right="medium">
+                11
+              </cell>
+            </row>
+          </tabular>
+        </table>
         <tabular>
           <col top="minor" width="30%" />
           <col top="minor" width="70%" />
