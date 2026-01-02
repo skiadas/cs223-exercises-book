@@ -345,23 +345,12 @@ Ziggy</output>
             <cell bottom="minor" right="minor">
               <p>
                 <cd>3</cd>
-              </p>
-            </cell>
-            <cell bottom="minor" right="minor">
-              <p>
-                <cd>11</cd>
-              </p>
-            </cell>
-          </row>
-          <row header="no" left="minor">
-            <cell bottom="minor" right="minor">
-              <p>
                 <cd>8</cd>
               </p>
             </cell>
             <cell bottom="minor" right="minor">
               <p>
-                <cd></cd>
+                <cd>11</cd>
               </p>
             </cell>
           </row>
