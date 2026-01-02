@@ -1070,6 +1070,39 @@ my_password</input>
       <statement>
         <p>Write a C++ program that reads integers from standard input until a number <alert>greater than 1000</alert> is entered.  At that point, the program stops and prints a report regarding how many numbers were entered that were not greater than 1000.  Match the form of your output to the given examples.</p>
         <p>Hint: Solve this problem with a <c>while</c>loop.</p>
+
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>45</line>
+              <line>823</line>
+              <line>1000</line>
+              <line>1001</line>
+            </cell>
+            <cell right="medium">
+              <line>You entered 3 numbers <= 1000.</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>2018</line>
+            </cell>
+            <cell right="medium">
+              <line>You entered 0 numbers <= 1000.</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
