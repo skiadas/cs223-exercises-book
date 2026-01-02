@@ -333,6 +333,39 @@ Ziggy</output>
     <exercise xml:id="exer-JMPCH3_code-addition-cpp-1" label="exe-sec-Homework-1-1-234128">
       <statement>
         <p>Write a C++ program that reads in two integers entered by the user, adds them together, and outputs the sum.</p>
+      <p>For example:</p>
+        <tabular>
+          <col top="minor" width="30%" />
+          <col top="minor" width="70%" />
+          <row header="yes" left="minor">
+            <cell bottom="minor" right="minor">Input</cell>
+            <cell bottom="minor" right="minor">Result</cell>
+          </row>
+          <row header="no" left="minor">
+            <cell bottom="minor" right="minor">
+              <p>
+                <cd>3</cd>
+              </p>
+            </cell>
+            <cell bottom="minor" right="minor">
+              <p>
+                <cd>11</cd>
+              </p>
+            </cell>
+          </row>
+          <row header="no" left="minor">
+            <cell bottom="minor" right="minor">
+              <p>
+                <cd>8</cd>
+              </p>
+            </cell>
+            <cell bottom="minor" right="minor">
+              <p>
+                <cd></cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
