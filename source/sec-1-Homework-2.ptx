@@ -558,6 +558,47 @@
     <exercise xml:id="exer-JMPCH4_code-string_comparison-1" label="exe-sec-Homework-2-1-234153">
       <statement>
         <p>Write a C++ program that reads in two strings and compares them. Format your output to correspond with the given examples.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>cat</line>
+              <line>bear</line>
+            </cell>
+            <cell right="medium">
+              <line>&apos;cat&apos; is greater than &apos;bear&apos;</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>dog</line>
+              <line>whale</line>
+            </cell>
+            <cell right="medium">
+              <line>&apos;dog&apos; is less than &apos;whale&apos;</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>2026</line>
+              <line>2026</line>
+            </cell>
+            <cell right="medium">
+              <line>both words are &apos;2026&apos;</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
