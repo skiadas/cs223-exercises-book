@@ -352,7 +352,7 @@ Ziggy</output>
               <line>8</line>
             </cell>
             <cell right="medium">
-              11
+              <line>11<line>
             </cell>
           </row>
         </tabular>
@@ -398,6 +398,29 @@ Ziggy</output>
     <exercise xml:id="exer-JMPCH3_code-subtraction-cpp-1" label="exe-sec-Homework-1-1-234129">
       <statement>
         <p>Write a C++ program that reads in two numbers with a decimal point entered by the user, subtracts the second number from the first, and outputs the difference.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>10.5</line>
+              <line>4.25</line>
+            </cell>
+            <cell right="medium">
+              <line>6.25</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
