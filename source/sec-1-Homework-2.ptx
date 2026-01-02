@@ -986,6 +986,38 @@ my_password</input>
       <statement>
         <p>Write a C++ program that reads integers from standard input and keeps a running sum of all the positive integers that are entered. <alert>As soon as a negative integer is entered</alert>, the program stops and outputs the sum of the positive integers that were read. If the first number is negative, then the result should be 0. Hint: Solve this problem with a <c>while</c>loop.</p>
         <p>Format your output as in the given examples.</p>
+
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>4</line>
+              <line>6</line>
+              <line>-5</line>
+            </cell>
+            <cell right="medium">
+              <line>The sum of the positive numbers is 10.</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>-65</line>
+            </cell>
+            <cell right="medium">
+              <line>The sum of the positive numbers is 0.</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
