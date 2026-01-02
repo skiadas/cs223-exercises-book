@@ -93,10 +93,10 @@
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <line>+ 5.5 2.01</line>
+              <line><pre>+ 5.5 2.01</pre></line>
             </cell>
             <cell right="medium">
-              <line>5.5 + 2.01 = 7.51</line>
+              <line><pre>5.5 + 2.01 = 7.51</pre></line>
             </cell>
           </row>
         </tabular>
