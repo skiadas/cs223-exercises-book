@@ -1091,7 +1091,7 @@ my_password</input>
               <line>1001</line>
             </cell>
             <cell right="medium">
-              <line>You entered 3 numbers <= 1000.</line>
+              <line>You entered 3 numbers &lt;= 1000.</line>
             </cell>
           </row>
           <row left="medium" bottom="medium">
@@ -1099,7 +1099,7 @@ my_password</input>
               <line>2018</line>
             </cell>
             <cell right="medium">
-              <line>You entered 0 numbers <= 1000.</line>
+              <line>You entered 0 numbers &lt;= 1000.</line>
             </cell>
           </row>
         </tabular>
