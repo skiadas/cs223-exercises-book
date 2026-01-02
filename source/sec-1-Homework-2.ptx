@@ -828,6 +828,56 @@ cout &lt;&lt; x &lt;&lt; endl;</pre>
         <p>- If the strings do not match, and the user has not already made ten attempts, the program reads another string and compares with "my_password" as before.</p>
         <p>- If the user's tenth attempt fails to match "my_password", the program outputs the message, "WRONG!", and stops.</p>
         <p>Note: Use a 'for' loop to solve this problem.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>my_password</line>
+            </cell>
+            <cell right="medium">
+              <line>CORRECT!</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>your_password</line>
+              <line>monkeymonkeymonkey</line>
+              <line>1234</line>
+              <line>my_password</line>
+            </cell>
+            <cell right="medium">
+              <line>CORRECT!</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>x1</line>
+              <line>x2</line>
+              <line>x3</line>
+              <line>x4</line>
+              <line>x5</line>
+              <line>x6</line>
+              <line>x7</line>
+              <line>x8</line>
+              <line>x9</line>
+              <line>x99</line>
+            </cell>
+            <cell right="medium">
+              <line>WRONG!</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
