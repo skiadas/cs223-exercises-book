@@ -333,8 +333,7 @@ Ziggy</output>
     <exercise xml:id="exer-JMPCH3_code-addition-cpp-1" label="exe-sec-Homework-1-1-234128">
       <statement>
         <p>Write a C++ program that reads in two integers entered by the user, adds them together, and outputs the sum.</p>
-        
-        <p></p>
+        <p>    </p>
         <p>For example:</p>
         <tabular top="medium">
           <col top="medium" width="30%" />
