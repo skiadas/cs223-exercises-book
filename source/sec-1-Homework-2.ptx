@@ -478,6 +478,44 @@
     <exercise xml:id="exer-JMPCH4_code-numposneg-cpp-1" label="exe-sec-Homework-2-1-234151">
       <statement>
         <p>Write a C++ program that reads in one decimal number, and then outputs whether the number is positive, negative, or zero. See the examples for the expected format of the output.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>3.14</line>
+            </cell>
+            <cell right="medium">
+              <line>3.14 is positive</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>-42.889</line>
+            </cell>
+            <cell right="medium">
+              <line>-42.889 is negative</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>0.0</line>
+            </cell>
+            <cell right="medium">
+              <line>0 is zero</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
