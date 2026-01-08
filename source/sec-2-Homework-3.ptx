@@ -530,10 +530,16 @@ int main()
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
               <line><pre>cout &lt;&lt; factorial(5);</pre></line>
-              <line><pre>cout &lt;&lt; factorial(0);</pre></line>
             </cell>
             <cell right="medium">
               <line><pre>120</pre></line>
+            </cell>
+          </row>
+          <row>
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; factorial(0);</pre></line>
+            </cell>
+            <cell right="medium">
               <line><pre>0</pre></line>
             </cell>
           </row>
