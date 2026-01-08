@@ -203,6 +203,28 @@ TEST_CASE( "test4" ) {
     <exercise xml:id="exer-JMPCH6_code-add_strings-1" label="exe-sec-Homework-3-1-234173">
       <statement>
         <p>Write a function <c>add_strings</c> that takes two parameters of type string and returns the concatenation.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; add_strings("Happy ", "New Year!");</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>Happy New Year!</pre></line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
