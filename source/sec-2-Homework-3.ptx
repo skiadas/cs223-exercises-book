@@ -610,6 +610,37 @@ TEST_CASE( "test5" ) {
         <p>The function <c>accumulate_acronym</c> has no arguments; it reads strings from standard input and accumulates the corresponding acronym.</p>
         <p>The end of the input is signaled when the user enters the string "STOP".  For example, if the user enters "United Guinea Pig Supporters of America STOP", then the function <alert>returns</alert> the acronym string, "UGPSoA".  (The function does not print anything to standard output.)</p>
         <p></p>
+
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="30%" />
+          <col top="medium" width="40%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; accumulate_acronym()</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>Cats</pre></line>
+              <line><pre>Rule</pre></line>
+              <line><pre>STOP</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>CR</pre></line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
