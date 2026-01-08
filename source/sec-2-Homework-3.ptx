@@ -118,6 +118,28 @@
     <exercise xml:id="exer-JMPCH6_code-add_doubles-1" label="exe-sec-Homework-3-1-234172">
       <statement>
         <p>Write a function <c>add_doubles</c> that takes two parameters of type double and returns the sum.</p>
+      
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line>cout << add_doubles(3.2, 4.6);</line>
+            </cell>
+            <cell right="medium">
+              <line>7.8</line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
