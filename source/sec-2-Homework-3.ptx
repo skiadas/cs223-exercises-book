@@ -133,7 +133,7 @@
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <line>cout &lt;&lt; add_doubles(3.2, 4.6);</line>
+              <line><pre>cout &lt;&lt; add_doubles(3.2, 4.6);</pre></line>
             </cell>
             <cell right="medium">
               <line>7.8</line>
