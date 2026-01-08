@@ -635,7 +635,7 @@ TEST_CASE( "test5" ) {
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <line><pre>cout &lt;&lt; accumulate_acronym()</pre></line>
+              <line><pre>cout &lt;&lt; accumulate_acronym();</pre></line>
             </cell>
             <cell right="medium">
               <pre>
