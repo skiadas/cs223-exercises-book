@@ -514,6 +514,30 @@ int main()
           </ul>
         </p>
         <p>You may assume that the parameter 'n' will not be negative in this problem.</p>
+
+        <p>For example:</p>
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Input
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; factorial(5);</pre></line>
+              <line><pre>cout &lt;&lt; factorial(0);</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>120</pre></line>
+              <line><pre>0</pre></line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
