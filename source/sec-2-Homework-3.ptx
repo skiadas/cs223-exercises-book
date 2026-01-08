@@ -125,7 +125,7 @@
           <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              Input
+              Test
             </cell>
             <cell right="medium">
               Result
@@ -210,7 +210,7 @@ TEST_CASE( "test4" ) {
           <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              Input
+              Test
             </cell>
             <cell right="medium">
               Result
@@ -521,7 +521,7 @@ int main()
           <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              Input
+              Test
             </cell>
             <cell right="medium">
               Result
@@ -618,7 +618,7 @@ TEST_CASE( "test5" ) {
           <col top="medium" width="40%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              Input
+              Test
             </cell>
             <cell right="medium">
               Input
