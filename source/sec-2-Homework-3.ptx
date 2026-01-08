@@ -817,6 +817,59 @@ switch(n)
     <exercise xml:id="exer-JMPCH6_code-weird_sum-1" label="exe-sec-Homework-3-1-234191">
       <statement>
         <p>Write a C++ function <alert>weird_sum</alert> that takes two integers, 'n1' and 'n2'. The function returns the sum of 'n1' and 'n2', unless their sum is a multiple of 13, in which case the function returns 3 less than their actual sum.</p>
+
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Test
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; weird_sum(13, 1);</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>14</pre></line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; weird_sum(10, 16);</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>23</pre></line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; weird_sum(-4, 42);</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>38</pre></line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; weird_sum(-1, -12);</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>-16</pre></line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; weird_sum(14, -15);</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>-1</pre></line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
