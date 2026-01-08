@@ -638,9 +638,11 @@ TEST_CASE( "test5" ) {
               <line><pre>cout &lt;&lt; accumulate_acronym()</pre></line>
             </cell>
             <cell right="medium">
-              <line><pre>Cats</pre></line>
-              <line><pre>Rule</pre></line>
-              <line><pre>STOP</pre></line>
+              <pre>
+              <line>Cats</line>
+              <line>Rule</line>
+              <line>STOP</line>
+              </pre>
             </cell>
             <cell right="medium">
               <line><pre>CR</pre></line>
