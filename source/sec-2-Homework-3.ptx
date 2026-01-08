@@ -535,7 +535,7 @@ int main()
               <line><pre>120</pre></line>
             </cell>
           </row>
-          <row>
+          <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
               <line><pre>cout &lt;&lt; factorial(0);</pre></line>
             </cell>
