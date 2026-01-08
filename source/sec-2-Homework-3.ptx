@@ -1000,6 +1000,27 @@ TEST_CASE( "test11" ) {
     <exercise xml:id="exer-JMPCH6-first_alpha-1" label="exe-sec-Homework-3-1-234192">
       <statement>
         <p>Write a C++ function called <alert>first_alpha</alert> that takes three string arguments and returns the string that comes first alphabetically from among those three. You may assume that the strings are in all lowercase.</p>
+
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Test
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <line><pre>cout &lt;&lt; first_alpha("uno", "dos", "tres");</pre></line>
+            </cell>
+            <cell right="medium">
+              <line><pre>dos</pre></line>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
