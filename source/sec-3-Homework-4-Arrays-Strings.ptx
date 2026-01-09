@@ -249,6 +249,55 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
       <statement>
         <p>Write a function <alert>array_sum</alert> that takes two arguments: an integer array called 'nums' and an integer called 'size' representing the number of values stored in the array. The function accumulates the sum of the values in the 'nums' array and returns that sum. If size &lt; 1, the function returns 0.</p>
         <p>An outline of the function definition is provided to help you get started.</p>
+      
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              Test
+            </cell>
+            <cell right="medium">
+              Result
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[1] = {3};<line>
+              <line>// call the function with arr = [3], size = 1</line>
+              <line>cout << array_sum(arr, 1)</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>3</line></pre>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[5] = {1, 2, 3, 4, 5};<line>
+              <line>// call the function with size = 4</line>
+              <line>cout << array_sum(arr, 4)</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>10</line></pre>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[5]; // values are random garbage<line>
+              <line>// call the function with size = 0</line>
+              <line>cout << array_sum(arr, 0)</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>0</line></pre>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
