@@ -264,7 +264,7 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
               <pre>
-              <line>int arr[1] = {3};<line>
+              <line>int arr[1] = {3};</line>
               <line><solidus/><solidus/> call the function with arr = [3], size = 1</line>
               <line>cout &lt;&lt; array_sum(arr, 1)</line>
               </pre>
@@ -276,7 +276,7 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
               <pre>
-              <line>int arr[5] = {1, 2, 3, 4, 5};<line>
+              <line>int arr[5] = {1, 2, 3, 4, 5};</line>
               <line><solidus/><solidus/> call the function with size = 4</line>
               <line>cout &lt;&lt; array_sum(arr, 4)</line>
               </pre>
@@ -288,7 +288,7 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
               <pre>
-              <line>int arr[5]; <solidus/><solidus/> values are random garbage<line>
+              <line>int arr[5]; <solidus/><solidus/> values are random garbage</line>
               <line><solidus/><solidus/> call the function with size = 0</line>
               <line>cout &lt;&lt; array_sum(arr, 0)</line>
               </pre>
