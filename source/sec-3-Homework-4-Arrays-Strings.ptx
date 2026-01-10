@@ -977,7 +977,7 @@ TEST_CASE( "test6" ) {
               </pre>
             </cell>
             <cell right="medium">
-              <pre><line>-1</line></pre>
+              <pre><line><minus/>1</line></pre>
             </cell>
           </row>
         </tabular>
