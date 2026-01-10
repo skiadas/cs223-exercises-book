@@ -693,6 +693,31 @@ TEST_CASE( "test7" ) {
       <statement>
         <p>Write a function <c>count_evens</c> that takes an array of integers 'arr' and an integer 'n'. The function returns an integer indicating the number of even elements among the first n elements of 'arr'.</p>
         <p></p>
+
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[10] = {0, 1, 3, 4, 6, 7, 9, 10, 12, 13};</line>
+              <line>// n = 3, answer is 1</line>
+              <line>cout &lt;&lt; count_evens(arr, 3);</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>1</line></pre>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
