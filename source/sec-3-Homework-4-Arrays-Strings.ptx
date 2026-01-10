@@ -549,6 +549,39 @@ TEST_CASE( "test6" ) {
         <p>Write a function <c>unique_elements</c> that takes an array of integers 'arr' and an integer 'size' (the size of 'arr'). The function returns true if there are no repeated elements in arr, otherwise it returns false.</p>
         <p>Note: If size &lt; 2, the function returns true since you need at least 2 elements to have a repeated element.</p>
         <p></p>
+
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre><line>int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};</line></pre>
+              <pre><line>// no repeats</line></pre>
+              <pre><line>cout &lt;&lt; unique_elements(arr, 10);</line></pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>1</line></pre>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre><line>int arr[5] = {0, 1, 2, 3, 1};</line></pre>
+              <pre><line>// has repeats</line></pre>
+              <pre><line>cout &lt;&lt; unique_elements(arr, 5);</line></pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>0</line></pre>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
