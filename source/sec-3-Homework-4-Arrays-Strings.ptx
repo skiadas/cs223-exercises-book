@@ -563,9 +563,11 @@ TEST_CASE( "test6" ) {
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <pre><line>int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};</line></pre>
-              <pre><line>// no repeats</line></pre>
-              <pre><line>cout &lt;&lt; unique_elements(arr, 10);</line></pre>
+              <pre>
+              <line>int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};</line>
+              <line>// no repeats</line>
+              <line>cout &lt;&lt; unique_elements(arr, 10);</line>
+              </pre>
             </cell>
             <cell right="medium">
               <pre><line>1</line></pre>
@@ -573,9 +575,11 @@ TEST_CASE( "test6" ) {
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <pre><line>int arr[5] = {0, 1, 2, 3, 1};</line></pre>
-              <pre><line>// has repeats</line></pre>
-              <pre><line>cout &lt;&lt; unique_elements(arr, 5);</line></pre>
+              <pre>
+              <line>int arr[5] = {0, 1, 2, 3, 1};</line>
+              <line>// has repeats</line>
+              <line>cout &lt;&lt; unique_elements(arr, 5);</line>
+              </pre>
             </cell>
             <cell right="medium">
               <pre><line>0</line></pre>
