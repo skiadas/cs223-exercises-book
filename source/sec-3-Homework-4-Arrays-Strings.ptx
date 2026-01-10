@@ -957,6 +957,19 @@ TEST_CASE( "test6" ) {
               <line>Result</line>
             </cell>
           </row>
+
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};</line>
+              <line>// with size = 6 and n = 1, should return 3</line>
+              <line>cout &lt;&lt; last_index(arr, 6, 1);</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>3</line></pre>
+            </cell>
+          </row>
         </tabular>
             
       </statement>
