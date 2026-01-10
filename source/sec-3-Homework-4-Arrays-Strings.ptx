@@ -945,6 +945,42 @@ TEST_CASE( "test6" ) {
       <statement>
         <p>Write a function <c>last_index</c> that takes an array of integers 'arr', an integer 'size', and an integer 'n'. The function returns an integer indicating the LARGEST index i such that i &lt; size and arr[i] equals n.  If there are no occurrences of 'n' among the first size-many elements of 'arr', the function returns -1 to indicate "n not found".</p>
         <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>last_index(arr, 7, 3)</c> returns 4 since 4 is the largest index i (i &lt; 7) such that arr[i] equals 3.</p>
+      
+        <tabular top="medium">
+          <col top="medium" width="30%" />
+          <col top="medium" width="70%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};</line>
+              <line>// with size = 6 and n = 1, should return 3</line>
+              <line>cout &lt;&lt; last_index(arr, 6, 1);</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>3</line></pre>
+            </cell>
+            <row left="medium" bottom="medium">
+            <cell left="medium" right="medium">
+              <pre>
+              <line>int arr[10] = {0, 4, 8, 0, 4, 8, 0, 4, 8, 0};</line>
+              <line>// with size = 1 and n = 4, should return -1</line>
+              <line>cout &lt;&lt; last_index(arr, 1, 4);</line>
+              </pre>
+            </cell>
+            <cell right="medium">
+              <pre><line>-1</line></pre>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
