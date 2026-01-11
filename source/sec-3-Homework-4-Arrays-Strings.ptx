@@ -960,27 +960,27 @@ TEST_CASE( "test6" ) {
 
           <row left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              <c>
+              <pre>
               <line>int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};</line>
               <line>// with size = 6 and n = 1, should return 3</line>
               <line>cout &lt;&lt; last_index(arr, 6, 1);</line>
-              </c>
+              </pre>
             </cell>
             <cell right="medium">
-              <c><line>3</line></c>
+              <pre><line>3</line></pre>
             </cell>
           </row>
 
           <row left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              <c>
+              <pre>
               <line>int arr[10] = {0, 4, 8, 0, 4, 8, 0, 4, 8, 0};</line>
               <line>// with size = 1 and n = 4, should return -1</line>
               <line>cout &lt;&lt; last_index(arr, 1, 4);</line>
-              </c>
+              </pre>
             </cell>
             <cell right="medium">
-              <c><line>-1</line></c>
+              <pre><line>-1</line></pre>
             </cell>
           </row>
         </tabular>
