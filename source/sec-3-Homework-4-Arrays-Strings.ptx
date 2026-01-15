@@ -251,8 +251,6 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
         <p>An outline of the function definition is provided to help you get started.</p>
       
         <tabular top="medium">
-          <col top="medium" width="30%" />
-          <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               Test
