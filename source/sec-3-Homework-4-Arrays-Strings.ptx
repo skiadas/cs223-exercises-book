@@ -583,26 +583,38 @@ TEST_CASE( "test6" ) {
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <pre>
-              <line>int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};</line>
-              <line>// no repeats</line>
-              <line>cout &lt;&lt; unique_elements(arr, 10);</line>
-              </pre>
+              <p>
+                <cd>
+                  <cline>int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};</cline>
+                  <cline>// no repeats</cline>
+                  <cline>cout &lt;&lt; unique_elements(arr, 10);</cline>
+                </cd>
+              </p>
             </cell>
             <cell right="medium">
-              <pre><line>1</line></pre>
+              <p>
+                <cd>
+                  <cline>1</cline>
+                </cd>
+              </p>
             </cell>
           </row>
           <row left="medium" bottom="medium">
             <cell left="medium" right="medium">
-              <pre>
-              <line>int arr[5] = {0, 1, 2, 3, 1};</line>
-              <line>// has repeats</line>
-              <line>cout &lt;&lt; unique_elements(arr, 5);</line>
-              </pre>
+              <p>
+                <cd>
+                  <cline>int arr[5] = {0, 1, 2, 3, 1};</cline>
+                  <cline>// has repeats</cline>
+                  <cline>cout &lt;&lt; unique_elements(arr, 5);</cline>
+                </cd>
+              </p>
             </cell>
             <cell right="medium">
-              <pre><line>0</line></pre>
+              <p>
+                <cd>
+                  <cline>0</cline>
+                </cd>
+              </p>
             </cell>
           </row>
         </tabular>
