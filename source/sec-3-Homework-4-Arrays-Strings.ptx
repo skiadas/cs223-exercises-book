@@ -412,8 +412,6 @@ TEST_CASE( "test6" ) {
         <p>Write a function <alert>array_max</alert> that takes one argument: a two-dimensional array of integers 'nums' which will always have 3 rows and 5 columns. The function returns the <alert>largest element in the array</alert>.</p>
       
         <tabular top="medium">
-          <col top="medium" width="30%" />
-          <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -423,19 +421,25 @@ TEST_CASE( "test6" ) {
             </cell>
           </row>
           <row left="medium" bottom="medium">
-            <cell left="medium" right="medium">
-              <pre>
-              <line>int arr[3][5];</line>
-              <line>for(int i = 0; i &lt; 3; i++) {</line>
-              <line>    for(int j = 0; j &lt; 5; j++) {</line>
-              <line>        arr[i][j] = i * i - j * j;</line>
-              <line>    }</line>
-              <line>}</line>
-              <line>cout &lt;&lt; array_max(arr);</line>
-              </pre>
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int arr[3][5];</cline>
+                  <cline>for(int i = 0; i &lt; 3; i++) {</cline>
+                  <cline>    for(int j = 0; j &lt; 5; j++) {</cline>
+                  <cline>        arr[i][j] = i * i - j * j;</cline>
+                  <cline>    }</cline>
+                  <cline>}</cline>
+                  <cline>cout &lt;&lt; array_max(arr);</cline>
+                </cd>
+              </p>
             </cell>
             <cell right="medium">
-              <pre><line>4</line></pre>
+              <p>
+                <cd>
+                  <cline>4</cline>
+                </cd>
+              </p>
             </cell>
           </row>
         </tabular>
