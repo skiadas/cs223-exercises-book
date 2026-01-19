@@ -1249,8 +1249,8 @@ cout &lt;&lt; input[1];        </pre>
         <p>The end of the input is signaled by the user hitting the "enter" key, which creates a '\n' character at the end of the input. Note that the newline character '\n' is discarded, it does not become part of the string which is read.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="50%"></col>
-          <col width="50%"></col>
+          <col width="50%" />
+          <col width="50%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
