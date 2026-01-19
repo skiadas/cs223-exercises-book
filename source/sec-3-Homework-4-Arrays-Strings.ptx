@@ -855,8 +855,6 @@ TEST_CASE( "test6" ) {
         <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>count_occurrences(arr, 3, 5)</c> returns 1 since there is one '5' in [3, 3, 5], and count_occurrences(arr, 6, 3) returns 4 since there are four 3's in [3, 3, 5, 3, 3, 2].</p>
 
         <tabular top="medium">
-          <col top="medium" width="30%" />
-          <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -866,15 +864,21 @@ TEST_CASE( "test6" ) {
             </cell>
           </row>
           <row left="medium" bottom="medium">
-            <cell left="medium" right="medium">
-              <pre>
-              <line>int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};</line>
-              <line>// size = 4, n = 1, should return 2</line>
-              <line>cout &lt;&lt; count_occurrences(arr, 4, 1);</line>
-              </pre>
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int arr[10] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};</cline>
+                  <cline>// size = 4, n = 1, should return 2</cline>
+                  <cline>cout &lt;&lt; count_occurrences(arr, 4, 1);</cline>
+                </cd>
+              </p>
             </cell>
             <cell right="medium">
-              <pre><line>2</line></pre>
+              <p>
+                <cd>
+                  <cline>2</cline>
+                </cd>
+              </p>
             </cell>
           </row>
         </tabular>
