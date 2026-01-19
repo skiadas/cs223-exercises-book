@@ -251,6 +251,8 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
         <p>An outline of the function definition is provided to help you get started.</p>
         <p>For example:</p>
         <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -412,6 +414,8 @@ TEST_CASE( "test6" ) {
         <p>Write a function <alert>array_max</alert> that takes one argument: a two-dimensional array of integers 'nums' which will always have 3 rows and 5 columns. The function returns the <alert>largest element in the array</alert>.</p>
         <p>For example:</p>
         <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -571,6 +575,8 @@ TEST_CASE( "test6" ) {
         
         <p>For example:</p>
         <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -722,9 +728,10 @@ TEST_CASE( "test7" ) {
     <exercise xml:id="exer-JMPCH10_code-array4-1" label="exe-sec-Homework-4-Arrays-Strings-1-234207">
       <statement>
         <p>Write a function <c>count_evens</c> that takes an array of integers 'arr' and an integer 'n'. The function returns an integer indicating the number of even elements among the first n elements of 'arr'.</p>
-        
         <p>For example:</p>
         <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -855,6 +862,8 @@ TEST_CASE( "test6" ) {
         <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>count_occurrences(arr, 3, 5)</c> returns 1 since there is one '5' in [3, 3, 5], and count_occurrences(arr, 6, 3) returns 4 since there are four 3's in [3, 3, 5, 3, 3, 2].</p>
         <p>For example:</p>
         <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -985,6 +994,8 @@ TEST_CASE( "test6" ) {
         <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>last_index(arr, 7, 3)</c> returns 4 since 4 is the largest index i (i &lt; 7) such that arr[i] equals 3.</p>
         <p>For example:</p>
         <tabular top="medium" right="medium">
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
