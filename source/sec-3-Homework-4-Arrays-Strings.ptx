@@ -1407,6 +1407,38 @@ cout &lt;&lt; input.rfind("se");        </pre>
         <pre>Aaron Rodgers
 J. J. Watt
 Luke Kuechly        </pre>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Input</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>TSkye,Spike,Cleo,Ziggy,,</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Skye</cline>
+                  <cline>Spike</cline>
+                  <cline>Cleo</cline>
+                  <cline>Ziggy</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
