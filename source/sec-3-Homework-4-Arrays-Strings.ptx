@@ -1275,7 +1275,6 @@ cout &lt;&lt; input[1];        </pre>
               <p>
                 <cd>
                   <cline>Mr. Grey is fluffy</cline>
-                  <cline>Xerea Lu is a cow-colored cat</cline>
                 </cd>
               </p>
             </cell>
@@ -1283,12 +1282,26 @@ cout &lt;&lt; input[1];        </pre>
               <p>
                 <cd>
                   <cline>Mr. Grey is fluffy</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Xerea Lu is a cow-colored cat</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
                   <cline>too long</cline>
                 </cd>
               </p>
             </cell>
           </row>
-        
         </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
