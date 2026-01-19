@@ -237,7 +237,7 @@ maudlin        </pre>
         <p>The first line of the file 'calculate.txt' contains an integer. The following lines contain simple arithmetic expressions, one per line. The integer on the first line specifies how many calculations will follow.</p>
         <p>
           <ul>
-            <li>All calculations will contain numbers with decimal points; use variables of type `double` for reading the numbers in the expressions.</li>
+            <li>All calculations will contain numbers with decimal points; use variables of type 'double' for reading the numbers in the expressions.</li>
             <li>The math operators your program must handle are: +, -, * , /</li>
           </ul>
         </p>
@@ -253,7 +253,7 @@ maudlin        </pre>
 -10
 36.9
 31.11        </pre>
-        <p>HINT: Because the first line of the file tells you exactly how many more lines need to be read, and each line after the first contains 3 tokens in the format &lt;double&gt; &lt;char&gt; &lt;double&gt;, it's easier to read the arithmetic expressions using the input stream operator `&gt;&gt;` (also called the "stream extraction operator") rather than `getline`.</p>
+        <p>HINT: Because the first line of the file tells you exactly how many more lines need to be read, and each line after the first contains 3 tokens in the format &lt;double&gt; &lt;char&gt; &lt;double&gt;, it's easier to read the arithmetic expressions using the input stream operator '&gt;&gt;' (also called the "stream extraction operator") rather than 'getline'.</p>
       </statement>
       <datafile label="calculate-datafile" xml:id="calculate-datafile" filename="calculate.txt" editable="no" hide="yes">
         <pre>
