@@ -253,10 +253,10 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
         <tabular top="medium">
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
-              Test
+              <line>Test</line>
             </cell>
             <cell right="medium">
-              Result
+              <line>Result</line>
             </cell>
           </row>
           <row left="medium" bottom="medium">
