@@ -580,7 +580,7 @@ TEST_CASE( "test6" ) {
             </cell>
           </row>
           <row left="medium" bottom="medium">
-            <cell left="medium" right="medium">
+            <cell bottom="medium" right="medium">
               <p>
                 <cd>
                   <cline>int arr[10] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};</cline>
@@ -598,7 +598,7 @@ TEST_CASE( "test6" ) {
             </cell>
           </row>
           <row left="medium" bottom="medium">
-            <cell left="medium" right="medium">
+            <cell bottom="medium" right="medium">
               <p>
                 <cd>
                   <cline>int arr[5] = {0, 1, 2, 3, 1};</cline>
