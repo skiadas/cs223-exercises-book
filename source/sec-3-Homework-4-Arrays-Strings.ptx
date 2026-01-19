@@ -568,7 +568,7 @@ TEST_CASE( "test6" ) {
       <statement>
         <p>Write a function <c>unique_elements</c> that takes an array of integers 'arr' and an integer 'size' (the size of 'arr'). The function returns true if there are no repeated elements in arr, otherwise it returns false.</p>
         <p>Note: If size &lt; 2, the function returns true since you need at least 2 elements to have a repeated element.</p>
-        <p></p>
+        
         <p>For example:</p>
         <tabular top="medium">
           <row header="yes" left="medium" bottom="medium">
@@ -722,7 +722,7 @@ TEST_CASE( "test7" ) {
     <exercise xml:id="exer-JMPCH10_code-array4-1" label="exe-sec-Homework-4-Arrays-Strings-1-234207">
       <statement>
         <p>Write a function <c>count_evens</c> that takes an array of integers 'arr' and an integer 'n'. The function returns an integer indicating the number of even elements among the first n elements of 'arr'.</p>
-        <p></p>
+        
         <p>For example:</p>
         <tabular top="medium">
           <row header="yes" left="medium" bottom="medium">
