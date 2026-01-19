@@ -332,7 +332,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <c>true || (false &amp;&amp; ! true)<c /></c>
+              <c>true || (false &amp;&amp; ! true)</c>
             </p>
           </statement>
           <feedback />
