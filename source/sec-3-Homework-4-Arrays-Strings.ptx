@@ -1407,6 +1407,7 @@ cout &lt;&lt; input.rfind("se");        </pre>
         <pre>Aaron Rodgers
 J. J. Watt
 Luke Kuechly        </pre>
+        <p>For example:</p>
         <tabular top="medium">
           <col width="80%" />
           <col width="20%" />
