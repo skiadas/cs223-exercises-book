@@ -1247,6 +1247,37 @@ cout &lt;&lt; input[1];        </pre>
       <statement>
         <p>Write a complete C++ program that reads a line of input and prints it out; however, if the string that was read is more than 20 characters long (including whitespace characters), the message "too long" is printed instead.</p>
         <p>The end of the input is signaled by the user hitting the "enter" key, which creates a '\n' character at the end of the input. Note that the newline character '\n' is discarded, it does not become part of the string which is read.</p>
+        <tabular top="medium">
+          <col width="50%"></col>
+          <col width="50%"></col>
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Output</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Mr. Grey is fluffy</cline>
+                  <cline>Xerea Lu is a cow-colored cat</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Mr. Grey is fluffy</cline>
+                  <cline>too long</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
