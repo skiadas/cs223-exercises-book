@@ -985,8 +985,6 @@ TEST_CASE( "test6" ) {
         <p>For example, if arr = [3, 3, 5, 3, 3, 2, 8], then <c>last_index(arr, 7, 3)</c> returns 4 since 4 is the largest index i (i &lt; 7) such that arr[i] equals 3.</p>
         <p>For example:</p>
         <tabular top="medium" right="medium">
-          <col top="medium" width="30%" />
-          <col top="medium" width="70%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
