@@ -571,6 +571,19 @@ TEST_CASE( "test6" ) {
     CHECK( cout.str() == answer );
 }
 
+TEST_CASE( "test7" ) {
+    std::stringstream cout;
+    int arr[3][5]; int i, j;
+    for(i=0; i&lt;3; i++) {
+       for(j=0; j&lt;5; j++) {
+          arr[i][j] = -(i + 1) + -(j + 1);
+       }
+    }
+    cout &lt;&lt; array_max(arr);
+    std::string answer = "-2";
+    CHECK( cout.str() == answer );
+}
+
         </tests>
       </program>
     </exercise>
