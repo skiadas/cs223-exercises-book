@@ -1037,7 +1037,7 @@ TEST_CASE( "test6" ) {
             <cell right="medium">
               <p>
                 <cd>
-                  <cline>1</cline>
+                  <cline>-1</cline>
                 </cd>
               </p>
             </cell>
