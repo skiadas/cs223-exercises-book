@@ -221,33 +221,33 @@ for (int i = 0; i &lt;= 10; i++) { arr[i] = i * i ; }        </pre>
           <statement>
             <p>int my_fun( bool x[ ][ 20 ] );</p>
           </statement>
-          <feedback />
+          
         </choice>
         <choice correct="yes">
           <statement>
             <p>int my_fun( bool x[ 10 ][ 20 ] );</p>
           </statement>
-          <feedback />
+          
         </choice>
         <choice correct="no">
           <statement>
             <p>int my_fun( bool x[ ][ ] );</p>
           </statement>
-          <feedback />
+          
         </choice>
         <choice>
           <statement>
             <p>
               int my_fun( bool x[ ] );
             </p>
-            <feedback />
+            
           </statement>
         </choice>
         <choice correct="no">
           <statement>
             <p>int my_fun( bool array x );</p>
           </statement>
-          <feedback />
+          
         </choice>
       </choices>
     </exercise>
