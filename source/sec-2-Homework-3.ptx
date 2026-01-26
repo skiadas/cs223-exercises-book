@@ -540,7 +540,7 @@ int main()
               <line><pre>cout &lt;&lt; factorial(0);</pre></line>
             </cell>
             <cell right="medium">
-              <line><pre>0</pre></line>
+              <line><pre>1</pre></line>
             </cell>
           </row>
         </tabular>
