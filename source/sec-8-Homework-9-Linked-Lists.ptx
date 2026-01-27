@@ -7,8 +7,8 @@
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>sumAll()</alert> that will add up all the values in the list and return the result.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="70%" />
+          <col width="30%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -158,8 +158,8 @@ TEST_CASE( "test3" ) {
         <p dir="ltr">In this question you are given a standard linked list setup that holds double values, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a "convert constructor" that will convert a string to a list. The string is assumed to contain numbers separated by spaces, so you can read them if you turn the string into an istringstream. The sstream header has already been included, so you have access to the istringstream. For the purposes of this program, there are no insert functions available to you. You will need to do the work to create the needed nodes in your constructor.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="70%" />
+          <col width="30%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -314,8 +314,8 @@ TEST_CASE( "test4" ) {
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>insertAt(value, index)</alert> that will insert a new node with the provided value at the requested index, if that is a valid spot. On a list of size 6 for example, the valid spots are at indexes 0 through 6, 0 being the beginning of the list, 1 meaning immediately after the first element, and so on, with 6 being the spot after the last element. If you are given an invalid index (either negative or out of bounds) you should simply return without changing the list.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="60%" />
+          <col width="40%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -566,8 +566,8 @@ TEST_CASE( "test9" ) {
         <p dir="ltr">(Although you should make sure you delete every removed node, the system will not check for that).</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="70%" />
+          <col width="30%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -796,8 +796,8 @@ TEST_CASE( "test7" ) {
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>reverse()</alert> that will reverse the order of all the nodes (i.e. the last node will end up being the first). This is not long, but it is not an easy function to write, make sure you have a plan and draw some pictures before starting to code. Your instructor's solution is about 10 lines and uses 3 local variables to help keep track of stuff.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="70%" />
+          <col width="30%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
