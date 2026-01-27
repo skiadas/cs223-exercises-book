@@ -1157,6 +1157,59 @@ TEST_CASE( "test4" ) {
  *        </pre>
         <p>Write the code to turn the given stub definition for the function into a complete implementation. This will be a friend to the class, so you can directly write into the x and y variables.</p>
         <p>HINT: Be sure to consume all the input, "(x here..., y here...)", including the parentheses, and the comma. You can use the input stream function <alert>ignore</alert> to skip characters.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>stringstream message;</cline>
+                  <cline>message &lt;&lt; "(-1.5, 3.75)";</cline>
+                  <cline>point pt(0, 0);</cline>
+                  <cline>message &gt;&gt; pt;</cline>
+                  <cline>cout &lt;&lt; pt;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>(-1.5, 3.75)</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>stringstream message;</cline>
+                  <cline>message &lt;&lt; "(10, 3)";</cline>
+                  <cline>point pt(0, 0);</cline>
+                  <cline>message &gt;&gt; pt;</cline>
+                  <cline>cout &lt;&lt; pt;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>(10, 3)</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
