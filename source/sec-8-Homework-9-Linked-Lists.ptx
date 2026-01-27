@@ -564,6 +564,59 @@ TEST_CASE( "test9" ) {
       <statement>
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>keepOddNumbered()</alert> that will change the list as follows: It will remove every second node, starting with the second node. See the examples for how this might look. You can do this in two ways: One is using a helper index variable to keep track of the index (or a boolean variable to keep track of if you are odd or even, alternating each time). There is also a way to do this that does not use any helper variables other than one-two <alert>Node*</alert> variables. This last version is a bit trickier but more interesting.</p>
         <p dir="ltr">(Although you should make sure you delete every removed node, the system will not check for that).</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List list("3 5 7");</cline>
+                  <cline>cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";</cline>
+                  <cline>list.keepOddNumbered();</cline>
+                  <cline>cout &lt;&lt; "After: " &lt;&lt; list;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Before: 3 -&gt; 5 -&gt; 7</cline>
+                  <cline>After: 3 -&gt; 7</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List list;</cline>
+                  <cline>cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";</cline>
+                  <cline>list.keepOddNumbered();</cline>
+                  <cline>cout &lt;&lt; "After: " &lt;&lt; list;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Before:</cline>
+                  <cline>After:</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
