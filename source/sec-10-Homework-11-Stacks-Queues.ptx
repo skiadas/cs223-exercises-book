@@ -1007,8 +1007,8 @@ public:
         <p>For this question, you have to implement the function <alert>dequeue</alert>. It must throw an error in the case of an empty list, and otherwise it must remove and return the next appropriate value, in a FIFO form. You must be careful for the special case where the list will be empty after the removal.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="60%" />
+          <col width="40%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
