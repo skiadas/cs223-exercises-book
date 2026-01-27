@@ -773,6 +773,64 @@ public:
         </pre>
         <p>This implementation uses a linked list with two pointers, one pointing to the head node and another pointing to the tail node. You can enqueue new values by placing them at the tail and advancing the tail pointer, and you can dequeue values by taking them out of the head and advancing the head pointer. As a result, the values in the linked list are stored effectively in opposite order, with newly inserted elements at the tail.</p>
         <p>For this question, you have to implement the function <alert>enqueue</alert>. It must place a new node with the provided value at the tail of the list (and you can use the tail pointer to get to that location directly, then adjust the tail pointer). You must be careful for the special case where the list is empty.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Queue&lt;std::string&gt; queue;</cline>
+                  <cline>queue.enqueue("mouse");</cline>
+                  <cline>std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>List: mouse</cline>
+                  <cline>Head: mouse</cline>
+                  <cline>Tail: mouse</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Queue&lt;std::string&gt; queue;</cline>
+                  <cline>queue.enqueue("mouse");</cline>
+                  <cline>queue.enqueue("danger");</cline>
+                  <cline>std::cout &lt;&lt; "List: " &lt;&lt; queue &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>List: mouse , danger</cline>
+                  <cline>Head: mouse</cline>
+                  <cline>Tail: danger</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
