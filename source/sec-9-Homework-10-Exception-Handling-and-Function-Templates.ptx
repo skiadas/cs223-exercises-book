@@ -1032,8 +1032,8 @@ TEST_CASE( "test5" ) {
         <p>NOTE: The <c>swapper</c> template has a void return type.</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="60%" />
+          <col width="40%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
