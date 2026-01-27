@@ -788,6 +788,51 @@ TEST_CASE( "test8" ) {
         <p>Write a function template <c>compare</c> that takes two values of the same type and <em>prints</em> the message "Those are the same" if the items are equal; if they are unequal, the function prints the message "Those are different".</p>
         <p>This template should work for any type that can use the "==" operator and the copy constructor.</p>
         <p>NOTE: The <c>compare</c> template has a void return type.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="50%" />
+          <col width="50%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>compare(3, 7);</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Those are different</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>compare("blueberry", "blueberry");</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Those are the same</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <datafile label="pixelh-datafile" xml:id="pixelh-datafile" filename="Pixel.h" editable="no" hide="yes">
         <pre>
