@@ -491,6 +491,97 @@ TEST_CASE( "test12" ) {
       <statement>
         <p>Write a function <c>array_sum</c> that takes two arguments: an integer array called 'nums' and an integer called 'size' representing the number of values stored in the array. The function accumulates the sum of the values in the 'nums' array and returns that sum.</p>
         <p>If size &lt; 1, the function throws a domain_error exception with the message, "size &lt; 1 is not allowed".</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int arr[1] = {3};</cline>
+                  <cline>int sum;</cline>
+                  <cline>try {</cline>
+                  <cline>    sum = array_sum(arr, 1);</cline>
+                  <cline>    cout &lt;&lt; sum;</cline>
+                  <cline>}</cline>
+                  <cline>catch(...) {</cline>
+                  <cline>    cout &lt;&lt; "Your code threw an exception." &lt;&lt; endl;</cline>
+                  <cline>}</cline>                  
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>3</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int arr[5] = {1, 2, 3, 4, 5};</cline>
+                  <cline>int sum;</cline>
+                  <cline>try {</cline>
+                  <cline>    sum = array_sum(arr, -4);</cline>
+                  <cline>    cout &lt;&lt; sum;</cline>
+                  <cline>}</cline>
+                  <cline>catch(domain_error e) {</cline>
+                  <cline>    cout &lt;&lt; e.what() &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>catch(...) {</cline>
+                  <cline>    cout &lt;&lt; "wrong exception type" &lt;&lt; endl;</cline>
+                  <cline>}</cline>                  
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>size &lt; 1 is not allowed</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int arr[5] = {1, 2, 3, 4, 5};</cline>
+                  <cline>int sum;</cline>
+                  <cline>try {</cline>
+                  <cline>    sum = array_sum(arr, 5);</cline>
+                  <cline>    cout &lt;&lt; sum;</cline>
+                  <cline>}</cline>
+                  <cline>catch(domain_error e) {</cline>
+                  <cline>    cout &lt;&lt; e.what() &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>catch(...) {</cline>
+                  <cline>    cout &lt;&lt; "wrong exception type" &lt;&lt; endl;</cline>
+                  <cline>}</cline>                  
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>15</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
