@@ -493,8 +493,8 @@ TEST_CASE( "test12" ) {
         <p>If size &lt; 1, the function throws a domain_error exception with the message, "size &lt; 1 is not allowed".</p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="70%" />
-          <col width="30%" />
+          <col width="80%" />
+          <col width="20%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
