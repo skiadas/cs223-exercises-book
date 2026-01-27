@@ -753,6 +753,55 @@ TEST_CASE( "test4" ) {
  *           the dot product would be (4 * 3) + (-2 * 1), i.e., 10
  */        </pre>
         <p>Write the code to turn the given stub definition for the function into a complete implementation. Note that this will not be a friend to the class, so you will need to use get_x and get_y to access the member variables values.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>point pt1(-1.5, 3.75);</cline>
+                  <cline>point pt2(0.5, 0.5);</cline>
+                  <cline>cout &lt;&lt; pt1 * pt2;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>1.125</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>point pt1(10, 3);</cline>
+                  <cline>point pt2(-1, -1);</cline>
+                  <cline>cout &lt;&lt; pt1 * pt2;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>-13</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
