@@ -582,7 +582,7 @@ TEST_CASE( "test4" ) {
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>cout << is_numerical("3.14159");</cline>
+                  <cline>cout &lt;&lt; is_numerical("3.14159");</cline>
                 </cd>
               </p>
             </cell>
@@ -598,7 +598,7 @@ TEST_CASE( "test4" ) {
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>cout << is_numerical("this_is_a_non_numerical_string");</cline>
+                  <cline>cout &lt;&lt; is_numerical("this_is_a_non_numerical_string");</cline>
                 </cd>
               </p>
             </cell>
@@ -614,7 +614,7 @@ TEST_CASE( "test4" ) {
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>cout << is_numerical(".99999");</cline>
+                  <cline>cout &lt;&lt; is_numerical(".99999");</cline>
                 </cd>
               </p>
             </cell>
@@ -630,7 +630,7 @@ TEST_CASE( "test4" ) {
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>cout << is_numerical("-.5");</cline>
+                  <cline>cout &lt;&lt; is_numerical("-.5");</cline>
                 </cd>
               </p>
             </cell>
