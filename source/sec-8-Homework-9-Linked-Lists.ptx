@@ -5,6 +5,53 @@
     <exercise xml:id="exer-NumberListSum-1" label="exe-sec-Homework-9-Linked-Lists-1-270230">
       <statement>
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>sumAll()</alert> that will add up all the values in the list and return the result.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>// list1 =  3 5 7</cline>
+                  <cline>cout &lt;&lt; list1 &lt;&lt; " :  " &lt;&lt; list1.sumAll();</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>3 -&gt; 5 -&gt; 7 :  15</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List l;</cline>
+                  <cline>cout &lt;&lt; "empty list   :  " &lt;&lt; l.sumAll();</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>empty list   :  0</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
