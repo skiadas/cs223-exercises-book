@@ -255,8 +255,8 @@
         <p><alert>Use a try-catch block to help you solve this problem.</alert></p>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="50%" />
+          <col width="50%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
