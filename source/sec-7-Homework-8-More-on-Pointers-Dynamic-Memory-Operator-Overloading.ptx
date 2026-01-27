@@ -939,6 +939,65 @@ TEST_CASE( "test4" ) {
  * returns true if point1 and point2 are equivalent; otherwise, returns false
  */        </pre>
         <p>Write the code to turn the given stub definition for the function into a complete implementation. Note that this will not be a friend to the class, so you will have to use get_x and get_y to access the variables.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>point pt1(-1.5, 3.75);</cline>
+                  <cline>point pt2(-1.5, 3.75);</cline>
+                  <cline>if (pt1 == pt2) {</cline>
+                  <cline>    cout &lt;&lt; "equivalent";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "not equivalent";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>equivalent</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>point pt1(9, 2);</cline>
+                  <cline>point pt2(2, 9);</cline>
+                  <cline>if (pt1 == pt2) {</cline>
+                  <cline>    cout &lt;&lt; "equivalent";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "not equivalent";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>not equivalent</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
