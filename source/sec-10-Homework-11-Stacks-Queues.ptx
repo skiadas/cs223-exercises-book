@@ -164,6 +164,44 @@ public:
 };
 </pre>
         <p>In this and the subsequent questions you will be asked to implement the various functions declared above. You will need to to write function templates that suitably implement these functions. For this assignment, you have to implement isEmpty. This is an easy question, you don't have to write much. The template syntax is also provided for you. In the subsequent questions you will need to provide your own.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Stack&lt;std::string&gt; mystack;</cline>
+                  <cline>mystack.push("cat");</cline>
+                  <cline>mystack.push("dog");</cline>
+                  <cline>mystack.push("marmot");</cline>
+                  <cline>if (mystack.isEmpty()) {</cline>
+                  <cline>    cout &lt;&lt; "true";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "false";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>false</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
