@@ -312,6 +312,55 @@ TEST_CASE( "test4" ) {
     <exercise xml:id="exer-ListInsertAt-1" label="exe-sec-Homework-9-Linked-Lists-1-234469">
       <statement>
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>insertAt(value, index)</alert> that will insert a new node with the provided value at the requested index, if that is a valid spot. On a list of size 6 for example, the valid spots are at indexes 0 through 6, 0 being the beginning of the list, 1 meaning immediately after the first element, and so on, with 6 being the spot after the last element. If you are given an invalid index (either negative or out of bounds) you should simply return without changing the list.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>// list1 =  3 5 7</cline>
+                  <cline>list1.insertAt(8, 1);</cline>
+                  <cline>cout &lt;&lt; list1;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>3 -&gt; 8 -&gt; 5 -&gt; 7</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>// list1 =  3 5 7</cline>
+                  <cline>list1.insertAt(8, 3);</cline>
+                  <cline>cout &lt;&lt; list1;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>3 -&gt; 5 -&gt; 7 -&gt; 8</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
