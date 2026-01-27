@@ -794,6 +794,59 @@ TEST_CASE( "test7" ) {
     <exercise xml:id="exer-LinkedListReverse-1" label="exe-sec-Homework-9-Linked-Lists-1-234471">
       <statement>
         <p dir="ltr">In this question you are given a standard linked list setup, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a function <alert>reverse()</alert> that will reverse the order of all the nodes (i.e. the last node will end up being the first). This is not long, but it is not an easy function to write, make sure you have a plan and draw some pictures before starting to code. Your instructor's solution is about 10 lines and uses 3 local variables to help keep track of stuff.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List list("3 5 7");</cline>
+                  <cline>cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";</cline>
+                  <cline>list.reverse();</cline>
+                  <cline>cout &lt;&lt; "After: " &lt;&lt; list;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Before: 3 -&gt; 5 -&gt; 7</cline>
+                  <cline>After: 7 -&gt; 5 -&gt; 3</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List list;</cline>
+                  <cline>cout &lt;&lt; "Before: " &lt;&lt; list &lt;&lt; "\n";</cline>
+                  <cline>list.reverse();</cline>
+                  <cline>cout &lt;&lt; "After: " &lt;&lt; list;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Before:</cline>
+                  <cline>After:</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
