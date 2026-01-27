@@ -321,6 +321,85 @@
         <p>Assume a Pixel class with member variables named <alert>blue</alert>, <alert>red</alert> and <alert>green</alert></p>
         <p>Implement a member function called <c>is_white</c> for the Pixel class. It takes no arguments.</p>
         <p>The function <c>is_white</c> <alert>returns true</alert> if this is a white pixel (all three color values are 255); otherwise, <c>is_white</c> <alert>returns false.</alert></p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Pixel pix;</cline>
+                  <cline>if (pix.is_white()) {</cline>
+                  <cline>    cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>this is NOT a white pixel.</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Pixel pix(253, 254, 255);</cline>
+                  <cline>if (pix.is_white()) {</cline>
+                  <cline>    cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>this is NOT a white pixel.</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Pixel pix(255, 255, 255);</cline>
+                  <cline>if (pix.is_white()) {</cline>
+                  <cline>    cout &lt;&lt; "this is a white pixel!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "this is NOT a white pixel." &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>this is a white pixel!</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
