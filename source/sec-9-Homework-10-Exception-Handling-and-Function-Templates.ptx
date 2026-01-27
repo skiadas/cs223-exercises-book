@@ -253,6 +253,67 @@
         <p>- If the call results in a <alert>domain_error</alert> exception, return the exception's "what" message.</p>
         <p>- If the call results in any other kind of exception, return the string "FAILURE".</p>
         <p><alert>Use a try-catch block to help you solve this problem.</alert></p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>cout &lt;&lt; myFun(0, 1);</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>2</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>cout &lt;&lt; myFun(4, 5);</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>I don't like those numbers</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>cout &lt;&lt; myFun(5, 5);</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>FAILURE</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
