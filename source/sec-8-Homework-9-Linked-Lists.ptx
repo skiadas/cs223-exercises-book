@@ -156,6 +156,53 @@ TEST_CASE( "test3" ) {
     <exercise xml:id="exer-ListStringConvertConstructor-1" label="exe-sec-Homework-9-Linked-Lists-1-234473">
       <statement>
         <p dir="ltr">In this question you are given a standard linked list setup that holds double values, with a Node class with members variables <alert>value</alert> and <alert>next</alert>, and a List class with a variable <alert>head</alert>. You are asked to implement a "convert constructor" that will convert a string to a list. The string is assumed to contain numbers separated by spaces, so you can read them if you turn the string into an istringstream. The sstream header has already been included, so you have access to the istringstream. For the purposes of this program, there are no insert functions available to you. You will need to do the work to create the needed nodes in your constructor.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>string s("4 6    7");</cline>
+                  <cline>cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>"4 6    7" :  4 -&gt; 6 -&gt; 7</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>string s("4");</cline>
+                  <cline>cout &lt;&lt; "\"" &lt;&lt; s &lt;&lt; "\"" &lt;&lt; " :  " &lt;&lt; List(s);</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>"4" :  4</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
