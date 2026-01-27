@@ -1249,6 +1249,55 @@ TEST_CASE( "test4" ) {
     <exercise xml:id="exer-M-S_Ch6_1_code-template_fcn_maximum-1" label="exe-sec-Homework-10-Exception-Handling-and-Function-Templates-1-234386">
       <statement>
         <p>Write a function template <c>maximum</c> that takes two values of the same type and <em>returns</em> the larger value.  This template should work for any type that can use the "&gt;" operator and the copy constructor.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="70%" />
+          <col width="30%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int x = 3;</cline>
+                  <cline>int y = 7;</cline>
+                  <cline>cout &lt;&lt; "The maximum is " &lt;&lt; maximum(x, y) &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>The maximum is 7</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>string a = "raspberry";</cline>
+                  <cline>string b = "jelly";</cline>
+                  <cline>cout &lt;&lt; "The maximum is " &lt;&lt; maximum(a, b) &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>The maximum is 7</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp" add-files="pixelh-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
