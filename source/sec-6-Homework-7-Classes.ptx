@@ -428,6 +428,56 @@ int main()
       <statement>
         <p>The function <c>int_to_string</c> takes an integer 'nums' and returns the equivalent string of digits.  For example, the function call <alert><c>int_to_string(33250</c><c>)</c></alert> returns the equivalent string, "33250".</p>
         <p>Hint:  Use a <alert>stringstream</alert> to help with this conversion.  Assume that the enclosing program has included the <c>sstream</c> header file.</p>
+        
+        <p>For example:</p>
+          <tabular top="medium">
+            <col width="80%" />
+            <col width="20%" />
+            <row header="yes" left="medium" bottom="medium">
+              <cell bottom="medium" right="medium">
+                <line>Test</line>
+              </cell>
+              <cell right="medium">
+                <line>Result</line>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell bottom="medium" right="medium">
+                <p>
+                  <cd>
+                    <cline>string val = int_to_string(7785);</cline>
+                    <cline>assert(val.length() == 4);</cline>
+                    <cline>cout &lt;&lt; val;</cline>
+                  </cd>
+                </p>
+              </cell>
+              <cell right="medium">
+                <p>
+                  <cd>
+                    <cline>7785</cline>
+                  </cd>
+                </p>
+              </cell>
+            </row>
+            <row left="medium" bottom="medium">
+              <cell bottom="medium" right="medium">
+                <p>
+                  <cd>
+                    <cline>string val = int_to_string(-3);</cline>
+                    <cline>assert(val.length() == 2);</cline>
+                    <cline>cout &lt;&lt; val;</cline>
+                  </cd>
+                </p>
+              </cell>
+              <cell right="medium">
+                <p>
+                  <cd>
+                    <cline>-3</cline>
+                  </cd>
+                </p>
+              </cell>
+            </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
