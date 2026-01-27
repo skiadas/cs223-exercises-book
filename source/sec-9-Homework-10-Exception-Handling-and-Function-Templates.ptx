@@ -1030,6 +1030,57 @@ TEST_CASE( "test5" ) {
       <statement>
         <p>Write a function template <c>swapper</c> that takes two values <em>passed by reference</em> and swaps them.</p>
         <p>NOTE: The <c>swapper</c> template has a void return type.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>int x = 3;</cline>
+                  <cline>int y = 7;</cline>
+                  <cline>swapper(x, y);</cline>
+                  <cline>cout &lt; "x = " &lt; x &lt; " and y = " &lt; y &lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>x = 7 and y = 3</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>string a = "raspberry";</cline>
+                  <cline>string b = "preserves";</cline>
+                  <cline>swapper(a, b);</cline>
+                  <cline>cout &lt; "a = " &lt; a &lt; " and b = " &lt; b &lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>a = preserves and b = raspberry</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp" add-files="pixelh-datafile personh-datafile">
         <preamble visible="no">#include &lt;sstream&gt;
