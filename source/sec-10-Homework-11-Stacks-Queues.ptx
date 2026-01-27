@@ -1005,6 +1005,73 @@ public:
         </pre>
         <p>This implementation uses a linked list with two pointers, one pointing to the head node and another pointing to the tail node. You can enqueue new values by placing them at the tail and advancing the tail pointer, and you can dequeue values by taking them out of the head and advancing the head pointer. As a result, the values in the linked list are stored effectively in opposite order, with newly inserted elements at the tail.</p>
         <p>For this question, you have to implement the function <alert>dequeue</alert>. It must throw an error in the case of an empty list, and otherwise it must remove and return the next appropriate value, in a FIFO form. You must be careful for the special case where the list will be empty after the removal.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Queue&lt;std::string&gt; queue;</cline>
+                  <cline>queue.enqueue("mouse");</cline>
+                  <cline>queue.enqueue("danger");</cline>
+                  <cline>queue.enqueue("will robinson");</cline>
+                  <cline>std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Head: " &lt;&lt; queue.head-&gt;value &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Tail: " &lt;&lt; queue.tail-&gt;value &lt;&lt; std::endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Initial List: mouse  ,  danger  ,  will robinson</cline>
+                  <cline>Dequeue result: mouse</cline>
+                  <cline>New List: danger  ,  will robinson</cline>
+                  <cline>Head: danger</cline>
+                  <cline>Tail: will robinson</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Queue&lt;std::string&gt; queue;</cline>
+                  <cline>queue.enqueue("mouse");</cline>
+                  <cline>std::cout &lt;&lt; "Initial List: " &lt;&lt; queue &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Dequeue result: " &lt;&lt; queue.dequeue() &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "New List: " &lt;&lt; queue &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Head: " &lt;&lt; (queue.head == nullptr ? "null" : queue.head-&gt;value) &lt;&lt; std::endl;</cline>
+                  <cline>std::cout &lt;&lt; "Tail: " &lt;&lt; (queue.tail == nullptr ? "null" : queue.tail-&gt;value) &lt;&lt; std::endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Initial List: mouse</cline>
+                  <cline>Dequeue result: mouse</cline>
+                  <cline>New List:</cline>
+                  <cline>Head: null</cline>
+                  <cline>Tail: null</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
