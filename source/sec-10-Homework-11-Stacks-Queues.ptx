@@ -563,6 +563,42 @@ public:
 };
 </pre>
         <p>For this question, you have to implement <alert>pop</alert>.</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Stack&lt;std::string&gt; mystack;</cline>
+                  <cline>mystack.push("mouse");</cline>
+                  <cline>std::cout &lt;&lt; "Before: " &lt;&lt; mystack &lt;&lt; std::endl;</cline>
+                  <cline>mystack.pop();</cline>
+                  <cline>std::cout &lt;&lt; "After: " &lt;&lt; mystack &lt;&lt; std::endl;</cline>
+                  <cline>if (! mystack.isEmpty()) {</cline>
+                  <cline>    std::cout &lt;&lt; "pop error";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Before: mouse</cline>
+                  <cline>After:</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
