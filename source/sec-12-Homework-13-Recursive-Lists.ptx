@@ -1129,6 +1129,64 @@ TEST_CASE( "test6" ) {
    *  Note: MUST be implemented with recursion.
    */
    string Rec_node::removeFrom(int n)        </pre>
+      <p>For example:</p>
+        <tabular top="medium">
+          <col width="50%" />
+          <col width="50%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("Ziggy");</cline>
+                  <cline>n1.append("Mr. Gray");</cline>
+                  <cline>cout &lt;&lt; "removing: "</cline>
+                  <cline>     &lt;&lt; n1.removeFrom(1) &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>removing: Mr. Gray</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("softball");</cline>
+                  <cline>n1.append("basketball");</cline>
+                  <cline>n1.append("oddball");</cline>
+                  <cline>n1.append("goofball");</cline>
+                  <cline>cout &lt;&lt; "removing: "</cline>
+                  <cline>     &lt;&lt; n1.removeFrom(2)</cline>
+                  <cline>     &lt;&lt; endl;</cline>
+                  <cline>cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", "</cline>
+                  <cline>     &lt;&lt; n1.retrieve(1) &lt;&lt; ", "</cline>
+                  <cline>     &lt;&lt; n1.retrieve(2) &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>removing: oddball</cline>
+                  <cline>softball, basketball, goofball</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
