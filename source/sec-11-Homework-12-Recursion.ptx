@@ -144,6 +144,99 @@
     <exercise xml:id="exer-RECURSION_code-palindrome_reursive-1" label="exe-sec-Homework-12-Recursion-1-234398">
       <statement>
         <p>Write a <em>recursive</em> function, <c>rec_is_pal</c>, that takes a string and returns true if the string is a palindrome; otherwise, returns false. Each recursive call should be dealing with the question for a string with a smaller size.</p>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>if (rec_is_pal("racecar")) {</cline>
+                  <cline>    cout &lt;&lt; "PALINDROME";</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "not a palindrome";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>PALINDROME</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>if (rec_is_pal("racebar")) {</cline>
+                  <cline>    cout &lt;&lt; "PALINDROME";</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "not a palindrome";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>not a palindrome</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>if (rec_is_pal("abba")) {</cline>
+                  <cline>    cout &lt;&lt; "PALINDROME";</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "not a palindrome";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>PALINDROME</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>if (rec_is_pal("ABCA")) {</cline>
+                  <cline>    cout &lt;&lt; "PALINDROME";</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "not a palindrome";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>not a palindrome</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
