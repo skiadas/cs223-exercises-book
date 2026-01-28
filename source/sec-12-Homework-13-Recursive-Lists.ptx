@@ -364,6 +364,57 @@ TEST_CASE( "test3" ) {
    *  Note: MUST be implemented with recursion.
    */
    string Rec_node::retrieve(int n) const        </pre>
+      <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("Ziggy");</cline>
+                  <cline>n1.append("Mr. Gray");</cline>
+                  <cline>cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Ziggy, Mr. Gray</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("python");</cline>
+                  <cline>n1.append("C++");</cline>
+                  <cline>n1.append("java");</cline>
+                  <cline>cout &lt;&lt; n1.retrieve(0) &lt;&lt; ", " &lt;&lt; n1.retrieve(1) &lt;&lt; ", "</cline>
+                  <cline>     &lt;&lt; n1.retrieve(2) &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>python, C++, java</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
