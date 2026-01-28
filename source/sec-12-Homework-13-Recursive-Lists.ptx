@@ -43,6 +43,57 @@ Rec_node(string val, Rec_node* rest_ptr = NULL);        </pre>
    *  Note: MUST be implemented with recursion.
    */
    void Rec_node::append(string val)        </pre>
+      <p>For example:</p>
+        <tabular top="medium">
+          <col width="4%" />
+          <col width="60%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("Ziggy");</cline>
+                  <cline>n1.append("Mr. Gray");</cline>
+                  <cline>cout &lt;&lt; n1 &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Ziggy, Mr. Gray</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("softball");</cline>
+                  <cline>n1.append("basketball");</cline>
+                  <cline>n1.append("oddball");</cline>
+                  <cline>n1.append("goofball")</cline>
+                  <cline>cout &lt;&lt; n1 &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>softball, basketball, oddball, goofball</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
