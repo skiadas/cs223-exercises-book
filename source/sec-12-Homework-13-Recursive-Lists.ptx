@@ -1,7 +1,35 @@
 <section xml:id="sec-Homework-13-Recursive-Lists-1">
   <title>Homework 13 -- Recursive Lists</title>
-  <introduction />
-  <exercises>
+  <!-- <introduction /> -->
+  <introduction>
+    <p>In a recursive list implementation, the nodes (<c>Rec_node</c> class) are "smart" and "dual-natured".  Each <c>Rec_node</c> considers itself to be the first node of a list consisting of a) itself and b) all the rest of the nodes that follow. As such, <c>Rec_nodes</c> have list functionality (append, retrieve, etc.).</p>
+        <p>
+          In addition:
+          <ul>
+            <li><c>Rec_node</c> methods are implemented RECURSIVELY whenever possible.</li>
+            <li><c>Rec_nodes</c> store strings as their data.</li>
+          </ul>
+        </p>
+        <p>Constructors for the <c>Rec_node</c> class:</p>
+        <pre>// Default constructor creates a Rec_Node with data = "" and rest_ptr = NULL
+Rec_node();
+
+// Constructor with 1 or 2 arguments
+Rec_node(string val, Rec_node* rest_ptr = NULL);        </pre>
+        <p>Private section for the <c>Rec_node</c> class:</p>
+        <pre>private:
+
+   // Instance variables
+   string data;       // value stored in this node
+   Rec_node * rest;   // pointer to first node of the rest of this list
+
+   /*
+   *  Rec_node assignment operator is disabled by making it private.
+   *  DO NOT IMPLEMENT.  DO NOT USE.
+   */
+   Rec_node&amp; operator=(const Rec_node &amp;other);        </pre>
+  </introduction>
+  <!-- <exercises>
     <exercise xml:id="exer-Recursive-Nodes-1" label="exe-sec-Homework-13-Recursive-Lists-1-234114">
       <statement correct="yes">
         <p>In a recursive list implementation, the nodes (<c>Rec_node</c> class) are "smart" and "dual-natured".  Each <c>Rec_node</c> considers itself to be the first node of a list consisting of a) itself and b) all the rest of the nodes that follow. As such, <c>Rec_nodes</c> have list functionality (append, retrieve, etc.).</p>
@@ -31,7 +59,7 @@ Rec_node(string val, Rec_node* rest_ptr = NULL);        </pre>
    */
    Rec_node&amp; operator=(const Rec_node &amp;other);        </pre>
       </statement>
-    </exercise>
+    </exercise> -->
     <exercise xml:id="exer-Recursion-Rec_node-append-1" label="exe-sec-Homework-13-Recursive-Lists-1-234401">
       <statement>
         <p>Implement the <c>append</c> member function for the <c>Rec_node</c> class.</p>
