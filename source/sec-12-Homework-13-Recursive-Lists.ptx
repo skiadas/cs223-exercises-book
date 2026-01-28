@@ -45,7 +45,7 @@ Rec_node(string val, Rec_node* rest_ptr = NULL);        </pre>
    void Rec_node::append(string val)        </pre>
       <p>For example:</p>
         <tabular top="medium">
-          <col width="4%" />
+          <col width="40%" />
           <col width="60%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
