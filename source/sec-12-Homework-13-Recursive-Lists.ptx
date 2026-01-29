@@ -1558,6 +1558,57 @@ TEST_CASE( "test6" ) {
    *  Note: MUST be implemented with recursion.
    */
    int Rec_node::size() const        </pre>
+      <p>For example:</p>
+        <tabular top="medium">
+          <col width="70%" />
+          <col width="30%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("Ziggy");</cline>
+                  <cline>n1.append("Mr. Gray");</cline>
+                  <cline>cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>size is: 2</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("softball");</cline>
+                  <cline>n1.append("basketball");</cline>
+                  <cline>n1.append("oddball");</cline>
+                  <cline>n1.append("goofball");</cline>
+                  <cline>cout &lt;&lt; "size is: " &lt;&lt; n1.size() &lt;&lt; endl;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>size is: 4</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
