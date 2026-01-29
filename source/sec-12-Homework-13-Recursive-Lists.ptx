@@ -2017,7 +2017,7 @@ TEST_CASE( "test4" ) {
                   <cline>Rec_node n2("Ziggy");</cline>
                   <cline>n2.append("Spike");</cline>
                   <cline>n2.append("Cleo");</cline>
-                  <cline>if (not (n1 == n2)) {</cline>
+                  <cline>if ( !(n1 == n2) ) {</cline>
                   <cline>    cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;</cline>
                   <cline>}</cline>
                   <cline>else {</cline>
@@ -2522,6 +2522,88 @@ TEST_CASE( "test6" ) {
             */
             string retrieve(int n) const;
         </pre>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List empty_list;</cline>
+                  <cline>if (empty_list.isEmpty()) {</cline>
+                  <cline>    cout &lt;&lt; "Right!";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "Incorrect.";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Right!</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List l1;</cline>
+                  <cline>l1.append("Ziggy");</cline>
+                  <cline>if ( !empty_list.isEmpty() ) {</cline>
+                  <cline>    cout &lt;&lt; "Right!";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "Incorrect.";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Right!</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List l1;</cline>
+                  <cline>l1.append("pickle");</cline>
+                  <cline>l1.append("relish");</cline>
+                  <cline>if ( !empty_list.isEmpty() ) {</cline>
+                  <cline>    cout &lt;&lt; "Right!";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "Incorrect.";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Right! pickle, relish</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
