@@ -1994,6 +1994,72 @@ TEST_CASE( "test4" ) {
    *  Note: DO NOT IMPLEMENT WITH RECURSION; implement by calling ==.
    */
    bool operator!= (const Rec_node &amp;n1, const Rec_node &amp;n2);        </pre>
+      
+      <p>For example:</p>
+        <tabular top="medium">
+          <col width="50%" />
+          <col width="50%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("Ziggy");</cline>
+                  <cline>n1.append("Spike");</cline>
+                  <cline>n1.append("Skye");</cline>
+                  <cline>Rec_node n2("Ziggy");</cline>
+                  <cline>n2.append("Spike");</cline>
+                  <cline>n2.append("Cleo");</cline>
+                  <cline>if (not (n1 == n2)) {</cline>
+                  <cline>    cout &lt;&lt; "Right, those two are NOT equivalent!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "Eek! No, n1 != n2. Check your code!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Right, those two are NOT equivalent!</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>Rec_node n1("Scooby Doo");</cline>
+                  <cline>n1.append("Snoopy");</cline>
+                  <cline>Rec_node n2("Scooby Doo");</cline>
+                  <cline>n2.append("Snoopy");</cline>                  
+                  <cline>if (n1 == n2) {</cline>
+                  <cline>    cout &lt;&lt; "Right, those two ARE equivalent!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "Eek! No, n1 == n2. Check your code!" &lt;&lt; endl;</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Right, those two are NOT equivalent!</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
