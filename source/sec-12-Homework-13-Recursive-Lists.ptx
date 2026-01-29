@@ -3985,8 +3985,8 @@ TEST_CASE( "test6" ) {
       string removeFrom(int n);        </pre>
         <p>For example:</p>
         <tabular top="medium">
-          <col width="80%" />
-          <col width="20%" />
+          <col width="70%" />
+          <col width="30%" />
           <row header="yes" left="medium" bottom="medium">
             <cell bottom="medium" right="medium">
               <line>Test</line>
@@ -3999,7 +3999,30 @@ TEST_CASE( "test6" ) {
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>TODO: REPLACE ME</cline>
+                  <cline>List L1;</cline>
+                  <cline>L1.insertAt(0, "Ziggy");</cline>
+                  <cline>cout &lt;&lt; L1;</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Ziggy</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List L1;</cline>
+                  <cline>L1.append("apple");</cline>
+                  <cline>L1.append("banana");</cline>
+                  <cline>L1.append("pear");</cline>
+                  <cline>cout &lt;&lt; L1.removeFrom(0) &lt;&lt; endl;</cline>
+                  <cline>cout &lt;&lt; L1;</cline>
                 </cd>
               </p>
             </cell>
@@ -4011,7 +4034,6 @@ TEST_CASE( "test6" ) {
               </p>
             </cell>
           </row>
-        
         </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
