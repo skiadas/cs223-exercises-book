@@ -3264,6 +3264,41 @@ TEST_CASE( "test7" ) {
       *   Postcondition: Returns the number of items in the list.
       */
       int size() const;        </pre>
+      <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>List L1;</cline>
+                  <cline>if (L1.size() == 0) {</cline>
+                  <cline>    cout &lt;&lt; "Size is 0.";</cline>
+                  <cline>}</cline>
+                  <cline>else {</cline>
+                  <cline>    cout &lt;&lt; "Incorrect.";</cline>
+                  <cline>}</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>Size is 0.</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>        
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
@@ -3948,6 +3983,36 @@ TEST_CASE( "test6" ) {
       *      nature of of Rec_nodes to accomplish any iteration.
       */
       string removeFrom(int n);        </pre>
+        <p>For example:</p>
+        <tabular top="medium">
+          <col width="80%" />
+          <col width="20%" />
+          <row header="yes" left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <line>Test</line>
+            </cell>
+            <cell right="medium">
+              <line>Result</line>
+            </cell>
+          </row>
+          <row left="medium" bottom="medium">
+            <cell bottom="medium" right="medium">
+              <p>
+                <cd>
+                  <cline>TODO: REPLACE ME</cline>
+                </cd>
+              </p>
+            </cell>
+            <cell right="medium">
+              <p>
+                <cd>
+                  <cline>TODO: REPLACE ME</cline>
+                </cd>
+              </p>
+            </cell>
+          </row>
+        
+        </tabular>
       </statement>
       <program interactive="activecode" language="cpp">
         <preamble visible="no">#include &lt;sstream&gt;
