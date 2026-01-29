@@ -426,7 +426,7 @@ int main()
     </exercise>
     <exercise xml:id="exer-stringstream_code-sstream1-1" label="exe-sec-Homework-7-Classes-1-234264">
       <statement>
-        <p>The function <c>int_to_string</c> takes an integer 'nums' and returns the equivalent string of digits.  For example, the function call <alert><c>int_to_string(33250</c><c>)</c></alert> returns the equivalent string, "33250".</p>
+        <p>The function <c>int_to_string</c> takes an integer 'nums' and returns the equivalent string of digits.  For example, the function call <alert><c>int_to_string(33250)</c></alert> returns the equivalent string, "33250".</p>
         <p>Hint:  Use a <alert>stringstream</alert> to help with this conversion.  Assume that the enclosing program has included the <c>sstream</c> header file.</p>
         
         <p>For example:</p>
