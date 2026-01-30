@@ -1547,7 +1547,7 @@ Christopher Robin
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>cout &lt;&lt; second_half("Freddie Mercury")</cline>
+                  <cline>cout &lt;&lt; second_half("Freddie Mercury");</cline>
                 </cd>
               </p>
             </cell>
@@ -1563,7 +1563,7 @@ Christopher Robin
             <cell bottom="medium" right="medium">
               <p>
                 <cd>
-                  <cline>cout &lt;&lt; second_half("David Bowie")</cline>
+                  <cline>cout &lt;&lt; second_half("David Bowie");</cline>
                 </cd>
               </p>
             </cell>
