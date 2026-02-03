@@ -723,7 +723,7 @@ TEST_CASE( "test5" ) {
    *  For example, if n is 1, a new node containing val will be inserted
    *  immediately after this node.
    */
-   void Rec_node::insertAt(int n, string val)        </pre>
+   void Rec_node::insertAt(int n, string val);        </pre>
       <p>For example:</p>
         <tabular top="medium">
           <col width="50%" />
