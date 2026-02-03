@@ -42,7 +42,7 @@ Rec_node(string val, Rec_node* rest_ptr = NULL);        </pre>
    *
    *  Note: MUST be implemented with recursion.
    */
-   void Rec_node::append(string val)        </pre>
+   void Rec_node::append(string val);        </pre>
       <p>For example:</p>
         <tabular top="medium">
           <col width="40%" />
