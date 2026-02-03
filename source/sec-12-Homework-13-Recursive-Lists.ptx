@@ -1129,7 +1129,7 @@ TEST_CASE( "test6" ) {
    *
    *  Note: MUST be implemented with recursion.
    */
-   string Rec_node::removeFrom(int n)        </pre>
+   string Rec_node::removeFrom(int n);        </pre>
       <p>For example:</p>
         <tabular top="medium">
           <col width="50%" />
