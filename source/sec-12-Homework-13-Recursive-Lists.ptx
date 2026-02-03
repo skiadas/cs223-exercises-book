@@ -1124,7 +1124,8 @@ TEST_CASE( "test6" ) {
    *     `n` relative to this node is now deleted and its data returned.
    *     The list is not changed in any other way.
    *
-   *  Note: Rec_node.removeFrom will NOT handle the case n == 0; it is handled in the List class.
+   *  Note: Rec_node.removeFrom will NOT handle the case n == 0; 
+   *        it is handled in the List class.
    *
    *  Note: MUST be implemented with recursion.
    */
