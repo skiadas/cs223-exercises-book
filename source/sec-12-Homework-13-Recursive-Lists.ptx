@@ -2055,7 +2055,7 @@ TEST_CASE( "test4" ) {
             <cell right="medium">
               <p>
                 <cd>
-                  <cline>Right, those two are NOT equivalent!</cline>
+                  <cline>Right, those two ARE equivalent!</cline>
                 </cd>
               </p>
             </cell>
