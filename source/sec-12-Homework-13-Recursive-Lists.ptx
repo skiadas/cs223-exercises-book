@@ -1558,7 +1558,7 @@ TEST_CASE( "test6" ) {
    *
    *  Note: MUST be implemented with recursion.
    */
-   int Rec_node::size() const        </pre>
+   int Rec_node::size() const;        </pre>
       <p>For example:</p>
         <tabular top="medium">
           <col width="70%" />
