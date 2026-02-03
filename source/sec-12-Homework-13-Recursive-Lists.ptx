@@ -2593,6 +2593,7 @@ TEST_CASE( "test6" ) {
                   <cline>else {</cline>
                   <cline>    cout &lt;&lt; "Incorrect.";</cline>
                   <cline>}</cline>
+                  <cline>cout &lt;&lt; l1;</cline>
                 </cd>
               </p>
             </cell>
