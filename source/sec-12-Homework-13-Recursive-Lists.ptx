@@ -363,7 +363,7 @@ TEST_CASE( "test3" ) {
    *     follows `myNode`.
    *  Note: MUST be implemented with recursion.
    */
-   string Rec_node::retrieve(int n) const        </pre>
+   string Rec_node::retrieve(int n) const;       </pre>
       <p>For example:</p>
         <tabular top="medium">
           <col width="80%" />
