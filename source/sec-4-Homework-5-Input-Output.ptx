@@ -211,7 +211,7 @@ maudlin        </pre>
       </statement>
       <datafile label="mystrings-datafile" xml:id="mystrings-datafile" filename="mystrings.txt" editable="no" hide="yes">
         <pre>
-          <xi:include parse="text" href="../assets/datafiles/mystrings.txt" />
+<xi:include parse="text" href="../assets/datafiles/mystrings.txt" />
         </pre>
       </datafile>
       <program interactive="activecode" language="cpp" add-files="mystrings-datafile">
