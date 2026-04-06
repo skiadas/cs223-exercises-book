@@ -2,7 +2,7 @@
   <book>
     <title>CS223 Exercises</title>
     <chapter xml:id="ch-exercises">
-      <title>Chapter Title</title>
+      <title>Homework Exercises</title>
       <xi:include href="./sec-0-Homework-1.ptx" />
       <xi:include href="./sec-1-Homework-2.ptx" />
       <xi:include href="./sec-2-Homework-3.ptx" />
@@ -17,6 +17,13 @@
       <xi:include href="./sec-11-Homework-12-Recursion.ptx" />
       <xi:include href="./sec-12-Homework-13-Recursive-Lists.ptx" />
       <xi:include href="./sec-13-Homework-14-Binary-Trees.ptx" />
+    </chapter>
+    <chapter xml:id="ch-practice">
+      <title>Practice Exercises</title>
+      <xi:include href="./sec-10-Homework-11-Stacks-Queues-Practice.ptx" />
+      <xi:include href="./sec-11-Homework-12-Recursion-Practice.ptx" />
+      <xi:include href="./sec-12-Homework-13-Recursive-Lists-Practice.ptx" />
+      <xi:include href="./sec-13-Homework-14-Binary-Trees-Practice.ptx" />
     </chapter>
   </book>
 </pretext>
